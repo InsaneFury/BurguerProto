@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun : MonoBehaviour
+public class Gun : MonobehaviourSingleton<Gun>
 {
     public GameObject bullet;
-    public float bulletSize;
+    public float bulletSize = 0.1f;
     public float speedOfIncrease = 0.1f;
     public float dropDistance = 1;
     public float shootPower = 10f;
@@ -14,11 +14,18 @@ public class Gun : MonoBehaviour
     Player player;
     float timer = 0;
     float timeToFire = 0f;
+    float originalSize = 0;
+
+    public override void Awake()
+    {
+        base.Awake();
+    }
 
     void Start()
     {
         bulletSize = bullet.transform.localScale.x;
         player = Player.Get();
+        originalSize = bulletSize;
 
     }
 
@@ -29,6 +36,7 @@ public class Gun : MonoBehaviour
             timeToFire = Time.time + 1f / fireRate;
             bulletSize += speedOfIncrease;
             Debug.Log(bulletSize);
+            UIManager.Get().RefreshUI();
             timer = 0;
         }
         if (Input.GetMouseButtonUp(0))
@@ -39,8 +47,8 @@ public class Gun : MonoBehaviour
             b.transform.localScale += finalSize;
 
             b.GetComponent<Rigidbody>().AddForce(player.forward * shootPower * Time.fixedDeltaTime, ForceMode.Impulse);
-
-            bulletSize = bullet.transform.localScale.x;
+            bulletSize = originalSize;
+            UIManager.Get().RefreshUI();
         }
     }
 }
