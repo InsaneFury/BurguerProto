@@ -2,14 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonobehaviourSingleton<Player>
 {
-    Rigidbody rb;
     public Transform crosshair;
     public float speed =  5;
     public float rayLenght = 100;
 
+    Rigidbody rb;
     Vector3 pointToLook = Vector3.zero;
+    [HideInInspector]
+    public Vector3 forward;
+
+    public override void Awake()
+    {
+        base.Awake();
+    }
 
     void Start()
     {
@@ -50,7 +57,7 @@ public class Player : MonoBehaviour
             Debug.DrawLine(ray.origin, pointToLook, Color.blue);
         }
 
-        Vector3 forward = new Vector3(pointToLook.x,transform.position.y,pointToLook.z) - transform.position;
+        forward = new Vector3(pointToLook.x,transform.position.y,pointToLook.z) - transform.position;
 
         if(crosshair)
         crosshair.position = pointToLook;
