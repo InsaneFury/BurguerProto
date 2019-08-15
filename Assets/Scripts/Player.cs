@@ -52,6 +52,7 @@ public class Player : MonoBehaviour
 
         Vector3 forward = new Vector3(pointToLook.x,transform.position.y,pointToLook.z) - transform.position;
 
+        if(crosshair)
         crosshair.position = pointToLook;
 
         transform.rotation = Quaternion.LookRotation(forward, Vector3.up);
