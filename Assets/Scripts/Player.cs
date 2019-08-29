@@ -7,6 +7,7 @@ public class Player : MonobehaviourSingleton<Player>
     public Transform crosshair;
     public float speed =  5;
     public float rayLenght = 100;
+    public float life = 100;
 
     Rigidbody rb;
     Vector3 pointToLook = Vector3.zero;
