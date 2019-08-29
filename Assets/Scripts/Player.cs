@@ -70,8 +70,13 @@ public class Player : MonobehaviourSingleton<Player>
     {
         if (collision.collider.CompareTag("Enemy"))
         {
-            life--;
+            TakeDamage(collision.collider.gameObject.GetComponent<Enemy>().damage);
             UIManager.Get().RefreshHealthbar();
         }
+    }
+
+    public void TakeDamage(float dmg)
+    {
+        life -= dmg;
     }
 }
