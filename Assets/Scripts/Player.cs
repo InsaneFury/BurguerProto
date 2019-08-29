@@ -65,4 +65,13 @@ public class Player : MonobehaviourSingleton<Player>
 
         transform.rotation = Quaternion.LookRotation(forward, Vector3.up);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Enemy"))
+        {
+            life--;
+            UIManager.Get().RefreshHealthbar();
+        }
+    }
 }

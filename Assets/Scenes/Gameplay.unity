@@ -744,7 +744,7 @@ GameObject:
   - component: {fileID: 806928155}
   m_Layer: 0
   m_Name: BadBurguer
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1707,7 +1707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPersistant: 0
   dropSize: {fileID: 1667281310}
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 286355210}
 --- !u!1 &1760305591
 GameObject:
   m_ObjectHideFlags: 0

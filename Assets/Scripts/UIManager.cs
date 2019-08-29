@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIManager : MonobehaviourSingleton<UIManager>
 {
     public Text dropSize;
-    public GameObject healthBar;
+    public Image healthBar;
     Player player;
 
     public override void Awake()
@@ -18,6 +18,7 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     {
         dropSize.text = "Drop Size: " + Gun.Get().bulletSize.ToString();
         player = Player.Get();
+        healthBar.fillAmount = player.life / 100f;
     }
 
     public void RefreshUI()
@@ -27,9 +28,9 @@ public class UIManager : MonobehaviourSingleton<UIManager>
 
     public void RefreshHealthbar()
     {
-        if(healthBar.transform.localScale.x != player.life)
+        if(healthBar.fillAmount != player.life)
         {
-            healthBar.transform.localScale =  new Vector3(player.life / 100f, 1f, 1f);
+            healthBar.fillAmount = player.life / 100f;
         }
     }
 }
