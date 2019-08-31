@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class UIManager : MonobehaviourSingleton<UIManager>
 {
-    public Text dropSize;
     public Image healthBar;
+    public Image sizeBar;
     Player player;
 
     public override void Awake()
@@ -16,14 +16,14 @@ public class UIManager : MonobehaviourSingleton<UIManager>
 
     void Start()
     {
-        dropSize.text = "Drop Size: " + Gun.Get().bulletSize.ToString();
         player = Player.Get();
         healthBar.fillAmount = player.life / 100f;
+        sizeBar.fillAmount = 0;
     }
 
     public void RefreshUI()
     {
-        dropSize.text = "Drop Size: " +  Gun.Get().bulletSize.ToString();
+        sizeBar.fillAmount = Gun.Get().bulletSize;
     }
 
     public void RefreshHealthbar()

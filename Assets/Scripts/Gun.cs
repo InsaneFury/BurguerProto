@@ -13,7 +13,6 @@ public class Gun : MonobehaviourSingleton<Gun>
     public float fireRate = 2f;
 
     Player player;
-    float timer = 0;
     float timeToFire = 0f;
     float originalSize = 0;
 
@@ -27,29 +26,37 @@ public class Gun : MonobehaviourSingleton<Gun>
         bulletSize = bullet.transform.localScale.x;
         player = Player.Get();
         originalSize = bulletSize;
-
     }
 
     private void Update()
     {
         if (bulletSize < maxBulletSize && Input.GetMouseButton(0) && (Time.time >= timeToFire))
         {
-            timeToFire = Time.time + 1f / fireRate;
-            bulletSize += speedOfIncrease;
-            Debug.Log(bulletSize);
-            UIManager.Get().RefreshUI();
-            timer = 0;
+            IncreaseBulletSize();
         }
         if (Input.GetMouseButtonUp(0))
         {
-            Vector3 finalSize = new Vector3(bulletSize, bulletSize, bulletSize);
-            Vector3 spawnPos = Player.Get().transform.position;
-            GameObject b = Instantiate(bullet, spawnPos + player.forward.normalized * dropDistance, player.transform.rotation);
-            b.transform.localScale += finalSize;
+            player.anim.SetTrigger("attack");
+        }   
+    }
 
-            b.GetComponent<Rigidbody>().AddForce(player.forward * shootPower * Time.fixedDeltaTime, ForceMode.Impulse);
-            bulletSize = originalSize;
-            UIManager.Get().RefreshUI();
-        }
+    void IncreaseBulletSize()
+    {
+        timeToFire = Time.time + 1f / fireRate;
+        bulletSize += speedOfIncrease;
+        Debug.Log(bulletSize);
+        UIManager.Get().RefreshUI();
+    }
+
+    public void Shoot()
+    {
+        Vector3 finalSize = new Vector3(bulletSize, bulletSize, bulletSize);
+        Vector3 spawnPos = Player.Get().transform.position;
+        GameObject b = Instantiate(bullet, spawnPos + player.forward.normalized * dropDistance, player.transform.rotation);
+        b.transform.localScale += finalSize;
+
+        b.GetComponent<Rigidbody>().AddForce(player.forward * shootPower * Time.fixedDeltaTime, ForceMode.Impulse);
+        bulletSize = originalSize;
+        UIManager.Get().RefreshUI();
     }
 }
