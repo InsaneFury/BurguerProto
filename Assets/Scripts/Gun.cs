@@ -37,6 +37,7 @@ public class Gun : MonobehaviourSingleton<Gun>
         if (Input.GetMouseButtonUp(0))
         {
             player.anim.SetTrigger("attack");
+            Shoot();
         }   
     }
 

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 685178486610340302}
   - component: {fileID: 1935110511479434303}
   - component: {fileID: 1994889516769884228}
+  - component: {fileID: 7880578130567524267}
   m_Layer: 0
   m_Name: mesa_cuadrada_lowpoly3
   m_TagString: Untagged
@@ -65,6 +66,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -77,6 +79,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7880578130567524267
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4754674518531635106}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 3039265032130674012, guid: 63ccc9a0bc56d5d4084c427b0936b674, type: 3}
 --- !u!1 &9001196650002863846
 GameObject:
   m_ObjectHideFlags: 0

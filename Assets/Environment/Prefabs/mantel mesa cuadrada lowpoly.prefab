@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2608578363080960775}
   - component: {fileID: 1260295565502701928}
-  - component: {fileID: 1587141369886051646}
+  - component: {fileID: 8617422518617912474}
   m_Layer: 0
   m_Name: mantel_mesa_cuadrada_lowpoly
   m_TagString: Untagged
@@ -40,8 +40,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 546367536923909172}
   m_Mesh: {fileID: -4073016548108618402, guid: c95a3427915bfcd45982ad50fb8791b9, type: 3}
---- !u!23 &1587141369886051646
-MeshRenderer:
+--- !u!137 &8617422518617912474
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -65,6 +65,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -77,6 +78,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: -4073016548108618402, guid: c95a3427915bfcd45982ad50fb8791b9, type: 3}
+  m_Bones: []
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 0}
+  m_AABB:
+    m_Center: {x: 0.05467987, y: 7.806243, z: 39.565193}
+    m_Extent: {x: 7.0527534, y: 3.0670605, z: 7.3295593}
+  m_DirtyAABB: 0
 --- !u!1 &4957931900202536393
 GameObject:
   m_ObjectHideFlags: 0
