@@ -6,7 +6,7 @@ public class Gun : MonobehaviourSingleton<Gun>
 {
     public GameObject bullet;
     public float bulletSize = 0.1f;
-    public float maxBulletSize = 1f;
+    public float maxBulletSize = 0.9f;
     public float speedOfIncrease = 0.1f;
     public float dropDistance = 1;
     public float shootPower = 10f;
@@ -30,7 +30,7 @@ public class Gun : MonobehaviourSingleton<Gun>
 
     private void Update()
     {
-        if (bulletSize < maxBulletSize && Input.GetMouseButton(0) && (Time.time >= timeToFire))
+        if ((bulletSize < maxBulletSize) && Input.GetMouseButton(0) && (Time.time >= timeToFire))
         {
             IncreaseBulletSize();
         }
@@ -57,7 +57,7 @@ public class Gun : MonobehaviourSingleton<Gun>
         b.transform.localScale += finalSize;
 
         b.GetComponent<Rigidbody>().AddForce(player.forward * shootPower * Time.fixedDeltaTime, ForceMode.Impulse);
-        bulletSize = originalSize;
+        bulletSize = 0;
         UIManager.Get().RefreshUI();
     }
 }
