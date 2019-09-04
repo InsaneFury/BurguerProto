@@ -107,17 +107,9 @@ public class Player : MonobehaviourSingleton<Player>
         vision.rotation = Quaternion.LookRotation(forward, Vector3.up);
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.CompareTag("Enemy"))
-        {
-            TakeDamage(collision.collider.gameObject.GetComponent<Enemy>().damage);
-            UIManager.Get().RefreshHealthbar();
-        }
-    }
-
     public void TakeDamage(float dmg)
     {
         life -= dmg;
+        UIManager.Get().RefreshHealthbar();
     }
 }

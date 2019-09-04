@@ -60,7 +60,7 @@ ModelImporter:
       curves: []
       events:
       - time: 0.9872882
-        functionName: Chase
+        functionName: CheckIfCanAttack
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 7c46cd09f7dea044680ac472f246ef1d,
           type: 3}

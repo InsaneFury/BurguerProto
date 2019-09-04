@@ -30,13 +30,14 @@ public class Enemy : MonoBehaviour
                 break;
             case EnemyAction.Run:
                 enemyAgent.SetDestination(player.transform.position);
-                if(enemyAgent.remainingDistance <= attackDistance)
+                if (enemyAgent.remainingDistance < attackDistance)
                 {
                     actions = EnemyAction.Attack;
                 }
                 break;
             case EnemyAction.Attack:
                 anim.SetTrigger("attack");
+               
                 break;
         }
         
@@ -45,5 +46,17 @@ public class Enemy : MonoBehaviour
     public void Chase()
     {
         actions = EnemyAction.Run;
+    }
+
+    public void CheckIfCanAttack()
+    {
+        //if (enemyAgent.remainingDistance < attackDistance)
+        //{
+        //    player.TakeDamage(damage);
+        //}
+        //else
+        //{
+            Chase();
+        //}
     }
 }
