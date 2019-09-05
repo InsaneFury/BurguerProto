@@ -45,7 +45,7 @@ public class Gun : MonobehaviourSingleton<Gun>
     {
         timeToFire = Time.time + 1f / fireRate;
         bulletSize += speedOfIncrease;
-        Debug.Log(bulletSize);
+        //Debug.Log(bulletSize);
         UIManager.Get().RefreshUI();
     }
 
