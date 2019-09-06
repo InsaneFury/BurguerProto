@@ -27,13 +27,11 @@ public class Explosion : MonoBehaviour
             Debug.Log(hit.transform.name);
 
             if (hrb != null)
+            {
                 hrb.AddExplosionForce(explosionForce, explosionPos, explosionRadius);
+            }
+               
         }
         Destroy(gameObject);
-    }
-
-    private void OnDestroy()
-    {
-        
     }
 }
