@@ -11,7 +11,10 @@ public class Player : MonobehaviourSingleton<Player>
     public float rayLenght = 100;
     public float life = 100;
 
-    public Animator anim;
+    public Animator animTop;
+    public Animator animBottom;
+
+    public GameObject Top;
 
     Rigidbody rb;
     Vector3 pointToLook = Vector3.zero;
@@ -26,12 +29,12 @@ public class Player : MonobehaviourSingleton<Player>
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
     {
-        anim.SetBool("run", false);
+        animTop.SetBool("run", false);
+        animBottom.SetBool("run", false);
         Move();
         RotateToMouse();
     }
@@ -43,25 +46,29 @@ public class Player : MonobehaviourSingleton<Player>
 
         if (Input.GetKey(KeyCode.A))
         {
-            anim.SetBool("run", true);
+            animTop.SetBool("run", true);
+            animBottom.SetBool("run", true);
             direction += Vector3.left;
             transform.rotation = Quaternion.Euler(0, 270, 0);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            anim.SetBool("run", true);
+            animTop.SetBool("run", true);
+            animBottom.SetBool("run", true);
             direction += Vector3.right;
             transform.rotation = Quaternion.Euler(0, 90, 0);
         }
         if (Input.GetKey(KeyCode.W))
         {
-            anim.SetBool("run", true);
+            animTop.SetBool("run", true);
+            animBottom.SetBool("run", true);
             direction += Vector3.forward;
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         if (Input.GetKey(KeyCode.S))
         {
-            anim.SetBool("run", true);
+            animTop.SetBool("run", true);
+            animBottom.SetBool("run", true);
             direction += Vector3.back;
             transform.rotation = Quaternion.Euler(0, 180, 0);
         }
@@ -105,6 +112,7 @@ public class Player : MonobehaviourSingleton<Player>
         crosshair.position = pointToLook;
 
         vision.rotation = Quaternion.LookRotation(forward, Vector3.up);
+        Top.transform.rotation = Quaternion.LookRotation(forward, Vector3.up);
     }
 
     public void TakeDamage(float dmg)

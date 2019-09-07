@@ -63,12 +63,4 @@ public class Enemy : MonoBehaviour
             Chase();
         }
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Explosion"))
-        {
-            Debug.Log("Enemy Get Damage");
-        }
-    }
 }
