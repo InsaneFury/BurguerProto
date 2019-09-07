@@ -100,6 +100,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 512
+  explosion: {fileID: 1000012903210382, guid: 45d66eb29fa331e4b852db4d6d5aa88d, type: 3}
 --- !u!54 &5591394167231188466
 Rigidbody:
   m_ObjectHideFlags: 0
