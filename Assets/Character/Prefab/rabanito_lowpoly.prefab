@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8191763486882079550}
   m_Layer: 0
   m_Name: rabanito_lowpoly
-  m_TagString: Untagged
+  m_TagString: Explosion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

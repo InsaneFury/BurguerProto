@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
     public float damage = 1;
     public NavMeshAgent enemyAgent;
     public float attackDistance = 2;
+    public float life = 100f;
+    public Image healthBar;
 
     Player player;
     Animator anim;
@@ -23,6 +26,7 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         enemyAgent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        healthBar.fillAmount = life / 100f;
         actions = EnemyAction.Run;
     }
     private void Update()
@@ -61,6 +65,36 @@ public class Enemy : MonoBehaviour
         else
         {
             Chase();
+        }
+    }
+
+    public void TakeDamage(int dmg)
+    {
+        if(life > 0)
+        {
+            life -= dmg;
+            if (life <= 0)
+            {
+                Die();
+            }
+        }
+        else if(life <= 0)
+        {
+            Die();
+        }
+        RefreshHealthbar();
+    }
+
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
+
+    public void RefreshHealthbar()
+    {
+        if (healthBar.fillAmount != life)
+        {
+            healthBar.fillAmount = life / 100f;
         }
     }
 }
