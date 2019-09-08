@@ -174,7 +174,7 @@ PrefabInstance:
     - target: {fileID: 5109970869550772391, guid: bbe617c381600054bbebfca9a0604785,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5109970869550772391, guid: bbe617c381600054bbebfca9a0604785,
         type: 3}
@@ -575,7 +575,7 @@ PrefabInstance:
     - target: {fileID: 5109970869550772391, guid: bbe617c381600054bbebfca9a0604785,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5109970869550772391, guid: bbe617c381600054bbebfca9a0604785,
         type: 3}
@@ -1568,7 +1568,7 @@ PrefabInstance:
     - target: {fileID: 5109970869550772391, guid: bbe617c381600054bbebfca9a0604785,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5109970869550772391, guid: bbe617c381600054bbebfca9a0604785,
         type: 3}
@@ -5393,7 +5393,7 @@ PrefabInstance:
     - target: {fileID: 5109970869550772391, guid: bbe617c381600054bbebfca9a0604785,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5109970869550772391, guid: bbe617c381600054bbebfca9a0604785,
         type: 3}
@@ -6095,7 +6095,7 @@ PrefabInstance:
     - target: {fileID: 5109970869550772391, guid: bbe617c381600054bbebfca9a0604785,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5109970869550772391, guid: bbe617c381600054bbebfca9a0604785,
         type: 3}
@@ -6529,16 +6529,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Walk_Cycle_TOP
       objectReference: {fileID: 0}
-    - target: {fileID: -6644001640238724306, guid: f2d0ebe2d8200db4ba41a14c8c705720,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: d6b47abda12c4e44db4f6d43943536b8, type: 2}
-    - target: {fileID: -6057140222963153312, guid: f2d0ebe2d8200db4ba41a14c8c705720,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 9c9111b90d9eed34ab8b3d58393ee4bb, type: 2}
     - target: {fileID: -4216859302048453862, guid: f2d0ebe2d8200db4ba41a14c8c705720,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6594,6 +6584,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: f2d0ebe2d8200db4ba41a14c8c705720,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9c9111b90d9eed34ab8b3d58393ee4bb, type: 2}
+    - target: {fileID: -6644001640238724306, guid: f2d0ebe2d8200db4ba41a14c8c705720,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d6b47abda12c4e44db4f6d43943536b8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2d0ebe2d8200db4ba41a14c8c705720, type: 3}
 --- !u!1001 &2119373544
@@ -6857,11 +6857,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Walk_Cycle_BOTTOM
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 8857874b4aa517941a567cdcc9a454e1,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 59e9407167ed86e4587b211acdb7eaa6, type: 2}
     - target: {fileID: -4216859302048453862, guid: 8857874b4aa517941a567cdcc9a454e1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6917,6 +6912,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 8857874b4aa517941a567cdcc9a454e1,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 59e9407167ed86e4587b211acdb7eaa6, type: 2}
     - target: {fileID: -8830634604493133791, guid: 8857874b4aa517941a567cdcc9a454e1,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6964,7 +6964,7 @@ PrefabInstance:
     - target: {fileID: 5109970869550772391, guid: bbe617c381600054bbebfca9a0604785,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5109970869550772391, guid: bbe617c381600054bbebfca9a0604785,
         type: 3}
