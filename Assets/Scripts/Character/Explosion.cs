@@ -10,6 +10,7 @@ public class Explosion : MonoBehaviour
     public int explosionDamage = 10;
     public LayerMask layer;
     public GameObject explosion;
+    public GameObject heatWave;
 
     Rigidbody rb;
 
@@ -22,6 +23,7 @@ public class Explosion : MonoBehaviour
     void Explode()
     {
         Instantiate(explosion, transform.position, Quaternion.identity);
+        Instantiate(heatWave, transform.position, heatWave.transform.rotation);
         Vector3 explosionPos = transform.position;
         Collider[] colliders = Physics.OverlapSphere(explosionPos, explosionRadius,layer);
         foreach (Collider hit in colliders)

@@ -37,7 +37,6 @@ public class Gun : MonobehaviourSingleton<Gun>
         if (Input.GetMouseButtonUp(0))
         {
             player.animTop.SetTrigger("attack");
-            Shoot();
         }   
     }
 
@@ -45,7 +44,6 @@ public class Gun : MonobehaviourSingleton<Gun>
     {
         timeToFire = Time.time + 1f / fireRate;
         bulletSize += speedOfIncrease;
-        //Debug.Log(bulletSize);
         UIManager.Get().RefreshUI();
     }
 
