@@ -102,7 +102,6 @@ public class Enemy : MonoBehaviour
 
     IEnumerator DamageFeedback()
     {
-        mat.gameObject.GetComponent<Renderer>().material.SetColor("_EMISSION", new Color(1F, 1F, 1F, 1F));
         mat.gameObject.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
         yield return new WaitForSeconds(0.5f);
         mat.gameObject.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");

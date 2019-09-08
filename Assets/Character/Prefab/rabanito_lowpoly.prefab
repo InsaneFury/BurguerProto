@@ -97,10 +97,11 @@ MonoBehaviour:
   time: 2
   explosionForce: 5000
   explosionRadius: 5
+  explosionDamage: 10
   layer:
     serializedVersion: 2
     m_Bits: 512
-  explosion: {fileID: 1000012903210382, guid: 45d66eb29fa331e4b852db4d6d5aa88d, type: 3}
+  explosion: {fileID: 1000012903210382, guid: a6a622dcb6224014f923dc6743bf35d3, type: 3}
 --- !u!54 &5591394167231188466
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -142,7 +143,7 @@ TrailRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_MotionVectors: 1
+  m_MotionVectors: 2
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 1
