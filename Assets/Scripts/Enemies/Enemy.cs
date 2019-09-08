@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     Player player;
     Animator anim;
     Rigidbody rb;
+    public GameObject mat;
     float distance = 0;
 
     enum EnemyAction : short {Idle = 0,Run,Attack};
@@ -72,6 +73,7 @@ public class Enemy : MonoBehaviour
     {
         if(life > 0)
         {
+            StartCoroutine("DamageFeedback");
             life -= dmg;
             if (life <= 0)
             {
@@ -85,16 +87,24 @@ public class Enemy : MonoBehaviour
         RefreshHealthbar();
     }
 
-    public void Die()
+    void Die()
     {
         Destroy(gameObject);
     }
 
-    public void RefreshHealthbar()
+    void RefreshHealthbar()
     {
         if (healthBar.fillAmount != life)
         {
             healthBar.fillAmount = life / 100f;
         }
+    }
+
+    IEnumerator DamageFeedback()
+    {
+        mat.gameObject.GetComponent<Renderer>().material.SetColor("_EMISSION", new Color(1F, 1F, 1F, 1F));
+        mat.gameObject.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
+        yield return new WaitForSeconds(0.5f);
+        mat.gameObject.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
     }
 }

@@ -324,6 +324,7 @@ MonoBehaviour:
   attackDistance: 6
   life: 100
   healthBar: {fileID: 937135447}
+  mat: {fileID: 8473002528761685935}
 --- !u!195 &5109970869550772384
 NavMeshAgent:
   m_ObjectHideFlags: 0
