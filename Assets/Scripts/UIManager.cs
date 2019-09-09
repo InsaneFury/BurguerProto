@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonobehaviourSingleton<UIManager>
 {
     public Image healthBar;
     public Image sizeBar;
+    public TextMeshProUGUI soul;
     Player player;
 
     public override void Awake()
@@ -23,6 +25,7 @@ public class UIManager : MonobehaviourSingleton<UIManager>
 
     public void RefreshUI()
     {
+        soul.text = player.soulsCollected.ToString();
         sizeBar.fillAmount = Gun.Get().bulletSize;
     }
 

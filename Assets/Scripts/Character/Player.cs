@@ -12,6 +12,7 @@ public class Player : MonobehaviourSingleton<Player>
 
     public float rayLenght = 100;
     public float life = 100;
+    public int soulsCollected = 0;
 
     public Animator animTop;
     public Animator animBottom;
@@ -109,5 +110,15 @@ public class Player : MonobehaviourSingleton<Player>
     {
         life -= dmg;
         UIManager.Get().RefreshHealthbar();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Soul"))
+        {
+            UIManager.Get().RefreshUI();
+            soulsCollected++;
+            Destroy(other.gameObject);
+        }
     }
 }

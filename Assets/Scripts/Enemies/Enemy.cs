@@ -6,16 +6,21 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Settings")]
     public float damage = 1;
     public NavMeshAgent enemyAgent;
     public float attackDistance = 2;
     public float life = 100f;
     public Image healthBar;
+    public GameObject mat;
+
+    [Header("Drops")]
+    public GameObject soul;
 
     Player player;
     Animator anim;
     Rigidbody rb;
-    public GameObject mat;
+    
     float distance = 0;
 
     enum EnemyAction : short {Idle = 0,Run,Attack};
@@ -89,6 +94,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        Drop();
         Destroy(gameObject);
     }
 
@@ -105,5 +111,9 @@ public class Enemy : MonoBehaviour
         mat.gameObject.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
         yield return new WaitForSeconds(0.5f);
         mat.gameObject.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
+    }
+    void Drop()
+    {
+        Instantiate(soul, transform.position, Quaternion.identity);
     }
 }
