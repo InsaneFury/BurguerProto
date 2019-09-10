@@ -44,7 +44,7 @@ public class Gun : MonobehaviourSingleton<Gun>
     {
         timeToFire = Time.time + 1f / fireRate;
         bulletSize += speedOfIncrease;
-        UIManager.Get().RefreshUI();
+        UIManager.Get().RefreshSizeBar();
     }
 
     public void Shoot()
@@ -56,6 +56,6 @@ public class Gun : MonobehaviourSingleton<Gun>
 
         b.GetComponent<Rigidbody>().AddForce(player.forward * shootPower * Time.fixedDeltaTime, ForceMode.Impulse);
         bulletSize = 0;
-        UIManager.Get().RefreshUI();
+        UIManager.Get().RefreshSizeBar();
     }
 }

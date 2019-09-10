@@ -8,7 +8,8 @@ public class UIManager : MonobehaviourSingleton<UIManager>
 {
     public Image healthBar;
     public Image sizeBar;
-    public TextMeshProUGUI soul;
+    public Image souls;
+    public float soulFillvelocity = 0.1f;
     Player player;
 
     public override void Awake()
@@ -23,9 +24,16 @@ public class UIManager : MonobehaviourSingleton<UIManager>
         sizeBar.fillAmount = 0;
     }
 
-    public void RefreshUI()
+    public void RefreshSouls()
     {
-        soul.text = player.soulsCollected.ToString();
+        if(souls.fillAmount < 1)
+        {
+            souls.fillAmount += soulFillvelocity;
+        }      
+    }
+
+    public void RefreshSizeBar()
+    {
         sizeBar.fillAmount = Gun.Get().bulletSize;
     }
 

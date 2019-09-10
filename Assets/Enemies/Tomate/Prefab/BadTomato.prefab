@@ -462,7 +462,7 @@ MonoBehaviour:
   healthBar: {fileID: 937135447}
   mat: {fileID: 8473002528761685935}
   soul: {fileID: 2755025432096814672, guid: bbb2e3cc93231ea4693a91d68b591dcd, type: 3}
-  flashTime: 0.2
+  flashTime: 0.3
 --- !u!195 &5109970869550772384
 NavMeshAgent:
   m_ObjectHideFlags: 0
