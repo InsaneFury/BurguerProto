@@ -116,8 +116,8 @@ public class Player : MonobehaviourSingleton<Player>
     {
         if (other.CompareTag("Soul"))
         {
-            UIManager.Get().RefreshUI();
             soulsCollected++;
+            UIManager.Get().RefreshUI();
             Destroy(other.gameObject);
         }
     }

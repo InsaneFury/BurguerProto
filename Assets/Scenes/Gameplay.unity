@@ -2331,7 +2331,7 @@ MonoBehaviour:
   bulletSize: 0.1
   maxBulletSize: 1
   speedOfIncrease: 0.2
-  dropDistance: 2
+  dropDistance: 4
   shootPower: 10
   fireRate: 2
 --- !u!1001 &536411812
