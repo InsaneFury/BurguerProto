@@ -30,7 +30,7 @@ public class Gun : MonobehaviourSingleton<Gun>
 
     private void Update()
     {
-        if ((bulletSize < maxBulletSize) && Input.GetMouseButton(0) && (Time.time >= timeToFire))
+        if ((bulletSize < maxBulletSize) && Input.GetButton("Fire1") && (Time.time >= timeToFire))
         {
             IncreaseBulletSize();
         }
