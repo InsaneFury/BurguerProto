@@ -14,14 +14,6 @@ public class ItemCollector : MonoBehaviour
         player = Player.Get();
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Soul"))
-        {
-            CollectItemUsingPhysics();
-        }
-    }
-
     private void FixedUpdate()
     {
         CollectItemUsingPhysics();

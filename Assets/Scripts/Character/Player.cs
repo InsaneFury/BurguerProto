@@ -120,11 +120,11 @@ public class Player : MonobehaviourSingleton<Player>
 
     private void OnTriggerEnter(Collider other)
     {
-       /* if (other.CompareTag("Soul"))
+       if (other.CompareTag("Soul"))
         {
             soulsCollected++;
             UIManager.Get().RefreshUI();
             Destroy(other.gameObject);
-        }*/
+        }
     } 
 }
