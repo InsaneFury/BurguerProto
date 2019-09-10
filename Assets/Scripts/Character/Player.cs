@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class Player : MonobehaviourSingleton<Player>
 {
+    [Header("Mouse Vision")]
     public Transform crosshair;
     public Transform vision;
+    public float rayLenght = 100;
 
+    [Header("Movement Speed")]
     public float speed = 0.5f;
     public float rotationSpeed = 0.5f;
 
-    public float rayLenght = 100;
+    [Header("Player Settings")]
     public float life = 100;
+
+    [HideInInspector]
     public int soulsCollected = 0;
 
+    [Header("Animator Settings")]
     public Animator animTop;
     public Animator animBottom;
-
     public GameObject Top;
 
     Rigidbody rb;
@@ -24,6 +29,7 @@ public class Player : MonobehaviourSingleton<Player>
     [HideInInspector]
     public Vector3 forward;
 
+    [Header("Camera Settings")]
     public Camera cam;
     Vector3 cameraForward;
     Vector3 cameraRight;
@@ -114,11 +120,11 @@ public class Player : MonobehaviourSingleton<Player>
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Soul"))
+       /* if (other.CompareTag("Soul"))
         {
             soulsCollected++;
             UIManager.Get().RefreshUI();
             Destroy(other.gameObject);
-        }
-    }
+        }*/
+    } 
 }
