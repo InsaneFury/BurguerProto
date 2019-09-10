@@ -98,6 +98,7 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         Drop();
+        EnemySpawner.Get().spawnedEnemies.Remove(gameObject);
         Destroy(gameObject);
     }
 
