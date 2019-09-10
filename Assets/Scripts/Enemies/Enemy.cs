@@ -17,6 +17,9 @@ public class Enemy : MonoBehaviour
     [Header("Drops")]
     public GameObject soul;
 
+    [Header("VFX")]
+    public float flashTime = 0.1f;
+
     Player player;
     Animator anim;
     Rigidbody rb;
@@ -109,7 +112,7 @@ public class Enemy : MonoBehaviour
     IEnumerator DamageFeedback()
     {
         mat.gameObject.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(flashTime);
         mat.gameObject.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
     }
     void Drop()

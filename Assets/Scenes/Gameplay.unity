@@ -1288,8 +1288,8 @@ MonoBehaviour:
   isPersistant: 0
   crosshair: {fileID: 973078813}
   vision: {fileID: 233962006}
-  speed: 200
-  rotationSpeed: 200
+  speed: 400
+  rotationSpeed: 400
   rayLenght: 100
   life: 100
   soulsCollected: 0
@@ -1321,8 +1321,8 @@ Rigidbody:
   m_GameObject: {fileID: 177865247}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 1
+  m_Drag: 20
+  m_AngularDrag: 20
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -3136,7 +3136,7 @@ PrefabInstance:
     - target: {fileID: 5175057131580403563, guid: 3ff00bce8c47bac489085a29a295ba4e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5175057131580403563, guid: 3ff00bce8c47bac489085a29a295ba4e,
         type: 3}
@@ -3437,7 +3437,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -4128,7 +4128,7 @@ PrefabInstance:
     - target: {fileID: 2340563131579907084, guid: 9f68ace3540ab3846956490bdc54cc2e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 2340563131579907084, guid: 9f68ace3540ab3846956490bdc54cc2e,
         type: 3}
@@ -4618,7 +4618,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -6406,7 +6406,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -7104,7 +7104,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
