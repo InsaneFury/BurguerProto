@@ -7,7 +7,7 @@ public class Explosion : MonoBehaviour
     public float time = 2f;
     public float explosionForce = 5000f;
     public float explosionRadius = 10f;
-    public int explosionDamage = 10;
+    public int explosionDamage = 20;
     public LayerMask layer;
     public GameObject explosion;
     public GameObject heatWave;
@@ -31,7 +31,8 @@ public class Explosion : MonoBehaviour
             Rigidbody hrb = hit.GetComponent<Rigidbody>();
             Enemy enemy = hit.GetComponent<Enemy>();
 
-            enemy.TakeDamage(explosionDamage);
+            int randDmg = (int)Random.Range(1, explosionDamage);
+            enemy.TakeDamage(randDmg);
 
             if (hrb != null)
             {

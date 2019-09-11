@@ -31,7 +31,6 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
         GameObject go = Instantiate(enemies[randEnemy], 
             spawnPoints[randSpawnPoint].transform.position, 
             enemies[randEnemy].transform.rotation);
-        Debug.Log(randSize);
         go.transform.localScale = new Vector3(randSize,randSize,randSize);
 
         spawnedEnemies.Add(go);
