@@ -46,25 +46,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionQuad: {fileID: 8066221440837111095}
-  ExplosionMat: {fileID: 2100000, guid: b5119b183ee080e4f81e7eb6890410c4, type: 2}
+  ExplosionMat: {fileID: 2100000, guid: f09d6484de4ade84082c52d3a5d3e0f7, type: 2}
   ScaleCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
-      tangentMode: 0
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.9872288
-      value: 15.020938
+      time: 1
+      value: 1
       inSlope: 0
       outSlope: 0
-      tangentMode: 0
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0
@@ -75,22 +75,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0.0000076293945
-      value: 3.9487915
+      time: 0
+      value: 1
       inSlope: 0
       outSlope: 0
-      tangentMode: 0
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 2.1002502
-      value: -0.009597778
-      inSlope: -0.025131255
-      outSlope: -0.025131255
-      tangentMode: 0
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
       weightedMode: 0
-      inWeight: 1
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2

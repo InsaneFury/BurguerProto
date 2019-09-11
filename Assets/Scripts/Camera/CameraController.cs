@@ -19,7 +19,6 @@ public class CameraController : MonoBehaviour
 
     void LateUpdate()
     {
-
         FollowTarget();
         if (Input.GetMouseButton(1))
         {
