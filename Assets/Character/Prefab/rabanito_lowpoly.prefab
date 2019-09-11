@@ -101,7 +101,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 512
-  explosion: {fileID: 1000012903210382, guid: a6a622dcb6224014f923dc6743bf35d3, type: 3}
+  explosion: {fileID: 1000012903210382, guid: 6a8df6952e1b43b4f83bead744b4ea28, type: 3}
   heatWave: {fileID: 8066221439061662295, guid: 982055f0db9a28a44877d98331b6626c,
     type: 3}
 --- !u!54 &5591394167231188466

@@ -32,7 +32,6 @@ public class Explosion : MonoBehaviour
             Enemy enemy = hit.GetComponent<Enemy>();
 
             enemy.TakeDamage(explosionDamage);
-            Debug.Log(hit.transform.name + " life: " + enemy.life);
 
             if (hrb != null)
             {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using TMPro;
 
 public class Enemy : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class Enemy : MonoBehaviour
     public float life = 100f;
     public Image healthBar;
     public GameObject mat;
+    public GameObject popUp;
 
     [Header("Drops")]
     public GameObject soul;
@@ -79,7 +81,12 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int dmg)
     {
-        if(life > 0)
+        if (popUp)
+        {
+            ShowPopUp(dmg);
+        }
+        
+        if (life > 0)
         {
             StartCoroutine("DamageFeedback");
             life -= dmg;
@@ -119,5 +126,10 @@ public class Enemy : MonoBehaviour
     void Drop()
     {
         Instantiate(soul, transform.position, Quaternion.identity);
+    }
+    void ShowPopUp(int dmg)
+    {
+        GameObject go = Instantiate(popUp, transform.position, Quaternion.identity, transform);
+        go.GetComponent<TextMeshPro>().text = dmg.ToString();
     }
 }

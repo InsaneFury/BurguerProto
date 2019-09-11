@@ -461,6 +461,7 @@ MonoBehaviour:
   life: 100
   healthBar: {fileID: 937135447}
   mat: {fileID: 8473002528761685935}
+  popUp: {fileID: 4771802812483107025, guid: 87863029054c3f5488297a4b3215a044, type: 3}
   soul: {fileID: 2755025432096814672, guid: bbb2e3cc93231ea4693a91d68b591dcd, type: 3}
   flashTime: 0.3
 --- !u!195 &5109970869550772384
