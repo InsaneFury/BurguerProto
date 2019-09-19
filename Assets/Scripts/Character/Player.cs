@@ -15,8 +15,11 @@ public class Player : MonobehaviourSingleton<Player>
     Vector3 playerMove;
 
     [Header("Dash")]
-    public float dashSpeed = 500f;
-    public float dashTime = 2f;
+    public float dashSpeed = 100f;
+    public float dashTime = 1f;
+    public GameObject trail;
+    public Material topMat;
+    public Material bottomMat;
 
     [Header("Player Settings")]
     public float life = 100;
@@ -136,7 +139,18 @@ public class Player : MonobehaviourSingleton<Player>
 
     void Dash()
     {
-        Debug.Log("Dash");
+        StartCoroutine(ActiveDashTrail());
         rb.velocity = playerMove * dashSpeed;
+    }
+
+    IEnumerator ActiveDashTrail()
+    {
+        trail.SetActive(true);
+        topMat.EnableKeyword("_EMISSION");
+        bottomMat.EnableKeyword("_EMISSION");
+        yield return new WaitForSeconds(dashTime);
+        trail.SetActive(false);
+        topMat.DisableKeyword("_EMISSION");
+        bottomMat.DisableKeyword("_EMISSION");
     }
 }
