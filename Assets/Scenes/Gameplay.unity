@@ -5855,7 +5855,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   pullRadius: 10
-  pullForce: 5000
+  pullForce: 10000
 --- !u!1 &1364512822
 GameObject:
   m_ObjectHideFlags: 0
