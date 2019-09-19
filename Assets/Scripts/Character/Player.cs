@@ -12,6 +12,11 @@ public class Player : MonobehaviourSingleton<Player>
     [Header("Movement Speed")]
     public float speed = 0.5f;
     public float rotationSpeed = 0.5f;
+    Vector3 playerMove;
+
+    [Header("Dash")]
+    public float dashSpeed = 500f;
+    public float dashTime = 2f;
 
     [Header("Player Settings")]
     public float life = 100;
@@ -48,12 +53,14 @@ public class Player : MonobehaviourSingleton<Player>
     {
         Move();
         RotateToMouse();
+        if (Input.GetButtonDown("Jump"))
+        {
+            Dash();
+        }
     }
 
     void Move()
     {
-        Vector3 playerMove;
-
         float vertical = Input.GetAxis("Vertical") * speed;
         float horizontal = Input.GetAxis("Horizontal") * rotationSpeed;
 
@@ -126,4 +133,10 @@ public class Player : MonobehaviourSingleton<Player>
             Destroy(other.gameObject);
         }
     } 
+
+    void Dash()
+    {
+        Debug.Log("Dash");
+        rb.velocity = playerMove * dashSpeed;
+    }
 }
