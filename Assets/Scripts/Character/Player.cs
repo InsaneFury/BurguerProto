@@ -126,6 +126,7 @@ public class Player : MonobehaviourSingleton<Player>
     {
         life -= dmg;
         UIManager.Get().RefreshHealthbar();
+        Death();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -140,7 +141,14 @@ public class Player : MonobehaviourSingleton<Player>
     void Dash()
     {
         StartCoroutine(ActiveDashTrail());
-        rb.velocity = playerMove * dashSpeed;
+        if (playerMove == Vector3.zero)
+        {
+            rb.velocity = cameraForward * dashSpeed;
+        }
+        else
+        {
+            rb.velocity = playerMove * dashSpeed;
+        }
     }
 
     IEnumerator ActiveDashTrail()
@@ -152,5 +160,14 @@ public class Player : MonobehaviourSingleton<Player>
         trail.SetActive(false);
         topMat.DisableKeyword("_EMISSION");
         bottomMat.DisableKeyword("_EMISSION");
+    }
+
+    void Death()
+    {
+        if(life <= 0)
+        {
+            animBottom.SetBool("death", true);
+            animTop.SetBool("death", true);
+        }
     }
 }

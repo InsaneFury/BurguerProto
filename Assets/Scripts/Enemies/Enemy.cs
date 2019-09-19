@@ -123,10 +123,12 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(flashTime);
         mat.gameObject.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
     }
+
     void Drop()
     {
         Instantiate(soul, transform.position, Quaternion.identity);
     }
+
     void ShowPopUp(int dmg)
     {
         GameObject go = Instantiate(popUp, transform.position, Quaternion.identity, transform);
