@@ -47,7 +47,7 @@ public class Player : MonobehaviourSingleton<Player>
     Vector3 pointToLook = Vector3.zero;
     [HideInInspector]
     public Vector3 forward;
-    bool isAlive = true;
+    public bool isAlive = true;
     bool isDashing = false;
     float originalLife = 0;
 
