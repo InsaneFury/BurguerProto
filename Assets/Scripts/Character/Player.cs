@@ -140,6 +140,8 @@ public class Player : MonobehaviourSingleton<Player>
 
     void Dash()
     {
+        animBottom.SetTrigger("dash");
+        animTop.SetTrigger("dash");
         StartCoroutine(ActiveDashTrail());
         if (playerMove == Vector3.zero)
         {
@@ -149,6 +151,7 @@ public class Player : MonobehaviourSingleton<Player>
         {
             rb.velocity = playerMove * dashSpeed;
         }
+
     }
 
     IEnumerator ActiveDashTrail()
