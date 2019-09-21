@@ -43,6 +43,7 @@ public class Player : MonobehaviourSingleton<Player>
     [HideInInspector]
     public Vector3 forward;
     bool isAlive = true;
+    bool isDashing = false;
 
     public override void Awake()
     {
@@ -84,7 +85,10 @@ public class Player : MonobehaviourSingleton<Player>
 
         Quaternion turn = transform.rotation;
         turn.SetLookRotation(transform.position + playerMove * rotationSpeed);
-        transform.rotation = new Quaternion(0f,turn.y,0f,turn.w);      
+        transform.rotation = new Quaternion(0f,turn.y,0f,turn.w);
+
+        if(isDashing)
+        Top.transform.rotation = transform.rotation;
 
         animBottom.SetFloat("horizontal", horizontal);
         animBottom.SetFloat("vertical", vertical);
@@ -112,7 +116,10 @@ public class Player : MonobehaviourSingleton<Player>
         crosshair.position = pointToLook;
 
         vision.rotation = Quaternion.LookRotation(forward, Vector3.up);
-        Top.transform.rotation = Quaternion.LookRotation(forward, Vector3.up);
+        if (!isDashing)
+        {
+            Top.transform.rotation = Quaternion.LookRotation(forward, Vector3.up);
+        }    
     }
 
     void CameraDirection()
@@ -152,8 +159,7 @@ public class Player : MonobehaviourSingleton<Player>
         }
         
         soulsCollected -= dashCost;
-        animBottom.SetTrigger("dash");
-        animTop.SetTrigger("dash");
+       
         StartCoroutine(ActiveDashTrail());
         if (playerMove == Vector3.zero)
         {
@@ -169,12 +175,18 @@ public class Player : MonobehaviourSingleton<Player>
     IEnumerator ActiveDashTrail()
     {
         trail.SetActive(true);
+        animBottom.SetTrigger("dash");
+        animTop.SetTrigger("dash");
         topMat.EnableKeyword("_EMISSION");
         bottomMat.EnableKeyword("_EMISSION");
+        isDashing = true;
         yield return new WaitForSeconds(dashTime);
         trail.SetActive(false);
+        animBottom.ResetTrigger("dash");
+        animTop.ResetTrigger("dash");
         topMat.DisableKeyword("_EMISSION");
         bottomMat.DisableKeyword("_EMISSION");
+        isDashing = false;
     }
 
     void Death()
