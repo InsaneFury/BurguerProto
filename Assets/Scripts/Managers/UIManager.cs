@@ -28,7 +28,7 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     {
         if(souls.fillAmount < 1)
         {
-            souls.fillAmount += soulFillvelocity;
+            souls.fillAmount = player.soulsCollected / 100f;
         }      
     }
 

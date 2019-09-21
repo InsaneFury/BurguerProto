@@ -97,11 +97,12 @@ MonoBehaviour:
   time: 0.2
   explosionForce: 5000
   explosionRadius: 5
-  explosionDamage: 20
+  minExplosionDamage: 20
+  maxExplosionDamage: 50
   layer:
     serializedVersion: 2
     m_Bits: 512
-  explosion: {fileID: 1000012903210382, guid: 6a8df6952e1b43b4f83bead744b4ea28, type: 3}
+  explosion: {fileID: 1000012903210382, guid: 0b0074ff9f3fc6c4c90891df7442ead4, type: 3}
   heatWave: {fileID: 8066221439061662295, guid: 982055f0db9a28a44877d98331b6626c,
     type: 3}
 --- !u!54 &5591394167231188466

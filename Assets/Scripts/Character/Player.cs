@@ -20,11 +20,12 @@ public class Player : MonobehaviourSingleton<Player>
     public GameObject trail;
     public Material topMat;
     public Material bottomMat;
+    public int dashCost = 2;
 
     [Header("Player Settings")]
     public float life = 100;
 
-    [HideInInspector]
+    [Header("Souls")]
     public int soulsCollected = 0;
 
     [Header("Animator Settings")]
@@ -134,12 +135,19 @@ public class Player : MonobehaviourSingleton<Player>
        if (other.CompareTag("Soul"))
         {
             UIManager.Get().RefreshSouls();
+            soulsCollected++;
             Destroy(other.gameObject);
         }
     } 
 
     void Dash()
     {
+        if(soulsCollected < dashCost)
+        {
+            return;
+        }
+        
+        soulsCollected -= dashCost;
         animBottom.SetTrigger("dash");
         animTop.SetTrigger("dash");
         StartCoroutine(ActiveDashTrail());
@@ -151,7 +159,7 @@ public class Player : MonobehaviourSingleton<Player>
         {
             rb.velocity = playerMove * dashSpeed;
         }
-
+        UIManager.Get().RefreshSouls();
     }
 
     IEnumerator ActiveDashTrail()
