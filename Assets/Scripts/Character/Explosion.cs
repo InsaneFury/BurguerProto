@@ -7,7 +7,8 @@ public class Explosion : MonoBehaviour
     public float time = 2f;
     public float explosionForce = 5000f;
     public float explosionRadius = 10f;
-    public int explosionDamage = 20;
+    public int minExplosionDamage = 20;
+    public int maxExplosionDamage = 50;
     public LayerMask layer;
     public GameObject explosion;
     public GameObject heatWave;
@@ -23,7 +24,7 @@ public class Explosion : MonoBehaviour
     void Explode()
     {
         Instantiate(explosion, transform.position, Quaternion.identity);
-        Instantiate(heatWave, transform.position, heatWave.transform.rotation);
+        //Instantiate(heatWave, transform.position, heatWave.transform.rotation);
         Vector3 explosionPos = transform.position;
         Collider[] colliders = Physics.OverlapSphere(explosionPos, explosionRadius,layer);
         foreach (Collider hit in colliders)
@@ -31,7 +32,7 @@ public class Explosion : MonoBehaviour
             Rigidbody hrb = hit.GetComponent<Rigidbody>();
             Enemy enemy = hit.GetComponent<Enemy>();
 
-            int randDmg = (int)Random.Range(1, explosionDamage);
+            int randDmg = (int)Random.Range(minExplosionDamage, maxExplosionDamage);
             enemy.TakeDamage(randDmg);
 
             if (hrb != null)

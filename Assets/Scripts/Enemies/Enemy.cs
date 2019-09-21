@@ -88,7 +88,7 @@ public class Enemy : MonoBehaviour
         
         if (life > 0)
         {
-            StartCoroutine("DamageFeedback");
+            //StartCoroutine("DamageFeedback");
             life -= dmg;
             if (life <= 0)
             {

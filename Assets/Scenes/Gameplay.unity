@@ -1182,8 +1182,8 @@ MonoBehaviour:
   crosshair: {fileID: 973078813}
   vision: {fileID: 233962006}
   rayLenght: 100
-  speed: 400
-  rotationSpeed: 400
+  speed: 700
+  rotationSpeed: 700
   dashSpeed: 500
   dashTime: 0.25
   trail: {fileID: 2109374928}
@@ -1221,7 +1221,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 20
   m_AngularDrag: 20
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 116
@@ -6856,13 +6856,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPersistant: 0
-  timeToSpawn: 5
+  timeToSpawn: 0.5
   enemies:
   - {fileID: 5109970869550772391, guid: bbe617c381600054bbebfca9a0604785, type: 3}
+  - {fileID: 3492087249705443679, guid: 7bf84ff54c81c7749899344f8d34e741, type: 3}
   bosses: []
   spawnPoints:
   - {fileID: 1906870266}
   spawnedEnemies: []
+  minEnemySize: 0.8
+  maxEnemySize: 1.1
 --- !u!1001 &1568857438
 PrefabInstance:
   m_ObjectHideFlags: 0
