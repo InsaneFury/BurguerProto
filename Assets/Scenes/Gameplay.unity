@@ -1195,8 +1195,8 @@ MonoBehaviour:
   animTop: {fileID: 510606018}
   animBottom: {fileID: 927148760}
   Top: {fileID: 510606016}
-  forward: {x: 0, y: 0, z: 0}
   cam: {fileID: 963194227}
+  forward: {x: 0, y: 0, z: 0}
 --- !u!136 &177865251
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6950,7 +6950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPersistant: 0
-  timeToSpawn: 0.5
+  timeToSpawn: 5
   enemies:
   - {fileID: 5109970869550772391, guid: bbe617c381600054bbebfca9a0604785, type: 3}
   - {fileID: 3492087249705443679, guid: 7bf84ff54c81c7749899344f8d34e741, type: 3}

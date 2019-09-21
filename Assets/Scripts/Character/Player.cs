@@ -33,15 +33,16 @@ public class Player : MonobehaviourSingleton<Player>
     public Animator animBottom;
     public GameObject Top;
 
-    Rigidbody rb;
-    Vector3 pointToLook = Vector3.zero;
-    [HideInInspector]
-    public Vector3 forward;
-
     [Header("Camera Settings")]
     public Camera cam;
     Vector3 cameraForward;
     Vector3 cameraRight;
+
+    Rigidbody rb;
+    Vector3 pointToLook = Vector3.zero;
+    [HideInInspector]
+    public Vector3 forward;
+    bool isAlive = true;
 
     public override void Awake()
     {
@@ -55,12 +56,15 @@ public class Player : MonobehaviourSingleton<Player>
 
     void Update()
     {
-        Move();
-        RotateToMouse();
-        if (Input.GetButtonDown("Jump"))
+        if(isAlive)
         {
-            Dash();
-        }
+            Move();
+            RotateToMouse();
+            if (Input.GetButtonDown("Jump"))
+            {
+                Dash();
+            }
+        } 
     }
 
     void Move()
@@ -177,6 +181,7 @@ public class Player : MonobehaviourSingleton<Player>
     {
         if(life <= 0)
         {
+            isAlive = false;
             animBottom.SetBool("death", true);
             animTop.SetBool("death", true);
         }
