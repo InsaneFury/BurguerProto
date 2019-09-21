@@ -1192,6 +1192,8 @@ MonoBehaviour:
   dashCost: 2
   life: 100
   soulsCollected: 100
+  healAmount: 0.1
+  healCost: 1
   animTop: {fileID: 510606018}
   animBottom: {fileID: 927148760}
   Top: {fileID: 510606016}
@@ -1614,8 +1616,6 @@ Transform:
   m_LocalPosition: {x: -0.04, y: -1.11, z: -0.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1098288893}
-  - {fileID: 2072310229}
   - {fileID: 1364512823}
   m_Father: {fileID: 177865248}
   m_RootOrder: 0
@@ -3073,6 +3073,26 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 2110760142}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &510606019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510606016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d75eba3aaf5d632479f7ac42a3c1c42e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPersistant: 0
+  bullet: {fileID: 5481822414896036123, guid: 35f4873cc9f657b448f56418d558c47f, type: 3}
+  bulletSize: 0.1
+  maxBulletSize: 1
+  speedOfIncrease: 0.2
+  dropDistance: 4
+  shootPower: 15
+  fireRate: 2
 --- !u!1 &535431757
 GameObject:
   m_ObjectHideFlags: 0
@@ -5257,57 +5277,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1091236172}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1098288892
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1098288893}
-  - component: {fileID: 1098288894}
-  m_Layer: 0
-  m_Name: Granades
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1098288893
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098288892}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.06, y: 1.56, z: 0.07}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 233962006}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1098288894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098288892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d75eba3aaf5d632479f7ac42a3c1c42e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPersistant: 0
-  bullet: {fileID: 5481822414896036123, guid: 35f4873cc9f657b448f56418d558c47f, type: 3}
-  bulletSize: 0.1
-  maxBulletSize: 1
-  speedOfIncrease: 0.2
-  dropDistance: 4
-  shootPower: 15
-  fireRate: 2
 --- !u!1 &1114176569
 GameObject:
   m_ObjectHideFlags: 0
@@ -6190,7 +6159,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 233962006}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 4.972, y: 0, z: 0}
 --- !u!108 &1364512824
 Light:
@@ -8251,12 +8220,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072310228}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.04, y: 1.11, z: 0.65}
+  m_LocalPosition: {x: 0, y: 0, z: 0.4300003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 535431758}
-  m_Father: {fileID: 233962006}
-  m_RootOrder: 1
+  m_Father: {fileID: 510606017}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2079807806
 PrefabInstance:

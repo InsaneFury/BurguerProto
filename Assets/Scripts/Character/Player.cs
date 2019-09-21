@@ -28,6 +28,11 @@ public class Player : MonobehaviourSingleton<Player>
     [Header("Souls")]
     public int soulsCollected = 0;
 
+    [Header("Heal")]
+    public float healAmount = 0.1f;
+    public int healCost = 1;
+
+
     [Header("Animator Settings")]
     public Animator animTop;
     public Animator animBottom;
@@ -44,6 +49,7 @@ public class Player : MonobehaviourSingleton<Player>
     public Vector3 forward;
     bool isAlive = true;
     bool isDashing = false;
+    float originalLife = 0;
 
     public override void Awake()
     {
@@ -53,6 +59,7 @@ public class Player : MonobehaviourSingleton<Player>
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        originalLife = life;
     }
 
     void Update()
@@ -65,6 +72,7 @@ public class Player : MonobehaviourSingleton<Player>
             {
                 Dash();
             }
+            Heal();
         } 
     }
 
@@ -187,6 +195,19 @@ public class Player : MonobehaviourSingleton<Player>
         topMat.DisableKeyword("_EMISSION");
         bottomMat.DisableKeyword("_EMISSION");
         isDashing = false;
+    }
+
+    void Heal()
+    {
+        bool canHeal = (soulsCollected >= healCost) && (life < originalLife);
+
+        if (Input.GetKey(KeyCode.E) && canHeal)
+        {
+            life += healAmount;
+            soulsCollected -= healCost;
+            UIManager.Get().RefreshSouls();
+            UIManager.Get().RefreshHealthbar();
+        }
     }
 
     void Death()
