@@ -8,6 +8,7 @@ TagManager:
   - Explosion
   - Soul
   - Collector
+  - Bullet
   layers:
   - Default
   - TransparentFX
