@@ -112,7 +112,7 @@ public class Player : MonobehaviourSingleton<Player>
         {
             animMachineGun.SetBool("run", true);
         }
-        else if(machineGunIsActive && movement.x <= 0 || movement.z <= 0)
+        else if(machineGunIsActive && (movement.x <= 0 || movement.z <= 0))
         {
             animMachineGun.SetBool("run", false);
         }
