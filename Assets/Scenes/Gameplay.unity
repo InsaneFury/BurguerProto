@@ -8312,7 +8312,7 @@ MonoBehaviour:
   - {fileID: 1906870266}
   spawnedEnemies: []
   minEnemySize: 0.8
-  maxEnemySize: 1.1
+  maxEnemySize: 1.3
 --- !u!4 &1560382315 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 8a1bd1df729f362428d9bc23fe7e1bc0,
