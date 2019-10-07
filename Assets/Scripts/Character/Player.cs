@@ -48,6 +48,7 @@ public class Player : MonobehaviourSingleton<Player>
     public bool machineGunIsActive = false;
     [HideInInspector]
     public Animator animMachineGun;
+    public Gun granade;
 
     Rigidbody rb;
     Vector3 pointToLook = Vector3.zero;
@@ -245,11 +246,13 @@ public class Player : MonobehaviourSingleton<Player>
         {
             machineGunIsActive = true;
             machineGun.SetActive(machineGunIsActive);
+            granade.enabled = false;
         }
         if (Input.GetKey(KeyCode.Alpha2))
         {
             machineGunIsActive = false;
             machineGun.SetActive(machineGunIsActive);
+            granade.enabled = true;
         }
 
         if (machineGunIsActive)
