@@ -54,6 +54,12 @@ public class MachineGun : MonoBehaviour
         {
             timeToFire = Time.time + 1f / fireRate;
             Shoot();
+            player.animMachineGun.SetBool("attack", true);
+            player.animTop.SetTrigger("attack");
+        }
+        if(Input.GetMouseButtonUp(0))
+        {
+            player.animMachineGun.SetBool("attack", false);
         }
     }
 

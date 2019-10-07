@@ -22,14 +22,12 @@ public class UIManager : MonobehaviourSingleton<UIManager>
         player = Player.Get();
         healthBar.fillAmount = player.life / 100f;
         sizeBar.fillAmount = 0;
+        RefreshSouls();
     }
 
     public void RefreshSouls()
     {
-        if(souls.fillAmount < 1)
-        {
-            souls.fillAmount = player.soulsCollected / 100f;
-        }      
+        souls.fillAmount = player.soulsCollected / 100f;
     }
 
     public void RefreshSizeBar()

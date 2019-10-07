@@ -43,10 +43,17 @@ public class Player : MonobehaviourSingleton<Player>
     Vector3 cameraForward;
     Vector3 cameraRight;
 
+    [Header("Weapons Settings")]
+    public GameObject machineGun;
+    public bool machineGunIsActive = false;
+    [HideInInspector]
+    public Animator animMachineGun;
+
     Rigidbody rb;
     Vector3 pointToLook = Vector3.zero;
     [HideInInspector]
     public Vector3 forward;
+    [HideInInspector]
     public bool isAlive = true;
     bool isDashing = false;
     float originalLife = 0;
@@ -60,12 +67,14 @@ public class Player : MonobehaviourSingleton<Player>
     {
         rb = GetComponent<Rigidbody>();
         originalLife = life;
+        animMachineGun = machineGun.GetComponent<Animator>();
     }
 
     void Update()
     {
         if(isAlive)
         {
+            WeaponChanger();
             Move();
             RotateToMouse();
             if (Input.GetButtonDown("Jump"))
@@ -98,10 +107,20 @@ public class Player : MonobehaviourSingleton<Player>
         if(isDashing)
         Top.transform.rotation = transform.rotation;
 
+        if (machineGunIsActive && movement.x > 0 || movement.z > 0)
+        {
+            animMachineGun.SetBool("run", true);
+        }
+        else if(machineGunIsActive && movement.x <= 0 || movement.z <= 0)
+        {
+            animMachineGun.SetBool("run", false);
+        }
+
         animBottom.SetFloat("horizontal", horizontal);
         animBottom.SetFloat("vertical", vertical);
         animTop.SetFloat("horizontal", horizontal);
         animTop.SetFloat("vertical", vertical);
+        
        
         rb.AddForce(playerMove * speed * Time.fixedDeltaTime,ForceMode.VelocityChange);
 
@@ -153,8 +172,8 @@ public class Player : MonobehaviourSingleton<Player>
     {
        if (other.CompareTag("Soul"))
         {
-            UIManager.Get().RefreshSouls();
             soulsCollected++;
+            UIManager.Get().RefreshSouls();
             Destroy(other.gameObject);
         }
     } 
@@ -217,6 +236,29 @@ public class Player : MonobehaviourSingleton<Player>
             isAlive = false;
             animBottom.SetBool("death", true);
             animTop.SetBool("death", true);
+        }
+    }
+
+    void WeaponChanger()
+    {
+        if (Input.GetKey(KeyCode.Alpha1))
+        {
+            machineGunIsActive = true;
+            machineGun.SetActive(machineGunIsActive);
+        }
+        if (Input.GetKey(KeyCode.Alpha2))
+        {
+            machineGunIsActive = false;
+            machineGun.SetActive(machineGunIsActive);
+        }
+
+        if (machineGunIsActive)
+        {
+            animTop.SetBool("machineGun", machineGunIsActive);
+        }
+        else
+        {
+            animTop.SetBool("machineGun", machineGunIsActive);
         }
     }
 }
