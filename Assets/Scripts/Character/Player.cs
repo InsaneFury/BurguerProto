@@ -56,7 +56,7 @@ public class Player : MonobehaviourSingleton<Player>
     public Vector3 forward;
     [HideInInspector]
     public bool isAlive = true;
-    bool isDashing = false;
+    public bool isDashing = false;
     float originalLife = 0;
 
     public override void Awake()
