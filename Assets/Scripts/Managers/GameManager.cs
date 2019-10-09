@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonobehaviourSingleton<GameManager>
 {
     Player player;
+
+    [Header("Game Settings")]
+    public bool gameStarted;
 
     [Header("GameOver")]
     public GameObject gameOverText;
@@ -13,11 +16,17 @@ public class GameManager : MonoBehaviour
     public FloatParameter gameOverSaturation;
     ColorGrading cg;
 
+    public override void Awake()
+    {
+        base.Awake();
+    }
+
     void Start()
     {
         player = Player.Get();
         profile.TryGetSettings(out cg);
         cg.saturation.value = new FloatParameter() { value = 0 };
+        gameStarted = true;
     }
 
     void Update()
@@ -30,6 +39,7 @@ public class GameManager : MonoBehaviour
 
     void GameOver()
     {
+        gameStarted = false;
         gameOverText.SetActive(true);
         cg.saturation.value = new FloatParameter() { value = gameOverSaturation };
     }
