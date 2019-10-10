@@ -116,6 +116,10 @@ public class Player : MonobehaviourSingleton<Player>
         {
             animMachineGun.SetBool("run", false);
         }
+        if(movement.x == 0 && movement.z == 0)
+        {
+            rb.velocity = Vector3.zero;
+        }
 
         animBottom.SetFloat("horizontal", horizontal);
         animBottom.SetFloat("vertical", vertical);
