@@ -9870,8 +9870,8 @@ MonoBehaviour:
     - {fileID: 7699124604792840249, guid: 5df0b42f13ebf564bba7b212accbdf5b, type: 3}
     - {fileID: 3492087249705443679, guid: 7bf84ff54c81c7749899344f8d34e741, type: 3}
     timeBetweenEnemies: 1
-  nextWaveIfEmpty: 1
-  timeBetweenWaves: 30
+  nextWaveIfEmpty: 0
+  timeBetweenWaves: 10
   spawnPoints:
   - {fileID: 1906870266}
   spawnedEnemies: []
