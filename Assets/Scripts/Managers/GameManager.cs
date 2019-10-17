@@ -23,6 +23,7 @@ public class GameManager : MonobehaviourSingleton<GameManager>
 
     void Start()
     {
+        UIManager.Get().version.text = Application.version;
         player = Player.Get();
         profile.TryGetSettings(out cg);
         cg.saturation.value = new FloatParameter() { value = 0 };

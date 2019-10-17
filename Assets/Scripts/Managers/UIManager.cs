@@ -15,6 +15,7 @@ public class UIManager : MonobehaviourSingleton<UIManager>
 
     [Header("HUD Settings")]
     public float soulFillvelocity = 0.1f;
+    public TextMeshProUGUI version;
 
     [Header("Wave Time Settings")]
     public GameObject waveWithTimer;
