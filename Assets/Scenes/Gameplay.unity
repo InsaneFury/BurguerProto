@@ -1359,9 +1359,11 @@ MonoBehaviour:
   animMachineGun: {fileID: 0}
   granade: {fileID: 612681273}
   sword: {fileID: 2116247485}
+  meleeMaxCooldown: 10
   forward: {x: 0, y: 0, z: 0}
   isAlive: 1
   isDashing: 0
+  isMeleeing: 0
 --- !u!136 &177865251
 CapsuleCollider:
   m_ObjectHideFlags: 0

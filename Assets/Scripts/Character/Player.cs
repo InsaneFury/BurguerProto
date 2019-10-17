@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonobehaviourSingleton<Player>
 {
+
     [Header("Mouse Vision")]
     public Transform crosshair;
     public Transform vision;
@@ -50,6 +51,8 @@ public class Player : MonobehaviourSingleton<Player>
     public Animator animMachineGun;
     public Gun granade;
     public GameObject sword;
+    public float meleeMaxCooldown = 5f;
+    float comboMeleeTimer = 0f;
 
     Rigidbody rb;
     Vector3 pointToLook = Vector3.zero;
@@ -58,7 +61,9 @@ public class Player : MonobehaviourSingleton<Player>
     [HideInInspector]
     public bool isAlive = true;
     public bool isDashing = false;
+    public bool isMeleeing = false;
     float originalLife = 0;
+    int comboCounter = 0;
 
     public override void Awake()
     {
@@ -70,12 +75,18 @@ public class Player : MonobehaviourSingleton<Player>
         rb = GetComponent<Rigidbody>();
         originalLife = life;
         animMachineGun = machineGun.GetComponent<Animator>();
+        comboMeleeTimer = meleeMaxCooldown;
     }
 
     void Update()
     {
         if(isAlive)
         {
+            if (isMeleeing)
+            {
+                comboMeleeTimer -= Time.deltaTime;
+            }
+            SwordAttack();
             WeaponChanger();
             Move();
             RotateToMouse();
@@ -242,6 +253,43 @@ public class Player : MonobehaviourSingleton<Player>
             isAlive = false;
             animBottom.SetBool("death", true);
             animTop.SetBool("death", true);
+        }
+    }
+
+    void SwordAttack()
+    {
+        if (comboMeleeTimer <= 0)
+        {
+            comboCounter = 0;
+            isMeleeing = false;
+            comboMeleeTimer = meleeMaxCooldown;
+        }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            comboCounter++;
+            
+            if(comboCounter == 1)
+            {
+                animTop.SetTrigger("swordOne");
+                animBottom.SetTrigger("swordOne");
+                comboMeleeTimer = meleeMaxCooldown;
+                isMeleeing = true;
+            }
+            if ((comboCounter == 2) && (comboMeleeTimer > 0))
+            {
+                animTop.SetBool("swordTwo", true);
+                animBottom.SetBool("swordTwo", true);
+                comboMeleeTimer = meleeMaxCooldown;
+            }
+            if ((comboCounter == 3) && (comboMeleeTimer > 0))
+            {
+                animTop.SetBool("swordThree", true);
+                animBottom.SetBool("swordThree", true);
+                animTop.SetBool("swordTwo", false);
+                animBottom.SetBool("swordTwo", false);
+                comboMeleeTimer = meleeMaxCooldown;
+            } 
         }
     }
 
