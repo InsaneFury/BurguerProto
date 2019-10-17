@@ -11025,6 +11025,7 @@ MonoBehaviour:
   healthSkill: {fileID: 496538943}
   dashSkill: {fileID: 1240810118}
   soulFillvelocity: 0.1
+  version: {fileID: 1713221564}
   waveWithTimer: {fileID: 394770496}
   waveTimer: {fileID: 177560353}
   waveWithEnemies: {fileID: 918312365}
