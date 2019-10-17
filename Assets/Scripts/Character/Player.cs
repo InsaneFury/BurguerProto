@@ -49,6 +49,7 @@ public class Player : MonobehaviourSingleton<Player>
     [HideInInspector]
     public Animator animMachineGun;
     public Gun granade;
+    public GameObject sword;
 
     Rigidbody rb;
     Vector3 pointToLook = Vector3.zero;
@@ -251,12 +252,21 @@ public class Player : MonobehaviourSingleton<Player>
             machineGunIsActive = true;
             machineGun.SetActive(machineGunIsActive);
             granade.enabled = false;
+            sword.SetActive(false);
         }
         if (Input.GetKey(KeyCode.Alpha2))
         {
             machineGunIsActive = false;
             machineGun.SetActive(machineGunIsActive);
             granade.enabled = true;
+            sword.SetActive(false);
+        }
+        if (Input.GetKey(KeyCode.Alpha3))
+        {
+            machineGunIsActive = false;
+            machineGun.SetActive(machineGunIsActive);
+            granade.enabled = false;
+            sword.SetActive(true);
         }
 
         if (machineGunIsActive)
