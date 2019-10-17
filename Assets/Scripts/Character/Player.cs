@@ -108,7 +108,7 @@ public class Player : MonobehaviourSingleton<Player>
         if(isDashing)
         Top.transform.rotation = transform.rotation;
 
-        if (machineGunIsActive && movement.x > 0 || movement.z > 0)
+        if (machineGunIsActive && (movement.x > 0 || movement.z > 0))
         {
             animMachineGun.SetBool("run", true);
         }
