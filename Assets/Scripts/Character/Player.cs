@@ -277,11 +277,8 @@ public class Player : MonobehaviourSingleton<Player>
             animTop.SetBool("exitCombo",true);
 
             animTop.ResetTrigger("swordOne");
-            animBottom.ResetTrigger("swordOne");
             animTop.SetBool("swordTwo",false);
-            animBottom.SetBool("swordTwo", false);
             animTop.SetBool("swordThree", false);
-            animBottom.SetBool("swordThree", false);
             comboMeleeTimer = meleeMaxCooldown;
         }
 
@@ -294,7 +291,6 @@ public class Player : MonobehaviourSingleton<Player>
             if (comboCounter == 1)
             {
                 animTop.SetTrigger("swordOne");
-                animBottom.SetTrigger("swordOne");
                 comboMeleeTimer = meleeMaxCooldown;
                 isMeleeing = true;
                 sword.GetComponent<BoxCollider>().enabled = true;
@@ -302,14 +298,12 @@ public class Player : MonobehaviourSingleton<Player>
             if ((comboCounter == 2) && (comboMeleeTimer > 0))
             {
                 animTop.SetBool("swordTwo",true);
-                animBottom.SetBool("swordTwo", true);
                 comboMeleeTimer = meleeMaxCooldown;
                 sword.GetComponent<BoxCollider>().enabled = true;
             }
             if ((comboCounter == 3) && (comboMeleeTimer > 0))
             {
                 animTop.SetBool("swordThree", true);
-                animBottom.SetBool("swordThree", true);
                 comboMeleeTimer = meleeMaxCooldown;
                 sword.GetComponent<BoxCollider>().enabled = true;
             } 
