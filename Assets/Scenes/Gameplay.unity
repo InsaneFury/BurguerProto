@@ -356,7 +356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &29471856
 Transform:
   m_ObjectHideFlags: 0
@@ -1359,7 +1359,7 @@ MonoBehaviour:
   animMachineGun: {fileID: 0}
   granade: {fileID: 612681273}
   sword: {fileID: 2116247485}
-  meleeMaxCooldown: 10
+  meleeMaxCooldown: 0.6
   forward: {x: 0, y: 0, z: 0}
   isAlive: 1
   isDashing: 0

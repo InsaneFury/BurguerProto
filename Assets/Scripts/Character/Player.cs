@@ -53,6 +53,7 @@ public class Player : MonobehaviourSingleton<Player>
     public GameObject sword;
     public float meleeMaxCooldown = 5f;
     float comboMeleeTimer = 0f;
+    bool swordIsActive = false;
 
     Rigidbody rb;
     Vector3 pointToLook = Vector3.zero;
@@ -86,7 +87,11 @@ public class Player : MonobehaviourSingleton<Player>
             {
                 comboMeleeTimer -= Time.deltaTime;
             }
-            SwordAttack();
+            if (swordIsActive)
+            {
+                SwordAttack();
+            }
+            
             WeaponChanger();
             Move();
             RotateToMouse();
@@ -163,7 +168,11 @@ public class Player : MonobehaviourSingleton<Player>
         if (!isDashing)
         {
             Top.transform.rotation = Quaternion.LookRotation(forward, Vector3.up);
-        }    
+        }
+        if (!isMeleeing)
+        {
+            Top.transform.rotation = Quaternion.LookRotation(forward, Vector3.up);
+        }
     }
 
     void CameraDirection()
@@ -262,13 +271,24 @@ public class Player : MonobehaviourSingleton<Player>
         {
             comboCounter = 0;
             isMeleeing = false;
+           
+            animBottom.SetBool("exitCombo",true);
+            animTop.SetBool("exitCombo",true);
+
+            animTop.ResetTrigger("swordOne");
+            animBottom.ResetTrigger("swordOne");
+            animTop.SetBool("swordTwo",false);
+            animBottom.SetBool("swordTwo", false);
+            animTop.SetBool("swordThree", false);
+            animBottom.SetBool("swordThree", false);
             comboMeleeTimer = meleeMaxCooldown;
         }
 
         if (Input.GetButtonDown("Fire1"))
         {
+            StartCoroutine("ResetAnimationsTriggers");
             comboCounter++;
-            
+
             if(comboCounter == 1)
             {
                 animTop.SetTrigger("swordOne");
@@ -278,7 +298,7 @@ public class Player : MonobehaviourSingleton<Player>
             }
             if ((comboCounter == 2) && (comboMeleeTimer > 0))
             {
-                animTop.SetBool("swordTwo", true);
+                animTop.SetBool("swordTwo",true);
                 animBottom.SetBool("swordTwo", true);
                 comboMeleeTimer = meleeMaxCooldown;
             }
@@ -286,8 +306,6 @@ public class Player : MonobehaviourSingleton<Player>
             {
                 animTop.SetBool("swordThree", true);
                 animBottom.SetBool("swordThree", true);
-                animTop.SetBool("swordTwo", false);
-                animBottom.SetBool("swordTwo", false);
                 comboMeleeTimer = meleeMaxCooldown;
             } 
         }
@@ -301,6 +319,7 @@ public class Player : MonobehaviourSingleton<Player>
             machineGun.SetActive(machineGunIsActive);
             granade.enabled = false;
             sword.SetActive(false);
+            swordIsActive = false;
         }
         if (Input.GetKey(KeyCode.Alpha2))
         {
@@ -308,6 +327,7 @@ public class Player : MonobehaviourSingleton<Player>
             machineGun.SetActive(machineGunIsActive);
             granade.enabled = true;
             sword.SetActive(false);
+            swordIsActive = false;
         }
         if (Input.GetKey(KeyCode.Alpha3))
         {
@@ -315,6 +335,7 @@ public class Player : MonobehaviourSingleton<Player>
             machineGun.SetActive(machineGunIsActive);
             granade.enabled = false;
             sword.SetActive(true);
+            swordIsActive = true;
         }
 
         if (machineGunIsActive)
@@ -325,5 +346,13 @@ public class Player : MonobehaviourSingleton<Player>
         {
             animTop.SetBool("machineGun", machineGunIsActive);
         }
+    }
+
+    IEnumerator ResetAnimationsTriggers()
+    {
+
+        yield return new WaitForSecondsRealtime(1);
+        animBottom.SetBool("exitCombo", false);
+        animTop.SetBool("exitCombo", false);
     }
 }

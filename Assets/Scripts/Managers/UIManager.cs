@@ -97,37 +97,44 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     #region Wave info
     void ShowWaveInfo()
     {
-        waveCompleted.SetActive(false);
-        if (eSpawner.nextWaveIfEmpty)
+        if(eSpawner != null)
         {
-            waveEnemiesAlive.text = eSpawner.spawnedEnemies.Count.ToString();
-            waveWithEnemies.SetActive(true);
-            waveWithTimer.SetActive(false);
+            waveCompleted.SetActive(false);
+            if (eSpawner.nextWaveIfEmpty)
+            {
+                waveEnemiesAlive.text = eSpawner.spawnedEnemies.Count.ToString();
+                waveWithEnemies.SetActive(true);
+                waveWithTimer.SetActive(false);
+            }
+            else
+            {
+                waveTimer.text = "00:" + eSpawner.seconds.ToString();
+                waveWithEnemies.SetActive(false);
+                waveWithTimer.SetActive(true);
+            }
         }
-        else
-        {
-            waveTimer.text = "00:" + eSpawner.seconds.ToString();
-            waveWithEnemies.SetActive(false);
-            waveWithTimer.SetActive(true);
-        }
+        
     }
 
     void RefreshWaveInfo()
     {
-        if (eSpawner.nextWaveIfEmpty)
+        if (eSpawner != null)
         {
-            waveEnemiesAlive.text = "0" + eSpawner.spawnedEnemies.Count;
-        }
-        else
-        {
-            waveTimer.text = "00:" + eSpawner.seconds.ToString();
-        }
+            if (eSpawner.nextWaveIfEmpty)
+            {
+                waveEnemiesAlive.text = "0" + eSpawner.spawnedEnemies.Count;
+            }
+            else
+            {
+                waveTimer.text = "00:" + eSpawner.seconds.ToString();
+            }
 
-        if (eSpawner.allWavesCompleted)
-        {
-            waveWithEnemies.SetActive(false);
-            waveWithTimer.SetActive(false);
-            waveCompleted.SetActive(true);
+            if (eSpawner.allWavesCompleted)
+            {
+                waveWithEnemies.SetActive(false);
+                waveWithTimer.SetActive(false);
+                waveCompleted.SetActive(true);
+            }
         }
     }
     #endregion
