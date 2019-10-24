@@ -135,7 +135,7 @@ public class Player : MonobehaviourSingleton<Player>
         }
         if(movement.x == 0 && movement.z == 0)
         {
-            rb.velocity = Vector3.zero;
+            rb.velocity = new Vector3(0, rb.velocity.y, 0);
         }
 
         animBottom.SetFloat("horizontal", horizontal);

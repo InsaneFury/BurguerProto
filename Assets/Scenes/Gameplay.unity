@@ -356,7 +356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &29471856
 Transform:
   m_ObjectHideFlags: 0
@@ -1338,9 +1338,9 @@ MonoBehaviour:
   crosshair: {fileID: 973078813}
   vision: {fileID: 233962006}
   rayLenght: 100
-  speed: 1500
-  rotationSpeed: 1500
-  dashSpeed: 500
+  speed: 100
+  rotationSpeed: 100
+  dashSpeed: 80
   dashTime: 0.25
   trail: {fileID: 2109374928}
   topMat: {fileID: 2100000, guid: d6b47abda12c4e44db4f6d43943536b8, type: 2}
@@ -1386,9 +1386,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177865247}
   serializedVersion: 2
-  m_Mass: 500
-  m_Drag: 30
-  m_AngularDrag: 30
+  m_Mass: 10
+  m_Drag: 3
+  m_AngularDrag: 3
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
