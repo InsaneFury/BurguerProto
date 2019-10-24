@@ -356,7 +356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &29471856
 Transform:
   m_ObjectHideFlags: 0
@@ -9854,29 +9854,29 @@ MonoBehaviour:
   - name: Wave 1
     enemyAmount: 2
     enemies:
-    - {fileID: 7699124604792840249, guid: 5df0b42f13ebf564bba7b212accbdf5b, type: 3}
+    - {fileID: 6501245377124900865, guid: 891678dc81aa68247b71ce91d14272e6, type: 3}
     timeBetweenEnemies: 1
   - name: Wave 2
     enemyAmount: 5
     enemies:
-    - {fileID: 7699124604792840249, guid: 5df0b42f13ebf564bba7b212accbdf5b, type: 3}
+    - {fileID: 6501245377124900865, guid: 891678dc81aa68247b71ce91d14272e6, type: 3}
     timeBetweenEnemies: 1
   - name: Wave 3
     enemyAmount: 10
     enemies:
-    - {fileID: 7699124604792840249, guid: 5df0b42f13ebf564bba7b212accbdf5b, type: 3}
+    - {fileID: 6501245377124900865, guid: 891678dc81aa68247b71ce91d14272e6, type: 3}
     - {fileID: 3492087249705443679, guid: 7bf84ff54c81c7749899344f8d34e741, type: 3}
     timeBetweenEnemies: 1
   - name: Wave 4
     enemyAmount: 15
     enemies:
-    - {fileID: 7699124604792840249, guid: 5df0b42f13ebf564bba7b212accbdf5b, type: 3}
+    - {fileID: 6501245377124900865, guid: 891678dc81aa68247b71ce91d14272e6, type: 3}
     - {fileID: 3492087249705443679, guid: 7bf84ff54c81c7749899344f8d34e741, type: 3}
     timeBetweenEnemies: 1
   - name: Wave 5
     enemyAmount: 20
     enemies:
-    - {fileID: 7699124604792840249, guid: 5df0b42f13ebf564bba7b212accbdf5b, type: 3}
+    - {fileID: 6501245377124900865, guid: 891678dc81aa68247b71ce91d14272e6, type: 3}
     - {fileID: 3492087249705443679, guid: 7bf84ff54c81c7749899344f8d34e741, type: 3}
     timeBetweenEnemies: 1
   nextWaveIfEmpty: 0
