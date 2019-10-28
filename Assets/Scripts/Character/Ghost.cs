@@ -25,6 +25,7 @@ public class Ghost : MonoBehaviour
         {
             GoUp();
         }
+
         transform.LookAt(player.transform);
     }
 

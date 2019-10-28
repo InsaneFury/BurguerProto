@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     public Image healthBar;
     public GameObject mat;
     public GameObject popUp;
+    public float timeToDie = 5f;
 
     [Header("Drops")]
     public GameObject soul;
@@ -44,7 +45,7 @@ public class Enemy : MonoBehaviour
     }
     private void Update()
     {
-        if (!isAlive)
+        if (isAlive)
         {
             distance = Vector3.Distance(transform.position, player.transform.position);
             switch (actions)
@@ -116,7 +117,7 @@ public class Enemy : MonoBehaviour
     {
         Drop();
         EnemySpawner.Get().spawnedEnemies.Remove(gameObject);
-        Destroy(gameObject);
+        Destroy(gameObject, timeToDie);
     }
 
     void RefreshHealthbar()
