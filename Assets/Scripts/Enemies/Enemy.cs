@@ -106,6 +106,12 @@ public class Enemy : MonoBehaviour
     {
         Drop();
         EnemySpawner.Get().spawnedEnemies.Remove(gameObject);
+        anim.SetBool("die", true);
+        
+    }
+
+    public void DeleteTomato()
+    {
         Destroy(gameObject);
     }
 
