@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
 
     [Header("Drops")]
     public GameObject soul;
+    public GameObject spawnPos;
 
     [Header("VFX")]
     public float flashTime = 0.1f;
@@ -25,6 +26,7 @@ public class Enemy : MonoBehaviour
     Player player;
     Animator anim;
     Rigidbody rb;
+    bool isAlive = true;
     
     float distance = 0;
 
@@ -42,24 +44,26 @@ public class Enemy : MonoBehaviour
     }
     private void Update()
     {
-        distance = Vector3.Distance(transform.position, player.transform.position);
-        switch (actions)
+        if (!isAlive)
         {
-            case EnemyAction.Idle:
-                break;
-            case EnemyAction.Run:
-                enemyAgent.SetDestination(player.transform.position);
-                
-                if (distance < attackDistance)
-                {
-                    actions = EnemyAction.Attack;
-                }
-                break;
-            case EnemyAction.Attack:
-                anim.SetTrigger("attack");
-                break;
+            distance = Vector3.Distance(transform.position, player.transform.position);
+            switch (actions)
+            {
+                case EnemyAction.Idle:
+                    break;
+                case EnemyAction.Run:
+                    enemyAgent.SetDestination(player.transform.position);
+
+                    if (distance < attackDistance)
+                    {
+                        actions = EnemyAction.Attack;
+                    }
+                    break;
+                case EnemyAction.Attack:
+                    anim.SetTrigger("attack");
+                    break;
+            }
         }
-        
     }
 
     public void Chase()
@@ -104,14 +108,14 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        Drop();
-        EnemySpawner.Get().spawnedEnemies.Remove(gameObject);
+        isAlive = false;
         anim.SetBool("die", true);
-        
     }
 
     public void DeleteTomato()
     {
+        Drop();
+        EnemySpawner.Get().spawnedEnemies.Remove(gameObject);
         Destroy(gameObject);
     }
 
@@ -132,7 +136,7 @@ public class Enemy : MonoBehaviour
 
     void Drop()
     {
-        Instantiate(soul, transform.position, Quaternion.identity);
+        Instantiate(soul, spawnPos.transform.position, Quaternion.identity);
     }
 
     void ShowPopUp(int dmg)
