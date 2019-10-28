@@ -25,6 +25,7 @@ public class Player : MonobehaviourSingleton<Player>
 
     [Header("Player Settings")]
     public float life = 100;
+    public Animator face;
 
     [Header("Souls")]
     public int soulsCollected = 0;
@@ -135,9 +136,15 @@ public class Player : MonobehaviourSingleton<Player>
         }
         if(movement.x == 0 && movement.z == 0)
         {
+            face.SetBool("run", false);
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
         }
+        else
+        {
+            face.SetBool("run", true);
+        }
 
+        
         animBottom.SetFloat("horizontal", horizontal);
         animBottom.SetFloat("vertical", vertical);
         animTop.SetFloat("horizontal", horizontal);
