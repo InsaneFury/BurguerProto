@@ -23,6 +23,7 @@ public class MachineGun : MonoBehaviour
     float timeToFire = 0f;
 
     Player player;
+    GameManager gManager;
 
     private void Awake()
     {
@@ -33,6 +34,7 @@ public class MachineGun : MonoBehaviour
     void Start()
     {
         player = Player.Get();
+        gManager = GameManager.Get();
         foreach (Pool pool in pools)
         {
             Queue<GameObject> objectPool = new Queue<GameObject>();
@@ -50,16 +52,19 @@ public class MachineGun : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetMouseButton(0) && Time.time >= timeToFire)
+        if (player.isAlive && gManager.gameStarted)
         {
-            timeToFire = Time.time + 1f / fireRate;
-            Shoot();
-            player.animMachineGun.SetBool("attack", true);
-            player.animTop.SetTrigger("attack");
-        }
-        if(Input.GetMouseButtonUp(0))
-        {
-            player.animMachineGun.SetBool("attack", false);
+            if (Input.GetMouseButton(0) && Time.time >= timeToFire)
+            {
+                timeToFire = Time.time + 1f / fireRate;
+                Shoot();
+                player.animMachineGun.SetBool("attack", true);
+                player.animTop.SetTrigger("attack");
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                player.animMachineGun.SetBool("attack", false);
+            }
         }
     }
 

@@ -14,6 +14,8 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     public Image dashSkill;
 
     [Header("HUD Settings")]
+    public GameObject inGameHUD;
+    public GameObject menuHUD;
     public float soulFillvelocity = 0.1f;
     public TextMeshProUGUI version;
 
@@ -28,6 +30,10 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     [Header("Waves Completed")]
     public GameObject waveCompleted;
 
+    [Header("Cameras")]
+    public GameObject VCamThirdPerson;
+    public GameObject VCamMenu;
+
     Player player;
     EnemySpawner eSpawner;
 
@@ -38,6 +44,9 @@ public class UIManager : MonobehaviourSingleton<UIManager>
 
     void Start()
     {
+        VCamThirdPerson.SetActive(false);
+        inGameHUD.SetActive(false);
+        menuHUD.SetActive(true);
         player = Player.Get();
         healthBar.fillAmount = player.life / 100f;
         sizeBar.fillAmount = 0;
@@ -50,6 +59,14 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     {
         RefreshSkillsIcons();
         RefreshWaveInfo();
+    }
+
+    public void ActiveInGameUI()
+    {
+        inGameHUD.SetActive(true);
+        VCamThirdPerson.SetActive(true);
+        menuHUD.SetActive(false);
+        VCamMenu.SetActive(false);
     }
 
     #region Refresh UI

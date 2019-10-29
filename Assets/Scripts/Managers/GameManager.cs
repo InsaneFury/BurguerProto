@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.Playables;
 
 public class GameManager : MonobehaviourSingleton<GameManager>
 {
     Player player;
+
+    public PlayableDirector playableDirector;
 
     [Header("Game Settings")]
     public bool gameStarted;
@@ -27,7 +30,6 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         player = Player.Get();
         profile.TryGetSettings(out cg);
         cg.saturation.value = new FloatParameter() { value = 0 };
-        gameStarted = true;
     }
 
     void Update()
@@ -36,6 +38,17 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         {
             GameOver();
         }
+    }
+
+    public void GameStart()
+    {
+        playableDirector.Play();
+    }
+
+    public void ActiveGame()
+    {
+        gameStarted = true;
+        UIManager.Get().ActiveInGameUI();
     }
 
     void GameOver()

@@ -66,7 +66,7 @@ public class Player : MonobehaviourSingleton<Player>
     public bool isMeleeing = false;
     float originalLife = 0;
     int comboCounter = 0;
-
+    GameManager gManager;
     public override void Awake()
     {
         base.Awake();
@@ -78,11 +78,12 @@ public class Player : MonobehaviourSingleton<Player>
         originalLife = life;
         animMachineGun = machineGun.GetComponent<Animator>();
         comboMeleeTimer = meleeMaxCooldown;
+        gManager = GameManager.Get();
     }
 
     void Update()
     {
-        if(isAlive)
+        if(isAlive && gManager.gameStarted)
         {
             if (isMeleeing)
             {
@@ -101,7 +102,7 @@ public class Player : MonobehaviourSingleton<Player>
                 Dash();
             }
             Heal();
-        } 
+        }
     }
 
     void Move()

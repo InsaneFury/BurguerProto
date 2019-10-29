@@ -13,6 +13,8 @@ public class Gun : MonobehaviourSingleton<Gun>
     public float fireRate = 2f;
 
     Player player;
+    GameManager gManager;
+
     float timeToFire = 0f;
     float originalSize = 0;
 
@@ -23,6 +25,7 @@ public class Gun : MonobehaviourSingleton<Gun>
 
     void Start()
     {
+        gManager = GameManager.Get();
         bulletSize = bullet.transform.localScale.x;
         player = Player.Get();
         originalSize = bulletSize;
@@ -30,14 +33,18 @@ public class Gun : MonobehaviourSingleton<Gun>
 
     private void Update()
     {
-        if ((bulletSize < maxBulletSize) && Input.GetButton("Fire1") && (Time.time >= timeToFire))
+        if (player.isAlive && gManager.gameStarted)
         {
-            IncreaseBulletSize();
+            if ((bulletSize < maxBulletSize) && Input.GetButton("Fire1") && (Time.time >= timeToFire))
+            {
+                IncreaseBulletSize();
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                player.animTop.SetTrigger("attack");
+            }
         }
-        if (Input.GetMouseButtonUp(0))
-        {
-            player.animTop.SetTrigger("attack");
-        }   
+            
     }
 
     void IncreaseBulletSize()
