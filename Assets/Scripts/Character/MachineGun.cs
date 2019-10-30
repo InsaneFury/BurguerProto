@@ -52,7 +52,7 @@ public class MachineGun : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (player.isAlive && gManager.gameStarted)
+        if ((player.isAlive && gManager.gameStarted) && !gManager.pause)
         {
             if (Input.GetMouseButton(0) && Time.time >= timeToFire)
             {

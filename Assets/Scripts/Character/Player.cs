@@ -83,7 +83,7 @@ public class Player : MonobehaviourSingleton<Player>
 
     void Update()
     {
-        if(isAlive && gManager.gameStarted)
+        if((isAlive && gManager.gameStarted) && !gManager.pause)
         {
             if (isMeleeing)
             {

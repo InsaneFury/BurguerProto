@@ -33,7 +33,7 @@ public class Gun : MonobehaviourSingleton<Gun>
 
     private void Update()
     {
-        if (player.isAlive && gManager.gameStarted)
+        if ((player.isAlive && gManager.gameStarted) && !gManager.pause)
         {
             if ((bulletSize < maxBulletSize) && Input.GetButton("Fire1") && (Time.time >= timeToFire))
             {
@@ -51,7 +51,6 @@ public class Gun : MonobehaviourSingleton<Gun>
     {
         timeToFire = Time.time + 1f / fireRate;
         bulletSize += speedOfIncrease;
-        UIManager.Get().RefreshSizeBar();
     }
 
     public void Shoot()
@@ -63,6 +62,5 @@ public class Gun : MonobehaviourSingleton<Gun>
 
         b.GetComponent<Rigidbody>().AddForce(player.forward * shootPower * Time.fixedDeltaTime, ForceMode.Impulse);
         bulletSize = 0;
-        UIManager.Get().RefreshSizeBar();
     }
 }

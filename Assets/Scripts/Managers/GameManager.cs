@@ -12,6 +12,7 @@ public class GameManager : MonobehaviourSingleton<GameManager>
 
     [Header("Game Settings")]
     public bool gameStarted;
+    public bool pause;
 
     [Header("GameOver")]
     public GameObject gameOverText;
@@ -34,6 +35,10 @@ public class GameManager : MonobehaviourSingleton<GameManager>
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape) && gameStarted)
+        {
+            PauseGame();
+        }
         if (!player.isAlive)
         {
             GameOver();
@@ -56,5 +61,12 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         gameStarted = false;
         gameOverText.SetActive(true);
         cg.saturation.value = new FloatParameter() { value = gameOverSaturation };
+    }
+
+    void PauseGame()
+    {
+        pause = !pause;
+        UIManager.Get().pauseText.SetActive(pause);
+        Time.timeScale = pause ? 0 : 1;
     }
 }

@@ -8,7 +8,6 @@ public class UIManager : MonobehaviourSingleton<UIManager>
 {
     [Header("Player HUD")]
     public Image healthBar;
-    public Image sizeBar;
     public Image souls;
     public Image healthSkill;
     public Image dashSkill;
@@ -18,6 +17,9 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     public GameObject menuHUD;
     public float soulFillvelocity = 0.1f;
     public TextMeshProUGUI version;
+
+    [Header("Pause Settings")]
+    public GameObject pauseText;
 
     [Header("Wave Time Settings")]
     public GameObject waveWithTimer;
@@ -49,7 +51,6 @@ public class UIManager : MonobehaviourSingleton<UIManager>
         menuHUD.SetActive(true);
         player = Player.Get();
         healthBar.fillAmount = player.life / 100f;
-        sizeBar.fillAmount = 0;
         RefreshSouls();
         eSpawner = EnemySpawner.Get();
         ShowWaveInfo(); 
@@ -73,11 +74,6 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     public void RefreshSouls()
     {
         souls.fillAmount = player.soulsCollected / 100f;
-    }
-
-    public void RefreshSizeBar()
-    {
-        sizeBar.fillAmount = Gun.Get().bulletSize;
     }
 
     public void RefreshHealthbar()

@@ -86,7 +86,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int dmg)
     {
-        if (popUp)
+        if (popUp && life > 0)
         {
             ShowPopUp(dmg);
         }
