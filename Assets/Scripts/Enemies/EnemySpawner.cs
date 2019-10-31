@@ -126,7 +126,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
             spawnPoints[randSpawnPoint].transform.position,
             wave.enemies[randEnemy].transform.rotation);
         go.transform.localScale = new Vector3(randSize,randSize,randSize);
-
+        go.transform.GetChild(0).GetComponent<Enemy>().OnDieAction += ScoreManager.Get().AddEnemyKilled;
         spawnedEnemies.Add(go);
     }
 

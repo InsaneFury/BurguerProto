@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class Enemy : MonoBehaviour
     public GameObject mat;
     public GameObject popUp;
     public float timeToDie = 5f;
+    public SphereCollider enemyCollider;
 
     [Header("Drops")]
     public GameObject soul;
@@ -23,6 +25,8 @@ public class Enemy : MonoBehaviour
 
     [Header("VFX")]
     public float flashTime = 0.1f;
+
+    public event UnityAction OnDieAction;
 
     Player player;
     Animator anim;
@@ -37,11 +41,13 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         player = Player.Get();
+        enemyCollider = GetComponent<SphereCollider>();
         rb = GetComponent<Rigidbody>();
         enemyAgent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         healthBar.fillAmount = life / 100f;
         actions = EnemyAction.Run;
+        OnDieAction += Die;
     }
     private void Update()
     {
@@ -95,14 +101,12 @@ public class Enemy : MonoBehaviour
         {
             StartCoroutine("DamageFeedback");
             life -= dmg;
-            if (life <= 0)
-            {
-                Die();
-            }
         }
-        else if(life <= 0)
+        if((life <= 0) && !enemyCollider.isTrigger)
         {
-            Die();
+            enemyCollider.isTrigger = true;
+            if (OnDieAction != null)
+                OnDieAction();
         }
         RefreshHealthbar();
     }
@@ -117,6 +121,8 @@ public class Enemy : MonoBehaviour
     {
         Drop();
         EnemySpawner.Get().spawnedEnemies.Remove(gameObject);
+        OnDieAction -= Die;
+        OnDieAction -= ScoreManager.Get().AddEnemyKilled;
         Destroy(gameObject, timeToDie);
     }
 
