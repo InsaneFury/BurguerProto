@@ -13,14 +13,28 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
         public float timeBetweenEnemies;
     }
 
+    public enum GAMEMODE
+    {
+        ENEMIESDIE,
+        TIMER,
+        SURVIVAL
+    };
+
+    public GAMEMODE gameMode;
+
     [Header("Waves Settings")]
     public Wave[] waves;
     [Tooltip("If is active the next wave gonna spawn only " +
-        "if all enemies of the current wave die " +
-        "(this function ignore timeBetweenWaves)")]
-    public bool nextWaveIfEmpty;
+             "if all enemies of the current wave die " +
+             "(this function ignore timeBetweenWaves)")]
+    public bool noTimerMode;
+    public bool survivalMode;
+
     public float timeBetweenWaves = 30f;
-    int currentWave = 0;
+    public int maxSurvivalWave = 5;
+
+    private int currentWave = 0;
+    private bool isSpawning = true;
 
     [Header("Spawn Settings")]
     public List<Transform> spawnPoints;
@@ -30,7 +44,12 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
     public float minEnemySize = 1f;
     public float maxEnemySize = 1.5f;
 
+    [Header("User Settings")]
+    public int userSurvivalRecord = 0;
+
     GameManager gManager;
+    UIManager uiManager;
+
     public float timer = 0;
     [HideInInspector]
     public int seconds = 0;
@@ -46,6 +65,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
     {
         spawnedEnemies = new List<GameObject>();
         gManager = GameManager.Get();
+        uiManager = UIManager.Get();
         timer = timeBetweenWaves;
     }
 
@@ -53,18 +73,45 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
     {
         if (gManager.gameStarted)
         {
-            timer -= Time.deltaTime;
-            seconds = (int)(timer % 60);
+            if (isSpawning)
+            {
+                timer -= Time.deltaTime;
+                seconds = (int)(timer % 60);
+            }
 
-            if(currentWave < waves.Length)
+            switch (gameMode)
             {
-                WavesSpawner();
-            }
-            else
-            {
-                allWavesCompleted = true;
-                gManager.gameStarted = false;
-            }
+                case GAMEMODE.ENEMIESDIE:
+                    if (currentWave < waves.Length)
+                    {
+                        EnemiesDieGameMode();
+                    }
+                    else
+                    {
+                        allWavesCompleted = true;
+                        gManager.gameStarted = false;
+                    }
+                    break;
+                case GAMEMODE.TIMER:
+                    if (currentWave < waves.Length)
+                    {
+                        TimerGameMode();
+                    }
+                    else
+                    {
+                        allWavesCompleted = true;
+                        gManager.gameStarted = false;
+                    }
+                    break;
+                case GAMEMODE.SURVIVAL:
+                    if (gManager.gameStarted)
+                    {
+                        SurvivalGameMode();
+                    }
+                    break;
+                default:
+                    break;
+            }   
         }
     }
 
@@ -93,25 +140,47 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
         yield break;
     }
 
-    void WavesSpawner()
+    void TimerGameMode()
     {
-        if (nextWaveIfEmpty)
+        if (seconds <= 0 && isSpawning)
         {
-            if(spawnedEnemies.Count == 0)
-            {
-                StartCoroutine(SpawnWave(waves[currentWave]));
-                currentWave++;
-            }  
+            isSpawning = false;
+            uiManager.SetWaveNumber(currentWave + 1);
+            StartCoroutine(SpawnWave(waves[currentWave]));
+            currentWave++;
         }
-        else
+    }
+
+    void EnemiesDieGameMode()
+    {
+        if (spawnedEnemies.Count == 0)
         {
-            if (seconds <= 0)
-            {
-                StartCoroutine(SpawnWave(waves[currentWave]));
-                timer = timeBetweenWaves;
-                currentWave++;
-            }
-        } 
+            uiManager.SetWaveNumber(currentWave);
+            StartCoroutine(SpawnWave(waves[currentWave]));
+            currentWave++;
+        }
+    }
+
+    void SurvivalGameMode()
+    {
+        if (seconds <= 0 && isSpawning)
+        {
+            isSpawning = false;
+
+            userSurvivalRecord = currentWave + 1;
+            uiManager.SetWaveNumber(userSurvivalRecord);
+
+            StartCoroutine(SpawnWave(waves[currentWave]));
+
+            if (currentWave < maxSurvivalWave)
+            currentWave++;
+        }
+    }
+
+    public void ResetTimer()
+    {
+        timer = timeBetweenWaves;
+        isSpawning = true;
     }
     
 }

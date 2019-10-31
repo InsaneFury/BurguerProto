@@ -31,6 +31,8 @@ public class UIManager : MonobehaviourSingleton<UIManager>
 
     [Header("Waves Completed")]
     public GameObject waveCompleted;
+    public GameObject waveNumber;
+    private float waveNumberTime = 3f;
 
     [Header("Cameras")]
     public GameObject VCamThirdPerson;
@@ -53,7 +55,7 @@ public class UIManager : MonobehaviourSingleton<UIManager>
         healthBar.fillAmount = player.life / 100f;
         RefreshSouls();
         eSpawner = EnemySpawner.Get();
-        ShowWaveInfo(); 
+        ShowWaveInfo();
     }
 
     private void Update()
@@ -110,10 +112,10 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     #region Wave info
     void ShowWaveInfo()
     {
-        if(eSpawner != null)
+        if (eSpawner != null)
         {
             waveCompleted.SetActive(false);
-            if (eSpawner.nextWaveIfEmpty)
+            if (eSpawner.noTimerMode)
             {
                 waveEnemiesAlive.text = eSpawner.spawnedEnemies.Count.ToString();
                 waveWithEnemies.SetActive(true);
@@ -126,20 +128,20 @@ public class UIManager : MonobehaviourSingleton<UIManager>
                 waveWithTimer.SetActive(true);
             }
         }
-        
+
     }
 
     void RefreshWaveInfo()
     {
         if (eSpawner != null)
         {
-            if (eSpawner.nextWaveIfEmpty)
+            if (eSpawner.noTimerMode)
             {
-                waveEnemiesAlive.text = "0" + eSpawner.spawnedEnemies.Count;
+                waveEnemiesAlive.text = eSpawner.spawnedEnemies.Count.ToString();
             }
             else
             {
-                waveTimer.text = "00:" + eSpawner.seconds.ToString();
+                waveTimer.text = eSpawner.seconds.ToString();
             }
 
             if (eSpawner.allWavesCompleted)
@@ -149,6 +151,21 @@ public class UIManager : MonobehaviourSingleton<UIManager>
                 waveCompleted.SetActive(true);
             }
         }
+    }
+
+    public void SetWaveNumber(int num)
+    {
+        waveNumber.GetComponent<TextMeshProUGUI>().text = "Wave " + num.ToString();
+        StartCoroutine(StartWaveNumber());
+        
+    }
+
+    IEnumerator StartWaveNumber()
+    {
+        waveNumber.SetActive(true);
+        yield return new WaitForSecondsRealtime(waveNumberTime);
+        waveNumber.SetActive(false);
+        EnemySpawner.Get().ResetTimer();
     }
     #endregion
 
