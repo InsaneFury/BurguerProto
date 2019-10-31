@@ -88,4 +88,14 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         player.transform.rotation = startPosition.rotation;
         player.ResetStats();
     }
+
+    public void ExitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+#if UNITY_STANDALONE && !UNITY_EDITOR
+        Application.Quit();
+#endif
+    }
 }
