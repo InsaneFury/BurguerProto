@@ -19,6 +19,7 @@ public class MachineGun : MonoBehaviour
     public float shootPower = 10f;
     public float fireRate = 0.25f;
     public Vector3 shootAngleRange;
+    public GameObject container;
 
     float timeToFire = 0f;
 
@@ -41,7 +42,7 @@ public class MachineGun : MonoBehaviour
 
             for (int i = 0; i < pool.size; i++)
             {
-                GameObject obj = Instantiate(pool.prefab);
+                GameObject obj = Instantiate(pool.prefab, pool.prefab.transform.position,Quaternion.identity, container.transform);
                 obj.SetActive(false);
                 objectPool.Enqueue(obj);
             }
