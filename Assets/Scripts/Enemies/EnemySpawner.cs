@@ -183,5 +183,18 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
         timer = timeBetweenWaves;
         isSpawning = true;
     }
+
+    public void ResetSpawner()
+    {
+        for (int i = 0; i < spawnedEnemies.Count; i++)
+        {
+            Destroy(spawnedEnemies[i].gameObject);
+        }
+        spawnedEnemies.Clear();
+
+        ResetTimer();
+        userSurvivalRecord = 0;
+        currentWave = 0;
+    }
     
 }

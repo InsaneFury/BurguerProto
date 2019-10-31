@@ -10,6 +10,9 @@ public class GameManager : MonobehaviourSingleton<GameManager>
 
     public PlayableDirector playableDirector;
 
+    [Header("Player settings")]
+    public Transform startPosition;
+
     [Header("Game Settings")]
     public bool gameStarted;
     public bool pause;
@@ -68,5 +71,21 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         pause = !pause;
         UIManager.Get().pauseText.SetActive(pause);
         Time.timeScale = pause ? 0 : 1;
+    }
+
+    public void RestartGame()
+    {
+        EnemySpawner.Get().ResetSpawner();
+        ResetPlayer();
+        cg.saturation.value = new FloatParameter() { value = 0 };
+        gameStarted = true;
+        gameOverText.SetActive(false);
+    }
+
+    void ResetPlayer()
+    {
+        player.transform.position = startPosition.position;
+        player.transform.rotation = startPosition.rotation;
+        player.ResetStats();
     }
 }

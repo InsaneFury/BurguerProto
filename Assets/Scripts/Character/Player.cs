@@ -327,6 +327,8 @@ public class Player : MonobehaviourSingleton<Player>
             granade.enabled = false;
             sword.SetActive(false);
             swordIsActive = false;
+            animBottom.SetBool("exitCombo", true);
+            animTop.SetBool("exitCombo", true);
         }
         if (Input.GetKey(KeyCode.Alpha2))
         {
@@ -335,6 +337,8 @@ public class Player : MonobehaviourSingleton<Player>
             granade.enabled = true;
             sword.SetActive(false);
             swordIsActive = false;
+            animBottom.SetBool("exitCombo", true);
+            animTop.SetBool("exitCombo", true);
         }
         if (Input.GetKey(KeyCode.Alpha3))
         {
@@ -361,5 +365,20 @@ public class Player : MonobehaviourSingleton<Player>
         yield return new WaitForSecondsRealtime(1);
         animBottom.SetBool("exitCombo", false);
         animTop.SetBool("exitCombo", false);
+    }
+
+    public void ResetStats()
+    {
+        animBottom.SetBool("death", false);
+        animTop.SetBool("death", false);
+        originalLife = life;
+        isAlive = true;
+
+        //Back to default weapon
+        machineGunIsActive = false;
+        machineGun.SetActive(machineGunIsActive);
+        granade.enabled = true;
+        sword.SetActive(false);
+        swordIsActive = false;
     }
 }
