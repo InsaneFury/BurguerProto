@@ -67,6 +67,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
         gManager = GameManager.Get();
         uiManager = UIManager.Get();
         timer = timeBetweenWaves;
+        userSurvivalRecord = currentWave;
     }
 
     private void Update()
@@ -166,8 +167,8 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
         if (seconds <= 0 && isSpawning)
         {
             isSpawning = false;
-
-            userSurvivalRecord = currentWave + 1;
+            
+            userSurvivalRecord++;
             uiManager.SetWaveNumber(userSurvivalRecord);
 
             StartCoroutine(SpawnWave(waves[currentWave]));
