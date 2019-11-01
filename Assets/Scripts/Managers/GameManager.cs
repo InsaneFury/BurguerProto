@@ -97,6 +97,8 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         cg.saturation.value = new FloatParameter() { value = 0 };
         gameStarted = true;
         gameOverText.SetActive(false);
+        ScoreManager.Get().score = 0;
+        ScoreManager.Get().enemiesKilled = 0;
         if(pause)
         PauseGame();
     }
