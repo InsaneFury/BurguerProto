@@ -25,6 +25,10 @@ public class Enemy : MonoBehaviour
     [Header("VFX")]
     public float flashTime = 0.1f;
 
+    [Header("Aji")]
+    public GameObject explosion;
+    public GameObject explotionParticle;
+    
     public static event Action<Enemy> OnDieAction;
 
     Player player;
@@ -103,7 +107,18 @@ public class Enemy : MonoBehaviour
         if((life <= 0) && !enemyCollider.isTrigger)
         {
             enemyCollider.isTrigger = true;
-            Die();
+
+            gameObject.name = gameObject.name.Replace("(Clone)", "");
+
+            if (gameObject.name == "Aji")
+            {
+                AjiDie();
+            }
+            else
+            {
+                Die();
+            }
+            
         }
         RefreshHealthbar();
     }
@@ -147,5 +162,30 @@ public class Enemy : MonoBehaviour
     {
         GameObject go = Instantiate(popUp, transform.position, Quaternion.identity, transform);
         go.GetComponent<TextMeshPro>().text = dmg.ToString();
+    }
+
+
+    //Temporal Aji code
+    public void AjiAttack()
+    {
+        explosion.SetActive(true);
+    }
+
+    public void AjiDie()
+    {
+        Instantiate(explotionParticle, transform.position, Quaternion.identity);
+        Drop();
+        EnemySpawner.Get().spawnedEnemies.Remove(gameObject);
+        if (OnDieAction != null)
+            OnDieAction(this);
+        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            player.TakeDamage(damage);
+        }
     }
 }

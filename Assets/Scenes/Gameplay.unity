@@ -2078,7 +2078,7 @@ GameObject:
   - component: {fileID: 177865250}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16490,6 +16490,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hamburguesa_Top@Animaciones
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 512eff70832d99d4bb53dcf731f7bef2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 512eff70832d99d4bb53dcf731f7bef2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16783,6 +16788,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hamburguesa_Bot@Animaciones
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 8a1bd1df729f362428d9bc23fe7e1bc0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: -8830634604493133791, guid: 8a1bd1df729f362428d9bc23fe7e1bc0,
         type: 3}
