@@ -8,7 +8,10 @@ public class GameManager : MonobehaviourSingleton<GameManager>
 {
     Player player;
 
-    public PlayableDirector playableDirector;
+    [Header("Timelines")]
+    public PlayableDirector menuToGameplay;
+    public PlayableDirector menuToCredits;
+    public PlayableDirector creditsToMenu;
 
     [Header("Player settings")]
     public Transform startPosition;
@@ -48,10 +51,23 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         }
     }
 
+
+    #region Timelines
     public void GameStart()
     {
-        playableDirector.Play();
+        menuToGameplay.Play();
     }
+
+    public void GoToCredits()
+    {
+        menuToCredits.Play();
+    }
+
+    public void GoToMenu()
+    {
+        creditsToMenu.Play();
+    }
+    #endregion
 
     public void ActiveGame()
     {
