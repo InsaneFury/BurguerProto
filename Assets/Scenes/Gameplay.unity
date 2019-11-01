@@ -11126,6 +11126,8 @@ PlayableDirector:
     value: {fileID: 537738726}
   - key: {fileID: -4818829785997666977, guid: f727fda335d1af541b972e1b69f7eb17, type: 2}
     value: {fileID: 1736103029}
+  - key: {fileID: -7037018180651643524, guid: f727fda335d1af541b972e1b69f7eb17, type: 2}
+    value: {fileID: 1027319782}
   m_ExposedReferences:
     m_References:
     - fcb37dd8f2518bb42b6b50d714c4cf89: {fileID: 497554037}
@@ -11155,7 +11157,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1027319783
 Animator:
   serializedVersion: 3
