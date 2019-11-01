@@ -6,6 +6,7 @@ public class MenuAnimations : MonoBehaviour
 {
     public GameObject difficulties;
     public GameObject init;
+    public GameObject controls;
 
     public void DeactiveDifficulties()
     {
@@ -25,5 +26,15 @@ public class MenuAnimations : MonoBehaviour
     public void ActiveInit()
     {
         init.SetActive(true);
+    }
+
+    public void DeactiveControls()
+    {
+        controls.SetActive(false);
+    }
+
+    public void ActiveControls()
+    {
+        controls.SetActive(true);
     }
 }
