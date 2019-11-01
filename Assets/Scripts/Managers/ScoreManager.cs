@@ -13,6 +13,17 @@ public class ScoreManager : MonobehaviourSingleton<ScoreManager>
         base.Awake();
     }
 
+    private void OnEnable()
+    {
+        Enemy.OnDieAction += AddEnemyKilled;
+        Enemy.OnDieAction += AddScore;
+    }
+    private void OnDisable()
+    {
+        Enemy.OnDieAction -= AddEnemyKilled;
+        Enemy.OnDieAction -= AddScore;
+    }
+
     void Start()
     {
         
@@ -23,12 +34,13 @@ public class ScoreManager : MonobehaviourSingleton<ScoreManager>
         
     }
 
-    public void AddScore(int amount)
+    public void AddScore(Enemy e)
     {
-        score += amount;
+        int randScore = Random.Range(10, 1000);
+        score += randScore;
     }
 
-    public void AddEnemyKilled()
+    public void AddEnemyKilled(Enemy e)
     {
         enemiesKilled++;
     }

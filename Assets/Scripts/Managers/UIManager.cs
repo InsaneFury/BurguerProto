@@ -18,6 +18,10 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     public float soulFillvelocity = 0.1f;
     public TextMeshProUGUI version;
 
+    [Header("Score Settings")]
+    public TextMeshProUGUI score;
+    public TextMeshProUGUI enemiesKilled;
+
     [Header("Pause Settings")]
     public GameObject pauseText;
 
@@ -62,6 +66,7 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     {
         RefreshSkillsIcons();
         RefreshWaveInfo();
+        RefreshStats();
     }
 
     public void ActiveInGameUI()
@@ -73,6 +78,13 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     }
 
     #region Refresh UI
+
+    public void RefreshStats()
+    {
+        score.text = ScoreManager.Get().score.ToString();
+        enemiesKilled.text = ScoreManager.Get().enemiesKilled.ToString();
+    }
+
     public void RefreshSouls()
     {
         souls.fillAmount = player.soulsCollected / 100f;

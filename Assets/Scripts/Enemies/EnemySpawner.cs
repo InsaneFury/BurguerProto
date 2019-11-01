@@ -126,7 +126,6 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
             spawnPoints[randSpawnPoint].transform.position,
             wave.enemies[randEnemy].transform.rotation);
         go.transform.localScale = new Vector3(randSize,randSize,randSize);
-        go.transform.GetChild(0).GetComponent<Enemy>().OnDieAction += ScoreManager.Get().AddEnemyKilled;
         spawnedEnemies.Add(go);
     }
 
@@ -134,7 +133,10 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
     {
         for(int i = 0; i < wave.enemyAmount; i++)
         {
-            SpawnRandomEnemy(wave);
+            if (gManager.gameStarted)
+                SpawnRandomEnemy(wave);
+            else
+                break;
             yield return new WaitForSecondsRealtime(wave.timeBetweenEnemies);
         }
 

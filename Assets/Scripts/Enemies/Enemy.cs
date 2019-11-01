@@ -1,10 +1,9 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.Events;
+using System;
 
 public class Enemy : MonoBehaviour
 {
@@ -26,7 +25,7 @@ public class Enemy : MonoBehaviour
     [Header("VFX")]
     public float flashTime = 0.1f;
 
-    public event UnityAction OnDieAction;
+    public static event Action<Enemy> OnDieAction;
 
     Player player;
     Animator anim;
@@ -47,7 +46,6 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         healthBar.fillAmount = life / 100f;
         actions = EnemyAction.Run;
-        OnDieAction += Die;
     }
     private void Update()
     {
@@ -105,8 +103,7 @@ public class Enemy : MonoBehaviour
         if((life <= 0) && !enemyCollider.isTrigger)
         {
             enemyCollider.isTrigger = true;
-            if (OnDieAction != null)
-                OnDieAction();
+            Die();
         }
         RefreshHealthbar();
     }
@@ -115,14 +112,14 @@ public class Enemy : MonoBehaviour
     {
         isAlive = false;
         anim.SetBool("die", true);
+        if (OnDieAction != null)
+            OnDieAction(this);
     }
 
     public void DeleteTomato()
     {
         Drop();
         EnemySpawner.Get().spawnedEnemies.Remove(gameObject);
-        OnDieAction -= Die;
-        OnDieAction -= ScoreManager.Get().AddEnemyKilled;
         Destroy(gameObject, timeToDie);
     }
 

@@ -371,7 +371,7 @@ public class Player : MonobehaviourSingleton<Player>
     {
         animBottom.SetBool("death", false);
         animTop.SetBool("death", false);
-        originalLife = life;
+        life = originalLife;
         isAlive = true;
 
         //Back to default weapon
