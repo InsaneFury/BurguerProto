@@ -69,6 +69,8 @@ public class UIManager : MonobehaviourSingleton<UIManager>
         RefreshSkillsIcons();
         RefreshWaveInfo();
         RefreshStats();
+        RefreshHealthbar();
+        RefreshSouls();
     }
 
     public void ActiveInGameUI()
