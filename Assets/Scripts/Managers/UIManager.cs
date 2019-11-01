@@ -15,6 +15,8 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     [Header("HUD Settings")]
     public GameObject inGameHUD;
     public GameObject menuHUD;
+    public GameObject initMenu;
+    public GameObject difficultyUi;
     public float soulFillvelocity = 0.1f;
     public TextMeshProUGUI version;
 

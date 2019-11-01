@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
 {
@@ -21,6 +22,17 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
     };
 
     public GAMEMODE gameMode;
+
+    public enum GAMEDIFFICULTY
+    {
+        PIMIENTODELPADRON,
+        REDHABANERO,
+        GHOSTPEPPER
+    };
+
+    public GAMEDIFFICULTY gameDifficulty;
+
+    public LevelDifficulty[] difficulties;
 
     [Header("Waves Settings")]
     public Wave[] waves;
@@ -116,22 +128,41 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
         }
     }
 
+    #region Spawner
     void SpawnRandomEnemy(Wave wave)
     {
         int randEnemy = (int)Random.Range(0f, wave.enemies.Count);
         int randSpawnPoint = (int)Random.Range(0f, spawnPoints.Count);
         float randSize = Random.Range(minEnemySize, maxEnemySize);
 
-        GameObject go = Instantiate(wave.enemies[randEnemy], 
+        GameObject go = Instantiate(wave.enemies[randEnemy],
             spawnPoints[randSpawnPoint].transform.position,
             wave.enemies[randEnemy].transform.rotation);
-        go.transform.localScale = new Vector3(randSize,randSize,randSize);
+        go.transform.localScale = new Vector3(randSize, randSize, randSize);
+        go.name = go.name.Replace("(Clone)", "");
+
+        switch (gameDifficulty)
+        {
+            case GAMEDIFFICULTY.PIMIENTODELPADRON:
+                SetPimientoDelPadron(ref go);
+                break;
+            case GAMEDIFFICULTY.REDHABANERO:
+                SetRedHabanero(ref go);
+                break;
+            case GAMEDIFFICULTY.GHOSTPEPPER:
+                SetGhostPepper(ref go);
+                break;
+            default:
+                break;
+        }
+
+
         spawnedEnemies.Add(go);
     }
 
     IEnumerator SpawnWave(Wave wave)
     {
-        for(int i = 0; i < wave.enemyAmount; i++)
+        for (int i = 0; i < wave.enemyAmount; i++)
         {
             if (gManager.gameStarted)
                 SpawnRandomEnemy(wave);
@@ -143,6 +174,27 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
         yield break;
     }
 
+    public void ResetTimer()
+    {
+        timer = timeBetweenWaves;
+        isSpawning = true;
+    }
+
+    public void ResetSpawner()
+    {
+        for (int i = 0; i < spawnedEnemies.Count; i++)
+        {
+            Destroy(spawnedEnemies[i].gameObject);
+        }
+        spawnedEnemies.Clear();
+
+        ResetTimer();
+        userSurvivalRecord = 0;
+        currentWave = 0;
+    }
+    #endregion
+
+    #region GameModes
     void TimerGameMode()
     {
         if (seconds <= 0 && isSpawning)
@@ -169,34 +221,74 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
         if (seconds <= 0 && isSpawning)
         {
             isSpawning = false;
-            
+
             userSurvivalRecord++;
             uiManager.SetWaveNumber(userSurvivalRecord);
 
             StartCoroutine(SpawnWave(waves[currentWave]));
 
             if (currentWave < maxSurvivalWave)
-            currentWave++;
+                currentWave++;
         }
     }
+    #endregion
 
-    public void ResetTimer()
+    #region LevelDifficulty
+    void SetPimientoDelPadron(ref GameObject go)
     {
-        timer = timeBetweenWaves;
-        isSpawning = true;
-    }
-
-    public void ResetSpawner()
-    {
-        for (int i = 0; i < spawnedEnemies.Count; i++)
+        if (go.name == "Aji")
         {
-            Destroy(spawnedEnemies[i].gameObject);
+            go.GetComponent<NavMeshAgent>().speed = difficulties[0].ajiSpeed;
+            go.GetComponent<Enemy>().damage = difficulties[0].ajiDmg;
+            go.GetComponent<Enemy>().life = difficulties[0].ajiLife;
         }
-        spawnedEnemies.Clear();
 
-        ResetTimer();
-        userSurvivalRecord = 0;
-        currentWave = 0;
+        if (go.name == "Tomato")
+        {
+            go.transform.GetChild(0).GetComponent<NavMeshAgent>().speed = difficulties[0].tomatoSpeed;
+            go.transform.GetChild(0).GetComponent<Enemy>().damage = difficulties[0].tomatoDmg;
+            go.transform.GetChild(0).GetComponent<Enemy>().life = difficulties[0].tomatoLife;
+        }
     }
-    
+
+    void SetRedHabanero(ref GameObject go)
+    {
+        if (go.name == "Aji")
+        {
+            go.GetComponent<NavMeshAgent>().speed = difficulties[1].ajiSpeed;
+            go.GetComponent<Enemy>().damage = difficulties[1].ajiDmg;
+            go.GetComponent<Enemy>().life = difficulties[1].ajiLife;
+        }
+
+        if (go.name == "Tomato")
+        {
+            go.transform.GetChild(0).GetComponent<NavMeshAgent>().speed = difficulties[1].tomatoSpeed;
+            go.transform.GetChild(0).GetComponent<Enemy>().damage = difficulties[1].tomatoDmg;
+            go.transform.GetChild(0).GetComponent<Enemy>().life = difficulties[1].tomatoLife;
+        }
+    }
+
+    void SetGhostPepper(ref GameObject go)
+    {
+        if (go.name == "Aji")
+        {
+            go.GetComponent<NavMeshAgent>().speed = difficulties[2].ajiSpeed;
+            go.GetComponent<Enemy>().damage = difficulties[2].ajiDmg;
+            go.GetComponent<Enemy>().life = difficulties[2].ajiLife;
+        }
+
+        if (go.name == "Tomato")
+        {
+            go.transform.GetChild(0).GetComponent<NavMeshAgent>().speed = difficulties[2].tomatoSpeed;
+            go.transform.GetChild(0).GetComponent<Enemy>().damage = difficulties[2].tomatoDmg;
+            go.transform.GetChild(0).GetComponent<Enemy>().life = difficulties[2].tomatoLife;
+        }
+    }
+
+    public void SetDifficulty(int levelOfDifficulty)
+    {
+        gameDifficulty = (GAMEDIFFICULTY)levelOfDifficulty;
+    }
+    #endregion
+
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonobehaviourSingleton<GameManager>
 {
@@ -96,6 +97,11 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         cg.saturation.value = new FloatParameter() { value = 0 };
         gameStarted = true;
         gameOverText.SetActive(false);
+    }
+
+    public void Menu()
+    {
+        SceneManager.LoadScene("Gameplay");
     }
 
     void ResetPlayer()
