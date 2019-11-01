@@ -86,7 +86,7 @@ public class GameManager : MonobehaviourSingleton<GameManager>
     void PauseGame()
     {
         pause = !pause;
-        UIManager.Get().pauseText.SetActive(pause);
+        UIManager.Get().pause.SetActive(pause);
         Time.timeScale = pause ? 0 : 1;
     }
 
@@ -97,10 +97,15 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         cg.saturation.value = new FloatParameter() { value = 0 };
         gameStarted = true;
         gameOverText.SetActive(false);
+        if(pause)
+        PauseGame();
     }
 
     public void Menu()
     {
+        if (pause)
+            PauseGame();
+        UIManager.Get().initMenu.SetActive(true);
         SceneManager.LoadScene("Gameplay");
     }
 

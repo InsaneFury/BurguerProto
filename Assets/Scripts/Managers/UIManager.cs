@@ -25,7 +25,7 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     public TextMeshProUGUI enemiesKilled;
 
     [Header("Pause Settings")]
-    public GameObject pauseText;
+    public GameObject pause;
 
     [Header("Wave Time Settings")]
     public GameObject waveWithTimer;
