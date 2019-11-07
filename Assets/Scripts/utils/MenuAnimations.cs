@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class MenuAnimations : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class MenuAnimations : MonoBehaviour
     public void ActiveDifficulties()
     {
         difficulties.SetActive(true);
+
     }
 
     public void DeactiveInit()

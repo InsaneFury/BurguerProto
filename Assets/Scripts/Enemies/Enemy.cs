@@ -44,10 +44,12 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         player = Player.Get();
+
         enemyCollider = GetComponent<SphereCollider>();
         rb = GetComponent<Rigidbody>();
         enemyAgent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+
         healthBar.fillAmount = life / 100f;
         actions = EnemyAction.Run;
     }

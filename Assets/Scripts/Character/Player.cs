@@ -34,7 +34,6 @@ public class Player : MonobehaviourSingleton<Player>
     public float healAmount = 0.1f;
     public int healCost = 1;
 
-
     [Header("Animator Settings")]
     public Animator animTop;
     public Animator animBottom;
@@ -66,7 +65,9 @@ public class Player : MonobehaviourSingleton<Player>
     public bool isMeleeing = false;
     float originalLife = 0;
     int comboCounter = 0;
+
     GameManager gManager;
+    UIManager uiManager;
 
     public override void Awake()
     {
@@ -80,6 +81,7 @@ public class Player : MonobehaviourSingleton<Player>
         animMachineGun = machineGun.GetComponent<Animator>();
         comboMeleeTimer = meleeMaxCooldown;
         gManager = GameManager.Get();
+        uiManager = UIManager.Get();
     }
 
     void Update()
@@ -199,7 +201,7 @@ public class Player : MonobehaviourSingleton<Player>
     public void TakeDamage(float dmg)
     {
         life -= dmg;
-        UIManager.Get().RefreshHealthbar();
+        uiManager.RefreshHealthbar();
         Death();
     }
 
@@ -208,7 +210,7 @@ public class Player : MonobehaviourSingleton<Player>
        if (other.CompareTag("Soul"))
         {
             soulsCollected++;
-            UIManager.Get().RefreshSouls();
+            uiManager.RefreshSouls();
             Destroy(other.gameObject);
         }
     } 
@@ -231,7 +233,7 @@ public class Player : MonobehaviourSingleton<Player>
         {
             rb.velocity = playerMove * dashSpeed;
         }
-        UIManager.Get().RefreshSouls();
+        uiManager.RefreshSouls();
     }
 
     IEnumerator ActiveDashTrail()
@@ -259,8 +261,8 @@ public class Player : MonobehaviourSingleton<Player>
         {
             life += healAmount;
             soulsCollected -= healCost;
-            UIManager.Get().RefreshSouls();
-            UIManager.Get().RefreshHealthbar();
+            uiManager.RefreshSouls();
+            uiManager.RefreshHealthbar();
         }
     }
 
