@@ -14,5 +14,9 @@ public class MachineGunBullet : MonoBehaviour
             int randDmg = (int)Random.Range(minDamage, maxDamage);
             other.gameObject.GetComponent<Enemy>().TakeDamage(randDmg);
         }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

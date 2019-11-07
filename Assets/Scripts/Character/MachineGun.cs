@@ -92,8 +92,6 @@ public class MachineGun : MonoBehaviour
 
         GameObject currentBullet = SpawnBulletFromPool("Bullet", transform.position + player.forward.normalized, player.vision.transform.rotation);
 
-        /*Quaternion shootAngle = Quaternion.Euler(new Vector3(currentBullet.transform.rotation.x + direction, currentBullet.transform.rotation.y, currentBullet.transform.rotation.z));
-        currentBullet.transform.rotation = shootAngle;*/
         currentBullet.GetComponent<Rigidbody>().velocity = Vector3.zero;
         currentBullet.GetComponent<Rigidbody>().AddForce(transform.forward * shootPower * Time.fixedUnscaledDeltaTime, ForceMode.Impulse);
     }
