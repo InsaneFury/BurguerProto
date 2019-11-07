@@ -67,6 +67,7 @@ public class Player : MonobehaviourSingleton<Player>
     float originalLife = 0;
     int comboCounter = 0;
     GameManager gManager;
+
     public override void Awake()
     {
         base.Awake();

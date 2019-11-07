@@ -106,7 +106,7 @@ public class Enemy : MonoBehaviour
         }
         if((life <= 0) && !enemyCollider.isTrigger)
         {
-            enemyCollider.isTrigger = true;
+            enemyCollider.enabled = false;
 
             gameObject.name = gameObject.name.Replace("(Clone)", "");
 
