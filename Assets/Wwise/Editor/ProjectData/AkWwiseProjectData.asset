@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f0c3ea71e3f1ae42b2fd0b7e3c356fe, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 52623640d26461438e5a317d670d74cb
+    GuidInternal: 
+    m_lastTime: -8586278204676025975
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: b7690cf6b9eec14d8a083bf3d0c89631
+    GuidInternal: 
+    m_lastTime: -8586278204675966228
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: eecaddb151808d48a7c18cdea2694540
+    GuidInternal: 
+    m_lastTime: -8586278204675826604
+    List: []
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: fb7edd5bcb865542baf3ea6824f48afd
+    GuidInternal: 
+    m_lastTime: -8586278204676035907
+    List: []
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 1b894e2b152c3a478d710e168dbd064a
+    GuidInternal: 
+    m_lastTime: -8586278204675996149
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 8959ead3ee0f4e41a380b1a562ac752b
+    GuidInternal: 
+    m_lastTime: -8586278204676016096
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: b1e7c6a92d35e34b81ded758d2f08b44
+    GuidInternal: 
+    m_lastTime: -8586278204675796684
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: b4511f323f4c46469fade40f0f241fcc
+    GuidInternal: 
+    m_lastTime: -8586278204675772195
+    List: []
+  ExpandedItems:
+  - /FastFoodNightmares_WwiseProject
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 
