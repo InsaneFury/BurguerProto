@@ -1,6 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{D3EA5989-0FEE-414E-A380-B1A562AC752B}" SchemaVersion="94">
+<WwiseDocument Type="WorkUnit" ID="{BDEAB2BE-392E-4616-A6E9-69E2BFD4392B}" SchemaVersion="94">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{D3EA5989-0FEE-414E-A380-B1A562AC752B}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{BDEAB2BE-392E-4616-A6E9-69E2BFD4392B}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="13"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<StateGroup Name="Escenario" ID="{116CE08A-8471-444A-9E50-F6BDEC5D4C70}">
+					<ChildrenList>
+						<State Name="None" ID="{58518037-69E7-43F8-8EFA-16F71805C561}"/>
+						<State Name="Restaurante" ID="{31ABA25A-E15E-4909-8063-000E00855527}"/>
+						<State Name="Lugar_nuevo" ID="{3E20337D-BA2B-46B4-84BA-6901B8917591}">
+							<PropertyList>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Dificultad" ID="{8DE50798-D435-4337-94F6-8669E81FFC4A}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="13"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{B381B299-B54A-490E-A506-5B746C0A76B8}"/>
+						<State Name="Facil" ID="{EA7B8713-41D7-4467-8F8E-10334984629C}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+						<State Name="Normal" ID="{FCA75CC1-A127-4E48-9A6D-235E49A36F7B}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="19"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+						<State Name="Dificil" ID="{6BF860A9-8EDF-4D94-9C28-033A0FC02E26}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Vivo_o_muerto" ID="{C501561B-E7F4-4449-B958-E55F11FA0BBB}">
+					<ChildrenList>
+						<State Name="None" ID="{DB68E9BA-FAB4-43F3-B36D-C57C54050EF7}"/>
+						<State Name="Vivo" ID="{2D47880D-97F6-406E-80D7-07A399F842C6}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+						<State Name="Muerto" ID="{B979E3D2-A277-46F0-A083-553370AACF7C}">
+							<PropertyList>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Gameplay" ID="{03AD8FDD-ACC7-44A8-A46C-FA3653AA4D31}">
+					<ChildrenList>
+						<State Name="None" ID="{FD904C1C-1E31-4481-8378-7E5DEA385F07}"/>
+						<State Name="Exploracion" ID="{36974AFE-4B6B-4BD2-8258-F783C63E1E85}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+						<State Name="Batalla" ID="{1554BC19-5B48-4A65-9377-79D74540D576}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+						<State Name="Boss" ID="{0E79AA47-5435-460E-A51E-45580237353C}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

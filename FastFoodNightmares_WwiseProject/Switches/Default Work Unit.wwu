@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{A9C6E7B1-352D-4BE3-81DE-D758D2F08B44}" SchemaVersion="94">
+<WwiseDocument Type="WorkUnit" ID="{4E336B69-B42C-44E5-96F6-FCB071EA8732}" SchemaVersion="94">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{A9C6E7B1-352D-4BE3-81DE-D758D2F08B44}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{4E336B69-B42C-44E5-96F6-FCB071EA8732}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="9"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<SwitchGroup Name="Superficie" ID="{04FC0EA5-E19E-4BF8-98A7-8C4125BD0A85}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="9"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="cubiertos" ID="{7313E1B1-D475-43AA-B925-0B92305E776B}"/>
+						<Switch Name="ceramica" ID="{3AE63CB1-E1C4-4380-A140-5B980ACAB15C}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>
