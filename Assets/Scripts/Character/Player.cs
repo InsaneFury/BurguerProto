@@ -55,6 +55,11 @@ public class Player : MonobehaviourSingleton<Player>
     float comboMeleeTimer = 0f;
     bool swordIsActive = false;
 
+    [Header("Particles VFX")]
+    public ParticleSystem healthVFX;
+    public ParticleSystem muzzleFlash;
+
+
     Rigidbody rb;
     Vector3 pointToLook = Vector3.zero;
     [HideInInspector]
@@ -257,10 +262,13 @@ public class Player : MonobehaviourSingleton<Player>
     {
         bool canHeal = (soulsCollected >= healCost) && (life < originalLife);
 
-        if (Input.GetKey(KeyCode.E) && canHeal)
+        if (Input.GetKeyDown(KeyCode.E) && canHeal)
         {
             life += healAmount;
             soulsCollected -= healCost;
+
+            healthVFX.Play();
+
             uiManager.RefreshSouls();
             uiManager.RefreshHealthbar();
         }

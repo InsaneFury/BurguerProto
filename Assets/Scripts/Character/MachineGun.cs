@@ -61,10 +61,12 @@ public class MachineGun : MonoBehaviour
                 Shoot();
                 player.animMachineGun.SetBool("attack", true);
                 player.animTop.SetTrigger("attack");
+                player.muzzleFlash.Play();
             }
             if (Input.GetMouseButtonUp(0))
             {
                 player.animMachineGun.SetBool("attack", false);
+                player.muzzleFlash.Stop();
             }
         }
     }
