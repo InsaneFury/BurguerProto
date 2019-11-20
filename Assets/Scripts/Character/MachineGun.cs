@@ -18,7 +18,7 @@ public class MachineGun : MonoBehaviour
     public Dictionary<string, Queue<GameObject>> poolDictionary;
     public float shootPower = 10f;
     public float fireRate = 0.25f;
-    public Vector3 shootAngleRange;
+    public float shootAngleRange;
     public GameObject container;
 
     float timeToFire = 0f;
@@ -88,11 +88,15 @@ public class MachineGun : MonoBehaviour
     }
     public void Shoot()
     {
-        float direction = Random.Range(shootAngleRange[0], shootAngleRange[1]);
-
         GameObject currentBullet = SpawnBulletFromPool("Bullet", transform.position + player.forward.normalized, player.vision.transform.rotation);
 
+        Quaternion randRotation = Random.rotation;
+        Quaternion bulletRotation = Quaternion.RotateTowards(currentBullet.transform.rotation, randRotation, shootAngleRange);
+        bulletRotation.x = 0;
+        bulletRotation.z = 0;
+        currentBullet.transform.rotation = bulletRotation;
+
         currentBullet.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        currentBullet.GetComponent<Rigidbody>().AddForce(transform.forward * shootPower * Time.fixedUnscaledDeltaTime, ForceMode.Impulse);
+        currentBullet.GetComponent<Rigidbody>().AddForce(currentBullet.transform.forward * shootPower * Time.fixedUnscaledDeltaTime, ForceMode.Impulse);
     }
 }

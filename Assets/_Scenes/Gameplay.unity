@@ -5448,7 +5448,7 @@ GameObject:
   - component: {fileID: 304890127}
   - component: {fileID: 304890128}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: MachineGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5485,9 +5485,9 @@ MonoBehaviour:
     prefab: {fileID: 3288030907621334384, guid: 82aa96e32707e7f49abfdba790f5ce81,
       type: 3}
     size: 100
-  shootPower: 1600
+  shootPower: 2000
   fireRate: 10
-  shootAngleRange: {x: 0, y: 0, z: 0}
+  shootAngleRange: 30
   container: {fileID: 1222943183}
 --- !u!1 &305729924
 GameObject:
