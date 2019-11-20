@@ -4,13 +4,14 @@ using UnityEngine;
 using Cinemachine;
 using UnityEngine.Events;
 
-public class CameraShakeController : MonoBehaviour
+public class CameraShakeController : MonobehaviourSingleton<CameraShakeController>
 {
     public float ShakeDuration = 0.3f;          // Time the Camera Shake effect will last
     public float ShakeAmplitude = 1.2f;         // Cinemachine Noise Profile Parameter
     public float ShakeFrequency = 2.0f;         // Cinemachine Noise Profile Parameter
 
     private Player player;
+    private bool shake = false;
 
     private float ShakeElapsedTime = 0f;
 
@@ -25,7 +26,12 @@ public class CameraShakeController : MonoBehaviour
     public CinemachineFreeLook freeLookCamera;
     private CinemachineBasicMultiChannelPerlin virtualCameraNoise;
 
-    // Use this for initialization
+
+    public override void Awake()
+    {
+        base.Awake();
+    }
+
     void Start()
     {
         player = Player.Get();
@@ -36,11 +42,10 @@ public class CameraShakeController : MonoBehaviour
    
     }
 
-    // Update is called once per frame
     void Update()
     {
         // TODO: Replace with your trigger
-        if (Input.GetMouseButton(0) && player.machineGunIsActive)
+        if ((Input.GetMouseButton(0) && player.machineGunIsActive) || shake)
         {
             ShakeElapsedTime = ShakeDuration;
         }
@@ -66,4 +71,17 @@ public class CameraShakeController : MonoBehaviour
             }
         }
     }
+
+    IEnumerator Shake()
+    {
+        shake = true;
+        yield return new WaitForSecondsRealtime(ShakeDuration);
+        shake = false;
+    }
+
+    public void ActiveScreenShake()
+    {
+        StartCoroutine(Shake());
+    }
+
 }

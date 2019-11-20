@@ -39,6 +39,7 @@ public class Explosion : MonoBehaviour
                 hrb.AddExplosionForce(explosionForce, explosionPos, explosionRadius);
             }    
         }
+        CameraShakeController.Get().ActiveScreenShake();
         Destroy(gameObject);
     }
 
