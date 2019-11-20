@@ -59,6 +59,8 @@ public class Player : MonobehaviourSingleton<Player>
     public ParticleSystem healthVFX;
     public ParticleSystem muzzleFlash;
 
+    [Header("UI VFX")]
+    public GameObject getDmgVFX;
 
     Rigidbody rb;
     Vector3 pointToLook = Vector3.zero;
@@ -206,6 +208,15 @@ public class Player : MonobehaviourSingleton<Player>
     public void TakeDamage(float dmg)
     {
         life -= dmg;
+        if (isAlive)
+        {
+            StartCoroutine(GettingDmgVFX());
+        }
+        else
+        {
+            getDmgVFX.SetActive(true);
+        }
+        
         uiManager.RefreshHealthbar();
         Death();
     }
@@ -256,6 +267,13 @@ public class Player : MonobehaviourSingleton<Player>
         topMat.DisableKeyword("_EMISSION");
         bottomMat.DisableKeyword("_EMISSION");
         isDashing = false;
+    }
+
+    IEnumerator GettingDmgVFX()
+    {
+        getDmgVFX.SetActive(true);
+        yield return new WaitForSeconds(1);
+        getDmgVFX.SetActive(false);
     }
 
     void Heal()
@@ -384,6 +402,7 @@ public class Player : MonobehaviourSingleton<Player>
         animTop.SetBool("death", false);
         life = originalLife;
         isAlive = true;
+        getDmgVFX.SetActive(false);
 
         //Back to default weapon
         machineGunIsActive = false;
