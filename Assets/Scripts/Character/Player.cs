@@ -359,6 +359,8 @@ public class Player : MonobehaviourSingleton<Player>
             swordIsActive = false;
             animBottom.SetBool("exitCombo", true);
             animTop.SetBool("exitCombo", true);
+            animBottom.SetTrigger("resetMove");
+            animTop.SetTrigger("resetMove");
         }
         if (Input.GetKey(KeyCode.Alpha2))
         {
@@ -369,6 +371,8 @@ public class Player : MonobehaviourSingleton<Player>
             swordIsActive = false;
             animBottom.SetBool("exitCombo", true);
             animTop.SetBool("exitCombo", true);
+            animBottom.SetTrigger("resetMove");
+            animTop.SetTrigger("resetMove");
         }
         if (Input.GetKey(KeyCode.Alpha3))
         {
@@ -377,6 +381,8 @@ public class Player : MonobehaviourSingleton<Player>
             granade.enabled = false;
             sword.SetActive(true);
             swordIsActive = true;
+            animBottom.SetTrigger("resetMove");
+            animTop.SetTrigger("resetMove");
         }
 
         if (machineGunIsActive)

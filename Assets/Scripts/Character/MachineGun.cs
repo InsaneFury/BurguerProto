@@ -55,17 +55,26 @@ public class MachineGun : MonoBehaviour
     {
         if ((player.isAlive && gManager.gameStarted) && !gManager.pause)
         {
+            
+
             if (Input.GetMouseButton(0) && Time.time >= timeToFire)
             {
                 timeToFire = Time.time + 1f / fireRate;
                 Shoot();
                 player.animMachineGun.SetBool("attack", true);
                 player.animTop.SetTrigger("attack");
+
+                //Parche previo CAMBIAR!!
+                /*player.animBottom.SetTrigger("resetMove");
+                player.animTop.SetTrigger("resetMove");*/
+
                 player.muzzleFlash.Play();
             }
             if (Input.GetMouseButtonUp(0))
             {
                 player.animMachineGun.SetBool("attack", false);
+                player.animBottom.SetTrigger("resetMove");
+                player.animTop.SetTrigger("resetMove");
                 player.muzzleFlash.Stop();
             }
         }
