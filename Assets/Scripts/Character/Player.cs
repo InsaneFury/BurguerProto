@@ -29,6 +29,7 @@ public class Player : MonobehaviourSingleton<Player>
 
     [Header("Souls")]
     public int soulsCollected = 0;
+    public Vector2 soulGainRange;
 
     [Header("Heal")]
     public float healAmount = 0.1f;
@@ -225,7 +226,7 @@ public class Player : MonobehaviourSingleton<Player>
     {
        if (other.CompareTag("Soul"))
         {
-            soulsCollected++;
+            soulsCollected += (int)Random.Range(soulGainRange.x, soulGainRange.y);
             uiManager.RefreshSouls();
             Destroy(other.gameObject);
         }

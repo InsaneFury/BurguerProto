@@ -3407,6 +3407,7 @@ MonoBehaviour:
   life: 100
   face: {fileID: 1524717479}
   soulsCollected: 100
+  soulGainRange: {x: 2, y: 5}
   healAmount: 15
   healCost: 10
   animTop: {fileID: 612681274}
