@@ -65,8 +65,8 @@ public class MachineGun : MonoBehaviour
                 player.animTop.SetTrigger("attack");
 
                 //Parche previo CAMBIAR!!
-                /*player.animBottom.SetTrigger("resetMove");
-                player.animTop.SetTrigger("resetMove");*/
+                player.animBottom.SetTrigger("resetMove");
+                player.animTop.SetTrigger("resetMove");
 
                 player.muzzleFlash.Play();
             }
