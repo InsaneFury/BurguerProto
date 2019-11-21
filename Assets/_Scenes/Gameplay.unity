@@ -3403,7 +3403,7 @@ MonoBehaviour:
   trail: {fileID: 2109374928}
   topMat: {fileID: 2100000, guid: d6b47abda12c4e44db4f6d43943536b8, type: 2}
   bottomMat: {fileID: 2100000, guid: f7faa58037319c14fb6004c65b2dd154, type: 2}
-  dashCost: 5
+  dashCost: 2
   life: 100
   face: {fileID: 1524717479}
   soulsCollected: 100
