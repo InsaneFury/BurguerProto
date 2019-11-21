@@ -23923,6 +23923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20c9ef5c55012cd4e8d645d87e621cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPersistant: 0
   ShakeDuration: 0.3
   ShakeAmplitude: 1.2
   ShakeFrequency: 2
@@ -69797,7 +69798,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: v0.4
+  m_text: v0.10
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 10afacd1ddc05a74b982c578c9b4bd38, type: 2}
   m_sharedMaterial: {fileID: -875986075962305725, guid: 10afacd1ddc05a74b982c578c9b4bd38,
@@ -69826,8 +69827,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -69840,7 +69841,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_firstOverflowCharacterIndex: -1
@@ -69867,7 +69868,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -0.13201214, w: 0}
   m_textInfo:
     textComponent: {fileID: 2145286920}
-    characterCount: 4
+    characterCount: 5
     spriteCount: 0
     spaceCount: 0
     wordCount: 2

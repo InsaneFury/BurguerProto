@@ -403,6 +403,8 @@ public class Player : MonobehaviourSingleton<Player>
         life = originalLife;
         isAlive = true;
         getDmgVFX.SetActive(false);
+        soulsCollected = 100;
+        uiManager.RefreshSouls();
 
         //Back to default weapon
         machineGunIsActive = false;
