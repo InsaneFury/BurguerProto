@@ -14,23 +14,23 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
         public float timeBetweenEnemies;
     }
 
-    public enum GAMEMODE
+    public enum GameMode
     {
-        ENEMIESDIE,
-        TIMER,
-        SURVIVAL
+        EnemiesDie,
+        Timer,
+        Survival
     };
 
-    public GAMEMODE gameMode;
+    public GameMode gameMode;
 
-    public enum GAMEDIFFICULTY
+    public enum GameDifficulty
     {
-        PIMIENTODELPADRON,
-        REDHABANERO,
-        GHOSTPEPPER
+        PimientoDelPadron,
+        RedHabanero,
+        GhostPepper
     };
 
-    public GAMEDIFFICULTY gameDifficulty;
+    public GameDifficulty gameDifficulty;
 
     public LevelDifficulty[] difficulties;
 
@@ -94,7 +94,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
 
             switch (gameMode)
             {
-                case GAMEMODE.ENEMIESDIE:
+                case GameMode.EnemiesDie:
                     if (currentWave < waves.Length)
                     {
                         EnemiesDieGameMode();
@@ -105,7 +105,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
                         gManager.gameStarted = false;
                     }
                     break;
-                case GAMEMODE.TIMER:
+                case GameMode.Timer:
                     if (currentWave < waves.Length)
                     {
                         TimerGameMode();
@@ -116,7 +116,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
                         gManager.gameStarted = false;
                     }
                     break;
-                case GAMEMODE.SURVIVAL:
+                case GameMode.Survival:
                     if (gManager.gameStarted)
                     {
                         SurvivalGameMode();
@@ -143,13 +143,13 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
 
         switch (gameDifficulty)
         {
-            case GAMEDIFFICULTY.PIMIENTODELPADRON:
+            case GameDifficulty.PimientoDelPadron:
                 SetPimientoDelPadron(go);
                 break;
-            case GAMEDIFFICULTY.REDHABANERO:
+            case GameDifficulty.RedHabanero:
                 SetRedHabanero(go);
                 break;
-            case GAMEDIFFICULTY.GHOSTPEPPER:
+            case GameDifficulty.GhostPepper:
                 SetGhostPepper(go);
                 break;
             default:
@@ -301,7 +301,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
 
     public void SetDifficulty(int levelOfDifficulty)
     {
-        gameDifficulty = (GAMEDIFFICULTY)levelOfDifficulty;
+        gameDifficulty = (GameDifficulty)levelOfDifficulty;
     }
     #endregion
 

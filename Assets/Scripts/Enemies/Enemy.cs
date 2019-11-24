@@ -38,7 +38,13 @@ public class Enemy : MonoBehaviour
     
     float distance = 0;
 
-    enum EnemyAction : short {Idle = 0,Run,Attack};
+    enum EnemyAction
+    {
+        Idle,
+        Run,
+        Attack
+    };
+
     EnemyAction actions;
 
     private void Start()

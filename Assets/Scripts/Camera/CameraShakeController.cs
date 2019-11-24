@@ -17,9 +17,9 @@ public class CameraShakeController : MonobehaviourSingleton<CameraShakeControlle
 
     enum CameraRigs
     {
-        TOPRIG,
-        MIDDLERIG,
-        BOTTOMRIG
+        TopRig,
+        MiddleRig,
+        BottomRig
     }
 
     // Cinemachine Shake
@@ -38,7 +38,7 @@ public class CameraShakeController : MonobehaviourSingleton<CameraShakeControlle
 
         // Get Virtual Camera Noise Profile
         if (freeLookCamera != null)
-            virtualCameraNoise = freeLookCamera.GetRig((int)CameraRigs.MIDDLERIG).GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+            virtualCameraNoise = freeLookCamera.GetRig((int)CameraRigs.MiddleRig).GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
    
     }
 
