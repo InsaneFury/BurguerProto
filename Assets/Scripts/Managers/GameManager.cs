@@ -77,6 +77,7 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         gameStarted = true;
         //Audio
         AkSoundEngine.PostEvent("Inicio_gameplay", gameObject);
+        JukeBoxAudio.Get().PlayJukeBoxAudio();
         UIManager.Get().ActiveInGameUI();
     }
 
@@ -84,6 +85,7 @@ public class GameManager : MonobehaviourSingleton<GameManager>
     {
         //Audio
         AkSoundEngine.PostEvent("Perder", gameObject);
+        JukeBoxAudio.Get().StopJukeBoxAudio();
         gameStarted = false;
         gameOverText.SetActive(true);
         cg.saturation.value = new FloatParameter() { value = gameOverSaturation };
@@ -112,7 +114,7 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         EnemySpawner.Get().ResetSpawner();
         ResetPlayer();
         cg.saturation.value = new FloatParameter() { value = 0 };
-        gameStarted = true;
+        ActiveGame();
         gameOverText.SetActive(false);
         ScoreManager.Get().score = 0;
         ScoreManager.Get().enemiesKilled = 0;

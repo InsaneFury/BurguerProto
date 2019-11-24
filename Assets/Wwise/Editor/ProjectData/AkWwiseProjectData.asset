@@ -798,5 +798,7 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /FastFoodNightmares_WwiseProject
+  - /FastFoodNightmares_WwiseProject/Events
+  - /FastFoodNightmares_WwiseProject/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
