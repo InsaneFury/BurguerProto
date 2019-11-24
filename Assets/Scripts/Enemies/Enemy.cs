@@ -52,6 +52,8 @@ public class Enemy : MonoBehaviour
 
         healthBar.fillAmount = life / 100f;
         actions = EnemyAction.Run;
+        //Audio
+        AkSoundEngine.PostEvent("Mov_enemigos", gameObject);
     }
     private void Update()
     {
@@ -80,12 +82,17 @@ public class Enemy : MonoBehaviour
     public void Chase()
     {
         actions = EnemyAction.Run;
+        //Audio
+        AkSoundEngine.PostEvent("Mov_enemigos", gameObject);
     }
 
     public void CheckIfCanAttack()
     {
         if (distance < attackDistance)
         {
+            //Audio
+            AkSoundEngine.PostEvent("Voz_enemigos", gameObject);
+            AkSoundEngine.PostEvent("Ataque_enemigos", gameObject);
             player.TakeDamage(damage);
         }
         else
@@ -99,6 +106,8 @@ public class Enemy : MonoBehaviour
         if (popUp && life > 0)
         {
             ShowPopUp(dmg);
+            //Audio
+            AkSoundEngine.PostEvent("Damage_enemigos", gameObject);
         }
         
         if (life > 0)
@@ -127,6 +136,8 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        //Audio
+        AkSoundEngine.PostEvent("Damage_enemigos", gameObject);
         isAlive = false;
         anim.SetBool("die", true);
         if (OnDieAction != null)

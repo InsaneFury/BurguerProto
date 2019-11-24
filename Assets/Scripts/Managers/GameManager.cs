@@ -34,6 +34,8 @@ public class GameManager : MonobehaviourSingleton<GameManager>
 
     void Start()
     {
+        //Audio
+        AkSoundEngine.PostEvent("Menu", gameObject);
         UIManager.Get().version.text ="v"+ Application.version;
         player = Player.Get();
         profile.TryGetSettings(out cg);
@@ -73,11 +75,15 @@ public class GameManager : MonobehaviourSingleton<GameManager>
     public void ActiveGame()
     {
         gameStarted = true;
+        //Audio
+        AkSoundEngine.PostEvent("Inicio_gameplay", gameObject);
         UIManager.Get().ActiveInGameUI();
     }
 
     void GameOver()
     {
+        //Audio
+        AkSoundEngine.PostEvent("Perder", gameObject);
         gameStarted = false;
         gameOverText.SetActive(true);
         cg.saturation.value = new FloatParameter() { value = gameOverSaturation };
@@ -88,6 +94,17 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         pause = !pause;
         UIManager.Get().pause.SetActive(pause);
         Time.timeScale = pause ? 0 : 1;
+
+        if (pause)
+        {
+            //Audio
+            AkSoundEngine.PostEvent("Pausa_ON", gameObject);
+        }
+        else
+        {
+            //Audio
+            AkSoundEngine.PostEvent("Pausa_OFF", gameObject);
+        }
     }
 
     public void RestartGame()
@@ -101,6 +118,9 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         ScoreManager.Get().enemiesKilled = 0;
         if(pause)
         PauseGame();
+
+        //Audio
+        AkSoundEngine.PostEvent("Restart", gameObject);
     }
 
     public void Menu()

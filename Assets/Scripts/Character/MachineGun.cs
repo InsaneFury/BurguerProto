@@ -60,6 +60,10 @@ public class MachineGun : MonoBehaviour
             if (Input.GetMouseButton(0) && Time.time >= timeToFire)
             {
                 timeToFire = Time.time + 1f / fireRate;
+
+                //Audio
+                AkSoundEngine.PostEvent("Mch_Gun_disparo", gameObject);
+
                 Shoot();
                 player.animMachineGun.SetBool("attack", true);
                 player.animTop.SetTrigger("attack");

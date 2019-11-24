@@ -199,6 +199,8 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
     {
         if (seconds <= 0 && isSpawning)
         {
+            //Audio
+            AkSoundEngine.PostEvent("Comienzo_oleada", gameObject);
             isSpawning = false;
             uiManager.SetWaveNumber(currentWave + 1);
             StartCoroutine(SpawnWave(waves[currentWave]));
@@ -210,6 +212,8 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
     {
         if (spawnedEnemies.Count == 0)
         {
+            //Audio
+            AkSoundEngine.PostEvent("Comienzo_oleada", gameObject);
             uiManager.SetWaveNumber(currentWave);
             StartCoroutine(SpawnWave(waves[currentWave]));
             currentWave++;
@@ -220,6 +224,8 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
     {
         if (seconds <= 0 && isSpawning)
         {
+            //Audio
+            AkSoundEngine.PostEvent("Comienzo_oleada", gameObject);
             isSpawning = false;
 
             userSurvivalRecord++;

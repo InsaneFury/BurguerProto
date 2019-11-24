@@ -798,5 +798,12 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /FastFoodNightmares_WwiseProject
+  - /FastFoodNightmares_WwiseProject/Events
+  - /FastFoodNightmares_WwiseProject/Events/Default Work Unit
+  - "/FastFoodNightmares_WwiseProject/Events/Default Work Unit/Eventos_Espec\xEDficos"
+  - /FastFoodNightmares_WwiseProject/States
+  - /FastFoodNightmares_WwiseProject/States/Default Work Unit
+  - /FastFoodNightmares_WwiseProject/States/Default Work Unit/Dificultad
+  - /FastFoodNightmares_WwiseProject/States/Default Work Unit/Vivo_o_muerto
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

@@ -24,6 +24,10 @@ public class Explosion : MonoBehaviour
     void Explode()
     {
         Instantiate(explosion, transform.position, Quaternion.identity);
+
+        //Audio
+        AkSoundEngine.PostEvent("Granada_explosion", gameObject);
+
         Vector3 explosionPos = transform.position;
         Collider[] colliders = Physics.OverlapSphere(explosionPos, explosionRadius,layer);
         foreach (Collider hit in colliders)

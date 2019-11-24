@@ -9,6 +9,9 @@ public class Sword : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //Audio
+        AkSoundEngine.PostEvent("Espada_impacto", gameObject);
+
         if (other.CompareTag("Enemy"))
         {
             int randDmg = (int)Random.Range(minDamage, maxDamage);
