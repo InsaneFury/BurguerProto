@@ -58,8 +58,6 @@ public class Enemy : MonoBehaviour
 
         healthBar.fillAmount = life / 100f;
         actions = EnemyAction.Run;
-        //Audio
-        AkSoundEngine.PostEvent("Mov_enemigos", gameObject);
     }
     private void Update()
     {
@@ -88,8 +86,6 @@ public class Enemy : MonoBehaviour
     public void Chase()
     {
         actions = EnemyAction.Run;
-        //Audio
-        AkSoundEngine.PostEvent("Mov_enemigos", gameObject);
     }
 
     public void CheckIfCanAttack()
@@ -208,5 +204,10 @@ public class Enemy : MonoBehaviour
         {
             player.TakeDamage(damage);
         }
+    }
+
+    public void PlayRunningSound()
+    {
+        AkSoundEngine.PostEvent("Mov_enemigos", gameObject);
     }
 }

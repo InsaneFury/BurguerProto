@@ -117,11 +117,27 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.13105416
+        functionName: PlayWalkCycleSound()
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: f50f39afa9d59f4429acf0446fa2eea9,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.5982907
+        functionName: PlayWalkCycleSound()
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: f50f39afa9d59f4429acf0446fa2eea9,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 1
     - serializedVersion: 16
       name: Dash_Start
       takeName: Take 001

@@ -130,6 +130,8 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         if (pause)
             PauseGame();
         UIManager.Get().initMenu.SetActive(true);
+
+        //Sacar y cambiar por volver al menu sin recagar la scene.
         SceneManager.LoadScene("Gameplay");
     }
 

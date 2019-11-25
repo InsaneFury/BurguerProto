@@ -71,6 +71,7 @@ public class Player : MonobehaviourSingleton<Player>
     public bool isAlive = true;
     public bool isDashing = false;
     public bool isMeleeing = false;
+
     float originalLife = 0;
     int comboCounter = 0;
 
@@ -159,8 +160,6 @@ public class Player : MonobehaviourSingleton<Player>
         }
         else
         {
-            //Audio
-            AkSoundEngine.PostEvent("Mov_hamburguesa", gameObject);
             face.SetBool("run", true);
         }
 
@@ -375,7 +374,7 @@ public class Player : MonobehaviourSingleton<Player>
 
     void WeaponChanger()
     {
-        if (Input.GetKey(KeyCode.Alpha1))
+        if (Input.GetKey(KeyCode.Alpha1) && !machineGunIsActive)
         {
             //Audio
             AkSoundEngine.PostEvent("Mch_Gun_cambio", gameObject);
@@ -390,7 +389,7 @@ public class Player : MonobehaviourSingleton<Player>
             animBottom.SetTrigger("resetMove");
             animTop.SetTrigger("resetMove");
         }
-        if (Input.GetKey(KeyCode.Alpha2))
+        if (Input.GetKey(KeyCode.Alpha2) && !granade.enabled)
         {
             //Audio
             AkSoundEngine.PostEvent("Granada_cambio", gameObject);
@@ -405,7 +404,7 @@ public class Player : MonobehaviourSingleton<Player>
             animBottom.SetTrigger("resetMove");
             animTop.SetTrigger("resetMove");
         }
-        if (Input.GetKey(KeyCode.Alpha3))
+        if (Input.GetKey(KeyCode.Alpha3) && !swordIsActive)
         {
             //Audio
             AkSoundEngine.PostEvent("Espada_cambio", gameObject);
@@ -456,5 +455,10 @@ public class Player : MonobehaviourSingleton<Player>
         granade.enabled = true;
         sword.SetActive(false);
         swordIsActive = false;
+    }
+
+    public void PlayWalkCycleSound()
+    {
+        AkSoundEngine.PostEvent("Mov_hamburguesa", gameObject);
     }
 }
