@@ -24,4 +24,10 @@ public class UIAudioManager : MonoBehaviour
     {
         AkSoundEngine.SetState("Dificultad", "Dificil");
     }
+
+    public void BackToMenu()
+    {
+        AkSoundEngine.PostEvent("volver_menu", gameObject);
+        AkSoundEngine.PostEvent("Menu", gameObject);
+    }
 }

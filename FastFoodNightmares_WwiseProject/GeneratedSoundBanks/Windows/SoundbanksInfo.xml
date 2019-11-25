@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>D:\EnginesProjects\Unity2019\FastFoodNightmares\FastFoodNightmares_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\EnginesProjects\Unity2019\FastFoodNightmares\FastFoodNightmares_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\EnginesProjects\Unity2019\FastFoodNightmares\FastFoodNightmares_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>E:\Program Files (x86)\Audiokinetic\WWISE Proyectos\Fast Food Nightmare Event List\</ProjectRoot>
+		<SourceFilesRoot>E:\Program Files (x86)\Audiokinetic\WWISE Proyectos\Fast Food Nightmare Event List\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>E:\Program Files (x86)\Audiokinetic\WWISE Proyectos\Fast Food Nightmare Event List\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\EnginesProjects\Unity2019\FastFoodNightmares\FastFoodNightmares_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>E:\Program Files (x86)\Audiokinetic\WWISE Proyectos\Fast Food Nightmare Event List\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -15,6 +15,49 @@
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
+			<ShortName>main</ShortName>
+			<Path>main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="193658694" Name="Ataque_boss" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Ataque_boss"/>
+				<Event Id="4098331468" Name="Ataque_enemigos" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Ataque_enemigos"/>
+				<Event Id="1604160490" Name="Comienzo_oleada" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Comienzo_oleada"/>
+				<Event Id="4082639641" Name="Curar_vida" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Curar_vida"/>
+				<Event Id="4059334902" Name="Damage_boss" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Damage_boss"/>
+				<Event Id="2244913564" Name="Damage_enemigos" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Damage_enemigos"/>
+				<Event Id="1567401025" Name="Damage_hamburguesa" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Damage_hamburguesa"/>
+				<Event Id="1942692385" Name="Dash" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Dash"/>
+				<Event Id="2655057481" Name="Espada_cambio" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Espada_cambio"/>
+				<Event Id="3311887745" Name="Espada_impacto" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Espada_impacto"/>
+				<Event Id="4243659193" Name="Fantasmas_enemigos" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Fantasmas_enemigos"/>
+				<Event Id="581321845" Name="Granada_cambio" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Granada_cambio"/>
+				<Event Id="3531178621" Name="Granada_explosion" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Granada_explosion"/>
+				<Event Id="3436479489" Name="Impacto_objetos" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Impacto_objetos"/>
+				<Event Id="2658298240" Name="Inicio" ObjectPath="\Events\Default Work Unit\Eventos_Generales\Inicio"/>
+				<Event Id="3425974687" Name="Inicio_gameplay" ObjectPath="\Events\Default Work Unit\Eventos_Generales\Inicio_gameplay"/>
+				<Event Id="2845818466" Name="Mch_Gun_cambio" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Mch_Gun_cambio"/>
+				<Event Id="3602564457" Name="Mch_Gun_disparo" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Mch_Gun_disparo"/>
+				<Event Id="2607556080" Name="Menu" ObjectPath="\Events\Default Work Unit\Eventos_Generales\Menu"/>
+				<Event Id="3971714355" Name="Mov_boss" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Mov_boss"/>
+				<Event Id="2241940529" Name="Mov_enemigos" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Mov_enemigos"/>
+				<Event Id="803525678" Name="Mov_hamburguesa" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Mov_hamburguesa"/>
+				<Event Id="4023256677" Name="Muerte_boss" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Muerte_boss"/>
+				<Event Id="40152227" Name="Muerte_enemigos" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Muerte_enemigos"/>
+				<Event Id="2349829932" Name="Muerte_hamburguesa" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Muerte_hamburguesa"/>
+				<Event Id="2659475283" Name="Pausa_OFF" ObjectPath="\Events\Default Work Unit\Eventos_Generales\Pausa_OFF"/>
+				<Event Id="549173535" Name="Pausa_ON" ObjectPath="\Events\Default Work Unit\Eventos_Generales\Pausa_ON"/>
+				<Event Id="2433235219" Name="Perder" ObjectPath="\Events\Default Work Unit\Eventos_Generales\Perder"/>
+				<Event Id="1203400786" Name="Restart" ObjectPath="\Events\Default Work Unit\Eventos_Generales\Restart"/>
+				<Event Id="4206091493" Name="Rocola_damage" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Rocola_damage"/>
+				<Event Id="3415832814" Name="Rocola_Start" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Rocola_Start"/>
+				<Event Id="1875703502" Name="Rocola_Stop" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Rocola_Stop"/>
+				<Event Id="2249769530" Name="UI_Click" ObjectPath="\Events\Default Work Unit\Eventos_Generales\UI_Click"/>
+				<Event Id="4247065354" Name="Voz_boss" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Voz_boss"/>
+				<Event Id="1323470984" Name="Voz_enemigos" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Voz_enemigos"/>
+				<Event Id="3121871613" Name="Voz_hamburguesa" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Voz_hamburguesa"/>
+			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

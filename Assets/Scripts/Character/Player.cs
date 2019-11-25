@@ -116,6 +116,9 @@ public class Player : MonobehaviourSingleton<Player>
             }
             Heal();
 
+            AkSoundEngine.SetRTPCValue("vida_hamburguesa", life);
+            AkSoundEngine.SetRTPCValue("mana_hamburguesa", soulsCollected);
+
         }
     }
 

@@ -90,6 +90,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
             {
                 timer -= Time.deltaTime;
                 seconds = (int)(timer % 60);
+                AkSoundEngine.SetRTPCValue("waves_time", seconds);
             }
 
             switch (gameMode)

@@ -31,8 +31,17 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 4dd0d03a04a09a4a991659e6759f5d39
     GuidInternal: 
-    m_lastTime: -8586276615598055438
-    List: []
+    m_lastTime: -8586269932552037329
+    List:
+    - name: main
+      guid: 3ec01e25d4298f45939a6ff5f22c057a
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: main
+        ObjectType: 7
+      Path: Default Work Unit\main
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -798,7 +807,7 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /FastFoodNightmares_WwiseProject
-  - /FastFoodNightmares_WwiseProject/Events
-  - /FastFoodNightmares_WwiseProject/Events/Default Work Unit
+  - /FastFoodNightmares_WwiseProject/SoundBanks
+  - /FastFoodNightmares_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
