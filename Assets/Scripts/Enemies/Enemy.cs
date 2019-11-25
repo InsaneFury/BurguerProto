@@ -143,7 +143,7 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         //Audio
-        AkSoundEngine.PostEvent("Damage_enemigos", gameObject);
+        AkSoundEngine.PostEvent("Muerte_enemigos", gameObject);
         isAlive = false;
         anim.SetBool("die", true);
         if (OnDieAction != null)
@@ -192,6 +192,8 @@ public class Enemy : MonoBehaviour
 
     public void AjiDie()
     {
+        //Audio
+        AkSoundEngine.PostEvent("Muerte_enemigos", gameObject);
         Instantiate(explotionParticle, transform.position, Quaternion.identity);
         Drop();
         EnemySpawner.Get().spawnedEnemies.Remove(gameObject);
