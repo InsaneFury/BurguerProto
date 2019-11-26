@@ -387,11 +387,10 @@
 						</Event>
 						<Event Name="Rocola_damage" ID="{CA13A282-0056-4EF0-8EF3-1AD2BB583B33}">
 							<ChildrenList>
-								<Action Name="" ID="{D0067846-866F-4452-96A3-7793CCE50618}" ShortID="1033177720">
+								<Action Name="" ID="{82BAAB87-B5C7-4AEF-9BEA-B5441D0E9476}" ShortID="317502503">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="29"/>
-										<Property Name="Highpass" Type="int16" Value="51"/>
-										<Property Name="Scope" Type="int16" Value="1"/>
+										<Property Name="Highpass" Type="int16" Value="35"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -403,10 +402,11 @@
 						</Event>
 						<Event Name="Rocola_Stop" ID="{F7DEFDD1-9AF3-4E35-9BA9-4FA824BAEAE5}">
 							<ChildrenList>
-								<Action Name="" ID="{8E50038D-E682-4068-8505-BAAA7195A476}" ShortID="750009436">
+								<Action Name="" ID="{0E880903-6F99-4A03-B257-6208A6D0E773}" ShortID="584898202">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="29"/>
-										<Property Name="Scope" Type="int16" Value="1"/>
+										<Property Name="Highpass" Type="int16" Value="35"/>
+										<Property Name="Volume" Type="Real64" Value="-96"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">

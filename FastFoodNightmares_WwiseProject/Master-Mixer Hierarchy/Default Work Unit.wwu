@@ -4,13 +4,6 @@
 		<WorkUnit Name="Default Work Unit" ID="{020CDD13-7FA1-4EF0-91FC-DDA738734A68}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
-					<PropertyList>
-						<Property Name="Lowpass" Type="int16">
-							<ValueList>
-								<Value>46</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice">
 							<ObjectRef Name="System" ID="{F9A9EB7F-F181-45C1-A2CA-9E3235201964}" WorkUnitID="{A7D9B23E-110E-47D4-81DE-4E6147F5EEDF}"/>

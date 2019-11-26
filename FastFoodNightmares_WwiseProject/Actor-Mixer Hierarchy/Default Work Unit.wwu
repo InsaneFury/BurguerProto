@@ -645,18 +645,14 @@
 											<Modifier Name="" ID="{61A5F517-B17A-4FA0-8578-E8E31B013941}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="246"/>
-													<Property Name="Min" Type="Real64" Value="-246"/>
+													<Property Name="Max" Type="Real64" Value="600"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-9</Value>
-									</ValueList>
-								</Property>
+								<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -671,12 +667,12 @@
 									<PropertyList>
 										<Property Name="Highpass" Type="int16">
 											<ValueList>
-												<Value>25</Value>
+												<Value>49</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
-												<Value>50</Value>
+												<Value>46</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -700,9 +696,14 @@
 								</Sound>
 								<Sound Name="footstep_02" ID="{381C4461-9ACA-4DA4-8A31-EAC6C65B9D84}" ShortID="714341010">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>37</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
-												<Value>49</Value>
+												<Value>46</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -906,6 +907,8 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="voz_enemigo" ID="{6A201540-5725-44DB-A4E8-024D6BF58091}" ShortID="968205024">
 							<PropertyList>
+								<Property Name="3DPosition" Type="int16" Value="2"/>
+								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -921,11 +924,14 @@
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-5</Value>
+										<Value>-2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Voices" ID="{3BC4FB29-9E26-433A-882F-53701BA80C0C}" WorkUnitID="{2AA3CE64-F1BB-4071-9253-8A01749CC03F}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD1961E4-98D0-41A4-A3AA-ABCFB615E72E}"/>
 								</Reference>
@@ -1063,6 +1069,183 @@
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+							<PositioningInfo>
+								<Position Name="" ID="{2B37754A-A4F0-4046-821E-8434C4005313}">
+									<PropertyList>
+										<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+									</PropertyList>
+									<ChildrenList>
+										<Path2D Name="voz_enemigo_Path" ID="{9A88F2AB-AAEB-4469-9C10-0DCD67502018}">
+											<PropertyList>
+												<Property Name="Duration" Type="int32" Value="1000"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-72.1519</XPos>
+													<YPos>75.47771</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+												<Point>
+													<XPos>-25.9493670886076</XPos>
+													<YPos>48.4076433121019</YPos>
+													<Flags>0</Flags>
+													<Time>333</Time>
+												</Point>
+												<Point>
+													<XPos>-74.6835443037975</XPos>
+													<YPos>23.5668789808917</YPos>
+													<Flags>0</Flags>
+													<Time>666</Time>
+												</Point>
+												<Point>
+													<XPos>72.1518987341772</XPos>
+													<YPos>59.8726114649682</YPos>
+													<Flags>0</Flags>
+													<Time>1000</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="voz_enemigo_Path_01" ID="{1F06F69E-09D3-4930-B242-AC16B0572CC1}">
+											<PropertyList>
+												<Property Name="Duration" Type="int32" Value="1000"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>0</XPos>
+													<YPos>50</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+												<Point>
+													<XPos>-73.4177215189873</XPos>
+													<YPos>-53.5031847133758</YPos>
+													<Flags>0</Flags>
+													<Time>500</Time>
+												</Point>
+												<Point>
+													<XPos>36.7088607594937</XPos>
+													<YPos>-63.0573248407643</YPos>
+													<Flags>0</Flags>
+													<Time>1000</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="voz_enemigo_Path_02" ID="{22CDD339-5865-46E0-BF8B-E4621ABE0521}">
+											<PropertyList>
+												<Property Name="Duration" Type="int32" Value="1000"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>78.48101</XPos>
+													<YPos>58.9172</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+												<Point>
+													<XPos>-45.5696202531646</XPos>
+													<YPos>64.3312101910828</YPos>
+													<Flags>0</Flags>
+													<Time>333</Time>
+												</Point>
+												<Point>
+													<XPos>36.7088607594937</XPos>
+													<YPos>-24.2038216560509</YPos>
+													<Flags>0</Flags>
+													<Time>666</Time>
+												</Point>
+												<Point>
+													<XPos>53.7974683544304</XPos>
+													<YPos>14.0127388535032</YPos>
+													<Flags>0</Flags>
+													<Time>1000</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="voz_enemigo_Path_03" ID="{955FC781-B011-4927-A664-552BC3CC3DFB}">
+											<PropertyList>
+												<Property Name="Duration" Type="int32" Value="1000"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-62.65823</XPos>
+													<YPos>-52.54777</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+												<Point>
+													<XPos>18.3544303797468</XPos>
+													<YPos>-59.2356687898089</YPos>
+													<Flags>0</Flags>
+													<Time>333</Time>
+												</Point>
+												<Point>
+													<XPos>29.746835443038</XPos>
+													<YPos>-0.636942675159233</YPos>
+													<Flags>0</Flags>
+													<Time>666</Time>
+												</Point>
+												<Point>
+													<XPos>46.8354430379747</XPos>
+													<YPos>22.9299363057325</YPos>
+													<Flags>0</Flags>
+													<Time>1000</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="voz_enemigo_Path_04" ID="{7FD50A28-7421-4142-99CB-CD42058C11C3}">
+											<PropertyList>
+												<Property Name="Duration" Type="int32" Value="1000"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-78.48101</XPos>
+													<YPos>-67.19745</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+												<Point>
+													<XPos>31.6455696202532</XPos>
+													<YPos>-66.8789808917197</YPos>
+													<Flags>0</Flags>
+													<Time>500</Time>
+												</Point>
+												<Point>
+													<XPos>52.5316455696203</XPos>
+													<YPos>17.8343949044586</YPos>
+													<Flags>0</Flags>
+													<Time>1000</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="voz_enemigo_Path_05" ID="{5B6DC102-EC67-48C6-A1F2-074EE682264F}">
+											<PropertyList>
+												<Property Name="Duration" Type="int32" Value="1000"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>0</XPos>
+													<YPos>50</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+												<Point>
+													<XPos>-84.8101265822785</XPos>
+													<YPos>43.9490445859873</YPos>
+													<Flags>0</Flags>
+													<Time>500</Time>
+												</Point>
+												<Point>
+													<XPos>-77.8481012658228</XPos>
+													<YPos>-10.828025477707</YPos>
+													<Flags>0</Flags>
+													<Time>1000</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+									</ChildrenList>
+								</Position>
+							</PositioningInfo>
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
@@ -1536,7 +1719,7 @@
 									<PropertyList>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
-												<Value>42</Value>
+												<Value>46</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1567,7 +1750,7 @@
 									<PropertyList>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
-												<Value>44</Value>
+												<Value>46</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1598,7 +1781,7 @@
 									<PropertyList>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
-												<Value>38</Value>
+												<Value>46</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Volume" Type="Real64">
