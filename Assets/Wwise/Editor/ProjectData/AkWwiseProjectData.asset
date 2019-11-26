@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 13dd0c02a17ff04e91fcdda738734a68
     GuidInternal: 
-    m_lastTime: -8586268688419548930
+    m_lastTime: -8586268676416280226
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
@@ -47,7 +47,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 55097ac39372dc4499e877ce3666d4b4
     GuidInternal: 
-    m_lastTime: -8586268687846275804
+    m_lastTime: -8586268657562269064
     List:
     - name: Ataque_boss
       guid: 0739bf4e4c359e40b4991e723471665b
