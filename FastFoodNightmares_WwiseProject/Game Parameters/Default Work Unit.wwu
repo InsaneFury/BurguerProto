@@ -7,9 +7,9 @@
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
 			<ChildrenList>
-				<GameParameter Name="Vida_Player" ID="{3087EB13-DD1E-49EF-8878-A0E50C15A886}"/>
-				<GameParameter Name="Mana_Player" ID="{62111FB2-4B11-4E94-90C3-36F6D8A2C055}"/>
-				<GameParameter Name="Tiempo_Wave" ID="{DAB0B4CB-9DCC-4F94-A72E-DDAEC14A593C}"/>
+				<GameParameter Name="vida_hamburguesa" ID="{3087EB13-DD1E-49EF-8878-A0E50C15A886}"/>
+				<GameParameter Name="mana_hamburguesa" ID="{62111FB2-4B11-4E94-90C3-36F6D8A2C055}"/>
+				<GameParameter Name="waves_time" ID="{DAB0B4CB-9DCC-4F94-A72E-DDAEC14A593C}"/>
 				<GameParameter Name="Zoom_camara" ID="{791A03D2-2203-4752-8755-BA93729C5244}"/>
 				<GameParameter Name="Cantidad_enemigos" ID="{1A52A7D7-1F5A-4DB3-9161-D612506EC9F4}"/>
 				<GameParameter Name="Distancia_enemigos" ID="{482E7846-4A03-4266-9442-586AA2032CF3}"/>

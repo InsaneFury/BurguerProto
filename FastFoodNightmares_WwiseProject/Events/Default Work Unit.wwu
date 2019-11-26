@@ -14,13 +14,163 @@
 					</PropertyList>
 					<ChildrenList>
 						<Event Name="Inicio" ID="{0DA8BF38-A383-4049-A089-22B62939672B}"/>
-						<Event Name="Menu" ID="{262C29ED-4F46-400A-87C8-E47C0D1A6016}"/>
-						<Event Name="Inicio_gameplay" ID="{20B54143-36B3-401C-99D4-00CC42FE7CB0}"/>
-						<Event Name="Perder" ID="{DBD9882C-720F-4198-B158-72545F0FB53D}"/>
-						<Event Name="Restart" ID="{27CB8CC6-8D90-478B-8267-7D4B043D5AC1}"/>
+						<Event Name="Menu" ID="{262C29ED-4F46-400A-87C8-E47C0D1A6016}">
+							<ChildrenList>
+								<Action Name="" ID="{D17ED179-2CF4-4E04-A178-E857CFEA2924}" ShortID="794274335">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Menu" ID="{0B24D8E4-0C5D-4917-B74B-F47E2D143522}" WorkUnitID="{997C49BF-FC31-4C96-8EE3-AF1C46A3C0BC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D62C63EF-50E2-40CF-92F4-D2979EB38D55}" ShortID="406117397">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Gameplay" ID="{84D2F857-D985-4FD3-ACD8-7BB5E34110B0}" WorkUnitID="{997C49BF-FC31-4C96-8EE3-AF1C46A3C0BC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F3E0B429-FE18-45E7-B936-59DCC189E097}" ShortID="316266673">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_music_master" ID="{01765979-947D-400C-A25B-A11AD30096B3}" WorkUnitID="{B27C09DC-6A30-4758-8639-361BF775165C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Inicio_gameplay" ID="{20B54143-36B3-401C-99D4-00CC42FE7CB0}">
+							<ChildrenList>
+								<Action Name="" ID="{6FE3E18E-954A-4375-8B2D-0493722950A8}" ShortID="62816102">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Menu" ID="{0B24D8E4-0C5D-4917-B74B-F47E2D143522}" WorkUnitID="{997C49BF-FC31-4C96-8EE3-AF1C46A3C0BC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B883CFE1-5A9C-49BE-AEE1-55C7EDBE2010}" ShortID="921398903">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="29"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Gameplay" ID="{84D2F857-D985-4FD3-ACD8-7BB5E34110B0}" WorkUnitID="{997C49BF-FC31-4C96-8EE3-AF1C46A3C0BC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{6844D8FD-365F-4F5A-B107-8DDFC58B5B2E}" ShortID="607623326">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_music_master" ID="{01765979-947D-400C-A25B-A11AD30096B3}" WorkUnitID="{B27C09DC-6A30-4758-8639-361BF775165C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{64EB4352-A6B6-4E96-AA5B-323ED9239FC8}" ShortID="264663774">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Exploracion" ID="{36974AFE-4B6B-4BD2-8258-F783C63E1E85}" WorkUnitID="{BDEAB2BE-392E-4616-A6E9-69E2BFD4392B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{5E058FD1-33F5-4106-90BD-A2A8AD2237B4}" ShortID="1004497721">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Gameplay" ID="{84D2F857-D985-4FD3-ACD8-7BB5E34110B0}" WorkUnitID="{997C49BF-FC31-4C96-8EE3-AF1C46A3C0BC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Perder" ID="{DBD9882C-720F-4198-B158-72545F0FB53D}">
+							<ChildrenList>
+								<Action Name="" ID="{8CB133D6-3428-4A98-B6BB-24C2819ED55E}" ShortID="706302193">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Gameplay" ID="{84D2F857-D985-4FD3-ACD8-7BB5E34110B0}" WorkUnitID="{997C49BF-FC31-4C96-8EE3-AF1C46A3C0BC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{328828F1-8DF5-4158-A004-59573482DB0D}" ShortID="274256008">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_music_master" ID="{01765979-947D-400C-A25B-A11AD30096B3}" WorkUnitID="{B27C09DC-6A30-4758-8639-361BF775165C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E4BD645D-4949-4AC7-9B42-7B9CD35B260C}" ShortID="886654034">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Restart" ID="{27CB8CC6-8D90-478B-8267-7D4B043D5AC1}">
+							<ChildrenList>
+								<Action Name="" ID="{81DD3DD0-F6E8-4478-BE3C-6C4E89713D06}" ShortID="644632309">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Gameplay" ID="{84D2F857-D985-4FD3-ACD8-7BB5E34110B0}" WorkUnitID="{997C49BF-FC31-4C96-8EE3-AF1C46A3C0BC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E1C5C489-11C3-4471-8D36-B7DCB2772B36}" ShortID="108458713">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Gameplay" ID="{84D2F857-D985-4FD3-ACD8-7BB5E34110B0}" WorkUnitID="{997C49BF-FC31-4C96-8EE3-AF1C46A3C0BC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Pausa_ON" ID="{89F2D01A-27EB-470E-804A-ECD875B2517D}"/>
 						<Event Name="Pausa_OFF" ID="{0FB6F297-F28C-4A53-BC3D-BFC16B343380}"/>
-						<Event Name="UI_Click" ID="{A8D8DCB0-A177-486B-A9E7-D674EAFC01FF}"/>
+						<Event Name="UI_Click" ID="{A8D8DCB0-A177-486B-A9E7-D674EAFC01FF}">
+							<ChildrenList>
+								<Action Name="" ID="{E1154C09-BA12-48E4-9C81-F1D580B75279}" ShortID="1050834882">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="click 6" ID="{8BA3BC77-1422-41CA-BFAA-9078B18BBDF4}" WorkUnitID="{B27C09DC-6A30-4758-8639-361BF775165C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="volver_menu" ID="{A87076E0-4CA2-4090-A96E-F0E2645B3BA2}">
+							<ChildrenList>
+								<Action Name="" ID="{4716C30F-5301-48F6-819C-D91D3CC1D038}" ShortID="545373064">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Eventos_Específicos" ID="{D4B2271B-DBE4-40E8-BEEE-913A3D652BDD}" ShortID="69164500">
@@ -29,34 +179,243 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Event Name="Mov_hamburguesa" ID="{AEDD7473-0053-46B1-B21C-08B26A149FF8}"/>
-						<Event Name="Mov_enemigos" ID="{792524B3-FCBF-4059-A741-C833DF358C10}"/>
-						<Event Name="Ataque_enemigos" ID="{9AB17A44-E738-4ADE-A279-14542101F88A}"/>
+						<Event Name="Mov_hamburguesa" ID="{AEDD7473-0053-46B1-B21C-08B26A149FF8}">
+							<ChildrenList>
+								<Action Name="" ID="{5FFB04D1-44E0-4EF9-A3A4-3F0D8CBF3D49}" ShortID="582181268">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="mov_hamburguesa" ID="{4A55DB1B-849A-4FCC-B88B-062EB8832F7B}" WorkUnitID="{B27C09DC-6A30-4758-8639-361BF775165C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Mov_enemigos" ID="{792524B3-FCBF-4059-A741-C833DF358C10}">
+							<ChildrenList>
+								<Action Name="" ID="{419E9540-F37E-44ED-A85A-FBAA6CE324BF}" ShortID="450927856">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="mov_enemigo" ID="{C78F8C4F-D6F7-4F4B-AED6-3ADAD6959CF7}" WorkUnitID="{B27C09DC-6A30-4758-8639-361BF775165C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Ataque_enemigos" ID="{9AB17A44-E738-4ADE-A279-14542101F88A}">
+							<ChildrenList>
+								<Action Name="" ID="{8B565A19-5464-4333-ADB8-8D674BA1D39A}" ShortID="250984612">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="golpe_enemigo" ID="{29A91C7E-255A-44DF-A151-D16CC81D1DA6}" WorkUnitID="{B27C09DC-6A30-4758-8639-361BF775165C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Voz_hamburguesa" ID="{13D10BFA-F6BA-44AB-83DF-D0FDD0A65D57}"/>
-						<Event Name="Voz_enemigos" ID="{EAA6F798-13C0-4F91-BE7D-8D7707BAD247}"/>
+						<Event Name="Voz_enemigos" ID="{EAA6F798-13C0-4F91-BE7D-8D7707BAD247}">
+							<ChildrenList>
+								<Action Name="" ID="{6C2121B0-A71F-4453-8A5E-16D8F9F9277D}" ShortID="184842740">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="voz_enemigo" ID="{6A201540-5725-44DB-A4E8-024D6BF58091}" WorkUnitID="{B27C09DC-6A30-4758-8639-361BF775165C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Muerte_hamburguesa" ID="{EEC6ADBA-84BC-4A00-966B-E0A1AFEC7564}"/>
-						<Event Name="Muerte_enemigos" ID="{48D92C83-972E-4500-9311-7AC9C45F7B67}"/>
+						<Event Name="Muerte_enemigos" ID="{48D92C83-972E-4500-9311-7AC9C45F7B67}">
+							<ChildrenList>
+								<Action Name="" ID="{176B13DB-0834-4A0A-8104-F501D2CA16E1}" ShortID="39365733">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="muerte_enemigo" ID="{34DE753B-87D8-4BBB-A3FF-EF9954BF9968}" WorkUnitID="{B27C09DC-6A30-4758-8639-361BF775165C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Ataque_boss" ID="{4EBF3907-354C-409E-B499-1E723471665B}"/>
 						<Event Name="Mov_boss" ID="{AA414164-53CB-4B61-AADD-9E89839C04AC}"/>
 						<Event Name="Muerte_boss" ID="{CCF28D3C-0538-4BA9-AB20-8F44D6063670}"/>
 						<Event Name="Damage_hamburguesa" ID="{1078CC13-2FE6-4700-8A97-A6ABBD5D232E}"/>
-						<Event Name="Damage_enemigos" ID="{CFCE54D6-27BD-4D36-9C3B-29C084033211}"/>
+						<Event Name="Damage_enemigos" ID="{CFCE54D6-27BD-4D36-9C3B-29C084033211}">
+							<ChildrenList>
+								<Action Name="" ID="{CB894907-ECD0-46EB-8451-0DD474260FC0}" ShortID="715496498">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="damage_enemigo" ID="{7C12A5BE-315B-4DD1-A250-22636C8F23A2}" WorkUnitID="{B27C09DC-6A30-4758-8639-361BF775165C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Damage_boss" ID="{375C7D76-5A85-4B68-8CC4-38AB93A4C4F9}"/>
 						<Event Name="Voz_boss" ID="{CA298AC5-9654-43AE-AF5B-B201FF165A22}"/>
-						<Event Name="Curar_vida" ID="{EAF7FD53-EA76-4400-A5E8-DE1D9F108936}"/>
-						<Event Name="Dash" ID="{2584DBF6-BC13-4D70-B9B4-FFEB1EBC7478}"/>
-						<Event Name="Fantasmas_enemigos" ID="{2434BC3E-7048-4988-95C0-B2686E034687}"/>
-						<Event Name="Mch_Gun_disparo" ID="{14AA2666-14CE-4105-924F-124CD7A075CF}"/>
-						<Event Name="Mch_Gun_cambio" ID="{4F28676B-BEFB-4812-B0E2-E031A1776038}"/>
-						<Event Name="Espada_impacto" ID="{80C81289-4310-4186-A133-23DA6C5EB9D2}"/>
-						<Event Name="Espada_cambio" ID="{D73E4494-B0F9-4D21-B453-D575A5BED3D1}"/>
-						<Event Name="Granada_cambio" ID="{DD99996E-8E48-4117-9A19-FD54B48B88FD}"/>
-						<Event Name="Granada_explosion" ID="{75B4309B-336E-4661-A57A-BE4921C7DAD3}"/>
+						<Event Name="Curar_vida" ID="{EAF7FD53-EA76-4400-A5E8-DE1D9F108936}">
+							<ChildrenList>
+								<Action Name="" ID="{B592F12D-F1B1-4DBB-8598-6D4F6CF78B35}" ShortID="719075246">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="curar" ID="{6D2D353F-50AE-4496-8E40-C3D4C97D1A3E}" WorkUnitID="{B27C09DC-6A30-4758-8639-361BF775165C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Dash" ID="{2584DBF6-BC13-4D70-B9B4-FFEB1EBC7478}">
+							<ChildrenList>
+								<Action Name="" ID="{C848A208-1A76-4E21-BE22-C79B03E1CB32}" ShortID="986101525">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="dash" ID="{B755E3DD-5161-49C8-9D61-E80F21E367F3}" WorkUnitID="{B27C09DC-6A30-4758-8639-361BF775165C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Fantasmas_enemigos" ID="{2434BC3E-7048-4988-95C0-B2686E034687}">
+							<ChildrenList>
+								<Action Name="" ID="{E6E4B604-1D2F-4B9E-A5FE-E1FE660AE103}" ShortID="486216515">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fantasmas" ID="{CA8A07B5-9794-48D5-AA6E-7EB6130A64F8}" WorkUnitID="{B27C09DC-6A30-4758-8639-361BF775165C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Mch_Gun_disparo" ID="{14AA2666-14CE-4105-924F-124CD7A075CF}">
+							<ChildrenList>
+								<Action Name="" ID="{4625BFED-6513-4D0D-940F-82A462ED85FC}" ShortID="797709130">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="machine_gun_disparo" ID="{8D56830E-57FB-478D-89D5-F26A036C7D38}" WorkUnitID="{B27C09DC-6A30-4758-8639-361BF775165C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Mch_Gun_cambio" ID="{4F28676B-BEFB-4812-B0E2-E031A1776038}">
+							<ChildrenList>
+								<Action Name="" ID="{F65BBDB9-D8BC-4AB8-BA29-595BC13BDC3A}" ShortID="379399457">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="machine_gun_cambio" ID="{15834915-48B9-4939-9673-C14A6BE1302D}" WorkUnitID="{B27C09DC-6A30-4758-8639-361BF775165C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Espada_impacto" ID="{80C81289-4310-4186-A133-23DA6C5EB9D2}">
+							<ChildrenList>
+								<Action Name="" ID="{ACB03D8C-6AD1-44D1-BF97-6E630310D2A5}" ShortID="484530135">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="espada_ataque" ID="{ED491C22-4F85-4FC6-B1F7-63DC62E7E38D}" WorkUnitID="{B27C09DC-6A30-4758-8639-361BF775165C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Espada_cambio" ID="{D73E4494-B0F9-4D21-B453-D575A5BED3D1}">
+							<ChildrenList>
+								<Action Name="" ID="{6C121D8F-522E-4E87-A38D-C5653E8DD719}" ShortID="694351565">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="espada_cambio" ID="{1DBEDE9E-32DD-4991-89FA-B6FC550C04D4}" WorkUnitID="{B27C09DC-6A30-4758-8639-361BF775165C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Granada_cambio" ID="{DD99996E-8E48-4117-9A19-FD54B48B88FD}">
+							<ChildrenList>
+								<Action Name="" ID="{2B3FD45F-9D29-45BB-8513-51285A1ED3AB}" ShortID="529777929">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="cambio_granada" ID="{8B567A67-0B82-4FA6-9AF8-55F8AAFBF9B3}" WorkUnitID="{B27C09DC-6A30-4758-8639-361BF775165C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Granada_explosion" ID="{75B4309B-336E-4661-A57A-BE4921C7DAD3}">
+							<ChildrenList>
+								<Action Name="" ID="{36BF3046-0340-46A2-A158-974CB9B6A75F}" ShortID="113579025">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="explosion" ID="{D02E12B5-8F45-41CD-AEBC-62349F1B0732}" WorkUnitID="{B27C09DC-6A30-4758-8639-361BF775165C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Impacto_objetos" ID="{A76EF9A9-46AE-454C-B8AC-895C9C933767}"/>
-						<Event Name="Comienzo_oleada" ID="{CFC833F6-4084-4579-A751-B18FCA6FDD38}"/>
-						<Event Name="Rocola_Start" ID="{19785E47-C994-442E-87E0-50B350BDD667}"/>
-						<Event Name="Rocola_damage" ID="{CA13A282-0056-4EF0-8EF3-1AD2BB583B33}"/>
-						<Event Name="Rocola_Stop" ID="{F7DEFDD1-9AF3-4E35-9BA9-4FA824BAEAE5}"/>
+						<Event Name="Comienzo_oleada" ID="{CFC833F6-4084-4579-A751-B18FCA6FDD38}">
+							<ChildrenList>
+								<Action Name="" ID="{F80B9697-DF41-45CC-96C6-651DCE23CE78}" ShortID="1011214307">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="comienzo_oleada" ID="{B0C50CBD-AD2A-4006-80C3-DC198C3E9CBF}" WorkUnitID="{B27C09DC-6A30-4758-8639-361BF775165C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7BF002E7-70EC-4D8D-B658-CB8464C4DD11}" ShortID="571609367">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Batalla" ID="{1554BC19-5B48-4A65-9377-79D74540D576}" WorkUnitID="{BDEAB2BE-392E-4616-A6E9-69E2BFD4392B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Rocola_Start" ID="{19785E47-C994-442E-87E0-50B350BDD667}">
+							<ChildrenList>
+								<Action Name="" ID="{4419F5DF-D5F0-4325-B686-0144CDDAAEE7}" ShortID="728167630">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="31"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Rocola_damage" ID="{CA13A282-0056-4EF0-8EF3-1AD2BB583B33}">
+							<ChildrenList>
+								<Action Name="" ID="{D0067846-866F-4452-96A3-7793CCE50618}" ShortID="1033177720">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="29"/>
+										<Property Name="Highpass" Type="int16" Value="51"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Gameplay" ID="{84D2F857-D985-4FD3-ACD8-7BB5E34110B0}" WorkUnitID="{997C49BF-FC31-4C96-8EE3-AF1C46A3C0BC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Rocola_Stop" ID="{F7DEFDD1-9AF3-4E35-9BA9-4FA824BAEAE5}">
+							<ChildrenList>
+								<Action Name="" ID="{8E50038D-E682-4068-8505-BAAA7195A476}" ShortID="750009436">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="29"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Gameplay" ID="{84D2F857-D985-4FD3-ACD8-7BB5E34110B0}" WorkUnitID="{997C49BF-FC31-4C96-8EE3-AF1C46A3C0BC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

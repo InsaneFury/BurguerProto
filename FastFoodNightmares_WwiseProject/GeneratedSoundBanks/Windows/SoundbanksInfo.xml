@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>E:\Program Files (x86)\Audiokinetic\WWISE Proyectos\Fast Food Nightmare Event List\</ProjectRoot>
-		<SourceFilesRoot>E:\Program Files (x86)\Audiokinetic\WWISE Proyectos\Fast Food Nightmare Event List\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>E:\Program Files (x86)\Audiokinetic\WWISE Proyectos\Fast Food Nightmare Event List\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>E:\Arturia\Image Campus\FAST FOOD NIGHTMARE\Fast Food Nightmares v0.10a\Fast Food Nightmare Event List\</ProjectRoot>
+		<SourceFilesRoot>E:\Arturia\Image Campus\FAST FOOD NIGHTMARE\Fast Food Nightmares v0.10a\Fast Food Nightmare Event List\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>E:\Arturia\Image Campus\FFN\Fast Food Nightmares\Fast Food Nightmares_Data\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>E:\Program Files (x86)\Audiokinetic\WWISE Proyectos\Fast Food Nightmare Event List\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>E:\Arturia\Image Campus\FAST FOOD NIGHTMARE\Fast Food Nightmares v0.10a\Fast Food Nightmare Event List\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -58,6 +58,268 @@
 				<Event Id="1323470984" Name="Voz_enemigos" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Voz_enemigos"/>
 				<Event Id="3121871613" Name="Voz_hamburguesa" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Voz_hamburguesa"/>
 			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="4839449" Language="SFX">
+					<ShortName>Espresso Machine 02.wav</ShortName>
+					<Path>SFX\Espresso Machine 02_D81F6FE9.wem</Path>
+				</File>
+				<File Id="30502215" Language="SFX">
+					<ShortName>verduras aplastadas 2.wav</ShortName>
+					<Path>SFX\verduras aplastadas 2_8C4A49F4.wem</Path>
+				</File>
+				<File Id="48888578" Language="SFX">
+					<ShortName>Fast Action Swish_HW 05.wav</ShortName>
+					<Path>SFX\Fast Action Swish_HW 05_D486302E.wem</Path>
+				</File>
+				<File Id="60609718" Language="SFX">
+					<ShortName>click 6.wav</ShortName>
+					<Path>SFX\click 6_76F7A649.wem</Path>
+				</File>
+				<File Id="107383592" Language="SFX">
+					<ShortName>salpicada 4.wav</ShortName>
+					<Path>SFX\salpicada 4_E1364A45.wem</Path>
+				</File>
+				<File Id="113659719" Language="SFX">
+					<ShortName>Juicy Crack and Break_VM 01.wav</ShortName>
+					<Path>SFX\Juicy Crack and Break_VM 01_DC263A07.wem</Path>
+				</File>
+				<File Id="123317364" Language="SFX">
+					<ShortName>Vegetable Carnage, Tomato, Squish, Slow, Soft Strength, Wet, Mono.wav</ShortName>
+					<Path>SFX\Vegetable Carnage, Tomato, Squish, Slow, Soft Strength, Wet, Mono_68229977.wem</Path>
+				</File>
+				<File Id="161873853" Language="SFX">
+					<ShortName>amb_stems_RA_40_Restaurant_Bar_Night_Fridges_Empty_Room Tone_Neumann KM184 ORTF.wav</ShortName>
+					<Path>SFX\amb_stems_RA_40_Restaurant_Bar_Night_Fridges_Empty_Room Tone_Neumann KM184 ORTF_9A5E173D.wem</Path>
+				</File>
+				<File Id="173586619" Language="SFX">
+					<ShortName>salpicada 5.wav</ShortName>
+					<Path>SFX\salpicada 5_EC96283B.wem</Path>
+				</File>
+				<File Id="183735320" Language="SFX">
+					<ShortName>amb_stems_roomtone_overhead_fan_002.wav</ShortName>
+					<Path>SFX\amb_stems_roomtone_overhead_fan_002_D79FB2B7.wem</Path>
+				</File>
+				<File Id="188314216" Language="SFX">
+					<ShortName>salpicada 4.wav</ShortName>
+					<Path>SFX\salpicada 4_ADC9E6C4.wem</Path>
+				</File>
+				<File Id="192027580" Language="SFX">
+					<ShortName>Luciernaga.wav</ShortName>
+					<Path>SFX\Luciernaga_14EEE6FA.wem</Path>
+				</File>
+				<File Id="208708728" Language="SFX">
+					<ShortName>Bombo_Corte.wav</ShortName>
+					<Path>SFX\Bombo_Corte_10C4C929.wem</Path>
+				</File>
+				<File Id="212168385" Language="SFX">
+					<ShortName>verduras aplastadas 1.wav</ShortName>
+					<Path>SFX\verduras aplastadas 1_19EEF7FB.wem</Path>
+				</File>
+				<File Id="227599732" Language="SFX">
+					<ShortName>Squishes_Orange_3.wav</ShortName>
+					<Path>SFX\Squishes_Orange_3_23CE7CDB.wem</Path>
+				</File>
+				<File Id="248984296" Language="SFX">
+					<ShortName>sfx_teleport_in3.wav</ShortName>
+					<Path>SFX\sfx_teleport_in3_10C4C929.wem</Path>
+				</File>
+				<File Id="258867803" Language="SFX">
+					<ShortName>Fast Action Swish_HW 05.wav</ShortName>
+					<Path>SFX\Fast Action Swish_HW 05_1B15E893.wem</Path>
+				</File>
+				<File Id="274469972" Language="SFX">
+					<ShortName>Whoosh 5.wav</ShortName>
+					<Path>SFX\Whoosh 5_6214C246.wem</Path>
+				</File>
+				<File Id="286930809" Language="SFX">
+					<ShortName>Fast Action Swish_HW 05.wav</ShortName>
+					<Path>SFX\Fast Action Swish_HW 05_F0770D53.wem</Path>
+				</File>
+				<File Id="310623159" Language="SFX">
+					<ShortName>verduras aplastadas 1.wav</ShortName>
+					<Path>SFX\verduras aplastadas 1_2F7F4932.wem</Path>
+				</File>
+				<File Id="333853002" Language="SFX">
+					<ShortName>Whoosh 5.wav</ShortName>
+					<Path>SFX\Whoosh 5_BCF9A594.wem</Path>
+				</File>
+				<File Id="348681231" Language="SFX">
+					<ShortName>salpicada 5.wav</ShortName>
+					<Path>SFX\salpicada 5_C822041F.wem</Path>
+				</File>
+				<File Id="375576445" Language="SFX">
+					<ShortName>salpicada 5.wav</ShortName>
+					<Path>SFX\salpicada 5_E60D697B.wem</Path>
+				</File>
+				<File Id="377737012" Language="SFX">
+					<ShortName>Espresso Machine 02.wav</ShortName>
+					<Path>SFX\Espresso Machine 02_256205A4.wem</Path>
+				</File>
+				<File Id="394831162" Language="SFX">
+					<ShortName>salpicada 4.wav</ShortName>
+					<Path>SFX\salpicada 4_49BF71F8.wem</Path>
+				</File>
+				<File Id="414823668" Language="SFX">
+					<ShortName>Whoosh 5.wav</ShortName>
+					<Path>SFX\Whoosh 5_445D689C.wem</Path>
+				</File>
+				<File Id="422624752" Language="SFX">
+					<ShortName>Whoosh 5.wav</ShortName>
+					<Path>SFX\Whoosh 5_7357AF9E.wem</Path>
+				</File>
+				<File Id="452944095" Language="SFX">
+					<ShortName>verduras aplastadas 1.wav</ShortName>
+					<Path>SFX\verduras aplastadas 1_C6281F84.wem</Path>
+				</File>
+				<File Id="471383629" Language="SFX">
+					<ShortName>explosion_large_08.wav</ShortName>
+					<Path>SFX\explosion_large_08_4837486D.wem</Path>
+				</File>
+				<File Id="473724882" Language="SFX">
+					<ShortName>salpicada 5.wav</ShortName>
+					<Path>SFX\salpicada 5_271843A8.wem</Path>
+				</File>
+				<File Id="489849936" Language="SFX">
+					<ShortName>Fast Action Swish_HW 05.wav</ShortName>
+					<Path>SFX\Fast Action Swish_HW 05_054FF2AE.wem</Path>
+				</File>
+				<File Id="536275234" Language="SFX">
+					<ShortName>gun_semi_auto_rifle_cock_02.wav</ShortName>
+					<Path>SFX\gun_semi_auto_rifle_cock_02_10C4C929.wem</Path>
+				</File>
+				<File Id="545290624" Language="SFX">
+					<ShortName>Hisses Dry 16.M.wav</ShortName>
+					<Path>SFX\Hisses Dry 16.M_10C4C929.wem</Path>
+				</File>
+				<File Id="554029261" Language="SFX">
+					<ShortName>salpicada 4.wav</ShortName>
+					<Path>SFX\salpicada 4_8E7D6816.wem</Path>
+				</File>
+				<File Id="565682572" Language="SFX">
+					<ShortName>salpicada 5.wav</ShortName>
+					<Path>SFX\salpicada 5_57DE202F.wem</Path>
+				</File>
+				<File Id="569853219" Language="SFX">
+					<ShortName>Luciernaga.wav</ShortName>
+					<Path>SFX\Luciernaga_CF43EC02.wem</Path>
+				</File>
+				<File Id="583319958" Language="SFX">
+					<ShortName>verduras aplastadas 2.wav</ShortName>
+					<Path>SFX\verduras aplastadas 2_E47ECAB1.wem</Path>
+				</File>
+				<File Id="584857983" Language="SFX">
+					<ShortName>Zombie Subject C Zombie Brat Groan (9).wav</ShortName>
+					<Path>SFX\Zombie Subject C Zombie Brat Groan (9)_10C4C929.wem</Path>
+				</File>
+				<File Id="628269664" Language="SFX">
+					<ShortName>salpicada 5.wav</ShortName>
+					<Path>SFX\salpicada 5_BD78B19E.wem</Path>
+				</File>
+				<File Id="651669458" Language="SFX">
+					<ShortName>gameplay survival(1).wav</ShortName>
+					<Path>SFX\gameplay survival(1)_D79FB2B7.wem</Path>
+				</File>
+				<File Id="657046840" Language="SFX">
+					<ShortName>salpicada 4.wav</ShortName>
+					<Path>SFX\salpicada 4_1AA382E8.wem</Path>
+				</File>
+				<File Id="667219373" Language="SFX">
+					<ShortName>Fast Action Swish_HW 05.wav</ShortName>
+					<Path>SFX\Fast Action Swish_HW 05_BE591AE4.wem</Path>
+				</File>
+				<File Id="678971282" Language="SFX">
+					<ShortName>golpe 4.wav</ShortName>
+					<Path>SFX\golpe 4_952EFA48.wem</Path>
+				</File>
+				<File Id="681519440" Language="SFX">
+					<ShortName>Monster_Struggle_Grunt_240.wav</ShortName>
+					<Path>SFX\Monster_Struggle_Grunt_240_10C4C929.wem</Path>
+				</File>
+				<File Id="693967265" Language="SFX">
+					<ShortName>Whoosh 5.wav</ShortName>
+					<Path>SFX\Whoosh 5_24FE05BC.wem</Path>
+				</File>
+				<File Id="761658493" Language="SFX">
+					<ShortName>destransformarse.wav</ShortName>
+					<Path>SFX\destransformarse_10C4C929.wem</Path>
+				</File>
+				<File Id="775001895" Language="SFX">
+					<ShortName>creature 4.wav</ShortName>
+					<Path>SFX\creature 4_90326FBC.wem</Path>
+				</File>
+				<File Id="788435645" Language="SFX">
+					<ShortName>footstep_ice_crunchy_run_01.wav</ShortName>
+					<Path>SFX\footstep_ice_crunchy_run_01_10C4C929.wem</Path>
+				</File>
+				<File Id="797325895" Language="SFX">
+					<ShortName>verduras aplastadas 1.wav</ShortName>
+					<Path>SFX\verduras aplastadas 1_E9643E30.wem</Path>
+				</File>
+				<File Id="799881096" Language="SFX">
+					<ShortName>Juicy Burst_VM 03.wav</ShortName>
+					<Path>SFX\Juicy Burst_VM 03_344B4E58.wem</Path>
+				</File>
+				<File Id="805398724" Language="SFX">
+					<ShortName>creature 4.wav</ShortName>
+					<Path>SFX\creature 4_DBA27647.wem</Path>
+				</File>
+				<File Id="809684932" Language="SFX">
+					<ShortName>verduras aplastadas 2.wav</ShortName>
+					<Path>SFX\verduras aplastadas 2_9B932A7E.wem</Path>
+				</File>
+				<File Id="838310805" Language="SFX">
+					<ShortName>Luciernaga.wav</ShortName>
+					<Path>SFX\Luciernaga_1F1EC816.wem</Path>
+				</File>
+				<File Id="849230674" Language="SFX">
+					<ShortName>salpicada 4.wav</ShortName>
+					<Path>SFX\salpicada 4_A4D7B7B7.wem</Path>
+				</File>
+				<File Id="849464546" Language="SFX">
+					<ShortName>disparos.wav</ShortName>
+					<Path>SFX\disparos_5BB86643.wem</Path>
+				</File>
+				<File Id="861853852" Language="SFX">
+					<ShortName>Espresso Machine 02.wav</ShortName>
+					<Path>SFX\Espresso Machine 02_06123585.wem</Path>
+				</File>
+				<File Id="882262350" Language="SFX">
+					<ShortName>amb_stems_EMF_Toaster.wav</ShortName>
+					<Path>SFX\amb_stems_EMF_Toaster_10C4C929.wem</Path>
+				</File>
+				<File Id="892944817" Language="SFX">
+					<ShortName>Whoosh 5.wav</ShortName>
+					<Path>SFX\Whoosh 5_35324475.wem</Path>
+				</File>
+				<File Id="895308598" Language="SFX">
+					<ShortName>comic terror.wav</ShortName>
+					<Path>SFX\comic terror_D79FB2B7.wem</Path>
+				</File>
+				<File Id="930231099" Language="SFX">
+					<ShortName>salpicada 4.wav</ShortName>
+					<Path>SFX\salpicada 4_30F79599.wem</Path>
+				</File>
+				<File Id="943007849" Language="SFX">
+					<ShortName>footstep_ice_crunchy_run_02.wav</ShortName>
+					<Path>SFX\footstep_ice_crunchy_run_02_BB53A90C.wem</Path>
+				</File>
+				<File Id="944014107" Language="SFX">
+					<ShortName>verduras aplastadas 2.wav</ShortName>
+					<Path>SFX\verduras aplastadas 2_B8949315.wem</Path>
+				</File>
+				<File Id="963263022" Language="SFX">
+					<ShortName>handling espada 2.wav</ShortName>
+					<Path>SFX\handling espada 2_4DD6745F.wem</Path>
+				</File>
+				<File Id="988067828" Language="SFX">
+					<ShortName>salpicada 4.wav</ShortName>
+					<Path>SFX\salpicada 4_4AE9CE51.wem</Path>
+				</File>
+				<File Id="1038329570" Language="SFX">
+					<ShortName>creature 5.wav</ShortName>
+					<Path>SFX\creature 5_BD7BE8B3.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

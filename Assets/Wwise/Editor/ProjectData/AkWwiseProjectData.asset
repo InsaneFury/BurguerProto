@@ -24,14 +24,14 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 13dd0c02a17ff04e91fcdda738734a68
     GuidInternal: 
-    m_lastTime: -8586276615597859903
+    m_lastTime: -8586268688419548930
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 4dd0d03a04a09a4a991659e6759f5d39
     GuidInternal: 
-    m_lastTime: -8586269932552037329
+    m_lastTime: -8586269015077519377
     List:
     - name: main
       guid: 3ec01e25d4298f45939a6ff5f22c057a
@@ -47,7 +47,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 55097ac39372dc4499e877ce3666d4b4
     GuidInternal: 
-    m_lastTime: -8586276598644908515
+    m_lastTime: -8586268687846275804
     List:
     - name: Ataque_boss
       guid: 0739bf4e4c359e40b4991e723471665b
@@ -511,6 +511,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: volver_menu
+      guid: e07670a8a24c9040a96ef0e2645b3ba2
+      id: 1118908715
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Eventos_Generales
+        ObjectType: 4
+      - ElementName: volver_menu
+        ObjectType: 3
+      Path: Default Work Unit\Eventos_Generales\volver_menu
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Voz_boss
       guid: c58a29ca5496ae43af5bb201ff165a22
       id: 4247065354
@@ -558,7 +572,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 68e3deba64252d4c9a0b1d0717650148
     GuidInternal: 
-    m_lastTime: -8586276598644953641
+    m_lastTime: -8586269548925284288
     List:
     - name: Cantidad_enemigos
       guid: d7a7521a5a1fb34d9161d612506ec9f4
@@ -587,33 +601,33 @@ MonoBehaviour:
       - ElementName: Distancia_enemigos
         ObjectType: 13
       Path: Default Work Unit\Distancia_enemigos
-    - name: Mana_Player
+    - name: mana_hamburguesa
       guid: b21f1162114b944e90c336f6d8a2c055
-      id: 34291096
+      id: 3702740643
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Mana_Player
+      - ElementName: mana_hamburguesa
         ObjectType: 13
-      Path: Default Work Unit\Mana_Player
-    - name: Tiempo_Wave
-      guid: cbb4b0dacc9d944fa72eddaec14a593c
-      id: 3130299307
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Tiempo_Wave
-        ObjectType: 13
-      Path: Default Work Unit\Tiempo_Wave
-    - name: Vida_Player
+      Path: Default Work Unit\mana_hamburguesa
+    - name: vida_hamburguesa
       guid: 13eb87301eddef498878a0e50c15a886
-      id: 873721965
+      id: 2679493820
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Vida_Player
+      - ElementName: vida_hamburguesa
         ObjectType: 13
-      Path: Default Work Unit\Vida_Player
+      Path: Default Work Unit\vida_hamburguesa
+    - name: waves_time
+      guid: cbb4b0dacc9d944fa72eddaec14a593c
+      id: 396537987
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: waves_time
+        ObjectType: 13
+      Path: Default Work Unit\waves_time
     - name: Zoom_camara
       guid: d2031a79032252478755ba93729c5244
       id: 102911878
@@ -807,9 +821,6 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /FastFoodNightmares_WwiseProject
-  - /FastFoodNightmares_WwiseProject/Events
-  - /FastFoodNightmares_WwiseProject/Events/Default Work Unit
-  - "/FastFoodNightmares_WwiseProject/Events/Default Work Unit/Eventos_Espec\xEDficos"
   - /FastFoodNightmares_WwiseProject/SoundBanks
   - /FastFoodNightmares_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
