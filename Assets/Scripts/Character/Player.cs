@@ -457,8 +457,5 @@ public class Player : MonobehaviourSingleton<Player>
         swordIsActive = false;
     }
 
-    public void PlayWalkCycleSound()
-    {
-        AkSoundEngine.PostEvent("Mov_hamburguesa", gameObject);
-    }
+    
 }

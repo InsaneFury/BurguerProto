@@ -31,6 +31,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6904320855741459737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002832438431585707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c578746ca6bad04dae448f75266ec18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7436023266341402002
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38,11 +50,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4761832509299633541}
     m_Modifications:
-    - target: {fileID: 7699124604792840249, guid: 5df0b42f13ebf564bba7b212accbdf5b,
-        type: 3}
-      propertyPath: m_Name
-      value: Tomate@Animations Variant
-      objectReference: {fileID: 0}
     - target: {fileID: 6666331103473914410, guid: 5df0b42f13ebf564bba7b212accbdf5b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -98,8 +105,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7699124604792840249, guid: 5df0b42f13ebf564bba7b212accbdf5b,
+        type: 3}
+      propertyPath: m_Name
+      value: Tomate@Animations Variant
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5df0b42f13ebf564bba7b212accbdf5b, type: 3}
+--- !u!1 &1002832438431585707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7699124604792840249, guid: 5df0b42f13ebf564bba7b212accbdf5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7436023266341402002}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4301394022840330168 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6666331103473914410, guid: 5df0b42f13ebf564bba7b212accbdf5b,

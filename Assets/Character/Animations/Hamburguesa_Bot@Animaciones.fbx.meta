@@ -119,17 +119,17 @@ ModelImporter:
       curves: []
       events:
       - time: 0.13105416
-        functionName: PlayWalkCycleSound()
+        functionName: PlayPlayerWalkCycleSound
         data: 
-        objectReferenceParameter: {fileID: 11500000, guid: f50f39afa9d59f4429acf0446fa2eea9,
+        objectReferenceParameter: {fileID: 11500000, guid: 4c578746ca6bad04dae448f75266ec18,
           type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.5982907
-        functionName: PlayWalkCycleSound()
+        functionName: PlayPlayerWalkCycleSound
         data: 
-        objectReferenceParameter: {fileID: 11500000, guid: f50f39afa9d59f4429acf0446fa2eea9,
+        objectReferenceParameter: {fileID: 11500000, guid: 4c578746ca6bad04dae448f75266ec18,
           type: 3}
         floatParameter: 0
         intParameter: 0

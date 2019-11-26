@@ -98,17 +98,17 @@ ModelImporter:
       curves: []
       events:
       - time: 0.07265759
-        functionName: PlayRunningSound()
+        functionName: PlayEnemyRunningSound
         data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 7c46cd09f7dea044680ac472f246ef1d,
+        objectReferenceParameter: {fileID: 11500000, guid: 4c578746ca6bad04dae448f75266ec18,
           type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.5156694
-        functionName: PlayRunningSound()
+        functionName: PlayEnemyRunningSound
         data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 7c46cd09f7dea044680ac472f246ef1d,
+        objectReferenceParameter: {fileID: 11500000, guid: 4c578746ca6bad04dae448f75266ec18,
           type: 3}
         floatParameter: 0
         intParameter: 0

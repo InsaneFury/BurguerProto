@@ -1637,6 +1637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5633214034456620339}
   - component: {fileID: 2352903828453228617}
+  - component: {fileID: 5660251666318296600}
   - component: {fileID: 7604129125977329370}
   - component: {fileID: 6121857591312772360}
   - component: {fileID: 302940340441480864}
@@ -1686,6 +1687,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5660251666318296600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8680243570442952480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c578746ca6bad04dae448f75266ec18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7604129125977329370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1926,10 +1939,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4123971816607367229}
     m_Modifications:
-    - target: {fileID: 149928, guid: 0b5e7793d4d1e854385c5ce9b1e79f47, type: 3}
-      propertyPath: m_Name
-      value: CartoonFireRed
-      objectReference: {fileID: 0}
     - target: {fileID: 472404, guid: 0b5e7793d4d1e854385c5ce9b1e79f47, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1985,6 +1994,10 @@ PrefabInstance:
     - target: {fileID: 472404, guid: 0b5e7793d4d1e854385c5ce9b1e79f47, type: 3}
       propertyPath: m_LocalScale.z
       value: 139.47647
+      objectReference: {fileID: 0}
+    - target: {fileID: 149928, guid: 0b5e7793d4d1e854385c5ce9b1e79f47, type: 3}
+      propertyPath: m_Name
+      value: CartoonFireRed
       objectReference: {fileID: 0}
     - target: {fileID: 19822052, guid: 0b5e7793d4d1e854385c5ce9b1e79f47, type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState

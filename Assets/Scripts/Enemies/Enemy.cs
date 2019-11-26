@@ -205,9 +205,4 @@ public class Enemy : MonoBehaviour
             player.TakeDamage(damage);
         }
     }
-
-    public void PlayRunningSound()
-    {
-        AkSoundEngine.PostEvent("Mov_enemigos", gameObject);
-    }
 }
