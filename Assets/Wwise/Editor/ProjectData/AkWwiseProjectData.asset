@@ -17,21 +17,21 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: ffd30f091fb81a4db9f3a3f3357d03d7
     GuidInternal: 
-    m_lastTime: -8586276615598289973
+    m_lastTime: -8586267696386321228
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 13dd0c02a17ff04e91fcdda738734a68
     GuidInternal: 
-    m_lastTime: -8586268676416280226
+    m_lastTime: -8586267696408789596
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 4dd0d03a04a09a4a991659e6759f5d39
     GuidInternal: 
-    m_lastTime: -8586269015077519377
+    m_lastTime: -8586267696386352945
     List:
     - name: main
       guid: 3ec01e25d4298f45939a6ff5f22c057a
@@ -47,7 +47,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 55097ac39372dc4499e877ce3666d4b4
     GuidInternal: 
-    m_lastTime: -8586268657562269064
+    m_lastTime: -8586267696415049405
     List:
     - name: Ataque_boss
       guid: 0739bf4e4c359e40b4991e723471665b
@@ -572,7 +572,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 68e3deba64252d4c9a0b1d0717650148
     GuidInternal: 
-    m_lastTime: -8586269548925284288
+    m_lastTime: -8586267696414899428
     List:
     - name: Cantidad_enemigos
       guid: d7a7521a5a1fb34d9161d612506ec9f4
@@ -642,7 +642,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: beb2eabd2e391646a6e969e2bfd4392b
     GuidInternal: 
-    m_lastTime: -8586276601738871662
+    m_lastTime: -8586267696386342592
     List:
     - name: Dificultad
       guid: 9807e58d35d4374394f68669e81ffc4a
@@ -785,7 +785,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 696b334e2cb4e54496f6fcb071ea8732
     GuidInternal: 
-    m_lastTime: -8586276605496891332
+    m_lastTime: -8586267696386332627
     List:
     - name: Superficie
       guid: a50efc049ee1f84b98a78c4125bd0a85
@@ -817,10 +817,13 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: f2a74cd6bee1494e8f2830fe9de28e19
     GuidInternal: 
-    m_lastTime: -8586276615597514170
+    m_lastTime: -8586267696386332627
     List: []
   ExpandedItems:
   - /FastFoodNightmares_WwiseProject
+  - /FastFoodNightmares_WwiseProject/Events
+  - /FastFoodNightmares_WwiseProject/Events/Default Work Unit
+  - "/FastFoodNightmares_WwiseProject/Events/Default Work Unit/Eventos_Espec\xEDficos"
   - /FastFoodNightmares_WwiseProject/SoundBanks
   - /FastFoodNightmares_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
