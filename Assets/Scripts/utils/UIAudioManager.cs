@@ -27,7 +27,9 @@ public class UIAudioManager : MonoBehaviour
 
     public void BackToMenu()
     {
-        AkSoundEngine.PostEvent("volver_menu", gameObject);
+        AkSoundEngine.StopAll();
+
+        //AkSoundEngine.PostEvent("volver_menu", gameObject);
         AkSoundEngine.PostEvent("Menu", gameObject);
     }
 }
