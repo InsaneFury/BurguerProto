@@ -139,7 +139,7 @@ public class UIManager : MonobehaviourSingleton<UIManager>
             }
             else
             {
-                waveTimer.text = "00:" + eSpawner.seconds.ToString();
+                waveTimer.text = eSpawner.seconds.ToString();
                 waveWithEnemies.SetActive(false);
                 waveWithTimer.SetActive(true);
             }
@@ -171,7 +171,7 @@ public class UIManager : MonobehaviourSingleton<UIManager>
 
     public void SetWaveNumber(int num)
     {
-        waveNumber.GetComponent<TextMeshProUGUI>().text = "Wave " + num.ToString();
+        waveNumber.GetComponent<TextMeshProUGUI>().text = "WAVE " + num.ToString();
         StartCoroutine(StartWaveNumber());
         
     }
