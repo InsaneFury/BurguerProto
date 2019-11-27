@@ -46,6 +46,11 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     public GameObject VCamThirdPerson;
     public GameObject VCamMenu;
 
+    [Header("PopUpAlert")]
+    public GameObject popUpAlert;
+    public TextMeshProUGUI popUpTitle;
+    public TextMeshProUGUI popUpText;
+
     Player player;
     EnemySpawner eSpawner;
 
@@ -56,6 +61,7 @@ public class UIManager : MonobehaviourSingleton<UIManager>
 
     void Start()
     {
+        popUpAlert.SetActive(false);
         VCamThirdPerson.SetActive(false);
         inGameHUD.SetActive(false);
         menuHUD.SetActive(true);
@@ -186,6 +192,14 @@ public class UIManager : MonobehaviourSingleton<UIManager>
         yield return new WaitForSecondsRealtime(waveNumberTime);
         waveNumber.SetActive(false);
         EnemySpawner.Get().ResetTimer();
+    }
+
+    public void ActivePopUpAlert(string popTitle,string popText)
+    {
+        popUpAlert.SetActive(false);
+        popUpTitle.text = popTitle;
+        popUpText.text = popText;
+        popUpAlert.SetActive(true);
     }
     #endregion
 

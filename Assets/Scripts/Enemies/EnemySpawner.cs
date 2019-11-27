@@ -91,6 +91,11 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
                 timer -= Time.deltaTime;
                 seconds = (int)(timer % 60);
                 AkSoundEngine.SetRTPCValue("waves_time", seconds);
+
+                if(seconds == 5)
+                {
+                    uiManager.ActivePopUpAlert("WARNING!", "Next wave is coming");
+                }
             }
 
             switch (gameMode)
