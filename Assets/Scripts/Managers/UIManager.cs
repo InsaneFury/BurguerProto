@@ -11,6 +11,8 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     public Image souls;
     public Image healthSkill;
     public Image dashSkill;
+    public TextMeshProUGUI lifeNum;
+    public TextMeshProUGUI SoulNum;
 
     [Header("HUD Settings")]
     public GameObject inGameHUD;
@@ -92,6 +94,7 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     public void RefreshSouls()
     {
         souls.fillAmount = player.soulsCollected / 100f;
+        SoulNum.text = ((int)player.soulsCollected).ToString();
     }
 
     public void RefreshHealthbar()
@@ -99,6 +102,7 @@ public class UIManager : MonobehaviourSingleton<UIManager>
         if (healthBar.fillAmount != player.life)
         {
             healthBar.fillAmount = player.life / 100f;
+            lifeNum.text = ((int)player.life).ToString();
         }
     }
 

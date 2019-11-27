@@ -30,6 +30,7 @@ public class Player : MonobehaviourSingleton<Player>
     [Header("Souls")]
     public int soulsCollected = 0;
     public Vector2 soulGainRange;
+    public int maxSoulsCollected = 100;
 
     [Header("Heal")]
     public float healAmount = 0.1f;
@@ -215,9 +216,11 @@ public class Player : MonobehaviourSingleton<Player>
 
     public void TakeDamage(float dmg)
     {
-        life -= dmg;
         if (isAlive)
         {
+            if(life > 0)
+            life -= dmg;
+
             //Audio
             AkSoundEngine.PostEvent("Voz_hamburguesa", gameObject);
             AkSoundEngine.PostEvent("Damage_hamburguesa", gameObject);
@@ -238,7 +241,11 @@ public class Player : MonobehaviourSingleton<Player>
         {
             //Audio
             AkSoundEngine.PostEvent("Fantasmas_enemigos", gameObject);
-            soulsCollected += (int)Random.Range(soulGainRange.x, soulGainRange.y);
+            if(soulsCollected < maxSoulsCollected)
+            {
+                soulsCollected += (int)Random.Range(soulGainRange.x, soulGainRange.y);
+            }
+            
             uiManager.RefreshSouls();
             Destroy(other.gameObject);
         }
