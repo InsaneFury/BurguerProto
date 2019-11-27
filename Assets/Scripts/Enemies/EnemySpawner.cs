@@ -147,22 +147,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
         go.transform.localScale = new Vector3(randSize, randSize, randSize);
         go.name = go.name.Replace("(Clone)", "");
 
-        switch (gameDifficulty)
-        {
-            case GameDifficulty.PimientoDelPadron:
-                SetPimientoDelPadron(go);
-                break;
-            case GameDifficulty.RedHabanero:
-                SetRedHabanero(go);
-                break;
-            case GameDifficulty.GhostPepper:
-                SetGhostPepper(go);
-                break;
-            default:
-                break;
-        }
-
-
+        SetEnemyDifficulty(go);
         spawnedEnemies.Add(go);
     }
 
@@ -246,62 +231,23 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
     #endregion
 
     #region LevelDifficulty
-    void SetPimientoDelPadron(GameObject go)
+
+    void SetEnemyDifficulty(GameObject go)
     {
         if (go.name == "Aji")
         {
-            go.GetComponent<NavMeshAgent>().speed = difficulties[0].ajiSpeed;
-            go.GetComponent<Enemy>().damage = difficulties[0].ajiDmg;
-            go.GetComponent<Enemy>().life = difficulties[0].ajiLife;
+            go.GetComponent<NavMeshAgent>().speed = difficulties[(int)gameDifficulty].ajiSpeed;
+            go.GetComponent<Enemy>().damage = difficulties[(int)gameDifficulty].ajiDmg;
+            go.GetComponent<Enemy>().life = difficulties[(int)gameDifficulty].ajiLife;
         }
 
         if (go.name == "Tomato")
         {
             Transform child = go.transform.GetChild(0);
 
-            child.GetComponent<NavMeshAgent>().speed = difficulties[0].tomatoSpeed;
-            child.GetComponent<Enemy>().damage = difficulties[0].tomatoDmg;
-            child.GetComponent<Enemy>().life = difficulties[0].tomatoLife;
-        }
-    }
-
-    void SetRedHabanero(GameObject go)
-    {
-        if (go.name == "Aji")
-        {
-            Transform child = go.transform.GetChild(0);
-
-            go.GetComponent<NavMeshAgent>().speed = difficulties[1].ajiSpeed;
-            go.GetComponent<Enemy>().damage = difficulties[1].ajiDmg;
-            go.GetComponent<Enemy>().life = difficulties[1].ajiLife;
-        }
-
-        if (go.name == "Tomato")
-        {
-            Transform child = go.transform.GetChild(0);
-
-            child.GetComponent<NavMeshAgent>().speed = difficulties[1].tomatoSpeed;
-            child.GetComponent<Enemy>().damage = difficulties[1].tomatoDmg;
-            child.GetComponent<Enemy>().life = difficulties[1].tomatoLife;
-        }
-    }
-
-    void SetGhostPepper(GameObject go)
-    {
-        if (go.name == "Aji")
-        {
-            go.GetComponent<NavMeshAgent>().speed = difficulties[2].ajiSpeed;
-            go.GetComponent<Enemy>().damage = difficulties[2].ajiDmg;
-            go.GetComponent<Enemy>().life = difficulties[2].ajiLife;
-        }
-
-        if (go.name == "Tomato")
-        {
-            Transform child = go.transform.GetChild(0);
-
-            child.GetComponent<NavMeshAgent>().speed = difficulties[2].tomatoSpeed;
-            child.GetComponent<Enemy>().damage = difficulties[2].tomatoDmg;
-            child.GetComponent<Enemy>().life = difficulties[2].tomatoLife;
+            child.GetComponent<NavMeshAgent>().speed = difficulties[(int)gameDifficulty].tomatoSpeed;
+            child.GetComponent<Enemy>().damage = difficulties[(int)gameDifficulty].tomatoDmg;
+            child.GetComponent<Enemy>().life = difficulties[(int)gameDifficulty].tomatoLife;
         }
     }
 
