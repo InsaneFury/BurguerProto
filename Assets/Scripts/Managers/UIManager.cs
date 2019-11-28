@@ -14,6 +14,11 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     public TextMeshProUGUI lifeNum;
     public TextMeshProUGUI SoulNum;
 
+    [Header("Weapons UI")]
+    public GameObject[] weaponsUI;
+    public string[] weaponsNames;
+    public TextMeshProUGUI currentWeaponText;
+
     [Header("HUD Settings")]
     public GameObject inGameHUD;
     public GameObject menuHUD;
@@ -61,6 +66,7 @@ public class UIManager : MonobehaviourSingleton<UIManager>
 
     void Start()
     {
+        Player.OnChangeWeapon += SetActiveWeaponUI;
         popUpAlert.SetActive(false);
         VCamThirdPerson.SetActive(false);
         inGameHUD.SetActive(false);
@@ -88,6 +94,20 @@ public class UIManager : MonobehaviourSingleton<UIManager>
         menuHUD.SetActive(false);
         VCamMenu.SetActive(false);
     }
+
+    #region WeaponsUI
+    public void SetActiveWeaponUI(Player p)
+    {
+        for (int i = 0; i < weaponsUI.Length; i++)
+        {
+            weaponsUI[i].GetComponent<Animator>().SetBool("weaponActive", false);
+        }
+        weaponsUI[player.currentActiveWeapon].GetComponent<Animator>().SetBool("weaponActive", true);
+        currentWeaponText.text = weaponsNames[player.currentActiveWeapon];
+        Debug.Log("Funca");
+    }
+    #endregion
+
 
     #region Refresh UI
 

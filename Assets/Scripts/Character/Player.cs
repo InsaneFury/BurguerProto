@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Player : MonobehaviourSingleton<Player>
 {
@@ -56,6 +57,7 @@ public class Player : MonobehaviourSingleton<Player>
     public float meleeMaxCooldown = 5f;
     float comboMeleeTimer = 0f;
     bool swordIsActive = false;
+    public int currentActiveWeapon;
 
     [Header("Particles VFX")]
     public ParticleSystem healthVFX;
@@ -77,7 +79,8 @@ public class Player : MonobehaviourSingleton<Player>
     int comboCounter = 0;
 
     GameManager gManager;
-    UIManager uiManager;
+
+    public static event Action<Player> OnChangeWeapon;
 
     public override void Awake()
     {
@@ -91,9 +94,9 @@ public class Player : MonobehaviourSingleton<Player>
         animMachineGun = machineGun.GetComponent<Animator>();
         comboMeleeTimer = meleeMaxCooldown;
         gManager = GameManager.Get();
-        uiManager = UIManager.Get();
         //Audio
         AkSoundEngine.SetState("Vivo_o_muerto", "Vivo");
+        currentActiveWeapon = 1;
     }
 
     void Update()
@@ -230,8 +233,7 @@ public class Player : MonobehaviourSingleton<Player>
         {
             getDmgVFX.SetActive(true);
         }
-        
-        uiManager.RefreshHealthbar();
+       
         Death();
     }
 
@@ -243,10 +245,8 @@ public class Player : MonobehaviourSingleton<Player>
             AkSoundEngine.PostEvent("Fantasmas_enemigos", gameObject);
             if(soulsCollected < maxSoulsCollected)
             {
-                soulsCollected += (int)Random.Range(soulGainRange.x, soulGainRange.y);
+                soulsCollected += (int)UnityEngine.Random.Range(soulGainRange.x, soulGainRange.y);
             }
-            
-            uiManager.RefreshSouls();
             Destroy(other.gameObject);
         }
     } 
@@ -273,7 +273,6 @@ public class Player : MonobehaviourSingleton<Player>
         {
             rb.velocity = playerMove * dashSpeed;
         }
-        uiManager.RefreshSouls();
     }
 
     IEnumerator ActiveDashTrail()
@@ -313,9 +312,6 @@ public class Player : MonobehaviourSingleton<Player>
             AkSoundEngine.PostEvent("Curar_vida", gameObject);
 
             healthVFX.Play();
-
-            uiManager.RefreshSouls();
-            uiManager.RefreshHealthbar();
         }
     }
 
@@ -383,6 +379,7 @@ public class Player : MonobehaviourSingleton<Player>
     {
         if (Input.GetKey(KeyCode.Alpha1) && !machineGunIsActive)
         {
+            currentActiveWeapon = 0;
             //Audio
             AkSoundEngine.PostEvent("Mch_Gun_cambio", gameObject);
 
@@ -395,9 +392,13 @@ public class Player : MonobehaviourSingleton<Player>
             animTop.SetBool("exitCombo", true);
             animBottom.SetTrigger("resetMove");
             animTop.SetTrigger("resetMove");
+
+            if (OnChangeWeapon != null)
+                OnChangeWeapon(this);
         }
         if (Input.GetKey(KeyCode.Alpha2) && !granade.enabled)
         {
+            currentActiveWeapon = 1;
             //Audio
             AkSoundEngine.PostEvent("Granada_cambio", gameObject);
 
@@ -410,9 +411,13 @@ public class Player : MonobehaviourSingleton<Player>
             animTop.SetBool("exitCombo", true);
             animBottom.SetTrigger("resetMove");
             animTop.SetTrigger("resetMove");
+
+            if (OnChangeWeapon != null)
+                OnChangeWeapon(this);
         }
         if (Input.GetKey(KeyCode.Alpha3) && !swordIsActive)
         {
+            currentActiveWeapon = 2;
             //Audio
             AkSoundEngine.PostEvent("Espada_cambio", gameObject);
 
@@ -423,7 +428,12 @@ public class Player : MonobehaviourSingleton<Player>
             swordIsActive = true;
             animBottom.SetTrigger("resetMove");
             animTop.SetTrigger("resetMove");
+
+            if (OnChangeWeapon != null)
+                OnChangeWeapon(this);
         }
+
+        
 
         if (machineGunIsActive)
         {
@@ -454,7 +464,6 @@ public class Player : MonobehaviourSingleton<Player>
         isAlive = true;
         getDmgVFX.SetActive(false);
         soulsCollected = 100;
-        uiManager.RefreshSouls();
 
         //Back to default weapon
         machineGunIsActive = false;
