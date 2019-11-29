@@ -5,10 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - Explosion
   - Soul
   - Collector
-  - Bullet
+  - Weapon
+  - VFX
   layers:
   - Default
   - TransparentFX

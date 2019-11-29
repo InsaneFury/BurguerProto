@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: -3974977881669278875}
   m_Layer: 0
   m_Name: rabanito_lowpoly
-  m_TagString: Explosion
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,11 +95,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bee656b0cc9e96047b33344f66b42398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minDamage: 20
+  maxDamage: 50
   time: 0.2
   explosionForce: 5000
   explosionRadius: 5
-  minExplosionDamage: 20
-  maxExplosionDamage: 50
   layer:
     serializedVersion: 2
     m_Bits: 512

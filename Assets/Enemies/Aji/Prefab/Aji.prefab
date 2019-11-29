@@ -1638,7 +1638,7 @@ GameObject:
   - component: {fileID: 5633214034456620339}
   - component: {fileID: 2352903828453228617}
   - component: {fileID: 5660251666318296600}
-  - component: {fileID: 7604129125977329370}
+  - component: {fileID: 4428587577690769741}
   - component: {fileID: 6121857591312772360}
   - component: {fileID: 302940340441480864}
   - component: {fileID: 686306645731388887}
@@ -1699,7 +1699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c578746ca6bad04dae448f75266ec18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7604129125977329370
+--- !u!114 &4428587577690769741
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1708,21 +1708,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 8680243570442952480}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c46cd09f7dea044680ac472f246ef1d, type: 3}
+  m_Script: {fileID: 11500000, guid: 7db51938a48e1b64e972da665c996f8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  enemyAgent: {fileID: 0}
+  enemyAgent: {fileID: 6121857591312772360}
   attackDistance: 6
   life: 100
   healthBar: {fileID: 4202129582291080033}
-  mat: {fileID: 8473002528761685935, guid: bbe617c381600054bbebfca9a0604785, type: 3}
+  mat: {fileID: 0}
   popUp: {fileID: 4771802812483107025, guid: 87863029054c3f5488297a4b3215a044, type: 3}
   timeToDie: 5
   enemyCollider: {fileID: 686306645731388887}
   soul: {fileID: 7872789756176858962, guid: 8d0629a8b07204644b8ec4f83a6f7c3f, type: 3}
   spawnPos: {fileID: 5006568695215763622}
-  flashTime: 0.3
+  flashTime: 0.1
   explosion: {fileID: 5769599830294413825}
   explotionParticle: {fileID: 4596686777795968663, guid: f65b27f96ac3e634692a3ec68c3d5c8b,
     type: 3}
@@ -1939,6 +1939,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4123971816607367229}
     m_Modifications:
+    - target: {fileID: 149928, guid: 0b5e7793d4d1e854385c5ce9b1e79f47, type: 3}
+      propertyPath: m_Name
+      value: CartoonFireRed
+      objectReference: {fileID: 0}
     - target: {fileID: 472404, guid: 0b5e7793d4d1e854385c5ce9b1e79f47, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1994,10 +1998,6 @@ PrefabInstance:
     - target: {fileID: 472404, guid: 0b5e7793d4d1e854385c5ce9b1e79f47, type: 3}
       propertyPath: m_LocalScale.z
       value: 139.47647
-      objectReference: {fileID: 0}
-    - target: {fileID: 149928, guid: 0b5e7793d4d1e854385c5ce9b1e79f47, type: 3}
-      propertyPath: m_Name
-      value: CartoonFireRed
       objectReference: {fileID: 0}
     - target: {fileID: 19822052, guid: 0b5e7793d4d1e854385c5ce9b1e79f47, type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState

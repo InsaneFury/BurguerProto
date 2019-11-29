@@ -145,7 +145,7 @@ ModelImporter:
       - time: 0.7237762
         functionName: CheckIfCanAttack
         data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 7c46cd09f7dea044680ac472f246ef1d,
+        objectReferenceParameter: {fileID: 11500000, guid: 56388d7a23509a84dbd61b7b9bdcccfe,
           type: 3}
         floatParameter: 0
         intParameter: 0
@@ -180,9 +180,9 @@ ModelImporter:
       curves: []
       events:
       - time: 0.9798271
-        functionName: DeleteTomato
+        functionName: Die
         data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 7c46cd09f7dea044680ac472f246ef1d,
+        objectReferenceParameter: {fileID: 11500000, guid: 56388d7a23509a84dbd61b7b9bdcccfe,
           type: 3}
         floatParameter: 0
         intParameter: 0
