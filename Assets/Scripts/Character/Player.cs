@@ -375,6 +375,7 @@ public class Player : MonobehaviourSingleton<Player>
         }
     }
 
+    //Refactorizar WeaponChanger
     void WeaponChanger()
     {
         if (Input.GetKey(KeyCode.Alpha1) && !machineGunIsActive)

@@ -25,9 +25,17 @@ public class JukeBoxAudio : MonobehaviourSingleton<JukeBoxAudio>
         AkSoundEngine.PostEvent("Rocola_damage", gameObject);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Weapon"))
+        {
+            DamageJukeBoxAudio();
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.CompareTag("Bullet") || collision.collider.CompareTag("Explosion"))
+        if (collision.collider.CompareTag("Weapon"))
         {
             DamageJukeBoxAudio();
         }
