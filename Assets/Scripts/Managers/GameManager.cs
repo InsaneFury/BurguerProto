@@ -75,6 +75,7 @@ public class GameManager : MonobehaviourSingleton<GameManager>
     public void ActiveGame()
     {
         gameStarted = true;
+        player.canPlay = true;
         //Audio
         AkSoundEngine.PostEvent("Inicio_gameplay", gameObject);
         JukeBoxAudio.Get().PlayJukeBoxAudio();
@@ -87,6 +88,7 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         AkSoundEngine.PostEvent("Perder", gameObject);
         JukeBoxAudio.Get().StopJukeBoxAudio();
         gameStarted = false;
+        player.canPlay = false;
         gameOverText.SetActive(true);
         cg.saturation.value = new FloatParameter() { value = gameOverSaturation };
     }
@@ -100,10 +102,12 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         if (pause)
         {
             //Audio
+            player.canPlay = false;
             AkSoundEngine.PostEvent("Pausa_ON", gameObject);
         }
         else
         {
+            player.canPlay = true;
             //Audio
             AkSoundEngine.PostEvent("Pausa_OFF", gameObject);
         }
@@ -140,6 +144,7 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         player.transform.position = startPosition.position;
         player.transform.rotation = startPosition.rotation;
         player.ResetStats();
+        player.canPlay = true;
     }
 
     public void ExitGame()

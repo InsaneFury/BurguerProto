@@ -74,11 +74,10 @@ public class Player : MonobehaviourSingleton<Player>
     public bool isAlive = true;
     public bool isDashing = false;
     public bool isMeleeing = false;
+    public bool canPlay = false;
 
     float originalLife = 0;
     int comboCounter = 0;
-
-    GameManager gManager;
 
     public static event Action<Player> OnChangeWeapon;
 
@@ -93,7 +92,6 @@ public class Player : MonobehaviourSingleton<Player>
         originalLife = life;
         animMachineGun = machineGun.GetComponent<Animator>();
         comboMeleeTimer = meleeMaxCooldown;
-        gManager = GameManager.Get();
         //Audio
         AkSoundEngine.SetState("Vivo_o_muerto", "Vivo");
         currentActiveWeapon = 1;
@@ -101,7 +99,7 @@ public class Player : MonobehaviourSingleton<Player>
 
     void Update()
     {
-        if((isAlive && gManager.gameStarted) && !gManager.pause)
+        if(isAlive && canPlay)
         {
             if (isMeleeing)
             {

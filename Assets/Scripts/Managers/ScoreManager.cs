@@ -24,16 +24,6 @@ public class ScoreManager : MonobehaviourSingleton<ScoreManager>
         Enemy.OnDieAction -= AddScore;
     }
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void AddScore(Enemy e)
     {
         int randScore = Random.Range(10, 1000);

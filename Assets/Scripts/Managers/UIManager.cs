@@ -108,7 +108,6 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     }
     #endregion
 
-
     #region Refresh UI
 
     public void RefreshStats()

@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
 
     [Header("VFX")]
     public float flashTime = 0.1f;
-    
+
     public static event Action<Enemy> OnDieAction;
 
     protected bool isAlive = true;
