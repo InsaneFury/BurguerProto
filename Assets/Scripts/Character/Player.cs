@@ -79,6 +79,9 @@ public class Player : MonobehaviourSingleton<Player>
     float originalLife = 0;
     int comboCounter = 0;
 
+    //CHEAT ZARLANGA
+    bool notCheating = false;
+
     public static event Action<Player> OnChangeWeapon;
 
     public override void Awake()
@@ -101,6 +104,16 @@ public class Player : MonobehaviourSingleton<Player>
     {
         if(isAlive && canPlay)
         {
+            //CHEAT ZARLANGA
+            if (Input.GetKeyDown(KeyCode.Z))
+            {
+                notCheating = !notCheating;
+                if(notCheating)
+                    Debug.Log("GOD MODE ZARLANGA ENABLE");
+                else
+                    Debug.Log("GOD MODE ZARLANGA DISABLE");
+            }
+
             if (isMeleeing)
             {
                 comboMeleeTimer -= Time.deltaTime;
@@ -217,22 +230,26 @@ public class Player : MonobehaviourSingleton<Player>
 
     public void TakeDamage(float dmg)
     {
-        if (isAlive)
+        if (!notCheating)
         {
-            if(life > 0)
-            life -= dmg;
+            if (isAlive)
+            {
+                if (life > 0)
+                    life -= dmg;
 
-            //Audio
-            AkSoundEngine.PostEvent("Voz_hamburguesa", gameObject);
-            AkSoundEngine.PostEvent("Damage_hamburguesa", gameObject);
-            StartCoroutine(GettingDmgVFX());
+                //Audio
+                AkSoundEngine.PostEvent("Voz_hamburguesa", gameObject);
+                AkSoundEngine.PostEvent("Damage_hamburguesa", gameObject);
+                StartCoroutine(GettingDmgVFX());
+            }
+            else
+            {
+                getDmgVFX.SetActive(true);
+            }
+
+            Death();
         }
-        else
-        {
-            getDmgVFX.SetActive(true);
-        }
-       
-        Death();
+        
     }
 
     private void OnTriggerEnter(Collider other)

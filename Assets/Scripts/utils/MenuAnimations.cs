@@ -5,38 +5,76 @@ using UnityEngine.EventSystems;
 
 public class MenuAnimations : MonoBehaviour
 {
-    public GameObject difficulties;
-    public GameObject init;
-    public GameObject controls;
+    [Header("Principal Menu")]
+    public Animator menuTab;
+    public Animator room;
+    public Animator settings;
+    public Animator modes;
 
-    public void DeactiveDifficulties()
+    bool settingsOpened = false;
+    bool menuTabOpened = false;
+    bool modesOpened = false;
+    bool roomOpened = true;
+
+    [Header("Modes Menu")]
+    public Animator classic;
+    public Animator frenetic;
+    public Animator story;
+
+    bool classicOpened = false;
+    bool freneticOpened = false;
+    bool storyOpened = false;
+
+    private void Start()
     {
-        difficulties.SetActive(false);
+        menuTab.SetBool("close", true);
+        settings.SetBool("close", true);
+        modes.SetBool("close", true);
+        room.SetBool("close", false);
     }
 
-    public void ActiveDifficulties()
+    #region PrincipalMenu
+    public void OpenRoom()
     {
-        difficulties.SetActive(true);
-
+        room.SetBool("close", roomOpened);
+        roomOpened = !roomOpened;
     }
 
-    public void DeactiveInit()
+    public void OpenMenuTab()
     {
-        init.SetActive(false);
+        menuTab.SetBool("close", menuTabOpened);
+        menuTabOpened = !menuTabOpened;
     }
 
-    public void ActiveInit()
+    public void OpenSettings()
     {
-        init.SetActive(true);
+        settings.SetBool("close", settingsOpened);
+        settingsOpened = !settingsOpened;
     }
 
-    public void DeactiveControls()
+    public void OpenModes()
     {
-        controls.SetActive(false);
+        modes.SetBool("close", modesOpened);
+        modesOpened = !modesOpened;
     }
+    #endregion
 
-    public void ActiveControls()
+    #region ModesMenu
+    public void EnableClassic()
     {
-        controls.SetActive(true);
+        classicOpened = !classicOpened;
+        classic.SetBool("open", classicOpened); 
     }
+    public void EnableFrenetic()
+    {
+        freneticOpened = !freneticOpened;
+        frenetic.SetBool("open", freneticOpened);
+    }
+    public void EnableStory()
+    {
+        storyOpened = !storyOpened;
+        story.SetBool("open", storyOpened);
+    }
+    #endregion
+
 }

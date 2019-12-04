@@ -27,6 +27,8 @@ public class GameManager : MonobehaviourSingleton<GameManager>
     public FloatParameter gameOverSaturation;
     ColorGrading cg;
 
+    ScoreManager sManager;
+
     public override void Awake()
     {
         base.Awake();
@@ -34,6 +36,7 @@ public class GameManager : MonobehaviourSingleton<GameManager>
 
     void Start()
     {
+        sManager = ScoreManager.Get();
         //Audio
         AkSoundEngine.PostEvent("Menu", gameObject);
         UIManager.Get().version.text ="v"+ Application.version;
@@ -91,6 +94,7 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         player.canPlay = false;
         gameOverText.SetActive(true);
         cg.saturation.value = new FloatParameter() { value = gameOverSaturation };
+        UIManager.Get().SetGameOverResults(sManager.enemiesKilled, sManager.maxWave, sManager.score);
     }
 
     void PauseGame()

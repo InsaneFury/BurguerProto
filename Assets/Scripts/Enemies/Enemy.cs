@@ -61,7 +61,7 @@ public class Enemy : MonoBehaviour
         isAlive = false;
         if (OnDieAction != null)
             OnDieAction(this);
-        EnemySpawner.Get().spawnedEnemies.Remove(gameObject);
+        
     }
 
     private void RefreshHealthbar()

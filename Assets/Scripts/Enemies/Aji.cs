@@ -101,6 +101,7 @@ public class Aji : Enemy
         //Audio
         AkSoundEngine.PostEvent("Muerte_enemigos", gameObject);
         Drop();
+        EnemySpawner.Get().spawnedEnemies.Remove(gameObject);
         Destroy(gameObject);
     }
 

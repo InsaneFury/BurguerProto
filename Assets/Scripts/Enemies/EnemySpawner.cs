@@ -86,23 +86,18 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
     {
         if (gManager.gameStarted)
         {
-            if (isSpawning)
-            {
-                timer -= Time.deltaTime;
-                seconds = (int)(timer % 60);
-                AkSoundEngine.SetRTPCValue("waves_time", seconds);
-
-                if(seconds == 5)
-                {
-                    uiManager.ActivePopUpAlert("WARNING!", "Next wave is coming");
-                }
-            }
+           
 
             switch (gameMode)
             {
                 case GameMode.EnemiesDie:
-                    if (currentWave < waves.Length)
+                    if (gManager.gameStarted)
                     {
+                        if(spawnedEnemies.Count == 0)
+                        {
+                            Timer();
+                        }
+                        
                         EnemiesDieGameMode();
                     }
                     else
@@ -125,6 +120,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
                 case GameMode.Survival:
                     if (gManager.gameStarted)
                     {
+                        Timer();
                         SurvivalGameMode();
                     }
                     break;
@@ -201,13 +197,20 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
 
     void EnemiesDieGameMode()
     {
-        if (spawnedEnemies.Count == 0)
+        if ((spawnedEnemies.Count == 0) && isSpawning && (seconds <= 0))
         {
             //Audio
             AkSoundEngine.PostEvent("Comienzo_oleada", gameObject);
-            uiManager.SetWaveNumber(currentWave);
+            isSpawning = false;
+
+            userSurvivalRecord++;
+            uiManager.SetWaveNumber(userSurvivalRecord);
+            ScoreManager.Get().SetMaxWave(userSurvivalRecord);
             StartCoroutine(SpawnWave(waves[currentWave]));
             currentWave++;
+
+            if (currentWave < maxSurvivalWave)
+                currentWave++;
         }
     }
 
@@ -221,12 +224,18 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
 
             userSurvivalRecord++;
             uiManager.SetWaveNumber(userSurvivalRecord);
+            ScoreManager.Get().SetMaxWave(userSurvivalRecord);
 
             StartCoroutine(SpawnWave(waves[currentWave]));
 
             if (currentWave < maxSurvivalWave)
                 currentWave++;
         }
+    }
+
+    public void SetGameMode(int mode)
+    {
+        gameMode = (GameMode)mode;
     }
     #endregion
 
@@ -256,5 +265,20 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
         gameDifficulty = (GameDifficulty)levelOfDifficulty;
     }
     #endregion
+
+    void Timer()
+    {
+        if (isSpawning)
+        {
+            timer -= Time.deltaTime;
+            seconds = (int)(timer % 60);
+            AkSoundEngine.SetRTPCValue("waves_time", seconds);
+
+            if (seconds == 5)
+            {
+                uiManager.ActivePopUpAlert("WARNING!", "Next wave is coming");
+            }
+        }
+    }
 
 }

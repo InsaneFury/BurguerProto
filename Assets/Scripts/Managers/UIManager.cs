@@ -47,6 +47,20 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     public GameObject waveNumber;
     private float waveNumberTime = 3f;
 
+    [Header("GameMode")]
+    public TextMeshProUGUI gameModeRoomText;
+    public TextMeshProUGUI gameModePauseText;
+    public TextMeshProUGUI gameOverModeText;
+    public Image pauseImage;
+    public Image gameOverImage;
+    public Sprite[] sprites;
+    public Sprite[] spritesColor;
+
+    [Header("GameOver")]
+    public TextMeshProUGUI enemiesKilledText;
+    public TextMeshProUGUI maxWaves;
+    public TextMeshProUGUI maxScore;
+
     [Header("Cameras")]
     public GameObject VCamThirdPerson;
     public GameObject VCamMenu;
@@ -219,6 +233,29 @@ public class UIManager : MonobehaviourSingleton<UIManager>
         popUpTitle.text = popTitle;
         popUpText.text = popText;
         popUpAlert.SetActive(true);
+    }
+
+    public void SetRoomGameModeText(string t)
+    {
+        gameModeRoomText.text = t.ToUpper();
+        gameModePauseText.text = t.ToUpper();
+        gameOverModeText.text = t.ToUpper();
+    }
+
+    public void SetRoomGameModeImage(int img)
+    {
+        pauseImage.sprite = sprites[img];
+    }
+    public void SetRoomGameModeImageColor(int img)
+    {
+        gameOverImage.sprite = spritesColor[img];
+    }
+
+    public void SetGameOverResults(int enemiesKilled,int maxwaves,int score)
+    {
+        enemiesKilledText.text = enemiesKilled.ToString();
+        maxWaves.text = maxwaves.ToString();
+        maxScore.text = score.ToString();
     }
     #endregion
 
