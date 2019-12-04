@@ -207,7 +207,6 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
             uiManager.SetWaveNumber(userSurvivalRecord);
             ScoreManager.Get().SetMaxWave(userSurvivalRecord);
             StartCoroutine(SpawnWave(waves[currentWave]));
-            currentWave++;
 
             if (currentWave < maxSurvivalWave)
                 currentWave++;
