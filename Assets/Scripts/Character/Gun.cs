@@ -11,6 +11,7 @@ public class Gun : MonobehaviourSingleton<Gun>
     public float dropDistance = 1;
     public float shootPower = 10f;
     public float fireRate = 2f;
+    public int granades = 2;
 
     Player player;
     GameManager gManager;
@@ -35,12 +36,13 @@ public class Gun : MonobehaviourSingleton<Gun>
     {
         if ((player.isAlive && gManager.gameStarted) && !gManager.pause)
         {
-            if ((bulletSize < maxBulletSize) && Input.GetButton("Fire1") && (Time.time >= timeToFire))
+            if ((bulletSize < maxBulletSize) && Input.GetButton("Fire1") && (Time.time >= timeToFire) && (granades > 0))
             {
                 IncreaseBulletSize();
             }
-            if (Input.GetMouseButtonUp(0))
+            if (Input.GetMouseButtonUp(0) && (granades > 0))
             {
+                granades--;
                 player.animTop.SetTrigger("attack");
             }
         }

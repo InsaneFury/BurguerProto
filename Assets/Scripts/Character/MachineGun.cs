@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MachineGun : MonoBehaviour
+public class MachineGun : MonobehaviourSingleton<MachineGun>
 {
 
     [System.Serializable]
@@ -19,6 +19,7 @@ public class MachineGun : MonoBehaviour
     public float shootPower = 10f;
     public float fireRate = 0.25f;
     public float shootAngleRange;
+    public int bullets = 100;
     public GameObject container;
 
     float timeToFire = 0f;
@@ -26,8 +27,9 @@ public class MachineGun : MonoBehaviour
     Player player;
     GameManager gManager;
 
-    private void Awake()
+    public override void Awake()
     {
+        base.Awake();
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
         
     }
@@ -57,9 +59,10 @@ public class MachineGun : MonoBehaviour
         {
             
 
-            if (Input.GetMouseButton(0) && Time.time >= timeToFire)
+            if (Input.GetMouseButton(0) && Time.time >= timeToFire && (bullets > 0))
             {
                 timeToFire = Time.time + 1f / fireRate;
+                bullets--;
 
                 //Audio
                 AkSoundEngine.PostEvent("Mch_Gun_disparo", gameObject);

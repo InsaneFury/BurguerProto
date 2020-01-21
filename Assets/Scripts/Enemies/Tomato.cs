@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 using TMPro;
-using System;
 
 public class Tomato : Enemy
 {
@@ -101,6 +100,18 @@ public class Tomato : Enemy
     void Drop()
     {
         Instantiate(soul, spawnPos.transform.position, Quaternion.identity);
+
+        int randProbability = Random.Range(0, 100);
+
+        if(randProbability >= bulletDropRate)
+        {
+            Instantiate(itemsToDrop[0], spawnPos.transform.position, Quaternion.identity);
+        }
+        else if (randProbability <= granadeDropRate)
+        {
+            Instantiate(itemsToDrop[1], spawnPos.transform.position, Quaternion.identity);
+        }
+
     }
 
     private void OnTriggerEnter(Collider other)

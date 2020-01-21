@@ -102,7 +102,11 @@ public class Player : MonobehaviourSingleton<Player>
 
     void Update()
     {
-        if(isAlive && canPlay)
+        float rvertical = Input.GetAxis("Mouse Y");
+        float rhorizontal = Input.GetAxis("Mouse X");
+        Debug.Log("rvertical: " + rvertical + "  /  " + "rhorizontal:" + rhorizontal);
+
+        if (isAlive && canPlay)
         {
             //CHEAT ZARLANGA
             if (Input.GetKeyDown(KeyCode.Z))
@@ -134,7 +138,6 @@ public class Player : MonobehaviourSingleton<Player>
 
             AkSoundEngine.SetRTPCValue("vida_hamburguesa", life);
             AkSoundEngine.SetRTPCValue("mana_hamburguesa", soulsCollected);
-
         }
     }
 
@@ -262,6 +265,16 @@ public class Player : MonobehaviourSingleton<Player>
             {
                 soulsCollected += (int)UnityEngine.Random.Range(soulGainRange.x, soulGainRange.y);
             }
+            Destroy(other.gameObject);
+        }
+        if (other.CompareTag("Granade"))
+        {
+            Gun.Get().granades++;
+            Destroy(other.gameObject);
+        }
+        if (other.CompareTag("Ammo"))
+        {
+            MachineGun.Get().bullets+=25;
             Destroy(other.gameObject);
         }
     } 

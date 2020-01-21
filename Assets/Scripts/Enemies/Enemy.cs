@@ -20,6 +20,9 @@ public class Enemy : MonoBehaviour
 
     [Header("Drops")]
     public GameObject soul;
+    public GameObject[] itemsToDrop;
+    public int bulletDropRate = 50;
+    public int granadeDropRate = 10;
     public GameObject spawnPos;
 
     [Header("VFX")]

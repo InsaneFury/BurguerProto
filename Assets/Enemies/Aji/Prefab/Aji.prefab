@@ -1721,6 +1721,11 @@ MonoBehaviour:
   timeToDie: 5
   enemyCollider: {fileID: 686306645731388887}
   soul: {fileID: 7872789756176858962, guid: 8d0629a8b07204644b8ec4f83a6f7c3f, type: 3}
+  itemsToDrop:
+  - {fileID: 2194200365539401291, guid: d4b5fe5358fcfef4c9454a7a02e9fe3a, type: 3}
+  - {fileID: 867848681458287531, guid: 4d47c94ccfd115442a83a6b85ab3e6a2, type: 3}
+  bulletDropRate: 50
+  granadeDropRate: 10
   spawnPos: {fileID: 5006568695215763622}
   flashTime: 0.1
   explosion: {fileID: 5769599830294413825}

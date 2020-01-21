@@ -18,6 +18,9 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     public GameObject[] weaponsUI;
     public string[] weaponsNames;
     public TextMeshProUGUI currentWeaponText;
+    public GameObject infinitSymbol;
+    public TextMeshProUGUI currentAmmo;
+    public GameObject currentAmmoGo;
 
     [Header("HUD Settings")]
     public GameObject inGameHUD;
@@ -90,6 +93,7 @@ public class UIManager : MonobehaviourSingleton<UIManager>
         RefreshSouls();
         eSpawner = EnemySpawner.Get();
         ShowWaveInfo();
+        currentAmmoGo.SetActive(false);
     }
 
     private void Update()
@@ -99,6 +103,7 @@ public class UIManager : MonobehaviourSingleton<UIManager>
         RefreshStats();
         RefreshHealthbar();
         RefreshSouls();
+        RefreshWeaponsAmmo();
     }
 
     public void ActiveInGameUI()
@@ -118,7 +123,24 @@ public class UIManager : MonobehaviourSingleton<UIManager>
         }
         weaponsUI[player.currentActiveWeapon].GetComponent<Animator>().SetBool("weaponActive", true);
         currentWeaponText.text = weaponsNames[player.currentActiveWeapon];
-        Debug.Log("Funca");
+
+        if (player.currentActiveWeapon == 0)
+        {
+            infinitSymbol.SetActive(false);
+            currentAmmo.text = MachineGun.Get().bullets.ToString();
+            currentAmmoGo.SetActive(true);
+        }
+        if (player.currentActiveWeapon == 1)
+        {
+            infinitSymbol.SetActive(false);
+            currentAmmo.text = Gun.Get().granades.ToString();
+            currentAmmoGo.SetActive(true);
+        }
+        if (player.currentActiveWeapon >= 2)
+        {
+            infinitSymbol.SetActive(true);
+            currentAmmoGo.SetActive(false);
+        }
     }
     #endregion
 
@@ -142,6 +164,18 @@ public class UIManager : MonobehaviourSingleton<UIManager>
         {
             healthBar.fillAmount = player.life / 100f;
             lifeNum.text = ((int)player.life).ToString();
+        }
+    }
+
+    public void RefreshWeaponsAmmo()
+    {
+        if (player.currentActiveWeapon == 0)
+        {
+            currentAmmo.text = MachineGun.Get().bullets.ToString();
+        }
+        if (player.currentActiveWeapon == 1)
+        {
+            currentAmmo.text = Gun.Get().granades.ToString();
         }
     }
 

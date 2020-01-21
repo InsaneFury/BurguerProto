@@ -9,6 +9,9 @@ TagManager:
   - Collector
   - Weapon
   - VFX
+  - Bullet
+  - Granade
+  - Ammo
   layers:
   - Default
   - TransparentFX
