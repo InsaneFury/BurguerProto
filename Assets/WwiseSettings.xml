@@ -9,5 +9,5 @@
   <SoundbankPath>Audio/GeneratedSoundBanks</SoundbankPath>
   <WwiseInstallationPathMac />
   <WwiseInstallationPathWindows>D:\Wwise</WwiseInstallationPathWindows>
-  <WwiseProjectPath>../FastFoodNightmares_WwiseProject/FastFoodNightmares_WwiseProject.wproj</WwiseProjectPath>
+  <WwiseProjectPath>../../Fast Food Nightmares/FastFoodNightmares_WwiseProject/FastFoodNightmares_WwiseProject.wproj</WwiseProjectPath>
 </WwiseSettings>
