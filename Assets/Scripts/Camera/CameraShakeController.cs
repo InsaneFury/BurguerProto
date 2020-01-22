@@ -67,6 +67,7 @@ public class CameraShakeController : MonobehaviourSingleton<CameraShakeControlle
             {
                 // If Camera Shake effect is over, reset variables
                 virtualCameraNoise.m_AmplitudeGain = 0f;
+                virtualCameraNoise.m_FrequencyGain = 0f;
                 ShakeElapsedTime = 0f;
             }
         }
@@ -77,6 +78,10 @@ public class CameraShakeController : MonobehaviourSingleton<CameraShakeControlle
         shake = true;
         yield return new WaitForSecondsRealtime(ShakeDuration);
         shake = false;
+        // If Camera Shake effect is over, reset variables
+        virtualCameraNoise.m_AmplitudeGain = 0f;
+        virtualCameraNoise.m_FrequencyGain = 0f;
+        ShakeElapsedTime = 0f;
     }
 
     public void ActiveScreenShake()

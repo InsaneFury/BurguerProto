@@ -493,6 +493,8 @@ public class Player : MonobehaviourSingleton<Player>
         isAlive = true;
         getDmgVFX.SetActive(false);
         soulsCollected = 100;
+        Gun.Get().granades = 2;
+        MachineGun.Get().bullets = 100;
 
         //Back to default weapon
         machineGunIsActive = false;
