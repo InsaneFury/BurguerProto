@@ -53,6 +53,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
     public List<GameObject> spawnedEnemies;
 
     [Header("Enemies Settings")]
+    public int survivalEnemiesLimit = 30;
     public float minEnemySize = 1f;
     public float maxEnemySize = 1.5f;
 
@@ -118,7 +119,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
                     }
                     break;
                 case GameMode.Survival:
-                    if (gManager.gameStarted)
+                    if (gManager.gameStarted && spawnedEnemies.Count < survivalEnemiesLimit)
                     {
                         Timer();
                         SurvivalGameMode();
