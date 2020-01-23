@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MachineGun : MonobehaviourSingleton<MachineGun>
 {
@@ -53,40 +54,6 @@ public class MachineGun : MonobehaviourSingleton<MachineGun>
         }
     }
 
-    void FixedUpdate()
-    {
-        if ((player.isAlive && gManager.gameStarted) && !gManager.pause)
-        {
-            
-
-            if (Input.GetMouseButton(0) && Time.time >= timeToFire && (bullets > 0))
-            {
-                timeToFire = Time.time + 1f / fireRate;
-                bullets--;
-
-                //Audio
-                AkSoundEngine.PostEvent("Mch_Gun_disparo", gameObject);
-
-                Shoot();
-                player.animMachineGun.SetBool("attack", true);
-                player.animTop.SetTrigger("attack");
-
-                //Parche previo CAMBIAR!!
-                player.animBottom.SetTrigger("resetMove");
-                player.animTop.SetTrigger("resetMove");
-
-                player.muzzleFlash.Play();
-            }
-            if (Input.GetMouseButtonUp(0))
-            {
-                player.animMachineGun.SetBool("attack", false);
-                player.animBottom.SetTrigger("resetMove");
-                player.animTop.SetTrigger("resetMove");
-                player.muzzleFlash.Stop();
-            }
-        }
-    }
-
     public GameObject SpawnBulletFromPool(string tag, Vector3 pos, Quaternion rot)
     {
         if (!poolDictionary.ContainsKey(tag))
@@ -104,6 +71,7 @@ public class MachineGun : MonobehaviourSingleton<MachineGun>
         poolDictionary[tag].Enqueue(objectToSpawn);
         return objectToSpawn;
     }
+
     public void Shoot()
     {
         GameObject currentBullet = SpawnBulletFromPool("Bullet", transform.position + player.forward.normalized, player.vision.transform.rotation);
@@ -117,4 +85,50 @@ public class MachineGun : MonobehaviourSingleton<MachineGun>
         currentBullet.GetComponent<Rigidbody>().velocity = Vector3.zero;
         currentBullet.GetComponent<Rigidbody>().AddForce(currentBullet.transform.forward * shootPower * Time.fixedUnscaledDeltaTime, ForceMode.Impulse);
     }
+
+    public void TriggerGun(Mouse fire)
+    {
+        if ((player.isAlive && gManager.gameStarted) && !gManager.pause)
+        {
+
+            if (fire.leftButton.isPressed)
+            {
+
+            }
+            
+           
+        }
+    }
+
+    public void HoldGun()
+    {
+        if (Input.GetMouseButton(0) && Time.time >= timeToFire && (bullets > 0))
+        {
+            timeToFire = Time.time + 1f / fireRate;
+            bullets--;
+
+            //Audio
+            AkSoundEngine.PostEvent("Mch_Gun_disparo", gameObject);
+
+            Shoot();
+            player.animMachineGun.SetBool("attack", true);
+            player.animTop.SetTrigger("attack");
+
+            //Parche previo CAMBIAR!!
+            player.animBottom.SetTrigger("resetMove");
+            player.animTop.SetTrigger("resetMove");
+
+            player.muzzleFlash.Play();
+        }
+    }
+   /* public void ReleaseGun()
+    {
+        if ()//release
+        {
+            player.animMachineGun.SetBool("attack", false);
+            player.animBottom.SetTrigger("resetMove");
+            player.animTop.SetTrigger("resetMove");
+            player.muzzleFlash.Stop();
+        }
+    }*/
 }

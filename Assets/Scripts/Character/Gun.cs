@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Gun : MonobehaviourSingleton<Gun>
 {
@@ -32,37 +33,24 @@ public class Gun : MonobehaviourSingleton<Gun>
         originalSize = bulletSize;
     }
 
-    private void Update()
+    public void Shoot()
     {
         if ((player.isAlive && gManager.gameStarted) && !gManager.pause)
         {
-            if ((bulletSize < maxBulletSize) && Input.GetButton("Fire1") && (Time.time >= timeToFire) && (granades > 0))
-            {
-                IncreaseBulletSize();
-            }
-            if (Input.GetMouseButtonUp(0) && (granades > 0))
+            if ((granades > 0))
             {
                 granades--;
                 player.animTop.SetTrigger("attack");
             }
         }
-            
     }
 
-    void IncreaseBulletSize()
+    public void InstantiateGranade()
     {
-        timeToFire = Time.time + 1f / fireRate;
-        bulletSize += speedOfIncrease;
-    }
 
-    public void Shoot()
-    {
-        Vector3 finalSize = new Vector3(bulletSize, bulletSize, bulletSize);
         Vector3 spawnPos = Player.Get().transform.position;
         GameObject b = Instantiate(bullet, spawnPos + player.forward.normalized * dropDistance, player.transform.rotation);
-        b.transform.localScale += finalSize;
 
         b.GetComponent<Rigidbody>().AddForce(player.forward * shootPower * Time.fixedDeltaTime, ForceMode.Impulse);
-        bulletSize = 0;
     }
 }

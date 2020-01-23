@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using System;
 
 public class Player : MonobehaviourSingleton<Player>
@@ -82,11 +83,32 @@ public class Player : MonobehaviourSingleton<Player>
     //CHEAT ZARLANGA
     bool notCheating = false;
 
+    //New Input System
+    public PlayerInputActions inputAction;
+    Vector2 movementInput;
+    Vector2 look;
+    Keyboard kb;
+    float aimAngle;
+    Quaternion aimRotation;
+
     public static event Action<Player> OnChangeWeapon;
 
     public override void Awake()
     {
         base.Awake();
+        inputAction = new PlayerInputActions();
+
+        kb = InputSystem.GetDevice<Keyboard>();
+        //All the pctx ctx etc mean ctx = context and the first letter just from heal, dash etc
+        //Input System (assign movement input vector2 to movementInput new variable)
+        inputAction.PlayerControls.Move.performed += pctx => movementInput = pctx.ReadValue<Vector2>();
+        inputAction.PlayerControls.Look.performed += lctx => look = lctx.ReadValue<Vector2>();
+        //Input System (its like a delegate assign a function or multiple functions to an input action)
+        inputAction.PlayerControls.Heal.performed += hctx => Heal();
+        inputAction.PlayerControls.Dash.performed += dctx => Dash();
+        inputAction.PlayerControls.Fire.performed += fctx => granade.Shoot();
+
+        inputAction.PlayerControls.WeaponChange.performed += wctx => WeaponChanger();
     }
 
     void Start()
@@ -102,20 +124,12 @@ public class Player : MonobehaviourSingleton<Player>
 
     void Update()
     {
-        float rvertical = Input.GetAxis("Mouse Y");
-        float rhorizontal = Input.GetAxis("Mouse X");
-        Debug.Log("rvertical: " + rvertical + "  /  " + "rhorizontal:" + rhorizontal);
-
         if (isAlive && canPlay)
         {
-            //CHEAT ZARLANGA
-            if (Input.GetKeyDown(KeyCode.Z))
+            //CHEAT ZARLANGA with new input system
+            if (kb.zKey.wasPressedThisFrame)
             {
-                notCheating = !notCheating;
-                if(notCheating)
-                    Debug.Log("GOD MODE ZARLANGA ENABLE");
-                else
-                    Debug.Log("GOD MODE ZARLANGA DISABLE");
+                BecomeInmortal();
             }
 
             if (isMeleeing)
@@ -126,15 +140,9 @@ public class Player : MonobehaviourSingleton<Player>
             {
                 SwordAttack();
             }
-            
-            WeaponChanger();
             Move();
             RotateToMouse();
-            if (Input.GetButtonDown("Jump"))
-            {
-                Dash();
-            }
-            Heal();
+            //RotateWithJoystick();
 
             AkSoundEngine.SetRTPCValue("vida_hamburguesa", life);
             AkSoundEngine.SetRTPCValue("mana_hamburguesa", soulsCollected);
@@ -143,14 +151,14 @@ public class Player : MonobehaviourSingleton<Player>
 
     void Move()
     {
-        float vertical = Input.GetAxis("Vertical") * speed;
-        float horizontal = Input.GetAxis("Horizontal") * rotationSpeed;
+        float vertical = movementInput.y * speed;
+        float horizontal = movementInput.x * rotationSpeed;
 
         vertical *= Time.fixedDeltaTime;
         horizontal *= Time.fixedDeltaTime;
 
         Vector3 movement = new Vector3(horizontal, 0f, vertical);
-        movement =  Vector3.ClampMagnitude(movement, 1);
+        movement = Vector3.ClampMagnitude(movement, 1);
 
         CameraDirection();
 
@@ -158,20 +166,20 @@ public class Player : MonobehaviourSingleton<Player>
 
         Quaternion turn = transform.rotation;
         turn.SetLookRotation(transform.position + playerMove * rotationSpeed);
-        transform.rotation = new Quaternion(0f,turn.y,0f,turn.w);
+        transform.rotation = new Quaternion(0f, turn.y, 0f, turn.w);
 
-        if(isDashing)
-        Top.transform.rotation = transform.rotation;
+        if (isDashing)
+            Top.transform.rotation = transform.rotation;
 
         if (machineGunIsActive && (movement.x > 0 || movement.z > 0))
         {
             animMachineGun.SetBool("run", true);
         }
-        if(machineGunIsActive && (movement.x <= 0 || movement.z <= 0))
+        if (machineGunIsActive && (movement.x <= 0 || movement.z <= 0))
         {
             animMachineGun.SetBool("run", false);
         }
-        if(movement.x == 0 && movement.z == 0)
+        if (movement.x == 0 && movement.z == 0)
         {
             face.SetBool("run", false);
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
@@ -181,32 +189,32 @@ public class Player : MonobehaviourSingleton<Player>
             face.SetBool("run", true);
         }
 
-        
+
         animBottom.SetFloat("horizontal", horizontal);
         animBottom.SetFloat("vertical", vertical);
         animTop.SetFloat("horizontal", horizontal);
         animTop.SetFloat("vertical", vertical);
-        
-       
-        rb.AddForce(playerMove * speed * Time.fixedDeltaTime,ForceMode.VelocityChange);
+
+
+        rb.AddForce(playerMove * speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
 
     }
 
     void RotateToMouse()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Plane groundPlane = new Plane(Vector3.up,Vector3.zero);
+        Ray ray = Camera.main.ScreenPointToRay(look);
+        Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
 
-        if (groundPlane.Raycast(ray,out rayLenght))
+        if (groundPlane.Raycast(ray, out rayLenght))
         {
             pointToLook = ray.GetPoint(rayLenght);
             Debug.DrawLine(ray.origin, pointToLook, Color.blue);
         }
 
-        forward = new Vector3(pointToLook.x,transform.position.y,pointToLook.z) - transform.position;
+        forward = new Vector3(pointToLook.x, transform.position.y, pointToLook.z) - transform.position;
 
-        if(crosshair)
-        crosshair.position = pointToLook;
+        if (crosshair)
+            crosshair.position = pointToLook;
 
         vision.rotation = Quaternion.LookRotation(forward, Vector3.up);
         if (!isDashing)
@@ -216,6 +224,19 @@ public class Player : MonobehaviourSingleton<Player>
         if (!isMeleeing)
         {
             Top.transform.rotation = Quaternion.LookRotation(forward, Vector3.up);
+        }
+    }
+
+    void RotateWithJoystick()
+    {
+        aimAngle = Mathf.Atan2(look.x, look.y) * Mathf.Rad2Deg;
+
+        aimRotation = Quaternion.AngleAxis(aimAngle, Vector3.up);
+        vision.rotation = Quaternion.Slerp(vision.transform.rotation, aimRotation, rotationSpeed * Time.deltaTime);
+
+        if (!isDashing || !isMeleeing)
+        {
+            Top.transform.rotation = Quaternion.Slerp(Top.transform.rotation, aimRotation, rotationSpeed * Time.deltaTime);
         }
     }
 
@@ -252,16 +273,16 @@ public class Player : MonobehaviourSingleton<Player>
 
             Death();
         }
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
-       if (other.CompareTag("Soul"))
+        if (other.CompareTag("Soul"))
         {
             //Audio
             AkSoundEngine.PostEvent("Fantasmas_enemigos", gameObject);
-            if(soulsCollected < maxSoulsCollected)
+            if (soulsCollected < maxSoulsCollected)
             {
                 soulsCollected += (int)UnityEngine.Random.Range(soulGainRange.x, soulGainRange.y);
             }
@@ -274,20 +295,20 @@ public class Player : MonobehaviourSingleton<Player>
         }
         if (other.CompareTag("Ammo"))
         {
-            MachineGun.Get().bullets+=25;
+            MachineGun.Get().bullets += 25;
             Destroy(other.gameObject);
         }
-    } 
+    }
 
     void Dash()
     {
-        if(soulsCollected < dashCost)
+        if (soulsCollected < dashCost)
         {
             return;
         }
-        
+
         soulsCollected -= dashCost;
-       
+
         StartCoroutine(ActiveDashTrail());
 
         //Audio
@@ -331,7 +352,7 @@ public class Player : MonobehaviourSingleton<Player>
     {
         bool canHeal = (soulsCollected >= healCost) && (life < originalLife);
 
-        if (Input.GetKeyDown(KeyCode.E) && canHeal)
+        if (canHeal)
         {
             life += healAmount;
             soulsCollected -= healCost;
@@ -345,7 +366,7 @@ public class Player : MonobehaviourSingleton<Player>
 
     void Death()
     {
-        if(life <= 0)
+        if (life <= 0)
         {
             isAlive = false;
 
@@ -360,26 +381,25 @@ public class Player : MonobehaviourSingleton<Player>
 
     void SwordAttack()
     {
-        if (comboMeleeTimer <= 0)
+        if (swordIsActive)
         {
-            comboCounter = 0;
-            isMeleeing = false;
+            if (comboMeleeTimer <= 0)
+            {
+                comboCounter = 0;
+                isMeleeing = false;
 
-            sword.GetComponent<BoxCollider>().enabled = false;
-            animBottom.SetBool("exitCombo",true);
-            animTop.SetBool("exitCombo",true);
+                sword.GetComponent<BoxCollider>().enabled = false;
+                animBottom.SetBool("exitCombo", true);
+                animTop.SetBool("exitCombo", true);
 
-            animTop.ResetTrigger("swordOne");
-            animTop.SetBool("swordTwo",false);
-            animTop.SetBool("swordThree", false);
-            comboMeleeTimer = meleeMaxCooldown;
-        }
+                animTop.ResetTrigger("swordOne");
+                animTop.SetBool("swordTwo", false);
+                animTop.SetBool("swordThree", false);
+                comboMeleeTimer = meleeMaxCooldown;
+            }
 
-        if (Input.GetButtonDown("Fire1"))
-        {
             StartCoroutine("ResetAnimationsTriggers");
             comboCounter++;
-            
 
             if (comboCounter == 1)
             {
@@ -390,7 +410,7 @@ public class Player : MonobehaviourSingleton<Player>
             }
             if ((comboCounter == 2) && (comboMeleeTimer > 0))
             {
-                animTop.SetBool("swordTwo",true);
+                animTop.SetBool("swordTwo", true);
                 comboMeleeTimer = meleeMaxCooldown;
                 sword.GetComponent<BoxCollider>().enabled = true;
             }
@@ -399,70 +419,85 @@ public class Player : MonobehaviourSingleton<Player>
                 animTop.SetBool("swordThree", true);
                 comboMeleeTimer = meleeMaxCooldown;
                 sword.GetComponent<BoxCollider>().enabled = true;
-            } 
+            }
         }
     }
 
     //Refactorizar WeaponChanger
     void WeaponChanger()
     {
-        if (Input.GetKey(KeyCode.Alpha1) && !machineGunIsActive)
+        currentActiveWeapon++;
+        if (currentActiveWeapon > 2)
         {
             currentActiveWeapon = 0;
-            //Audio
-            AkSoundEngine.PostEvent("Mch_Gun_cambio", gameObject);
-
-            machineGunIsActive = true;
-            machineGun.SetActive(machineGunIsActive);
-            granade.enabled = false;
-            sword.SetActive(false);
-            swordIsActive = false;
-            animBottom.SetBool("exitCombo", true);
-            animTop.SetBool("exitCombo", true);
-            animBottom.SetTrigger("resetMove");
-            animTop.SetTrigger("resetMove");
-
-            if (OnChangeWeapon != null)
-                OnChangeWeapon(this);
         }
-        if (Input.GetKey(KeyCode.Alpha2) && !granade.enabled)
+        switch (currentActiveWeapon)
         {
-            currentActiveWeapon = 1;
-            //Audio
-            AkSoundEngine.PostEvent("Granada_cambio", gameObject);
+            case 0:
+                if (!machineGunIsActive)
+                {
+                    currentActiveWeapon = 0;
+                    //Audio
+                    AkSoundEngine.PostEvent("Mch_Gun_cambio", gameObject);
 
-            machineGunIsActive = false;
-            machineGun.SetActive(machineGunIsActive);
-            granade.enabled = true;
-            sword.SetActive(false);
-            swordIsActive = false;
-            animBottom.SetBool("exitCombo", true);
-            animTop.SetBool("exitCombo", true);
-            animBottom.SetTrigger("resetMove");
-            animTop.SetTrigger("resetMove");
+                    machineGunIsActive = true;
+                    machineGun.SetActive(machineGunIsActive);
+                    granade.enabled = false;
+                    sword.SetActive(false);
+                    swordIsActive = false;
+                    animBottom.SetBool("exitCombo", true);
+                    animTop.SetBool("exitCombo", true);
+                    animBottom.SetTrigger("resetMove");
+                    animTop.SetTrigger("resetMove");
 
-            if (OnChangeWeapon != null)
-                OnChangeWeapon(this);
+                    if (OnChangeWeapon != null)
+                        OnChangeWeapon(this);
+                }
+                break;
+            case 1:
+                if (!granade.enabled)
+                {
+                    currentActiveWeapon = 1;
+                    //Audio
+                    AkSoundEngine.PostEvent("Granada_cambio", gameObject);
+
+                    machineGunIsActive = false;
+                    machineGun.SetActive(machineGunIsActive);
+                    granade.enabled = true;
+                    sword.SetActive(false);
+                    swordIsActive = false;
+                    animBottom.SetBool("exitCombo", true);
+                    animTop.SetBool("exitCombo", true);
+                    animBottom.SetTrigger("resetMove");
+                    animTop.SetTrigger("resetMove");
+
+                    if (OnChangeWeapon != null)
+                        OnChangeWeapon(this);
+                }
+                break;
+            case 2:
+                if (!swordIsActive)
+                {
+                    currentActiveWeapon = 2;
+                    //Audio
+                    AkSoundEngine.PostEvent("Espada_cambio", gameObject);
+
+                    machineGunIsActive = false;
+                    machineGun.SetActive(machineGunIsActive);
+                    granade.enabled = false;
+                    sword.SetActive(true);
+                    swordIsActive = true;
+                    animBottom.SetTrigger("resetMove");
+                    animTop.SetTrigger("resetMove");
+
+                    if (OnChangeWeapon != null)
+                        OnChangeWeapon(this);
+                }
+                break;
+            default:
+                break;
         }
-        if (Input.GetKey(KeyCode.Alpha3) && !swordIsActive)
-        {
-            currentActiveWeapon = 2;
-            //Audio
-            AkSoundEngine.PostEvent("Espada_cambio", gameObject);
 
-            machineGunIsActive = false;
-            machineGun.SetActive(machineGunIsActive);
-            granade.enabled = false;
-            sword.SetActive(true);
-            swordIsActive = true;
-            animBottom.SetTrigger("resetMove");
-            animTop.SetTrigger("resetMove");
-
-            if (OnChangeWeapon != null)
-                OnChangeWeapon(this);
-        }
-
-        
 
         if (machineGunIsActive)
         {
@@ -504,5 +539,24 @@ public class Player : MonobehaviourSingleton<Player>
         swordIsActive = false;
     }
 
-    
+    //INPUTS FUNCTIONS
+    private void OnEnable()
+    {
+        inputAction.Enable();
+    }
+
+    private void OnDisable()
+    {
+        inputAction.Disable();
+    }
+
+    public void BecomeInmortal()
+    {
+        notCheating = !notCheating;
+        if (notCheating)
+            Debug.Log("GOD MODE ZARLANGA ENABLE");
+        else
+            Debug.Log("GOD MODE ZARLANGA DISABLE");
+    }
+
 }

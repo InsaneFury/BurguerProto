@@ -32,6 +32,8 @@ public class GameManager : MonobehaviourSingleton<GameManager>
     public override void Awake()
     {
         base.Awake();
+        player = Player.Get();
+        player.inputAction.GameManagerControls.Pause.performed += ctx => PauseGame();
     }
 
     void Start()
@@ -40,17 +42,13 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         //Audio
         AkSoundEngine.PostEvent("Menu", gameObject);
         UIManager.Get().version.text ="v"+ Application.version;
-        player = Player.Get();
+        
         profile.TryGetSettings(out cg);
         cg.saturation.value = new FloatParameter() { value = 0 };
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && gameStarted)
-        {
-            PauseGame();
-        }
         if (!player.isAlive)
         {
             GameOver();
@@ -99,21 +97,24 @@ public class GameManager : MonobehaviourSingleton<GameManager>
 
     void PauseGame()
     {
-        pause = !pause;
-        UIManager.Get().pause.SetActive(pause);
-        Time.timeScale = pause ? 0 : 1;
+        if (gameStarted)
+        {
+            pause = !pause;
+            UIManager.Get().pause.SetActive(pause);
+            Time.timeScale = pause ? 0 : 1;
 
-        if (pause)
-        {
-            //Audio
-            player.canPlay = false;
-            AkSoundEngine.PostEvent("Pausa_ON", gameObject);
-        }
-        else
-        {
-            player.canPlay = true;
-            //Audio
-            AkSoundEngine.PostEvent("Pausa_OFF", gameObject);
+            if (pause)
+            {
+                //Audio
+                player.canPlay = false;
+                AkSoundEngine.PostEvent("Pausa_ON", gameObject);
+            }
+            else
+            {
+                player.canPlay = true;
+                //Audio
+                AkSoundEngine.PostEvent("Pausa_OFF", gameObject);
+            }
         }
     }
 

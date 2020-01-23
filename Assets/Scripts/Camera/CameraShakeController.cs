@@ -45,10 +45,10 @@ public class CameraShakeController : MonobehaviourSingleton<CameraShakeControlle
     void Update()
     {
         // TODO: Replace with your trigger
-        if ((Input.GetMouseButton(0) && player.machineGunIsActive) || shake)
+        /*if ((Input.GetMouseButton(0) && player.machineGunIsActive) || shake)
         {
             ShakeElapsedTime = ShakeDuration;
-        }
+        }*/
 
         // If the Cinemachine componet is not set, avoid update
         if (freeLookCamera != null && virtualCameraNoise != null)
