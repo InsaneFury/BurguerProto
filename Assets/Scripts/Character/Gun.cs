@@ -17,12 +17,17 @@ public class Gun : MonobehaviourSingleton<Gun>
     Player player;
     GameManager gManager;
 
+    Mouse mouse;
+    Gamepad gd;
+
     float timeToFire = 0f;
     float originalSize = 0;
 
     public override void Awake()
     {
         base.Awake();
+        mouse = InputSystem.GetDevice<Mouse>();
+        gd = InputSystem.GetDevice<Gamepad>();
     }
 
     void Start()
@@ -33,11 +38,16 @@ public class Gun : MonobehaviourSingleton<Gun>
         originalSize = bulletSize;
     }
 
+    private void Update()
+    {
+        Shoot();
+    }
+
     public void Shoot()
     {
         if ((player.isAlive && gManager.gameStarted) && !gManager.pause)
         {
-            if ((granades > 0))
+            if (mouse.leftButton.wasPressedThisFrame || gd.rightTrigger.wasPressedThisFrame && (granades > 0))
             {
                 granades--;
                 player.animTop.SetTrigger("attack");
@@ -49,8 +59,8 @@ public class Gun : MonobehaviourSingleton<Gun>
     {
         Vector3 spawnPos = Player.Get().transform.position;
 
-        GameObject b = Instantiate(bullet, spawnPos + player.forward.normalized * dropDistance, player.transform.rotation);
+        GameObject b = Instantiate(bullet, spawnPos + player.Top.transform.forward * dropDistance, player.transform.rotation);
 
-        b.GetComponent<Rigidbody>().AddForce(player.forward * shootPower * Time.fixedDeltaTime, ForceMode.Impulse);
+        b.GetComponent<Rigidbody>().AddForce(player.Top.transform.forward * shootPower * Time.fixedDeltaTime, ForceMode.Impulse);
     }
 }

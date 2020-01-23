@@ -18023,8 +18023,8 @@ MonoBehaviour:
   bulletSize: 0.1
   maxBulletSize: 1
   speedOfIncrease: 0.2
-  dropDistance: 4
-  shootPower: 15
+  dropDistance: 8
+  shootPower: 200
   fireRate: 2
   granades: 2
 --- !u!95 &612681274 stripped

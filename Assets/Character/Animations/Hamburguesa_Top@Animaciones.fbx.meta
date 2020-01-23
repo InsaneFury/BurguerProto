@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 512eff70832d99d4bb53dcf731f7bef2
 ModelImporter:
-  serializedVersion: 26
+  serializedVersion: 19300
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
@@ -50,7 +50,7 @@ ModelImporter:
     second: Sword_3
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -334,7 +334,7 @@ ModelImporter:
       curves: []
       events:
       - time: 0.27243587
-        functionName: Shoot
+        functionName: InstantiateGranade
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: d75eba3aaf5d632479f7ac42a3c1c42e,
           type: 3}
@@ -557,7 +557,6 @@ ModelImporter:
     normalSmoothingSource: 0
   referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
     serializedVersion: 3
     human: []
@@ -575,8 +574,10 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
