@@ -106,7 +106,6 @@ public class Player : MonobehaviourSingleton<Player>
         //Input System (its like a delegate assign a function or multiple functions to an input action)
         inputAction.PlayerControls.Heal.performed += hctx => Heal();
         inputAction.PlayerControls.Dash.performed += dctx => Dash();
-        inputAction.PlayerControls.Fire.performed += fctx => granade.Shoot();
 
         inputAction.PlayerControls.WeaponChange.performed += wctx => WeaponChanger();
     }
@@ -141,8 +140,8 @@ public class Player : MonobehaviourSingleton<Player>
                 SwordAttack();
             }
             Move();
-            RotateToMouse();
-            //RotateWithJoystick();
+            //RotateToMouse();
+            RotateWithJoystick();
 
             AkSoundEngine.SetRTPCValue("vida_hamburguesa", life);
             AkSoundEngine.SetRTPCValue("mana_hamburguesa", soulsCollected);

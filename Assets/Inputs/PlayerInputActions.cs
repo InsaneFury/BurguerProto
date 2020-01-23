@@ -43,14 +43,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Fire"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""ce3a0cbf-a477-489e-bb74-9ffb60c9fa50"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
                     ""name"": ""Dash"",
                     ""type"": ""PassThrough"",
                     ""id"": ""fb998566-c859-4491-800a-909ddf62b02b"",
@@ -153,28 +145,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard & Mouse"",
                     ""action"": ""Look"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""8ffb20fb-8300-4177-b9ad-88b2a84882f2"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": ""Press,Hold"",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard & Mouse"",
-                    ""action"": ""Fire"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""8daf8d84-24fe-4236-84d9-b938bf9e49e2"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
-                    ""interactions"": ""Press,Hold"",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Fire"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -309,7 +279,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         m_PlayerControls_Move = m_PlayerControls.FindAction("Move", throwIfNotFound: true);
         m_PlayerControls_Look = m_PlayerControls.FindAction("Look", throwIfNotFound: true);
         m_PlayerControls_Heal = m_PlayerControls.FindAction("Heal", throwIfNotFound: true);
-        m_PlayerControls_Fire = m_PlayerControls.FindAction("Fire", throwIfNotFound: true);
         m_PlayerControls_Dash = m_PlayerControls.FindAction("Dash", throwIfNotFound: true);
         m_PlayerControls_WeaponChange = m_PlayerControls.FindAction("WeaponChange", throwIfNotFound: true);
         // GameManagerControls
@@ -367,7 +336,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerControls_Move;
     private readonly InputAction m_PlayerControls_Look;
     private readonly InputAction m_PlayerControls_Heal;
-    private readonly InputAction m_PlayerControls_Fire;
     private readonly InputAction m_PlayerControls_Dash;
     private readonly InputAction m_PlayerControls_WeaponChange;
     public struct PlayerControlsActions
@@ -377,7 +345,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         public InputAction @Move => m_Wrapper.m_PlayerControls_Move;
         public InputAction @Look => m_Wrapper.m_PlayerControls_Look;
         public InputAction @Heal => m_Wrapper.m_PlayerControls_Heal;
-        public InputAction @Fire => m_Wrapper.m_PlayerControls_Fire;
         public InputAction @Dash => m_Wrapper.m_PlayerControls_Dash;
         public InputAction @WeaponChange => m_Wrapper.m_PlayerControls_WeaponChange;
         public InputActionMap Get() { return m_Wrapper.m_PlayerControls; }
@@ -398,9 +365,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Heal.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnHeal;
                 @Heal.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnHeal;
                 @Heal.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnHeal;
-                @Fire.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnFire;
-                @Fire.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnFire;
-                @Fire.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnFire;
                 @Dash.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnDash;
                 @Dash.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnDash;
                 @Dash.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnDash;
@@ -420,9 +384,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Heal.started += instance.OnHeal;
                 @Heal.performed += instance.OnHeal;
                 @Heal.canceled += instance.OnHeal;
-                @Fire.started += instance.OnFire;
-                @Fire.performed += instance.OnFire;
-                @Fire.canceled += instance.OnFire;
                 @Dash.started += instance.OnDash;
                 @Dash.performed += instance.OnDash;
                 @Dash.canceled += instance.OnDash;
@@ -489,7 +450,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnHeal(InputAction.CallbackContext context);
-        void OnFire(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
         void OnWeaponChange(InputAction.CallbackContext context);
     }

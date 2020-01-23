@@ -28,16 +28,22 @@ public class MachineGun : MonobehaviourSingleton<MachineGun>
     Player player;
     GameManager gManager;
 
+    Mouse mouse;
+    Gamepad gd;
+
     public override void Awake()
     {
         base.Awake();
+        player = Player.Get();
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
-        
+        mouse = InputSystem.GetDevice<Mouse>();
+        gd = InputSystem.GetDevice<Gamepad>();
+
     }
 
     void Start()
     {
-        player = Player.Get();
+        
         gManager = GameManager.Get();
         foreach (Pool pool in pools)
         {
@@ -45,7 +51,7 @@ public class MachineGun : MonobehaviourSingleton<MachineGun>
 
             for (int i = 0; i < pool.size; i++)
             {
-                GameObject obj = Instantiate(pool.prefab, pool.prefab.transform.position,Quaternion.identity, container.transform);
+                GameObject obj = Instantiate(pool.prefab, pool.prefab.transform.position, Quaternion.identity, container.transform);
                 obj.SetActive(false);
                 objectPool.Enqueue(obj);
             }
@@ -72,6 +78,21 @@ public class MachineGun : MonobehaviourSingleton<MachineGun>
         return objectToSpawn;
     }
 
+    private void Update()
+    {
+        if ((player.isAlive && gManager.gameStarted) && !gManager.pause)
+        {
+            if (mouse.leftButton.isPressed || gd.rightTrigger.isPressed)
+            {
+                HoldGun();
+            }
+            if (mouse.leftButton.wasReleasedThisFrame || gd.rightTrigger.wasReleasedThisFrame)
+            {
+                ReleaseGun();
+            }
+        }
+    }
+
     public void Shoot()
     {
         GameObject currentBullet = SpawnBulletFromPool("Bullet", transform.position + player.forward.normalized, player.vision.transform.rotation);
@@ -86,49 +107,34 @@ public class MachineGun : MonobehaviourSingleton<MachineGun>
         currentBullet.GetComponent<Rigidbody>().AddForce(currentBullet.transform.forward * shootPower * Time.fixedUnscaledDeltaTime, ForceMode.Impulse);
     }
 
-    public void TriggerGun(Mouse fire)
-    {
-        if ((player.isAlive && gManager.gameStarted) && !gManager.pause)
-        {
-
-            if (fire.leftButton.isPressed)
-            {
-
-            }
-            
-           
-        }
-    }
 
     public void HoldGun()
     {
-        if (Input.GetMouseButton(0) && Time.time >= timeToFire && (bullets > 0))
-        {
-            timeToFire = Time.time + 1f / fireRate;
-            bullets--;
+            if (Time.time >= timeToFire && (bullets > 0))
+            {
+                timeToFire = Time.time + 1f / fireRate;
+                bullets--;
 
-            //Audio
-            AkSoundEngine.PostEvent("Mch_Gun_disparo", gameObject);
+                //Audio
+                AkSoundEngine.PostEvent("Mch_Gun_disparo", gameObject);
 
-            Shoot();
-            player.animMachineGun.SetBool("attack", true);
-            player.animTop.SetTrigger("attack");
+                Shoot();
+                player.animMachineGun.SetBool("attack", true);
+                player.animTop.SetTrigger("attack");
 
-            //Parche previo CAMBIAR!!
-            player.animBottom.SetTrigger("resetMove");
-            player.animTop.SetTrigger("resetMove");
+                //Parche previo CAMBIAR!!
+                player.animBottom.SetTrigger("resetMove");
+                player.animTop.SetTrigger("resetMove");
 
-            player.muzzleFlash.Play();
-        }
+                player.muzzleFlash.Play();
+            }
     }
-   /* public void ReleaseGun()
+
+    public void ReleaseGun()
     {
-        if ()//release
-        {
-            player.animMachineGun.SetBool("attack", false);
-            player.animBottom.SetTrigger("resetMove");
-            player.animTop.SetTrigger("resetMove");
-            player.muzzleFlash.Stop();
-        }
-    }*/
+        player.animMachineGun.SetBool("attack", false);
+        player.animBottom.SetTrigger("resetMove");
+        player.animTop.SetTrigger("resetMove");
+        player.muzzleFlash.Stop();
+    }
 }
