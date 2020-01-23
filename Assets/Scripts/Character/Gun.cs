@@ -47,8 +47,8 @@ public class Gun : MonobehaviourSingleton<Gun>
 
     public void InstantiateGranade()
     {
-
         Vector3 spawnPos = Player.Get().transform.position;
+
         GameObject b = Instantiate(bullet, spawnPos + player.forward.normalized * dropDistance, player.transform.rotation);
 
         b.GetComponent<Rigidbody>().AddForce(player.forward * shootPower * Time.fixedDeltaTime, ForceMode.Impulse);

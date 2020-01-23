@@ -90,6 +90,7 @@ public class Player : MonobehaviourSingleton<Player>
     Keyboard kb;
     float aimAngle;
     Quaternion aimRotation;
+    float lastPosition = 0;
 
     public static event Action<Player> OnChangeWeapon;
 
@@ -188,12 +189,10 @@ public class Player : MonobehaviourSingleton<Player>
             face.SetBool("run", true);
         }
 
-
         animBottom.SetFloat("horizontal", horizontal);
         animBottom.SetFloat("vertical", vertical);
         animTop.SetFloat("horizontal", horizontal);
         animTop.SetFloat("vertical", vertical);
-
 
         rb.AddForce(playerMove * speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
 
@@ -228,7 +227,17 @@ public class Player : MonobehaviourSingleton<Player>
 
     void RotateWithJoystick()
     {
-        aimAngle = Mathf.Atan2(look.x, look.y) * Mathf.Rad2Deg;
+
+        if (look.x > 0.03 || look.x < 0 || look.y > 0.03 || look.y < 0)
+        {
+            aimAngle = Mathf.Atan2(look.x, look.y) * Mathf.Rad2Deg;
+            lastPosition = aimAngle;
+        }
+        else
+        {
+            aimAngle = lastPosition;
+        }
+        
 
         aimRotation = Quaternion.AngleAxis(aimAngle, Vector3.up);
         vision.rotation = Quaternion.Slerp(vision.transform.rotation, aimRotation, rotationSpeed * Time.deltaTime);
