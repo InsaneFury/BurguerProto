@@ -1,0 +1,2080 @@
+fileFormatVersion: 2
+guid: 9ed514675971d8f428ab0521f41e73f4
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: base
+    100002: base 1
+    100004: bola_de_nieve_1
+    100006: bola_de_nieve_10
+    100008: bola_de_nieve_11
+    100010: bola_de_nieve_12
+    100012: bola_de_nieve_13
+    100014: bola_de_nieve_14
+    100016: bola_de_nieve_15
+    100018: bola_de_nieve_16
+    100020: bola_de_nieve_17
+    100022: bola_de_nieve_18
+    100024: bola_de_nieve_19
+    100026: bola_de_nieve_2
+    100028: bola_de_nieve_20
+    100030: bola_de_nieve_21
+    100032: bola_de_nieve_22
+    100034: bola_de_nieve_23
+    100036: bola_de_nieve_24
+    100038: bola_de_nieve_25
+    100040: bola_de_nieve_26
+    100042: bola_de_nieve_27
+    100044: bola_de_nieve_28
+    100046: bola_de_nieve_29
+    100048: bola_de_nieve_3
+    100050: bola_de_nieve_4
+    100052: bola_de_nieve_5
+    100054: bola_de_nieve_6
+    100056: bola_de_nieve_7
+    100058: bola_de_nieve_8
+    100060: bola_de_nieve_9
+    100062: bolas_de_nieve
+    100064: caja_1
+    100066: caja_10
+    100068: caja_11
+    100070: caja_12
+    100072: caja_13
+    100074: caja_14
+    100076: caja_15
+    100078: caja_16
+    100080: caja_17
+    100082: caja_18
+    100084: caja_19
+    100086: caja_2
+    100088: caja_20
+    100090: caja_21
+    100092: caja_22
+    100094: caja_23
+    100096: caja_24
+    100098: caja_25
+    100100: caja_26
+    100102: caja_27
+    100104: caja_28
+    100106: caja_29
+    100108: caja_3
+    100110: caja_30
+    100112: caja_31
+    100114: caja_4
+    100116: caja_5
+    100118: caja_6
+    100120: caja_7
+    100122: caja_8
+    100124: caja_9
+    100126: Cajas
+    100128: caramelo_1
+    100130: caramelo_2
+    100132: caramelo_3
+    100134: caramelo_4
+    100136: caramelo_5
+    100138: caramelo_6
+    100140: caramelo_7
+    100142: caramelo_8
+    100144: caramelo_9
+    100146: Caramelos
+    100148: Cartel_nivel_2_LP
+    100150: copa
+    100152: copa 1
+    100154: copa 10
+    100156: copa 11
+    100158: copa 12
+    100160: copa 13
+    100162: copa 14
+    100164: copa 15
+    100166: copa 2
+    100168: copa 3
+    100170: copa 4
+    100172: copa 5
+    100174: copa 6
+    100176: copa 7
+    100178: copa 8
+    100180: copa 9
+    100182: copa5
+    100184: copa5 1
+    100186: copa5 10
+    100188: copa5 11
+    100190: copa5 12
+    100192: copa5 13
+    100194: copa5 14
+    100196: copa5 15
+    100198: copa5 2
+    100200: copa5 3
+    100202: copa5 4
+    100204: copa5 5
+    100206: copa5 6
+    100208: copa5 7
+    100210: copa5 8
+    100212: copa5 9
+    100214: copa6
+    100216: copa6 1
+    100218: copa6 10
+    100220: copa6 11
+    100222: copa6 12
+    100224: copa6 13
+    100226: copa6 14
+    100228: copa6 15
+    100230: copa6 2
+    100232: copa6 3
+    100234: copa6 4
+    100236: copa6 5
+    100238: copa6 6
+    100240: copa6 7
+    100242: copa6 8
+    100244: copa6 9
+    100246: copa7
+    100248: copa7 1
+    100250: copa7 10
+    100252: copa7 11
+    100254: copa7 12
+    100256: copa7 13
+    100258: copa7 14
+    100260: copa7 15
+    100262: copa7 2
+    100264: copa7 3
+    100266: copa7 4
+    100268: copa7 5
+    100270: copa7 6
+    100272: copa7 7
+    100274: copa7 8
+    100276: copa7 9
+    100278: cubo_de_nieve_1
+    100280: cubo_de_nieve_10
+    100282: cubo_de_nieve_11
+    100284: cubo_de_nieve_12
+    100286: cubo_de_nieve_13
+    100288: cubo_de_nieve_14
+    100290: cubo_de_nieve_15
+    100292: cubo_de_nieve_16
+    100294: cubo_de_nieve_17
+    100296: cubo_de_nieve_18
+    100298: cubo_de_nieve_19
+    100300: cubo_de_nieve_2
+    100302: cubo_de_nieve_3
+    100304: cubo_de_nieve_4
+    100306: cubo_de_nieve_5
+    100308: cubo_de_nieve_6
+    100310: cubo_de_nieve_7
+    100312: cubo_de_nieve_8
+    100314: cubo_de_nieve_9
+    100316: Cubos_de_nieve
+    100318: Estanteria_1
+    100320: Estanteria_2
+    100322: Estanterias
+    100324: faro_1
+    100326: faro_10
+    100328: faro_11
+    100330: faro_2
+    100332: faro_3
+    100334: faro_4
+    100336: faro_5
+    100338: faro_6
+    100340: faro_7
+    100342: faro_8
+    100344: faro_9
+    100346: Faros
+    100348: floor_LP
+    100350: GIFT_1
+    100352: GIFT_10
+    100354: GIFT_11
+    100356: GIFT_12
+    100358: GIFT_13
+    100360: GIFT_14
+    100362: GIFT_15
+    100364: GIFT_16
+    100366: GIFT_2
+    100368: GIFT_3
+    100370: GIFT_4
+    100372: GIFT_5
+    100374: GIFT_6
+    100376: GIFT_7
+    100378: GIFT_8
+    100380: GIFT_9
+    100382: Gifts
+    100384: marco_puerta
+    100386: "mo\xF1os1"
+    100388: "mo\xF1os1 1"
+    100390: "mo\xF1os1 2"
+    100392: "mo\xF1os1 3"
+    100394: //RootNode
+    100396: Pared_nivel_2
+    100398: parte_1_manija
+    100400: parte_3_manija
+    100402: parte_3_manija1
+    100404: pCube103
+    100406: pCube103 1
+    100408: pCube103 2
+    100410: pCube103 3
+    100412: pCube104
+    100414: pCube104 1
+    100416: pCube104 2
+    100418: pCube104 3
+    100420: pCube144
+    100422: pCube144 1
+    100424: pCube144 10
+    100426: pCube144 11
+    100428: pCube144 12
+    100430: pCube144 13
+    100432: pCube144 14
+    100434: pCube144 15
+    100436: pCube144 2
+    100438: pCube144 3
+    100440: pCube144 4
+    100442: pCube144 5
+    100444: pCube144 6
+    100446: pCube144 7
+    100448: pCube144 8
+    100450: pCube144 9
+    100452: pCube145
+    100454: pCube145 1
+    100456: pCube145 10
+    100458: pCube145 11
+    100460: pCube145 12
+    100462: pCube145 13
+    100464: pCube145 14
+    100466: pCube145 15
+    100468: pCube145 2
+    100470: pCube145 3
+    100472: pCube145 4
+    100474: pCube145 5
+    100476: pCube145 6
+    100478: pCube145 7
+    100480: pCube145 8
+    100482: pCube145 9
+    100484: pCube146
+    100486: pCube146 1
+    100488: pCube146 10
+    100490: pCube146 11
+    100492: pCube146 12
+    100494: pCube146 13
+    100496: pCube146 14
+    100498: pCube146 15
+    100500: pCube146 2
+    100502: pCube146 3
+    100504: pCube146 4
+    100506: pCube146 5
+    100508: pCube146 6
+    100510: pCube146 7
+    100512: pCube146 8
+    100514: pCube146 9
+    100516: pCube149
+    100518: pCube149 1
+    100520: pCube149 2
+    100522: pCube149 3
+    100524: pCube150
+    100526: pCube150 1
+    100528: pCube150 2
+    100530: pCube150 3
+    100532: pCube151
+    100534: pCube151 1
+    100536: pCube151 2
+    100538: pCube151 3
+    100540: pCube152
+    100542: pCube152 1
+    100544: pCube152 2
+    100546: pCube152 3
+    100548: pCube38
+    100550: pCube38 1
+    100552: pCube38 10
+    100554: pCube38 11
+    100556: pCube38 12
+    100558: pCube38 13
+    100560: pCube38 14
+    100562: pCube38 15
+    100564: pCube38 2
+    100566: pCube38 3
+    100568: pCube38 4
+    100570: pCube38 5
+    100572: pCube38 6
+    100574: pCube38 7
+    100576: pCube38 8
+    100578: pCube38 9
+    100580: pCube42
+    100582: pCube42 1
+    100584: pCube42 10
+    100586: pCube42 11
+    100588: pCube42 12
+    100590: pCube42 13
+    100592: pCube42 14
+    100594: pCube42 15
+    100596: pCube42 2
+    100598: pCube42 3
+    100600: pCube42 4
+    100602: pCube42 5
+    100604: pCube42 6
+    100606: pCube42 7
+    100608: pCube42 8
+    100610: pCube42 9
+    100612: pCylinder1
+    100614: pCylinder1 1
+    100616: pCylinder1 10
+    100618: pCylinder1 11
+    100620: pCylinder1 12
+    100622: pCylinder1 13
+    100624: pCylinder1 14
+    100626: pCylinder1 15
+    100628: pCylinder1 2
+    100630: pCylinder1 3
+    100632: pCylinder1 4
+    100634: pCylinder1 5
+    100636: pCylinder1 6
+    100638: pCylinder1 7
+    100640: pCylinder1 8
+    100642: pCylinder1 9
+    100644: pCylinder13
+    100646: pCylinder13 1
+    100648: pCylinder13 2
+    100650: pCylinder13 3
+    100652: piedra_1
+    100654: piedra_10
+    100656: piedra_11
+    100658: piedra_12
+    100660: piedra_13
+    100662: piedra_14
+    100664: piedra_15
+    100666: piedra_16
+    100668: piedra_17
+    100670: piedra_18
+    100672: piedra_19
+    100674: piedra_2
+    100676: piedra_20
+    100678: piedra_21
+    100680: piedra_22
+    100682: piedra_23
+    100684: piedra_24
+    100686: piedra_25
+    100688: piedra_26
+    100690: piedra_27
+    100692: piedra_28
+    100694: piedra_29
+    100696: piedra_30
+    100698: piedra_31
+    100700: piedra_32
+    100702: piedra_33
+    100704: piedra_34
+    100706: piedra_35
+    100708: piedra_36
+    100710: piedra_37
+    100712: piedra_38
+    100714: piedra_39
+    100716: piedra_4
+    100718: piedra_40
+    100720: piedra_41
+    100722: piedra_42
+    100724: piedra_43
+    100726: piedra_44
+    100728: piedra_45
+    100730: piedra_46
+    100732: piedra_47
+    100734: piedra_5
+    100736: piedra_6
+    100738: piedra_7
+    100740: piedra_8
+    100742: piedra_9
+    100744: Piedras
+    100746: piedras_circulares_de_hielo
+    100748: piedras_de_hielo1
+    100750: pino_17
+    100752: pino_18
+    100754: pino_19
+    100756: pino_20
+    100758: pino_21
+    100760: pino_22
+    100762: pino_23
+    100764: pino_24
+    100766: pino_25
+    100768: pino_26
+    100770: pino_27
+    100772: pino_28
+    100774: pino_29
+    100776: pino_30
+    100778: pino_31
+    100780: pino_9
+    100782: Pinos_de_nieve
+    100784: polySurface89
+    100786: polySurface89 1
+    100788: polySurface90
+    100790: polySurface90 1
+    100792: polySurface92
+    100794: polySurface92 1
+    100796: polySurface93
+    100798: polySurface93 1
+    100800: polySurface94
+    100802: polySurface94 1
+    100804: puente_1
+    100806: puente_2
+    100808: puente_3
+    100810: puentes_de_hielo
+    100812: puerta4
+    100814: Puerta_entera
+    100816: soportes
+    100818: soportes 1
+    100820: spawner1
+    100822: spawner2
+    100824: spawner3
+    100826: spawner4
+    100828: Spawners
+    100830: tronco
+    100832: tronco 1
+    100834: tronco 10
+    100836: tronco 11
+    100838: tronco 12
+    100840: tronco 13
+    100842: tronco 14
+    100844: tronco 15
+    100846: tronco 2
+    100848: tronco 3
+    100850: tronco 4
+    100852: tronco 5
+    100854: tronco 6
+    100856: tronco 7
+    100858: tronco 8
+    100860: tronco 9
+    400000: base
+    400002: base 1
+    400004: bola_de_nieve_1
+    400006: bola_de_nieve_10
+    400008: bola_de_nieve_11
+    400010: bola_de_nieve_12
+    400012: bola_de_nieve_13
+    400014: bola_de_nieve_14
+    400016: bola_de_nieve_15
+    400018: bola_de_nieve_16
+    400020: bola_de_nieve_17
+    400022: bola_de_nieve_18
+    400024: bola_de_nieve_19
+    400026: bola_de_nieve_2
+    400028: bola_de_nieve_20
+    400030: bola_de_nieve_21
+    400032: bola_de_nieve_22
+    400034: bola_de_nieve_23
+    400036: bola_de_nieve_24
+    400038: bola_de_nieve_25
+    400040: bola_de_nieve_26
+    400042: bola_de_nieve_27
+    400044: bola_de_nieve_28
+    400046: bola_de_nieve_29
+    400048: bola_de_nieve_3
+    400050: bola_de_nieve_4
+    400052: bola_de_nieve_5
+    400054: bola_de_nieve_6
+    400056: bola_de_nieve_7
+    400058: bola_de_nieve_8
+    400060: bola_de_nieve_9
+    400062: bolas_de_nieve
+    400064: caja_1
+    400066: caja_10
+    400068: caja_11
+    400070: caja_12
+    400072: caja_13
+    400074: caja_14
+    400076: caja_15
+    400078: caja_16
+    400080: caja_17
+    400082: caja_18
+    400084: caja_19
+    400086: caja_2
+    400088: caja_20
+    400090: caja_21
+    400092: caja_22
+    400094: caja_23
+    400096: caja_24
+    400098: caja_25
+    400100: caja_26
+    400102: caja_27
+    400104: caja_28
+    400106: caja_29
+    400108: caja_3
+    400110: caja_30
+    400112: caja_31
+    400114: caja_4
+    400116: caja_5
+    400118: caja_6
+    400120: caja_7
+    400122: caja_8
+    400124: caja_9
+    400126: Cajas
+    400128: caramelo_1
+    400130: caramelo_2
+    400132: caramelo_3
+    400134: caramelo_4
+    400136: caramelo_5
+    400138: caramelo_6
+    400140: caramelo_7
+    400142: caramelo_8
+    400144: caramelo_9
+    400146: Caramelos
+    400148: Cartel_nivel_2_LP
+    400150: copa
+    400152: copa 1
+    400154: copa 10
+    400156: copa 11
+    400158: copa 12
+    400160: copa 13
+    400162: copa 14
+    400164: copa 15
+    400166: copa 2
+    400168: copa 3
+    400170: copa 4
+    400172: copa 5
+    400174: copa 6
+    400176: copa 7
+    400178: copa 8
+    400180: copa 9
+    400182: copa5
+    400184: copa5 1
+    400186: copa5 10
+    400188: copa5 11
+    400190: copa5 12
+    400192: copa5 13
+    400194: copa5 14
+    400196: copa5 15
+    400198: copa5 2
+    400200: copa5 3
+    400202: copa5 4
+    400204: copa5 5
+    400206: copa5 6
+    400208: copa5 7
+    400210: copa5 8
+    400212: copa5 9
+    400214: copa6
+    400216: copa6 1
+    400218: copa6 10
+    400220: copa6 11
+    400222: copa6 12
+    400224: copa6 13
+    400226: copa6 14
+    400228: copa6 15
+    400230: copa6 2
+    400232: copa6 3
+    400234: copa6 4
+    400236: copa6 5
+    400238: copa6 6
+    400240: copa6 7
+    400242: copa6 8
+    400244: copa6 9
+    400246: copa7
+    400248: copa7 1
+    400250: copa7 10
+    400252: copa7 11
+    400254: copa7 12
+    400256: copa7 13
+    400258: copa7 14
+    400260: copa7 15
+    400262: copa7 2
+    400264: copa7 3
+    400266: copa7 4
+    400268: copa7 5
+    400270: copa7 6
+    400272: copa7 7
+    400274: copa7 8
+    400276: copa7 9
+    400278: cubo_de_nieve_1
+    400280: cubo_de_nieve_10
+    400282: cubo_de_nieve_11
+    400284: cubo_de_nieve_12
+    400286: cubo_de_nieve_13
+    400288: cubo_de_nieve_14
+    400290: cubo_de_nieve_15
+    400292: cubo_de_nieve_16
+    400294: cubo_de_nieve_17
+    400296: cubo_de_nieve_18
+    400298: cubo_de_nieve_19
+    400300: cubo_de_nieve_2
+    400302: cubo_de_nieve_3
+    400304: cubo_de_nieve_4
+    400306: cubo_de_nieve_5
+    400308: cubo_de_nieve_6
+    400310: cubo_de_nieve_7
+    400312: cubo_de_nieve_8
+    400314: cubo_de_nieve_9
+    400316: Cubos_de_nieve
+    400318: Estanteria_1
+    400320: Estanteria_2
+    400322: Estanterias
+    400324: faro_1
+    400326: faro_10
+    400328: faro_11
+    400330: faro_2
+    400332: faro_3
+    400334: faro_4
+    400336: faro_5
+    400338: faro_6
+    400340: faro_7
+    400342: faro_8
+    400344: faro_9
+    400346: Faros
+    400348: floor_LP
+    400350: GIFT_1
+    400352: GIFT_10
+    400354: GIFT_11
+    400356: GIFT_12
+    400358: GIFT_13
+    400360: GIFT_14
+    400362: GIFT_15
+    400364: GIFT_16
+    400366: GIFT_2
+    400368: GIFT_3
+    400370: GIFT_4
+    400372: GIFT_5
+    400374: GIFT_6
+    400376: GIFT_7
+    400378: GIFT_8
+    400380: GIFT_9
+    400382: Gifts
+    400384: marco_puerta
+    400386: "mo\xF1os1"
+    400388: "mo\xF1os1 1"
+    400390: "mo\xF1os1 2"
+    400392: "mo\xF1os1 3"
+    400394: //RootNode
+    400396: Pared_nivel_2
+    400398: parte_1_manija
+    400400: parte_3_manija
+    400402: parte_3_manija1
+    400404: pCube103
+    400406: pCube103 1
+    400408: pCube103 2
+    400410: pCube103 3
+    400412: pCube104
+    400414: pCube104 1
+    400416: pCube104 2
+    400418: pCube104 3
+    400420: pCube144
+    400422: pCube144 1
+    400424: pCube144 10
+    400426: pCube144 11
+    400428: pCube144 12
+    400430: pCube144 13
+    400432: pCube144 14
+    400434: pCube144 15
+    400436: pCube144 2
+    400438: pCube144 3
+    400440: pCube144 4
+    400442: pCube144 5
+    400444: pCube144 6
+    400446: pCube144 7
+    400448: pCube144 8
+    400450: pCube144 9
+    400452: pCube145
+    400454: pCube145 1
+    400456: pCube145 10
+    400458: pCube145 11
+    400460: pCube145 12
+    400462: pCube145 13
+    400464: pCube145 14
+    400466: pCube145 15
+    400468: pCube145 2
+    400470: pCube145 3
+    400472: pCube145 4
+    400474: pCube145 5
+    400476: pCube145 6
+    400478: pCube145 7
+    400480: pCube145 8
+    400482: pCube145 9
+    400484: pCube146
+    400486: pCube146 1
+    400488: pCube146 10
+    400490: pCube146 11
+    400492: pCube146 12
+    400494: pCube146 13
+    400496: pCube146 14
+    400498: pCube146 15
+    400500: pCube146 2
+    400502: pCube146 3
+    400504: pCube146 4
+    400506: pCube146 5
+    400508: pCube146 6
+    400510: pCube146 7
+    400512: pCube146 8
+    400514: pCube146 9
+    400516: pCube149
+    400518: pCube149 1
+    400520: pCube149 2
+    400522: pCube149 3
+    400524: pCube150
+    400526: pCube150 1
+    400528: pCube150 2
+    400530: pCube150 3
+    400532: pCube151
+    400534: pCube151 1
+    400536: pCube151 2
+    400538: pCube151 3
+    400540: pCube152
+    400542: pCube152 1
+    400544: pCube152 2
+    400546: pCube152 3
+    400548: pCube38
+    400550: pCube38 1
+    400552: pCube38 10
+    400554: pCube38 11
+    400556: pCube38 12
+    400558: pCube38 13
+    400560: pCube38 14
+    400562: pCube38 15
+    400564: pCube38 2
+    400566: pCube38 3
+    400568: pCube38 4
+    400570: pCube38 5
+    400572: pCube38 6
+    400574: pCube38 7
+    400576: pCube38 8
+    400578: pCube38 9
+    400580: pCube42
+    400582: pCube42 1
+    400584: pCube42 10
+    400586: pCube42 11
+    400588: pCube42 12
+    400590: pCube42 13
+    400592: pCube42 14
+    400594: pCube42 15
+    400596: pCube42 2
+    400598: pCube42 3
+    400600: pCube42 4
+    400602: pCube42 5
+    400604: pCube42 6
+    400606: pCube42 7
+    400608: pCube42 8
+    400610: pCube42 9
+    400612: pCylinder1
+    400614: pCylinder1 1
+    400616: pCylinder1 10
+    400618: pCylinder1 11
+    400620: pCylinder1 12
+    400622: pCylinder1 13
+    400624: pCylinder1 14
+    400626: pCylinder1 15
+    400628: pCylinder1 2
+    400630: pCylinder1 3
+    400632: pCylinder1 4
+    400634: pCylinder1 5
+    400636: pCylinder1 6
+    400638: pCylinder1 7
+    400640: pCylinder1 8
+    400642: pCylinder1 9
+    400644: pCylinder13
+    400646: pCylinder13 1
+    400648: pCylinder13 2
+    400650: pCylinder13 3
+    400652: piedra_1
+    400654: piedra_10
+    400656: piedra_11
+    400658: piedra_12
+    400660: piedra_13
+    400662: piedra_14
+    400664: piedra_15
+    400666: piedra_16
+    400668: piedra_17
+    400670: piedra_18
+    400672: piedra_19
+    400674: piedra_2
+    400676: piedra_20
+    400678: piedra_21
+    400680: piedra_22
+    400682: piedra_23
+    400684: piedra_24
+    400686: piedra_25
+    400688: piedra_26
+    400690: piedra_27
+    400692: piedra_28
+    400694: piedra_29
+    400696: piedra_30
+    400698: piedra_31
+    400700: piedra_32
+    400702: piedra_33
+    400704: piedra_34
+    400706: piedra_35
+    400708: piedra_36
+    400710: piedra_37
+    400712: piedra_38
+    400714: piedra_39
+    400716: piedra_4
+    400718: piedra_40
+    400720: piedra_41
+    400722: piedra_42
+    400724: piedra_43
+    400726: piedra_44
+    400728: piedra_45
+    400730: piedra_46
+    400732: piedra_47
+    400734: piedra_5
+    400736: piedra_6
+    400738: piedra_7
+    400740: piedra_8
+    400742: piedra_9
+    400744: Piedras
+    400746: piedras_circulares_de_hielo
+    400748: piedras_de_hielo1
+    400750: pino_17
+    400752: pino_18
+    400754: pino_19
+    400756: pino_20
+    400758: pino_21
+    400760: pino_22
+    400762: pino_23
+    400764: pino_24
+    400766: pino_25
+    400768: pino_26
+    400770: pino_27
+    400772: pino_28
+    400774: pino_29
+    400776: pino_30
+    400778: pino_31
+    400780: pino_9
+    400782: Pinos_de_nieve
+    400784: polySurface89
+    400786: polySurface89 1
+    400788: polySurface90
+    400790: polySurface90 1
+    400792: polySurface92
+    400794: polySurface92 1
+    400796: polySurface93
+    400798: polySurface93 1
+    400800: polySurface94
+    400802: polySurface94 1
+    400804: puente_1
+    400806: puente_2
+    400808: puente_3
+    400810: puentes_de_hielo
+    400812: puerta4
+    400814: Puerta_entera
+    400816: soportes
+    400818: soportes 1
+    400820: spawner1
+    400822: spawner2
+    400824: spawner3
+    400826: spawner4
+    400828: Spawners
+    400830: tronco
+    400832: tronco 1
+    400834: tronco 10
+    400836: tronco 11
+    400838: tronco 12
+    400840: tronco 13
+    400842: tronco 14
+    400844: tronco 15
+    400846: tronco 2
+    400848: tronco 3
+    400850: tronco 4
+    400852: tronco 5
+    400854: tronco 6
+    400856: tronco 7
+    400858: tronco 8
+    400860: tronco 9
+    2100000: suelo_frigorifico
+    2100002: cajas
+    2100004: pared_frigorifico
+    2100006: cubos_de_hielo
+    2100008: piedras_de_hielo
+    2100010: piedras_de_hielo_circulares
+    2100012: caramelos
+    2100014: spawners
+    2100016: bolas_de_nieve1
+    2100018: bloques_puente
+    2100020: gifts
+    2100022: pinos_de_nieve
+    2100024: Puerta_frigorifico
+    2100026: faros
+    2100028: soportes_estanterias
+    2100030: base_estanteria
+    2100032: cartel_nivel_2
+    2300000: bola_de_nieve_1
+    2300002: bola_de_nieve_10
+    2300004: bola_de_nieve_11
+    2300006: bola_de_nieve_12
+    2300008: bola_de_nieve_13
+    2300010: bola_de_nieve_14
+    2300012: bola_de_nieve_15
+    2300014: bola_de_nieve_16
+    2300016: bola_de_nieve_17
+    2300018: bola_de_nieve_18
+    2300020: bola_de_nieve_19
+    2300022: bola_de_nieve_2
+    2300024: bola_de_nieve_20
+    2300026: bola_de_nieve_21
+    2300028: bola_de_nieve_22
+    2300030: bola_de_nieve_23
+    2300032: bola_de_nieve_24
+    2300034: bola_de_nieve_25
+    2300036: bola_de_nieve_26
+    2300038: bola_de_nieve_27
+    2300040: bola_de_nieve_28
+    2300042: bola_de_nieve_29
+    2300044: bola_de_nieve_3
+    2300046: bola_de_nieve_4
+    2300048: bola_de_nieve_5
+    2300050: bola_de_nieve_6
+    2300052: bola_de_nieve_7
+    2300054: bola_de_nieve_8
+    2300056: bola_de_nieve_9
+    2300058: caja_1
+    2300060: caja_10
+    2300062: caja_11
+    2300064: caja_12
+    2300066: caja_13
+    2300068: caja_14
+    2300070: caja_15
+    2300072: caja_16
+    2300074: caja_17
+    2300076: caja_18
+    2300078: caja_19
+    2300080: caja_2
+    2300082: caja_20
+    2300084: caja_21
+    2300086: caja_22
+    2300088: caja_23
+    2300090: caja_24
+    2300092: caja_25
+    2300094: caja_26
+    2300096: caja_27
+    2300098: caja_28
+    2300100: caja_29
+    2300102: caja_3
+    2300104: caja_30
+    2300106: caja_31
+    2300108: caja_4
+    2300110: caja_5
+    2300112: caja_6
+    2300114: caja_7
+    2300116: caja_8
+    2300118: caja_9
+    2300120: caramelo_1
+    2300122: caramelo_2
+    2300124: caramelo_3
+    2300126: caramelo_4
+    2300128: caramelo_5
+    2300130: caramelo_6
+    2300132: caramelo_7
+    2300134: caramelo_8
+    2300136: caramelo_9
+    2300138: Cartel_nivel_2_LP
+    2300140: copa
+    2300142: copa 1
+    2300144: copa 10
+    2300146: copa 11
+    2300148: copa 12
+    2300150: copa 13
+    2300152: copa 14
+    2300154: copa 15
+    2300156: copa 2
+    2300158: copa 3
+    2300160: copa 4
+    2300162: copa 5
+    2300164: copa 6
+    2300166: copa 7
+    2300168: copa 8
+    2300170: copa 9
+    2300172: copa5
+    2300174: copa5 1
+    2300176: copa5 10
+    2300178: copa5 11
+    2300180: copa5 12
+    2300182: copa5 13
+    2300184: copa5 14
+    2300186: copa5 15
+    2300188: copa5 2
+    2300190: copa5 3
+    2300192: copa5 4
+    2300194: copa5 5
+    2300196: copa5 6
+    2300198: copa5 7
+    2300200: copa5 8
+    2300202: copa5 9
+    2300204: copa6
+    2300206: copa6 1
+    2300208: copa6 10
+    2300210: copa6 11
+    2300212: copa6 12
+    2300214: copa6 13
+    2300216: copa6 14
+    2300218: copa6 15
+    2300220: copa6 2
+    2300222: copa6 3
+    2300224: copa6 4
+    2300226: copa6 5
+    2300228: copa6 6
+    2300230: copa6 7
+    2300232: copa6 8
+    2300234: copa6 9
+    2300236: copa7
+    2300238: copa7 1
+    2300240: copa7 10
+    2300242: copa7 11
+    2300244: copa7 12
+    2300246: copa7 13
+    2300248: copa7 14
+    2300250: copa7 15
+    2300252: copa7 2
+    2300254: copa7 3
+    2300256: copa7 4
+    2300258: copa7 5
+    2300260: copa7 6
+    2300262: copa7 7
+    2300264: copa7 8
+    2300266: copa7 9
+    2300268: cubo_de_nieve_1
+    2300270: cubo_de_nieve_10
+    2300272: cubo_de_nieve_11
+    2300274: cubo_de_nieve_12
+    2300276: cubo_de_nieve_13
+    2300278: cubo_de_nieve_14
+    2300280: cubo_de_nieve_15
+    2300282: cubo_de_nieve_16
+    2300284: cubo_de_nieve_17
+    2300286: cubo_de_nieve_18
+    2300288: cubo_de_nieve_19
+    2300290: cubo_de_nieve_2
+    2300292: cubo_de_nieve_3
+    2300294: cubo_de_nieve_4
+    2300296: cubo_de_nieve_5
+    2300298: cubo_de_nieve_6
+    2300300: cubo_de_nieve_7
+    2300302: cubo_de_nieve_8
+    2300304: cubo_de_nieve_9
+    2300306: faro_1
+    2300308: faro_10
+    2300310: faro_11
+    2300312: faro_2
+    2300314: faro_3
+    2300316: faro_4
+    2300318: faro_5
+    2300320: faro_6
+    2300322: faro_7
+    2300324: faro_8
+    2300326: faro_9
+    2300328: floor_LP
+    2300330: marco_puerta
+    2300332: Pared_nivel_2
+    2300334: parte_1_manija
+    2300336: parte_3_manija
+    2300338: parte_3_manija1
+    2300340: pCube103
+    2300342: pCube103 1
+    2300344: pCube103 2
+    2300346: pCube103 3
+    2300348: pCube104
+    2300350: pCube104 1
+    2300352: pCube104 2
+    2300354: pCube104 3
+    2300356: pCube144
+    2300358: pCube144 1
+    2300360: pCube144 10
+    2300362: pCube144 11
+    2300364: pCube144 12
+    2300366: pCube144 13
+    2300368: pCube144 14
+    2300370: pCube144 15
+    2300372: pCube144 2
+    2300374: pCube144 3
+    2300376: pCube144 4
+    2300378: pCube144 5
+    2300380: pCube144 6
+    2300382: pCube144 7
+    2300384: pCube144 8
+    2300386: pCube144 9
+    2300388: pCube145
+    2300390: pCube145 1
+    2300392: pCube145 10
+    2300394: pCube145 11
+    2300396: pCube145 12
+    2300398: pCube145 13
+    2300400: pCube145 14
+    2300402: pCube145 15
+    2300404: pCube145 2
+    2300406: pCube145 3
+    2300408: pCube145 4
+    2300410: pCube145 5
+    2300412: pCube145 6
+    2300414: pCube145 7
+    2300416: pCube145 8
+    2300418: pCube145 9
+    2300420: pCube146
+    2300422: pCube146 1
+    2300424: pCube146 10
+    2300426: pCube146 11
+    2300428: pCube146 12
+    2300430: pCube146 13
+    2300432: pCube146 14
+    2300434: pCube146 15
+    2300436: pCube146 2
+    2300438: pCube146 3
+    2300440: pCube146 4
+    2300442: pCube146 5
+    2300444: pCube146 6
+    2300446: pCube146 7
+    2300448: pCube146 8
+    2300450: pCube146 9
+    2300452: pCube149
+    2300454: pCube149 1
+    2300456: pCube149 2
+    2300458: pCube149 3
+    2300460: pCube150
+    2300462: pCube150 1
+    2300464: pCube150 2
+    2300466: pCube150 3
+    2300468: pCube151
+    2300470: pCube151 1
+    2300472: pCube151 2
+    2300474: pCube151 3
+    2300476: pCube152
+    2300478: pCube152 1
+    2300480: pCube152 2
+    2300482: pCube152 3
+    2300484: pCube38
+    2300486: pCube38 1
+    2300488: pCube38 10
+    2300490: pCube38 11
+    2300492: pCube38 12
+    2300494: pCube38 13
+    2300496: pCube38 14
+    2300498: pCube38 15
+    2300500: pCube38 2
+    2300502: pCube38 3
+    2300504: pCube38 4
+    2300506: pCube38 5
+    2300508: pCube38 6
+    2300510: pCube38 7
+    2300512: pCube38 8
+    2300514: pCube38 9
+    2300516: pCube42
+    2300518: pCube42 1
+    2300520: pCube42 10
+    2300522: pCube42 11
+    2300524: pCube42 12
+    2300526: pCube42 13
+    2300528: pCube42 14
+    2300530: pCube42 15
+    2300532: pCube42 2
+    2300534: pCube42 3
+    2300536: pCube42 4
+    2300538: pCube42 5
+    2300540: pCube42 6
+    2300542: pCube42 7
+    2300544: pCube42 8
+    2300546: pCube42 9
+    2300548: pCylinder1
+    2300550: pCylinder1 1
+    2300552: pCylinder1 10
+    2300554: pCylinder1 11
+    2300556: pCylinder1 12
+    2300558: pCylinder1 13
+    2300560: pCylinder1 14
+    2300562: pCylinder1 15
+    2300564: pCylinder1 2
+    2300566: pCylinder1 3
+    2300568: pCylinder1 4
+    2300570: pCylinder1 5
+    2300572: pCylinder1 6
+    2300574: pCylinder1 7
+    2300576: pCylinder1 8
+    2300578: pCylinder1 9
+    2300580: pCylinder13
+    2300582: pCylinder13 1
+    2300584: pCylinder13 2
+    2300586: pCylinder13 3
+    2300588: piedra_1
+    2300590: piedra_10
+    2300592: piedra_11
+    2300594: piedra_12
+    2300596: piedra_13
+    2300598: piedra_14
+    2300600: piedra_15
+    2300602: piedra_16
+    2300604: piedra_17
+    2300606: piedra_18
+    2300608: piedra_19
+    2300610: piedra_2
+    2300612: piedra_20
+    2300614: piedra_21
+    2300616: piedra_22
+    2300618: piedra_23
+    2300620: piedra_24
+    2300622: piedra_25
+    2300624: piedra_26
+    2300626: piedra_27
+    2300628: piedra_28
+    2300630: piedra_29
+    2300632: piedra_30
+    2300634: piedra_31
+    2300636: piedra_32
+    2300638: piedra_33
+    2300640: piedra_34
+    2300642: piedra_35
+    2300644: piedra_36
+    2300646: piedra_37
+    2300648: piedra_38
+    2300650: piedra_39
+    2300652: piedra_4
+    2300654: piedra_40
+    2300656: piedra_41
+    2300658: piedra_42
+    2300660: piedra_43
+    2300662: piedra_44
+    2300664: piedra_45
+    2300666: piedra_46
+    2300668: piedra_47
+    2300670: piedra_5
+    2300672: piedra_6
+    2300674: piedra_7
+    2300676: piedra_8
+    2300678: piedra_9
+    2300680: polySurface89
+    2300682: polySurface89 1
+    2300684: polySurface90
+    2300686: polySurface90 1
+    2300688: polySurface92
+    2300690: polySurface92 1
+    2300692: polySurface93
+    2300694: polySurface93 1
+    2300696: polySurface94
+    2300698: polySurface94 1
+    2300700: puente_1
+    2300702: puente_2
+    2300704: puente_3
+    2300706: puerta4
+    2300708: tronco
+    2300710: tronco 1
+    2300712: tronco 10
+    2300714: tronco 11
+    2300716: tronco 12
+    2300718: tronco 13
+    2300720: tronco 14
+    2300722: tronco 15
+    2300724: tronco 2
+    2300726: tronco 3
+    2300728: tronco 4
+    2300730: tronco 5
+    2300732: tronco 6
+    2300734: tronco 7
+    2300736: tronco 8
+    2300738: tronco 9
+    3300000: bola_de_nieve_1
+    3300002: bola_de_nieve_10
+    3300004: bola_de_nieve_11
+    3300006: bola_de_nieve_12
+    3300008: bola_de_nieve_13
+    3300010: bola_de_nieve_14
+    3300012: bola_de_nieve_15
+    3300014: bola_de_nieve_16
+    3300016: bola_de_nieve_17
+    3300018: bola_de_nieve_18
+    3300020: bola_de_nieve_19
+    3300022: bola_de_nieve_2
+    3300024: bola_de_nieve_20
+    3300026: bola_de_nieve_21
+    3300028: bola_de_nieve_22
+    3300030: bola_de_nieve_23
+    3300032: bola_de_nieve_24
+    3300034: bola_de_nieve_25
+    3300036: bola_de_nieve_26
+    3300038: bola_de_nieve_27
+    3300040: bola_de_nieve_28
+    3300042: bola_de_nieve_29
+    3300044: bola_de_nieve_3
+    3300046: bola_de_nieve_4
+    3300048: bola_de_nieve_5
+    3300050: bola_de_nieve_6
+    3300052: bola_de_nieve_7
+    3300054: bola_de_nieve_8
+    3300056: bola_de_nieve_9
+    3300058: caja_1
+    3300060: caja_10
+    3300062: caja_11
+    3300064: caja_12
+    3300066: caja_13
+    3300068: caja_14
+    3300070: caja_15
+    3300072: caja_16
+    3300074: caja_17
+    3300076: caja_18
+    3300078: caja_19
+    3300080: caja_2
+    3300082: caja_20
+    3300084: caja_21
+    3300086: caja_22
+    3300088: caja_23
+    3300090: caja_24
+    3300092: caja_25
+    3300094: caja_26
+    3300096: caja_27
+    3300098: caja_28
+    3300100: caja_29
+    3300102: caja_3
+    3300104: caja_30
+    3300106: caja_31
+    3300108: caja_4
+    3300110: caja_5
+    3300112: caja_6
+    3300114: caja_7
+    3300116: caja_8
+    3300118: caja_9
+    3300120: caramelo_1
+    3300122: caramelo_2
+    3300124: caramelo_3
+    3300126: caramelo_4
+    3300128: caramelo_5
+    3300130: caramelo_6
+    3300132: caramelo_7
+    3300134: caramelo_8
+    3300136: caramelo_9
+    3300138: Cartel_nivel_2_LP
+    3300140: copa
+    3300142: copa 1
+    3300144: copa 10
+    3300146: copa 11
+    3300148: copa 12
+    3300150: copa 13
+    3300152: copa 14
+    3300154: copa 15
+    3300156: copa 2
+    3300158: copa 3
+    3300160: copa 4
+    3300162: copa 5
+    3300164: copa 6
+    3300166: copa 7
+    3300168: copa 8
+    3300170: copa 9
+    3300172: copa5
+    3300174: copa5 1
+    3300176: copa5 10
+    3300178: copa5 11
+    3300180: copa5 12
+    3300182: copa5 13
+    3300184: copa5 14
+    3300186: copa5 15
+    3300188: copa5 2
+    3300190: copa5 3
+    3300192: copa5 4
+    3300194: copa5 5
+    3300196: copa5 6
+    3300198: copa5 7
+    3300200: copa5 8
+    3300202: copa5 9
+    3300204: copa6
+    3300206: copa6 1
+    3300208: copa6 10
+    3300210: copa6 11
+    3300212: copa6 12
+    3300214: copa6 13
+    3300216: copa6 14
+    3300218: copa6 15
+    3300220: copa6 2
+    3300222: copa6 3
+    3300224: copa6 4
+    3300226: copa6 5
+    3300228: copa6 6
+    3300230: copa6 7
+    3300232: copa6 8
+    3300234: copa6 9
+    3300236: copa7
+    3300238: copa7 1
+    3300240: copa7 10
+    3300242: copa7 11
+    3300244: copa7 12
+    3300246: copa7 13
+    3300248: copa7 14
+    3300250: copa7 15
+    3300252: copa7 2
+    3300254: copa7 3
+    3300256: copa7 4
+    3300258: copa7 5
+    3300260: copa7 6
+    3300262: copa7 7
+    3300264: copa7 8
+    3300266: copa7 9
+    3300268: cubo_de_nieve_1
+    3300270: cubo_de_nieve_10
+    3300272: cubo_de_nieve_11
+    3300274: cubo_de_nieve_12
+    3300276: cubo_de_nieve_13
+    3300278: cubo_de_nieve_14
+    3300280: cubo_de_nieve_15
+    3300282: cubo_de_nieve_16
+    3300284: cubo_de_nieve_17
+    3300286: cubo_de_nieve_18
+    3300288: cubo_de_nieve_19
+    3300290: cubo_de_nieve_2
+    3300292: cubo_de_nieve_3
+    3300294: cubo_de_nieve_4
+    3300296: cubo_de_nieve_5
+    3300298: cubo_de_nieve_6
+    3300300: cubo_de_nieve_7
+    3300302: cubo_de_nieve_8
+    3300304: cubo_de_nieve_9
+    3300306: faro_1
+    3300308: faro_10
+    3300310: faro_11
+    3300312: faro_2
+    3300314: faro_3
+    3300316: faro_4
+    3300318: faro_5
+    3300320: faro_6
+    3300322: faro_7
+    3300324: faro_8
+    3300326: faro_9
+    3300328: floor_LP
+    3300330: marco_puerta
+    3300332: Pared_nivel_2
+    3300334: parte_1_manija
+    3300336: parte_3_manija
+    3300338: parte_3_manija1
+    3300340: pCube103
+    3300342: pCube103 1
+    3300344: pCube103 2
+    3300346: pCube103 3
+    3300348: pCube104
+    3300350: pCube104 1
+    3300352: pCube104 2
+    3300354: pCube104 3
+    3300356: pCube144
+    3300358: pCube144 1
+    3300360: pCube144 10
+    3300362: pCube144 11
+    3300364: pCube144 12
+    3300366: pCube144 13
+    3300368: pCube144 14
+    3300370: pCube144 15
+    3300372: pCube144 2
+    3300374: pCube144 3
+    3300376: pCube144 4
+    3300378: pCube144 5
+    3300380: pCube144 6
+    3300382: pCube144 7
+    3300384: pCube144 8
+    3300386: pCube144 9
+    3300388: pCube145
+    3300390: pCube145 1
+    3300392: pCube145 10
+    3300394: pCube145 11
+    3300396: pCube145 12
+    3300398: pCube145 13
+    3300400: pCube145 14
+    3300402: pCube145 15
+    3300404: pCube145 2
+    3300406: pCube145 3
+    3300408: pCube145 4
+    3300410: pCube145 5
+    3300412: pCube145 6
+    3300414: pCube145 7
+    3300416: pCube145 8
+    3300418: pCube145 9
+    3300420: pCube146
+    3300422: pCube146 1
+    3300424: pCube146 10
+    3300426: pCube146 11
+    3300428: pCube146 12
+    3300430: pCube146 13
+    3300432: pCube146 14
+    3300434: pCube146 15
+    3300436: pCube146 2
+    3300438: pCube146 3
+    3300440: pCube146 4
+    3300442: pCube146 5
+    3300444: pCube146 6
+    3300446: pCube146 7
+    3300448: pCube146 8
+    3300450: pCube146 9
+    3300452: pCube149
+    3300454: pCube149 1
+    3300456: pCube149 2
+    3300458: pCube149 3
+    3300460: pCube150
+    3300462: pCube150 1
+    3300464: pCube150 2
+    3300466: pCube150 3
+    3300468: pCube151
+    3300470: pCube151 1
+    3300472: pCube151 2
+    3300474: pCube151 3
+    3300476: pCube152
+    3300478: pCube152 1
+    3300480: pCube152 2
+    3300482: pCube152 3
+    3300484: pCube38
+    3300486: pCube38 1
+    3300488: pCube38 10
+    3300490: pCube38 11
+    3300492: pCube38 12
+    3300494: pCube38 13
+    3300496: pCube38 14
+    3300498: pCube38 15
+    3300500: pCube38 2
+    3300502: pCube38 3
+    3300504: pCube38 4
+    3300506: pCube38 5
+    3300508: pCube38 6
+    3300510: pCube38 7
+    3300512: pCube38 8
+    3300514: pCube38 9
+    3300516: pCube42
+    3300518: pCube42 1
+    3300520: pCube42 10
+    3300522: pCube42 11
+    3300524: pCube42 12
+    3300526: pCube42 13
+    3300528: pCube42 14
+    3300530: pCube42 15
+    3300532: pCube42 2
+    3300534: pCube42 3
+    3300536: pCube42 4
+    3300538: pCube42 5
+    3300540: pCube42 6
+    3300542: pCube42 7
+    3300544: pCube42 8
+    3300546: pCube42 9
+    3300548: pCylinder1
+    3300550: pCylinder1 1
+    3300552: pCylinder1 10
+    3300554: pCylinder1 11
+    3300556: pCylinder1 12
+    3300558: pCylinder1 13
+    3300560: pCylinder1 14
+    3300562: pCylinder1 15
+    3300564: pCylinder1 2
+    3300566: pCylinder1 3
+    3300568: pCylinder1 4
+    3300570: pCylinder1 5
+    3300572: pCylinder1 6
+    3300574: pCylinder1 7
+    3300576: pCylinder1 8
+    3300578: pCylinder1 9
+    3300580: pCylinder13
+    3300582: pCylinder13 1
+    3300584: pCylinder13 2
+    3300586: pCylinder13 3
+    3300588: piedra_1
+    3300590: piedra_10
+    3300592: piedra_11
+    3300594: piedra_12
+    3300596: piedra_13
+    3300598: piedra_14
+    3300600: piedra_15
+    3300602: piedra_16
+    3300604: piedra_17
+    3300606: piedra_18
+    3300608: piedra_19
+    3300610: piedra_2
+    3300612: piedra_20
+    3300614: piedra_21
+    3300616: piedra_22
+    3300618: piedra_23
+    3300620: piedra_24
+    3300622: piedra_25
+    3300624: piedra_26
+    3300626: piedra_27
+    3300628: piedra_28
+    3300630: piedra_29
+    3300632: piedra_30
+    3300634: piedra_31
+    3300636: piedra_32
+    3300638: piedra_33
+    3300640: piedra_34
+    3300642: piedra_35
+    3300644: piedra_36
+    3300646: piedra_37
+    3300648: piedra_38
+    3300650: piedra_39
+    3300652: piedra_4
+    3300654: piedra_40
+    3300656: piedra_41
+    3300658: piedra_42
+    3300660: piedra_43
+    3300662: piedra_44
+    3300664: piedra_45
+    3300666: piedra_46
+    3300668: piedra_47
+    3300670: piedra_5
+    3300672: piedra_6
+    3300674: piedra_7
+    3300676: piedra_8
+    3300678: piedra_9
+    3300680: polySurface89
+    3300682: polySurface89 1
+    3300684: polySurface90
+    3300686: polySurface90 1
+    3300688: polySurface92
+    3300690: polySurface92 1
+    3300692: polySurface93
+    3300694: polySurface93 1
+    3300696: polySurface94
+    3300698: polySurface94 1
+    3300700: puente_1
+    3300702: puente_2
+    3300704: puente_3
+    3300706: puerta4
+    3300708: tronco
+    3300710: tronco 1
+    3300712: tronco 10
+    3300714: tronco 11
+    3300716: tronco 12
+    3300718: tronco 13
+    3300720: tronco 14
+    3300722: tronco 15
+    3300724: tronco 2
+    3300726: tronco 3
+    3300728: tronco 4
+    3300730: tronco 5
+    3300732: tronco 6
+    3300734: tronco 7
+    3300736: tronco 8
+    3300738: tronco 9
+    4300000: floor_LP
+    4300002: caja_1
+    4300004: caja_2
+    4300006: caja_3
+    4300008: caja_4
+    4300010: caja_5
+    4300012: caja_6
+    4300014: caja_7
+    4300016: caja_8
+    4300018: caja_9
+    4300020: caja_10
+    4300022: caja_11
+    4300024: caja_12
+    4300026: caja_13
+    4300028: caja_14
+    4300030: caja_15
+    4300032: caja_16
+    4300034: caja_17
+    4300036: caja_18
+    4300038: caja_19
+    4300040: caja_20
+    4300042: caja_21
+    4300044: caja_22
+    4300046: caja_23
+    4300048: caja_24
+    4300050: caja_25
+    4300052: caja_26
+    4300054: caja_27
+    4300056: caja_28
+    4300058: caja_29
+    4300060: caja_30
+    4300062: caja_31
+    4300064: Pared_nivel_2
+    4300066: cubo_de_nieve_1
+    4300068: cubo_de_nieve_2
+    4300070: cubo_de_nieve_3
+    4300072: cubo_de_nieve_4
+    4300074: cubo_de_nieve_5
+    4300076: cubo_de_nieve_6
+    4300078: cubo_de_nieve_7
+    4300080: cubo_de_nieve_8
+    4300082: cubo_de_nieve_9
+    4300084: cubo_de_nieve_10
+    4300086: cubo_de_nieve_11
+    4300088: cubo_de_nieve_12
+    4300090: cubo_de_nieve_13
+    4300092: cubo_de_nieve_14
+    4300094: cubo_de_nieve_15
+    4300096: cubo_de_nieve_16
+    4300098: cubo_de_nieve_17
+    4300100: cubo_de_nieve_18
+    4300102: cubo_de_nieve_19
+    4300104: piedra_16
+    4300106: piedra_15
+    4300108: piedra_42
+    4300110: piedra_40
+    4300112: piedra_31
+    4300114: piedra_35
+    4300116: piedra_37
+    4300118: piedra_36
+    4300120: piedra_34
+    4300122: piedra_33
+    4300124: piedra_32
+    4300126: piedra_28
+    4300128: piedra_20
+    4300130: piedra_21
+    4300132: piedra_23
+    4300134: piedra_22
+    4300136: piedra_2
+    4300138: piedra_45
+    4300140: piedra_44
+    4300142: piedra_4
+    4300144: piedra_5
+    4300146: piedra_30
+    4300148: piedra_41
+    4300150: piedra_47
+    4300152: piedra_46
+    4300154: piedra_1
+    4300156: piedra_6
+    4300158: piedra_7
+    4300160: piedra_8
+    4300162: piedra_9
+    4300164: piedra_10
+    4300166: piedra_11
+    4300168: piedra_12
+    4300170: piedra_13
+    4300172: piedra_14
+    4300174: piedra_17
+    4300176: piedra_18
+    4300178: piedra_19
+    4300180: piedra_24
+    4300182: piedra_25
+    4300184: piedra_26
+    4300186: piedra_27
+    4300188: piedra_29
+    4300190: piedra_38
+    4300192: piedra_39
+    4300194: piedra_43
+    4300196: caramelo_1
+    4300198: caramelo_2
+    4300200: caramelo_3
+    4300202: caramelo_4
+    4300204: caramelo_5
+    4300206: caramelo_6
+    4300208: caramelo_7
+    4300210: caramelo_8
+    4300212: caramelo_9
+    4300214: pCube103
+    4300216: pCube104
+    4300218: pCube152
+    4300220: pCube151
+    4300222: pCube150
+    4300224: pCube149
+    4300226: pCylinder13
+    4300228: pCube103
+    4300230: pCube104
+    4300232: pCube152
+    4300234: pCube151
+    4300236: pCube150
+    4300238: pCube149
+    4300240: pCylinder13
+    4300242: pCube103
+    4300244: pCube104
+    4300246: pCube152
+    4300248: pCube151
+    4300250: pCube150
+    4300252: pCube149
+    4300254: pCylinder13
+    4300256: pCube103
+    4300258: pCube104
+    4300260: pCube152
+    4300262: pCube151
+    4300264: pCube150
+    4300266: pCube149
+    4300268: pCylinder13
+    4300270: bola_de_nieve_1
+    4300272: bola_de_nieve_2
+    4300274: bola_de_nieve_3
+    4300276: bola_de_nieve_4
+    4300278: bola_de_nieve_5
+    4300280: bola_de_nieve_6
+    4300282: bola_de_nieve_7
+    4300284: bola_de_nieve_8
+    4300286: bola_de_nieve_9
+    4300288: bola_de_nieve_10
+    4300290: bola_de_nieve_11
+    4300292: bola_de_nieve_12
+    4300294: bola_de_nieve_13
+    4300296: bola_de_nieve_14
+    4300298: bola_de_nieve_15
+    4300300: bola_de_nieve_16
+    4300302: bola_de_nieve_17
+    4300304: bola_de_nieve_18
+    4300306: bola_de_nieve_19
+    4300308: bola_de_nieve_20
+    4300310: bola_de_nieve_21
+    4300312: bola_de_nieve_22
+    4300314: bola_de_nieve_23
+    4300316: bola_de_nieve_24
+    4300318: bola_de_nieve_25
+    4300320: bola_de_nieve_26
+    4300322: bola_de_nieve_27
+    4300324: bola_de_nieve_28
+    4300326: bola_de_nieve_29
+    4300328: puente_3
+    4300330: puente_2
+    4300332: puente_1
+    4300334: pCube38
+    4300336: pCylinder1
+    4300338: pCube42
+    4300340: pCube144
+    4300342: pCube145
+    4300344: pCube146
+    4300346: pCube38
+    4300348: pCylinder1
+    4300350: pCube42
+    4300352: pCube144
+    4300354: pCube145
+    4300356: pCube146
+    4300358: pCube38
+    4300360: pCylinder1
+    4300362: pCube42
+    4300364: pCube144
+    4300366: pCube145
+    4300368: pCube146
+    4300370: pCube38
+    4300372: pCylinder1
+    4300374: pCube42
+    4300376: pCube144
+    4300378: pCube145
+    4300380: pCube146
+    4300382: pCube38
+    4300384: pCylinder1
+    4300386: pCube42
+    4300388: pCube144
+    4300390: pCube145
+    4300392: pCube146
+    4300394: pCube38
+    4300396: pCylinder1
+    4300398: pCube42
+    4300400: pCube144
+    4300402: pCube145
+    4300404: pCube146
+    4300406: pCube38
+    4300408: pCylinder1
+    4300410: pCube42
+    4300412: pCube144
+    4300414: pCube145
+    4300416: pCube146
+    4300418: pCube38
+    4300420: pCylinder1
+    4300422: pCube42
+    4300424: pCube144
+    4300426: pCube145
+    4300428: pCube146
+    4300430: pCube38
+    4300432: pCylinder1
+    4300434: pCube42
+    4300436: pCube144
+    4300438: pCube145
+    4300440: pCube146
+    4300442: pCube38
+    4300444: pCylinder1
+    4300446: pCube42
+    4300448: pCube144
+    4300450: pCube145
+    4300452: pCube146
+    4300454: pCube38
+    4300456: pCylinder1
+    4300458: pCube42
+    4300460: pCube144
+    4300462: pCube145
+    4300464: pCube146
+    4300466: pCube38
+    4300468: pCylinder1
+    4300470: pCube42
+    4300472: pCube144
+    4300474: pCube145
+    4300476: pCube146
+    4300478: pCube38
+    4300480: pCylinder1
+    4300482: pCube42
+    4300484: pCube144
+    4300486: pCube145
+    4300488: pCube146
+    4300490: pCube38
+    4300492: pCylinder1
+    4300494: pCube42
+    4300496: pCube144
+    4300498: pCube145
+    4300500: pCube146
+    4300502: pCube38
+    4300504: pCylinder1
+    4300506: pCube42
+    4300508: pCube144
+    4300510: pCube145
+    4300512: pCube146
+    4300514: pCube38
+    4300516: pCylinder1
+    4300518: pCube42
+    4300520: pCube144
+    4300522: pCube145
+    4300524: pCube146
+    4300526: tronco
+    4300528: copa
+    4300530: copa5
+    4300532: copa6
+    4300534: copa7
+    4300536: tronco
+    4300538: copa
+    4300540: copa5
+    4300542: copa6
+    4300544: copa7
+    4300546: tronco
+    4300548: copa
+    4300550: copa5
+    4300552: copa6
+    4300554: copa7
+    4300556: tronco
+    4300558: copa
+    4300560: copa5
+    4300562: copa6
+    4300564: copa7
+    4300566: tronco
+    4300568: copa
+    4300570: copa5
+    4300572: copa6
+    4300574: copa7
+    4300576: tronco
+    4300578: copa
+    4300580: copa5
+    4300582: copa6
+    4300584: copa7
+    4300586: tronco
+    4300588: copa
+    4300590: copa5
+    4300592: copa6
+    4300594: copa7
+    4300596: tronco
+    4300598: copa
+    4300600: copa5
+    4300602: copa6
+    4300604: copa7
+    4300606: tronco
+    4300608: copa
+    4300610: copa5
+    4300612: copa6
+    4300614: copa7
+    4300616: tronco
+    4300618: copa
+    4300620: copa5
+    4300622: copa6
+    4300624: copa7
+    4300626: tronco
+    4300628: copa
+    4300630: copa5
+    4300632: copa6
+    4300634: copa7
+    4300636: tronco
+    4300638: copa
+    4300640: copa5
+    4300642: copa6
+    4300644: copa7
+    4300646: tronco
+    4300648: copa
+    4300650: copa5
+    4300652: copa6
+    4300654: copa7
+    4300656: tronco
+    4300658: copa
+    4300660: copa5
+    4300662: copa6
+    4300664: copa7
+    4300666: tronco
+    4300668: copa
+    4300670: copa5
+    4300672: copa6
+    4300674: copa7
+    4300676: tronco
+    4300678: copa
+    4300680: copa5
+    4300682: copa6
+    4300684: copa7
+    4300686: marco_puerta
+    4300688: puerta4
+    4300690: parte_1_manija
+    4300692: parte_3_manija
+    4300694: parte_3_manija1
+    4300696: faro_1
+    4300698: faro_2
+    4300700: faro_3
+    4300702: faro_4
+    4300704: faro_5
+    4300706: faro_6
+    4300708: faro_7
+    4300710: faro_8
+    4300712: faro_9
+    4300714: faro_10
+    4300716: faro_11
+    4300718: polySurface89
+    4300720: polySurface90
+    4300722: polySurface92
+    4300724: polySurface93
+    4300726: polySurface94
+    4300728: polySurface89
+    4300730: polySurface90
+    4300732: polySurface92
+    4300734: polySurface93
+    4300736: polySurface94
+    4300738: Cartel_nivel_2_LP
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
