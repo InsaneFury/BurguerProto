@@ -684,6 +684,7 @@ GameObject:
   - component: {fileID: 1557822991691470807}
   - component: {fileID: 3319889098388824342}
   - component: {fileID: 5021059233783222216}
+  - component: {fileID: 3204957144888951453}
   m_Layer: 0
   m_Name: bola_de_nieve_4
   m_TagString: Untagged
@@ -752,6 +753,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &3204957144888951453
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184308424367134337}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.0009918213, y: 0.00010681152, z: -0.0009613037}
 --- !u!1 &223935811776789761
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,6 +870,7 @@ GameObject:
   - component: {fileID: 6148025838472126400}
   - component: {fileID: 5651595490805374969}
   - component: {fileID: 1141160186789432001}
+  - component: {fileID: 6972307068923175747}
   m_Layer: 0
   m_Name: bola_de_nieve_5
   m_TagString: Untagged
@@ -924,6 +939,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &6972307068923175747
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224110972126413337}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.0004119873, y: -0.0008544922, z: -0.00093078613}
 --- !u!1 &231049791558530319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,6 +1213,7 @@ GameObject:
   - component: {fileID: 5759562724509687266}
   - component: {fileID: 7545327463602825126}
   - component: {fileID: 5855974724286782011}
+  - component: {fileID: 5410236920438864078}
   m_Layer: 0
   m_Name: cubo_de_nieve_18
   m_TagString: Untagged
@@ -1253,6 +1282,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &5410236920438864078
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379522661240224395}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 695.8242, y: 514.54175, z: 915.8916}
+  m_Center: {x: -0.0020103455, y: -0.000061035156, z: 0.0027770996}
 --- !u!1 &402014447957838011
 GameObject:
   m_ObjectHideFlags: 0
@@ -1264,6 +1306,7 @@ GameObject:
   - component: {fileID: 1275343129486907966}
   - component: {fileID: 1372761069653560289}
   - component: {fileID: 7526992240828519434}
+  - component: {fileID: 5695720987814522638}
   m_Layer: 0
   m_Name: bola_de_nieve_25
   m_TagString: Untagged
@@ -1332,6 +1375,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &5695720987814522638
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402014447957838011}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.00047302246, y: -0.000091552734, z: 0.00012207031}
 --- !u!1 &408200084435348280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1468,6 +1524,7 @@ GameObject:
   - component: {fileID: 749521600270226932}
   - component: {fileID: 3520919356220920383}
   - component: {fileID: 5344981854011094377}
+  - component: {fileID: 5970508398386558404}
   m_Layer: 0
   m_Name: piedra_34
   m_TagString: Untagged
@@ -1487,7 +1544,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 442535306952270800}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3520919356220920383
 MeshFilter:
@@ -1536,6 +1593,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5970508398386558404
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447309967267608332}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300120, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &475187567629907958
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,6 +1844,7 @@ GameObject:
   - component: {fileID: 1579536310355753347}
   - component: {fileID: 8569107662139146585}
   - component: {fileID: 5430706018168020816}
+  - component: {fileID: 180055490530610209}
   m_Layer: 0
   m_Name: piedra_14
   m_TagString: Untagged
@@ -1841,6 +1913,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &180055490530610209
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663697895195313846}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300172, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &711728621862287671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1852,6 +1938,7 @@ GameObject:
   - component: {fileID: 5136337206617669515}
   - component: {fileID: 6518916314187911265}
   - component: {fileID: 2553330204606897803}
+  - component: {fileID: 5943181920484961178}
   m_Layer: 0
   m_Name: cubo_de_nieve_5
   m_TagString: Untagged
@@ -1920,6 +2007,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5943181920484961178
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711728621862287671}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300074, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &721180741561498394
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,6 +2032,7 @@ GameObject:
   - component: {fileID: 1542720111481425755}
   - component: {fileID: 1412453509204052857}
   - component: {fileID: 9140547962311814694}
+  - component: {fileID: 4320437333826575323}
   m_Layer: 0
   m_Name: bola_de_nieve_2
   m_TagString: Untagged
@@ -1999,6 +2101,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &4320437333826575323
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721180741561498394}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: 0.0008239746, y: -0.0008544922, z: 0.000076293945}
 --- !u!1 &732093410809138624
 GameObject:
   m_ObjectHideFlags: 0
@@ -2124,6 +2239,7 @@ GameObject:
   - component: {fileID: 1842555169747495018}
   - component: {fileID: 3707753604795027812}
   - component: {fileID: 6480989939580609007}
+  - component: {fileID: 8263668818876931796}
   m_Layer: 0
   m_Name: piedra_7
   m_TagString: Untagged
@@ -2192,6 +2308,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8263668818876931796
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798110848215385573}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300158, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &805538673208240142
 GameObject:
   m_ObjectHideFlags: 0
@@ -2273,6 +2403,7 @@ GameObject:
   - component: {fileID: 7420392761776043050}
   - component: {fileID: 580243332275380539}
   - component: {fileID: 3848118726825892410}
+  - component: {fileID: 9137760366006626894}
   m_Layer: 0
   m_Name: cubo_de_nieve_8
   m_TagString: Untagged
@@ -2341,6 +2472,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &9137760366006626894
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868328396873032260}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300080, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &898436797656340523
 GameObject:
   m_ObjectHideFlags: 0
@@ -2352,6 +2497,7 @@ GameObject:
   - component: {fileID: 5335444012570082110}
   - component: {fileID: 1396660503025225300}
   - component: {fileID: 8234936617496951493}
+  - component: {fileID: 6032924591913562199}
   m_Layer: 0
   m_Name: cubo_de_nieve_17
   m_TagString: Untagged
@@ -2420,6 +2566,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6032924591913562199
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898436797656340523}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 695.8242, y: 514.54175, z: 915.8916}
+  m_Center: {x: -0.0021362305, y: -0.000061035156, z: 0.0027770996}
 --- !u!1 &965443090666770561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2589,6 +2748,7 @@ GameObject:
   - component: {fileID: 2688851792837486410}
   - component: {fileID: 6726698327000409327}
   - component: {fileID: 333656735976255137}
+  - component: {fileID: 4167676717106352153}
   m_Layer: 0
   m_Name: piedra_29
   m_TagString: Untagged
@@ -2657,6 +2817,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4167676717106352153
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984509763515760255}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300188, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &992716311889479181
 GameObject:
   m_ObjectHideFlags: 0
@@ -2668,6 +2842,7 @@ GameObject:
   - component: {fileID: 8004464766317750424}
   - component: {fileID: 2212275740185174053}
   - component: {fileID: 5023762610317092476}
+  - component: {fileID: 1648264401695323412}
   m_Layer: 0
   m_Name: faro_1
   m_TagString: Untagged
@@ -2736,6 +2911,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1648264401695323412
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992716311889479181}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 278.2588, y: 1398.3823, z: 278.2588}
+  m_Center: {x: -0.00048828125, y: 0, z: -0.00048828125}
 --- !u!1 &1053613406119724431
 GameObject:
   m_ObjectHideFlags: 0
@@ -2747,6 +2935,7 @@ GameObject:
   - component: {fileID: 6124168806095332860}
   - component: {fileID: 54480381774956404}
   - component: {fileID: 7347309391164523377}
+  - component: {fileID: 1346391097723478437}
   m_Layer: 0
   m_Name: piedra_10
   m_TagString: Untagged
@@ -2815,85 +3004,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &1059899470937416492
-GameObject:
+--- !u!64 &1346391097723478437
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 637408019237626742}
-  - component: {fileID: 4725500667707884239}
-  - component: {fileID: 4662454131813755239}
-  m_Layer: 0
-  m_Name: piedra_32
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &637408019237626742
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059899470937416492}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14767.988, y: 3062.094, z: 8888.354}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 442535306952270800}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4725500667707884239
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059899470937416492}
-  m_Mesh: {fileID: 4300124, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
---- !u!23 &4662454131813755239
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059899470937416492}
+  m_GameObject: {fileID: 1053613406119724431}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 15cd707ab893db34c9ab3148405e3a6f, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300164, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &1095821954149876561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2905,6 +3029,7 @@ GameObject:
   - component: {fileID: 4214322164536386777}
   - component: {fileID: 292175322986528563}
   - component: {fileID: 6532007252732458908}
+  - component: {fileID: 942570270987984299}
   m_Layer: 0
   m_Name: piedra_25
   m_TagString: Untagged
@@ -2973,6 +3098,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &942570270987984299
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095821954149876561}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300182, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &1207519141488539121
 GameObject:
   m_ObjectHideFlags: 0
@@ -3221,6 +3360,7 @@ GameObject:
   - component: {fileID: 9069758761522171957}
   - component: {fileID: 5932189653043343525}
   - component: {fileID: 4519561249031626584}
+  - component: {fileID: 3325986422707724964}
   m_Layer: 0
   m_Name: bola_de_nieve_15
   m_TagString: Untagged
@@ -3289,6 +3429,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &3325986422707724964
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265254401909813264}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.0007324219, y: -0.000091552734, z: -0.0009765625}
 --- !u!1 &1290661208090633055
 GameObject:
   m_ObjectHideFlags: 0
@@ -3537,6 +3690,7 @@ GameObject:
   - component: {fileID: 8631234019260353272}
   - component: {fileID: 612434008402452273}
   - component: {fileID: 7648059838642412112}
+  - component: {fileID: 8408143002684682775}
   m_Layer: 0
   m_Name: faro_3
   m_TagString: Untagged
@@ -3605,6 +3759,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &8408143002684682775
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338752060519403979}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 278.25977, y: 1398.3823, z: 278.2588}
+  m_Center: {x: -0.0009765625, y: 0, z: -0.0006713867}
 --- !u!1 &1410332394315156415
 GameObject:
   m_ObjectHideFlags: 0
@@ -3774,6 +3941,7 @@ GameObject:
   - component: {fileID: 7522672287418499588}
   - component: {fileID: 5729669868123514162}
   - component: {fileID: 1609166921991899494}
+  - component: {fileID: 5021624934084635075}
   m_Layer: 0
   m_Name: piedra_20
   m_TagString: Untagged
@@ -3842,6 +4010,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5021624934084635075
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449833455864304482}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300128, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &1467351365989114067
 GameObject:
   m_ObjectHideFlags: 0
@@ -3853,6 +4035,7 @@ GameObject:
   - component: {fileID: 4031961868502400945}
   - component: {fileID: 8359470041259317853}
   - component: {fileID: 6599769749937719210}
+  - component: {fileID: 4077375643544995694}
   m_Layer: 0
   m_Name: cubo_de_nieve_13
   m_TagString: Untagged
@@ -3921,6 +4104,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4077375643544995694
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467351365989114067}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300090, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &1572605248190922733
 GameObject:
   m_ObjectHideFlags: 0
@@ -3932,6 +4129,7 @@ GameObject:
   - component: {fileID: 3018292513090203767}
   - component: {fileID: 218907993518430962}
   - component: {fileID: 4103748729238702875}
+  - component: {fileID: 6702801803918215377}
   m_Layer: 0
   m_Name: piedra_38
   m_TagString: Untagged
@@ -4000,6 +4198,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6702801803918215377
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572605248190922733}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300190, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &1579001484963049786
 GameObject:
   m_ObjectHideFlags: 0
@@ -4011,6 +4223,7 @@ GameObject:
   - component: {fileID: 91593644148602363}
   - component: {fileID: 5148574518849781834}
   - component: {fileID: 3853716030709521398}
+  - component: {fileID: 2144034542007959662}
   m_Layer: 0
   m_Name: piedra_30
   m_TagString: Untagged
@@ -4079,6 +4292,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2144034542007959662
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579001484963049786}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300146, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &1660134041588826435
 GameObject:
   m_ObjectHideFlags: 0
@@ -4090,6 +4317,7 @@ GameObject:
   - component: {fileID: 4536256670311563393}
   - component: {fileID: 856538191812814164}
   - component: {fileID: 2148057627834469112}
+  - component: {fileID: 1320817567594409680}
   m_Layer: 0
   m_Name: piedra_6
   m_TagString: Untagged
@@ -4158,6 +4386,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1320817567594409680
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660134041588826435}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300156, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &1687301894510098547
 GameObject:
   m_ObjectHideFlags: 0
@@ -4684,6 +4926,7 @@ GameObject:
   - component: {fileID: 5227901438057889036}
   - component: {fileID: 8575992108574317466}
   - component: {fileID: 4461128561817100198}
+  - component: {fileID: 8345381795159626098}
   m_Layer: 0
   m_Name: bola_de_nieve_21
   m_TagString: Untagged
@@ -4752,6 +4995,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &8345381795159626098
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829813630162798937}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: 0.00010681152, y: -0.000091552734, z: -0.0017700195}
 --- !u!1 &1861252080183959867
 GameObject:
   m_ObjectHideFlags: 0
@@ -4763,6 +5019,7 @@ GameObject:
   - component: {fileID: 2661304305781825597}
   - component: {fileID: 4885995162252275789}
   - component: {fileID: 6214779911944475029}
+  - component: {fileID: 5603301248299554450}
   m_Layer: 0
   m_Name: faro_4
   m_TagString: Untagged
@@ -4831,6 +5088,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &5603301248299554450
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861252080183959867}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 278.25977, y: 1398.3823, z: 278.2588}
+  m_Center: {x: -0.00061035156, y: 0.000061035156, z: 0.000869751}
 --- !u!1 &1909678336230115969
 GameObject:
   m_ObjectHideFlags: 0
@@ -4842,6 +5112,7 @@ GameObject:
   - component: {fileID: 7297697445636499548}
   - component: {fileID: 7763254183214564408}
   - component: {fileID: 220228375678730815}
+  - component: {fileID: 2760889180749673583}
   m_Layer: 0
   m_Name: piedra_19
   m_TagString: Untagged
@@ -4910,6 +5181,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2760889180749673583
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909678336230115969}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300178, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &1915885937349581863
 GameObject:
   m_ObjectHideFlags: 0
@@ -5014,6 +5299,7 @@ GameObject:
   - component: {fileID: 4660641258216469291}
   - component: {fileID: 2365972128194986945}
   - component: {fileID: 6264385736064335038}
+  - component: {fileID: 3760950923189239814}
   m_Layer: 0
   m_Name: bola_de_nieve_1
   m_TagString: Untagged
@@ -5082,6 +5368,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &3760950923189239814
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943583308242736459}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.000030517578, y: -0.0008544922, z: -0.0009765625}
 --- !u!1 &1967462885335410197
 GameObject:
   m_ObjectHideFlags: 0
@@ -5093,6 +5392,7 @@ GameObject:
   - component: {fileID: 7638007878223291644}
   - component: {fileID: 8120777466255819289}
   - component: {fileID: 7240162682172187758}
+  - component: {fileID: 2861861790744381379}
   m_Layer: 0
   m_Name: cubo_de_nieve_12
   m_TagString: Untagged
@@ -5161,6 +5461,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2861861790744381379
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967462885335410197}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300088, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &1978021103131047137
 GameObject:
   m_ObjectHideFlags: 0
@@ -5172,6 +5486,7 @@ GameObject:
   - component: {fileID: 4894949833058533056}
   - component: {fileID: 5260378671766984309}
   - component: {fileID: 3728616591881024512}
+  - component: {fileID: 7204609169010098525}
   m_Layer: 0
   m_Name: cubo_de_nieve_6
   m_TagString: Untagged
@@ -5240,6 +5555,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7204609169010098525
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978021103131047137}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300076, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &1987271056951410666
 GameObject:
   m_ObjectHideFlags: 0
@@ -5417,6 +5746,7 @@ GameObject:
   - component: {fileID: 5128812045105866223}
   - component: {fileID: 6929943491260829567}
   - component: {fileID: 2358008106698994372}
+  - component: {fileID: 8696098214102773264}
   m_Layer: 0
   m_Name: piedra_5
   m_TagString: Untagged
@@ -5485,6 +5815,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8696098214102773264
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056742604237054627}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300144, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &2074759373693913148
 GameObject:
   m_ObjectHideFlags: 0
@@ -5575,6 +5919,7 @@ GameObject:
   - component: {fileID: 8804763318236008437}
   - component: {fileID: 2747643837777792555}
   - component: {fileID: 3758648344890745046}
+  - component: {fileID: 831047689663606538}
   m_Layer: 0
   m_Name: bola_de_nieve_18
   m_TagString: Untagged
@@ -5643,6 +5988,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &831047689663606538
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086316869766685687}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.0005493164, y: -0.000091552734, z: -0.0001373291}
 --- !u!1 &2088071645907153062
 GameObject:
   m_ObjectHideFlags: 0
@@ -5783,6 +6141,7 @@ GameObject:
   - component: {fileID: 4081966526543435640}
   - component: {fileID: 4242449263342443662}
   - component: {fileID: 8159879436940329961}
+  - component: {fileID: 1788297163227016910}
   m_Layer: 0
   m_Name: cubo_de_nieve_19
   m_TagString: Untagged
@@ -5864,6 +6223,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 587.63477, y: 412.59595, z: 915.8916}
   m_Center: {x: -0.002319336, y: -0.000091552734, z: 0.0008239746}
+--- !u!65 &1788297163227016910
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103344929160116102}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 587.63477, y: 412.59595, z: 915.8916}
+  m_Center: {x: -0.002319336, y: 0.00088500977, z: 0.0008239746}
 --- !u!1 &2106072081031507894
 GameObject:
   m_ObjectHideFlags: 0
@@ -5954,6 +6326,7 @@ GameObject:
   - component: {fileID: 8935391270584258558}
   - component: {fileID: 3944296786310265837}
   - component: {fileID: 9214136952059716167}
+  - component: {fileID: 8388916890229358485}
   m_Layer: 0
   m_Name: faro_2
   m_TagString: Untagged
@@ -6022,6 +6395,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &8388916890229358485
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112165700392354439}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 278.2578, y: 1398.3823, z: 278.2588}
+  m_Center: {x: -0.00033569336, y: 0, z: 0.000091552734}
 --- !u!1 &2118160416400357921
 GameObject:
   m_ObjectHideFlags: 0
@@ -6033,6 +6419,7 @@ GameObject:
   - component: {fileID: 4326953595349066515}
   - component: {fileID: 2201681519043925871}
   - component: {fileID: 7826740242194806195}
+  - component: {fileID: 7928180685368288071}
   m_Layer: 0
   m_Name: faro_10
   m_TagString: Untagged
@@ -6101,6 +6488,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7928180685368288071
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118160416400357921}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 278.2578, y: 1398.3823, z: 278.2588}
+  m_Center: {x: -0.00039672852, y: -0.0010375977, z: -0.00015258789}
 --- !u!1 &2134203009440273675
 GameObject:
   m_ObjectHideFlags: 0
@@ -6349,6 +6749,7 @@ GameObject:
   - component: {fileID: 836175978526340397}
   - component: {fileID: 3116155077660476805}
   - component: {fileID: 3041008149602644794}
+  - component: {fileID: 3799285871746523882}
   m_Layer: 0
   m_Name: piedra_13
   m_TagString: Untagged
@@ -6417,6 +6818,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3799285871746523882
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2170595060406236206}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300170, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &2200822527208195564
 GameObject:
   m_ObjectHideFlags: 0
@@ -6428,6 +6843,7 @@ GameObject:
   - component: {fileID: 3847708775746684637}
   - component: {fileID: 1182467638569749641}
   - component: {fileID: 8706423873567121803}
+  - component: {fileID: 4223858942045935391}
   m_Layer: 0
   m_Name: piedra_17
   m_TagString: Untagged
@@ -6496,6 +6912,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4223858942045935391
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2200822527208195564}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300174, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &2224973231354991049
 GameObject:
   m_ObjectHideFlags: 0
@@ -6618,6 +7048,7 @@ GameObject:
   - component: {fileID: 3789566034567252578}
   - component: {fileID: 2535502394879998144}
   - component: {fileID: 1734698033877658769}
+  - component: {fileID: 3122408443423037744}
   m_Layer: 0
   m_Name: bola_de_nieve_20
   m_TagString: Untagged
@@ -6686,6 +7117,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &3122408443423037744
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2281200752368653630}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.00033569336, y: -0.000091552734, z: -0.0001373291}
 --- !u!1 &2331662169837270194
 GameObject:
   m_ObjectHideFlags: 0
@@ -6899,6 +7343,7 @@ GameObject:
   - component: {fileID: 7717362137853487672}
   - component: {fileID: 3293671385178537298}
   - component: {fileID: 4561781374222041478}
+  - component: {fileID: 8659404802194091031}
   m_Layer: 0
   m_Name: piedra_1
   m_TagString: Untagged
@@ -6967,6 +7412,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8659404802194091031
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2583511681348028343}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300154, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &2652538490381318347
 GameObject:
   m_ObjectHideFlags: 0
@@ -6978,6 +7437,7 @@ GameObject:
   - component: {fileID: 7424973689941324472}
   - component: {fileID: 1020505031449281029}
   - component: {fileID: 7116502463464983707}
+  - component: {fileID: 7222760309253330914}
   m_Layer: 0
   m_Name: cubo_de_nieve_1
   m_TagString: Untagged
@@ -7046,6 +7506,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7222760309253330914
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2652538490381318347}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300066, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &2654930120468772672
 GameObject:
   m_ObjectHideFlags: 0
@@ -7215,6 +7689,7 @@ GameObject:
   - component: {fileID: 3189237179671586498}
   - component: {fileID: 1740519843712316070}
   - component: {fileID: 4544844587695887364}
+  - component: {fileID: 2529664651311030672}
   m_Layer: 0
   m_Name: cubo_de_nieve_16
   m_TagString: Untagged
@@ -7283,6 +7758,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2529664651311030672
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2710714578711411283}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300096, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &2759541454302046551
 GameObject:
   m_ObjectHideFlags: 0
@@ -7373,6 +7862,7 @@ GameObject:
   - component: {fileID: 7839722622924471045}
   - component: {fileID: 8509102309419436059}
   - component: {fileID: 1186008202873717941}
+  - component: {fileID: 3744882875124416420}
   m_Layer: 0
   m_Name: bola_de_nieve_24
   m_TagString: Untagged
@@ -7441,6 +7931,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &3744882875124416420
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2783686063624851719}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: 0.00019836426, y: -0.000091552734, z: 0.00010681152}
 --- !u!1 &2790733604443472917
 GameObject:
   m_ObjectHideFlags: 0
@@ -7452,6 +7955,7 @@ GameObject:
   - component: {fileID: 7092184425233193996}
   - component: {fileID: 5816149153409352505}
   - component: {fileID: 9172972508846159740}
+  - component: {fileID: 1902483922063162050}
   m_Layer: 0
   m_Name: piedra_4
   m_TagString: Untagged
@@ -7520,6 +8024,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1902483922063162050
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2790733604443472917}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300142, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &2807640545361764207
 GameObject:
   m_ObjectHideFlags: 0
@@ -7689,6 +8207,7 @@ GameObject:
   - component: {fileID: 1799189889123846296}
   - component: {fileID: 5339676313497684380}
   - component: {fileID: 2392953320318620075}
+  - component: {fileID: 6708551969461302963}
   m_Layer: 0
   m_Name: faro_5
   m_TagString: Untagged
@@ -7757,6 +8276,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6708551969461302963
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2847315157061791273}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 278.2588, y: 1398.3823, z: 278.2588}
+  m_Center: {x: -0.00024414062, y: -0.0010375977, z: 0.0007019043}
 --- !u!1 &2858942642211845449
 GameObject:
   m_ObjectHideFlags: 0
@@ -7847,6 +8379,7 @@ GameObject:
   - component: {fileID: 5457028836326460317}
   - component: {fileID: 5274919644680949313}
   - component: {fileID: 453847257311203674}
+  - component: {fileID: 2963786495555898017}
   m_Layer: 0
   m_Name: piedra_11
   m_TagString: Untagged
@@ -7915,6 +8448,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2963786495555898017
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2873585710618174037}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300166, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &2881489713568937950
 GameObject:
   m_ObjectHideFlags: 0
@@ -8212,6 +8759,7 @@ GameObject:
   - component: {fileID: 6039855461156491720}
   - component: {fileID: 6989497418011558232}
   - component: {fileID: 8908032652286238698}
+  - component: {fileID: 8448489693500678476}
   m_Layer: 0
   m_Name: bola_de_nieve_3
   m_TagString: Untagged
@@ -8280,6 +8828,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &8448489693500678476
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2993271213956332868}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.00033569336, y: -0.0008544922, z: -0.0010070801}
 --- !u!1 &3021752760117269345
 GameObject:
   m_ObjectHideFlags: 0
@@ -8291,6 +8852,7 @@ GameObject:
   - component: {fileID: 8763040387586928971}
   - component: {fileID: 2078915731017634230}
   - component: {fileID: 6652091154872960001}
+  - component: {fileID: 7110088400397356714}
   m_Layer: 0
   m_Name: bola_de_nieve_8
   m_TagString: Untagged
@@ -8359,6 +8921,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &7110088400397356714
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3021752760117269345}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.0006713867, y: -0.000061035156, z: -0.000030517578}
 --- !u!1 &3107967941913772049
 GameObject:
   m_ObjectHideFlags: 0
@@ -8493,6 +9068,7 @@ GameObject:
   - component: {fileID: 5951532590023115133}
   - component: {fileID: 5078256379595188261}
   - component: {fileID: 1301845637962569827}
+  - component: {fileID: 2991663946934656803}
   m_Layer: 0
   m_Name: bola_de_nieve_27
   m_TagString: Untagged
@@ -8561,6 +9137,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &2991663946934656803
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3127908817960229190}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.0007324219, y: -0.000091552734, z: -0.000045776367}
 --- !u!1 &3149365841381202256
 GameObject:
   m_ObjectHideFlags: 0
@@ -8841,6 +9430,7 @@ GameObject:
   - component: {fileID: 2677101881502153762}
   - component: {fileID: 4274996348210740352}
   - component: {fileID: 5569465878394115090}
+  - component: {fileID: 6770407883914618647}
   m_Layer: 0
   m_Name: piedra_41
   m_TagString: Untagged
@@ -8860,7 +9450,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 442535306952270800}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4274996348210740352
 MeshFilter:
@@ -8909,6 +9499,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6770407883914618647
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3288913240160508870}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300148, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &3329109750971412332
 GameObject:
   m_ObjectHideFlags: 0
@@ -9032,8 +9636,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2000, y: 3274.0193, z: 12813.246}
-  m_Center: {x: 0, y: 373.5064, z: 0}
+  m_Size: {x: 1516.4099, y: 3274.0193, z: 12813.246}
+  m_Center: {x: 6.363964, y: 373.50635, z: 0}
 --- !u!1 &3370352482943110617
 GameObject:
   m_ObjectHideFlags: 0
@@ -9115,6 +9719,7 @@ GameObject:
   - component: {fileID: 3583176048840914206}
   - component: {fileID: 8759669564180173462}
   - component: {fileID: 3240405458724461148}
+  - component: {fileID: 8995311324088584175}
   m_Layer: 0
   m_Name: piedra_44
   m_TagString: Untagged
@@ -9134,7 +9739,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 442535306952270800}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8759669564180173462
 MeshFilter:
@@ -9183,6 +9788,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8995311324088584175
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3396288654964381127}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300140, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &3399375880581864795
 GameObject:
   m_ObjectHideFlags: 0
@@ -9514,6 +10133,7 @@ GameObject:
   - component: {fileID: 1607311441068836688}
   - component: {fileID: 3854609212627007404}
   - component: {fileID: 7401606039035673659}
+  - component: {fileID: 2558481764919138267}
   m_Layer: 0
   m_Name: faro_8
   m_TagString: Untagged
@@ -9582,6 +10202,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2558481764919138267
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3445049295356397061}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 278.2578, y: 1398.3823, z: 278.2588}
+  m_Center: {x: 0.00030517578, y: -0.0010375977, z: -0.00018310547}
 --- !u!1 &3458013346381264511
 GameObject:
   m_ObjectHideFlags: 0
@@ -9593,6 +10226,7 @@ GameObject:
   - component: {fileID: 5109108972602760415}
   - component: {fileID: 6026107693668217728}
   - component: {fileID: 8382230261837895986}
+  - component: {fileID: 7275928105794989862}
   m_Layer: 0
   m_Name: bola_de_nieve_22
   m_TagString: Untagged
@@ -9661,6 +10295,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &7275928105794989862
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3458013346381264511}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: 0.00010681152, y: -0.000091552734, z: 0.00015258789}
 --- !u!1 &3473883572513401537
 GameObject:
   m_ObjectHideFlags: 0
@@ -9672,6 +10319,7 @@ GameObject:
   - component: {fileID: 6503332421163554691}
   - component: {fileID: 2207205095163797409}
   - component: {fileID: 2477368780595034631}
+  - component: {fileID: 105356195231831320}
   m_Layer: 0
   m_Name: piedra_46
   m_TagString: Untagged
@@ -9691,7 +10339,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 442535306952270800}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2207205095163797409
 MeshFilter:
@@ -9740,6 +10388,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &105356195231831320
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3473883572513401537}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300152, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &3478949397656610568
 GameObject:
   m_ObjectHideFlags: 0
@@ -9988,6 +10650,7 @@ GameObject:
   - component: {fileID: 8274000141386346018}
   - component: {fileID: 6638808348135019183}
   - component: {fileID: 2413601596701868974}
+  - component: {fileID: 5872103390134134369}
   m_Layer: 0
   m_Name: piedra_18
   m_TagString: Untagged
@@ -10056,6 +10719,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5872103390134134369
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3498687678232198004}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300176, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &3514631034928795301
 GameObject:
   m_ObjectHideFlags: 0
@@ -10308,6 +10985,7 @@ GameObject:
   - component: {fileID: 123605869189384557}
   - component: {fileID: 1696501488537610329}
   - component: {fileID: 3543255038965311558}
+  - component: {fileID: 8199983859933339751}
   m_Layer: 0
   m_Name: piedra_16
   m_TagString: Untagged
@@ -10376,6 +11054,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8199983859933339751
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3600199192259411073}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300104, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &3639694521195070379
 GameObject:
   m_ObjectHideFlags: 0
@@ -10466,6 +11158,7 @@ GameObject:
   - component: {fileID: 7624267351752972365}
   - component: {fileID: 8404070684271457744}
   - component: {fileID: 2603534393030926853}
+  - component: {fileID: 4296702087670788994}
   m_Layer: 0
   m_Name: piedra_8
   m_TagString: Untagged
@@ -10534,6 +11227,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4296702087670788994
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3658160506088125140}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300160, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &3661300083042315446
 GameObject:
   m_ObjectHideFlags: 0
@@ -10764,6 +11471,7 @@ GameObject:
   - component: {fileID: 6833459705159158680}
   - component: {fileID: 8608597287819979935}
   - component: {fileID: 1034867893253563717}
+  - component: {fileID: 4137276089249313958}
   m_Layer: 0
   m_Name: cubo_de_nieve_3
   m_TagString: Untagged
@@ -10832,6 +11540,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4137276089249313958
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3785696183803270961}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300070, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &3835949057180787306
 GameObject:
   m_ObjectHideFlags: 0
@@ -10843,6 +11565,7 @@ GameObject:
   - component: {fileID: 2470948594380979642}
   - component: {fileID: 9189570229592590023}
   - component: {fileID: 285553482088589640}
+  - component: {fileID: 4435337723740846858}
   m_Layer: 0
   m_Name: piedra_35
   m_TagString: Untagged
@@ -10862,7 +11585,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 442535306952270800}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &9189570229592590023
 MeshFilter:
@@ -10911,6 +11634,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4435337723740846858
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3835949057180787306}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300114, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &3851535141322443579
 GameObject:
   m_ObjectHideFlags: 0
@@ -11634,6 +12371,7 @@ GameObject:
   - component: {fileID: 5991209059884538519}
   - component: {fileID: 934409270959480157}
   - component: {fileID: 425137541808822238}
+  - component: {fileID: 6526284820762711437}
   m_Layer: 0
   m_Name: piedra_15
   m_TagString: Untagged
@@ -11702,6 +12440,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6526284820762711437
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4157680129782933106}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300106, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &4230354569550643448
 GameObject:
   m_ObjectHideFlags: 0
@@ -11806,6 +12558,7 @@ GameObject:
   - component: {fileID: 6248792143397462898}
   - component: {fileID: 6697348244034239654}
   - component: {fileID: 8775889232423287354}
+  - component: {fileID: 2125295599932941925}
   m_Layer: 0
   m_Name: cubo_de_nieve_14
   m_TagString: Untagged
@@ -11874,6 +12627,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2125295599932941925
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4243814081790796191}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300092, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &4316216994359676741
 GameObject:
   m_ObjectHideFlags: 0
@@ -11920,6 +12687,7 @@ GameObject:
   - component: {fileID: 8269109154155540487}
   - component: {fileID: 3212951592774392760}
   - component: {fileID: 2584310557820949430}
+  - component: {fileID: 3205594803539425052}
   m_Layer: 0
   m_Name: piedra_27
   m_TagString: Untagged
@@ -11988,6 +12756,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3205594803539425052
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4353793433144550919}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300186, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &4375006449779474809
 GameObject:
   m_ObjectHideFlags: 0
@@ -11999,6 +12781,7 @@ GameObject:
   - component: {fileID: 3239132667393894143}
   - component: {fileID: 5907525348590305678}
   - component: {fileID: 7006011361368645488}
+  - component: {fileID: 5457677113394741200}
   m_Layer: 0
   m_Name: faro_11
   m_TagString: Untagged
@@ -12067,6 +12850,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &5457677113394741200
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4375006449779474809}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 278.25977, y: 1398.3823, z: 278.2588}
+  m_Center: {x: -0.001083374, y: -0.0010375977, z: -0.00015258789}
 --- !u!1 &4394198102461507361
 GameObject:
   m_ObjectHideFlags: 0
@@ -12078,6 +12874,7 @@ GameObject:
   - component: {fileID: 3811679773367913932}
   - component: {fileID: 8007641478811019605}
   - component: {fileID: 3728377180307991644}
+  - component: {fileID: 8406443616652067754}
   m_Layer: 0
   m_Name: piedra_43
   m_TagString: Untagged
@@ -12146,6 +12943,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8406443616652067754
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4394198102461507361}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300194, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &4412544905175796067
 GameObject:
   m_ObjectHideFlags: 0
@@ -12394,6 +13205,7 @@ GameObject:
   - component: {fileID: 1622504073159366422}
   - component: {fileID: 9166349536588784268}
   - component: {fileID: 4293816293528056360}
+  - component: {fileID: 6976476952444943454}
   m_Layer: 0
   m_Name: piedra_31
   m_TagString: Untagged
@@ -12462,6 +13274,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6976476952444943454
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4561561677671256734}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300112, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &4607521402168503341
 GameObject:
   m_ObjectHideFlags: 0
@@ -12473,6 +13299,7 @@ GameObject:
   - component: {fileID: 8137174329645330754}
   - component: {fileID: 507473470054256294}
   - component: {fileID: 3681373469745696619}
+  - component: {fileID: 6471750100309425683}
   m_Layer: 0
   m_Name: piedra_40
   m_TagString: Untagged
@@ -12492,7 +13319,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 442535306952270800}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &507473470054256294
 MeshFilter:
@@ -12541,6 +13368,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6471750100309425683
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4607521402168503341}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300110, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &4717939098049835088
 GameObject:
   m_ObjectHideFlags: 0
@@ -12631,6 +13472,7 @@ GameObject:
   - component: {fileID: 4575551796106650420}
   - component: {fileID: 3288295136165808469}
   - component: {fileID: 5869312338704558752}
+  - component: {fileID: 295775422029685573}
   m_Layer: 0
   m_Name: bola_de_nieve_19
   m_TagString: Untagged
@@ -12699,6 +13541,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &295775422029685573
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4784441011581475249}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.0008239746, y: -0.000091552734, z: 0.0002746582}
 --- !u!1 &4810712134413356595
 GameObject:
   m_ObjectHideFlags: 0
@@ -13105,6 +13960,7 @@ GameObject:
   - component: {fileID: 1929103697232936692}
   - component: {fileID: 6333583499673658679}
   - component: {fileID: 7731944159514030140}
+  - component: {fileID: 8687948316727512919}
   m_Layer: 0
   m_Name: bola_de_nieve_23
   m_TagString: Untagged
@@ -13173,6 +14029,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &8687948316727512919
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4995146034896122435}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.0007019043, y: -0.000091552734, z: -0.000061035156}
 --- !u!1 &5006942214127820599
 GameObject:
   m_ObjectHideFlags: 0
@@ -13292,7 +14161,6 @@ Transform:
   - {fileID: 91593644148602363}
   - {fileID: 1622504073159366422}
   - {fileID: 637408019237626742}
-  - {fileID: 4973632467638974774}
   - {fileID: 749521600270226932}
   - {fileID: 2470948594380979642}
   - {fileID: 8467149858042950270}
@@ -13304,6 +14172,7 @@ Transform:
   - {fileID: 8177987505830340807}
   - {fileID: 6503332421163554691}
   - {fileID: 6704886803386335458}
+  - {fileID: 2749224935240987678}
   m_Father: {fileID: 1748597378014466753}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13476,6 +14345,7 @@ GameObject:
   - component: {fileID: 8467149858042950270}
   - component: {fileID: 6325545172391853741}
   - component: {fileID: 881330050289630009}
+  - component: {fileID: 300938584612789336}
   m_Layer: 0
   m_Name: piedra_36
   m_TagString: Untagged
@@ -13495,7 +14365,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 442535306952270800}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6325545172391853741
 MeshFilter:
@@ -13544,6 +14414,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &300938584612789336
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5244571228285184862}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300118, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &5310489937002096831
 GameObject:
   m_ObjectHideFlags: 0
@@ -13752,6 +14636,7 @@ GameObject:
   - component: {fileID: 4426502875625765232}
   - component: {fileID: 4109479356732455749}
   - component: {fileID: 8661077693210677897}
+  - component: {fileID: 1857259811134405676}
   m_Layer: 0
   m_Name: cubo_de_nieve_7
   m_TagString: Untagged
@@ -13820,6 +14705,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1857259811134405676
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5407449316916653162}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300078, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &5421178093073500040
 GameObject:
   m_ObjectHideFlags: 0
@@ -13910,6 +14809,7 @@ GameObject:
   - component: {fileID: 2787133951986440018}
   - component: {fileID: 4221172792466437342}
   - component: {fileID: 8609010131470122784}
+  - component: {fileID: 5134252928408571327}
   m_Layer: 0
   m_Name: piedra_39
   m_TagString: Untagged
@@ -13978,6 +14878,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5134252928408571327
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5458786036818652218}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300192, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &5481114135596773491
 GameObject:
   m_ObjectHideFlags: 0
@@ -14068,6 +14982,7 @@ GameObject:
   - component: {fileID: 8294609992654223780}
   - component: {fileID: 1685673184604892754}
   - component: {fileID: 2176851168032895649}
+  - component: {fileID: 7586497877036557039}
   m_Layer: 0
   m_Name: cubo_de_nieve_15
   m_TagString: Untagged
@@ -14136,6 +15051,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7586497877036557039
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5509379462375436362}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300094, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &5510236921722117116
 GameObject:
   m_ObjectHideFlags: 0
@@ -14305,6 +15234,7 @@ GameObject:
   - component: {fileID: 8160941481360224011}
   - component: {fileID: 4538870964235366506}
   - component: {fileID: 7658070193425683888}
+  - component: {fileID: 8534861831650719477}
   m_Layer: 0
   m_Name: bola_de_nieve_17
   m_TagString: Untagged
@@ -14373,6 +15303,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &8534861831650719477
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5567533936658413123}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.0015258789, y: -0.000091552734, z: 0.00012207031}
 --- !u!1 &5572561223351331757
 GameObject:
   m_ObjectHideFlags: 0
@@ -14700,6 +15643,7 @@ GameObject:
   - component: {fileID: 2840474658998509052}
   - component: {fileID: 4726567013801539434}
   - component: {fileID: 7208616510813303494}
+  - component: {fileID: 4805383201162712476}
   m_Layer: 0
   m_Name: bola_de_nieve_14
   m_TagString: Untagged
@@ -14768,6 +15712,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &4805383201162712476
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5617662936522806532}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.00030517578, y: 0.0010681152, z: -0.000061035156}
 --- !u!1 &5627661069713193813
 GameObject:
   m_ObjectHideFlags: 0
@@ -14812,8 +15769,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2137.6987, y: 3357.5933, z: 12992.511}
-  m_Center: {x: 68.84961, y: 329.6423, z: 0}
+  m_Size: {x: 1569.0922, y: 3357.5933, z: 12992.511}
+  m_Center: {x: 17.118645, y: 329.6423, z: 0}
 --- !u!1 &5644412099758980686
 GameObject:
   m_ObjectHideFlags: 0
@@ -14904,6 +15861,7 @@ GameObject:
   - component: {fileID: 2116464262680076909}
   - component: {fileID: 7889752674770899967}
   - component: {fileID: 7880143397024541415}
+  - component: {fileID: 6492664601668916790}
   m_Layer: 0
   m_Name: bola_de_nieve_26
   m_TagString: Untagged
@@ -14972,6 +15930,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &6492664601668916790
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5689724224321031349}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.00030517578, y: 0.0010681152, z: -0.001083374}
 --- !u!1 &5725626851816416823
 GameObject:
   m_ObjectHideFlags: 0
@@ -15076,6 +16047,7 @@ GameObject:
   - component: {fileID: 8839253146025740983}
   - component: {fileID: 7814304288328909322}
   - component: {fileID: 579960038561236689}
+  - component: {fileID: 5240458765432614840}
   m_Layer: 0
   m_Name: cubo_de_nieve_10
   m_TagString: Untagged
@@ -15144,6 +16116,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5240458765432614840
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5884718369263642147}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300084, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &5893226419606750706
 GameObject:
   m_ObjectHideFlags: 0
@@ -15234,6 +16220,7 @@ GameObject:
   - component: {fileID: 8497227160933285542}
   - component: {fileID: 3159387647217731064}
   - component: {fileID: 6983747077085208002}
+  - component: {fileID: 379753214233678741}
   m_Layer: 0
   m_Name: bola_de_nieve_10
   m_TagString: Untagged
@@ -15302,6 +16289,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &379753214233678741
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5907511737489066506}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.0007324219, y: 0.0010681152, z: -0.00010681152}
 --- !u!1 &5912750049385718433
 GameObject:
   m_ObjectHideFlags: 0
@@ -15550,6 +16550,7 @@ GameObject:
   - component: {fileID: 6704886803386335458}
   - component: {fileID: 539746663826094574}
   - component: {fileID: 2297841394687384220}
+  - component: {fileID: 5075543366337163395}
   m_Layer: 0
   m_Name: piedra_47
   m_TagString: Untagged
@@ -15569,7 +16570,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 442535306952270800}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &539746663826094574
 MeshFilter:
@@ -15618,6 +16619,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5075543366337163395
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5997502023540060929}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300150, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &6048617145220618325
 GameObject:
   m_ObjectHideFlags: 0
@@ -16117,6 +17132,7 @@ GameObject:
   - component: {fileID: 6958114333369341486}
   - component: {fileID: 4288148819515479799}
   - component: {fileID: 6542271544967333343}
+  - component: {fileID: 3237486493938329360}
   m_Layer: 0
   m_Name: faro_6
   m_TagString: Untagged
@@ -16185,6 +17201,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3237486493938329360
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6167327405367969950}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 278.2578, y: 1398.3823, z: 278.2588}
+  m_Center: {x: 0.00030517578, y: -0.0010375977, z: 0.001159668}
 --- !u!1 &6189113567800885738
 GameObject:
   m_ObjectHideFlags: 0
@@ -16512,6 +17541,7 @@ GameObject:
   - component: {fileID: 1578050236108272182}
   - component: {fileID: 7586245033713465092}
   - component: {fileID: 4191738672570875052}
+  - component: {fileID: 6124970552565017302}
   m_Layer: 0
   m_Name: piedra_22
   m_TagString: Untagged
@@ -16580,6 +17610,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6124970552565017302
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6399675947104116625}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300134, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &6426007781781348990
 GameObject:
   m_ObjectHideFlags: 0
@@ -16650,6 +17694,7 @@ GameObject:
   - component: {fileID: 5487159976535536266}
   - component: {fileID: 980299303679913086}
   - component: {fileID: 2866541820713817736}
+  - component: {fileID: 5969040019471854863}
   m_Layer: 0
   m_Name: bola_de_nieve_28
   m_TagString: Untagged
@@ -16718,6 +17763,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &5969040019471854863
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6444649957969384757}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.0015258789, y: -0.000091552734, z: -0.000091552734}
 --- !u!1 &6491925923748147241
 GameObject:
   m_ObjectHideFlags: 0
@@ -16808,6 +17866,7 @@ GameObject:
   - component: {fileID: 8177987505830340807}
   - component: {fileID: 2387764015027926207}
   - component: {fileID: 193167610290506729}
+  - component: {fileID: 7057995384709097293}
   m_Layer: 0
   m_Name: piedra_45
   m_TagString: Untagged
@@ -16827,7 +17886,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 442535306952270800}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2387764015027926207
 MeshFilter:
@@ -16876,6 +17935,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7057995384709097293
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6532400113841066155}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300138, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &6544124628525332118
 GameObject:
   m_ObjectHideFlags: 0
@@ -17001,6 +18074,7 @@ GameObject:
   - component: {fileID: 6434508054486443144}
   - component: {fileID: 7174247833521874193}
   - component: {fileID: 5320209326193748519}
+  - component: {fileID: 6717966540345599078}
   m_Layer: 0
   m_Name: bola_de_nieve_7
   m_TagString: Untagged
@@ -17069,6 +18143,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &6717966540345599078
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6785296304867438305}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.0006713867, y: -0.000061035156, z: -0.000045776367}
 --- !u!1 &6803854033144047310
 GameObject:
   m_ObjectHideFlags: 0
@@ -17396,6 +18483,7 @@ GameObject:
   - component: {fileID: 181195449173985682}
   - component: {fileID: 7231206335096748095}
   - component: {fileID: 8899184576809317762}
+  - component: {fileID: 2087743885922020071}
   m_Layer: 0
   m_Name: cubo_de_nieve_2
   m_TagString: Untagged
@@ -17464,6 +18552,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2087743885922020071
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6958424159904786266}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300068, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &6994488939865926324
 GameObject:
   m_ObjectHideFlags: 0
@@ -17554,6 +18656,7 @@ GameObject:
   - component: {fileID: 1374887527978851541}
   - component: {fileID: 6661541774880052051}
   - component: {fileID: 1991384673686817690}
+  - component: {fileID: 130124837151211788}
   m_Layer: 0
   m_Name: piedra_12
   m_TagString: Untagged
@@ -17622,6 +18725,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &130124837151211788
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7004602583094448270}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300168, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &7015163906686337904
 GameObject:
   m_ObjectHideFlags: 0
@@ -17712,6 +18829,7 @@ GameObject:
   - component: {fileID: 1620322977137723769}
   - component: {fileID: 5010866436208751565}
   - component: {fileID: 7598001672105567061}
+  - component: {fileID: 506806663091355943}
   m_Layer: 0
   m_Name: piedra_21
   m_TagString: Untagged
@@ -17780,6 +18898,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &506806663091355943
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7057905642767332784}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300130, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &7068954306778596110
 GameObject:
   m_ObjectHideFlags: 0
@@ -17870,6 +19002,7 @@ GameObject:
   - component: {fileID: 3421414547573057566}
   - component: {fileID: 1909815536104425915}
   - component: {fileID: 9042003926983463875}
+  - component: {fileID: 3604260085255580934}
   m_Layer: 0
   m_Name: piedra_42
   m_TagString: Untagged
@@ -17889,7 +19022,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 442535306952270800}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1909815536104425915
 MeshFilter:
@@ -17938,6 +19071,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3604260085255580934
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7139636635143282735}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300108, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &7185353579374932751
 GameObject:
   m_ObjectHideFlags: 0
@@ -17949,6 +19096,7 @@ GameObject:
   - component: {fileID: 2061961346044969959}
   - component: {fileID: 4393508859689720988}
   - component: {fileID: 4885410311767462574}
+  - component: {fileID: 7393482866946217610}
   m_Layer: 0
   m_Name: faro_9
   m_TagString: Untagged
@@ -18017,6 +19165,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7393482866946217610
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7185353579374932751}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 278.2578, y: 1398.3823, z: 278.2588}
+  m_Center: {x: -0.00039672852, y: -0.0010375977, z: -0.00018310547}
 --- !u!1 &7324634703935428391
 GameObject:
   m_ObjectHideFlags: 0
@@ -18107,6 +19268,7 @@ GameObject:
   - component: {fileID: 8032414177466410108}
   - component: {fileID: 8389160805067712651}
   - component: {fileID: 6634006589673748386}
+  - component: {fileID: 4135894430268987918}
   m_Layer: 0
   m_Name: cubo_de_nieve_9
   m_TagString: Untagged
@@ -18175,6 +19337,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4135894430268987918
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7355299759953553961}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300082, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &7378745676264065054
 GameObject:
   m_ObjectHideFlags: 0
@@ -18186,6 +19362,7 @@ GameObject:
   - component: {fileID: 4840201403799823205}
   - component: {fileID: 1184806776552888020}
   - component: {fileID: 9084715617242607316}
+  - component: {fileID: 210160258161366}
   m_Layer: 0
   m_Name: cubo_de_nieve_4
   m_TagString: Untagged
@@ -18254,6 +19431,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &210160258161366
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7378745676264065054}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300072, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &7409538842234375021
 GameObject:
   m_ObjectHideFlags: 0
@@ -18313,85 +19504,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: aa73ff53ec1cde54a979c28dfebd6fce, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!1 &7455193465571853102
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4973632467638974774}
-  - component: {fileID: 7678582243178234770}
-  - component: {fileID: 7858220590547661984}
-  m_Layer: 0
-  m_Name: piedra_33
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4973632467638974774
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7455193465571853102}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16710.436, y: 3013.4265, z: 8971.036}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 442535306952270800}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7678582243178234770
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7455193465571853102}
-  m_Mesh: {fileID: 4300122, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
---- !u!23 &7858220590547661984
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7455193465571853102}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 15cd707ab893db34c9ab3148405e3a6f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18706,6 +19818,7 @@ GameObject:
   - component: {fileID: 5408866010683357973}
   - component: {fileID: 8549759188045631306}
   - component: {fileID: 2052027982965930909}
+  - component: {fileID: 3920030463803432206}
   m_Layer: 0
   m_Name: bola_de_nieve_9
   m_TagString: Untagged
@@ -18774,6 +19887,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &3920030463803432206
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7630644588634835192}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.0009765625, y: 0, z: -0.0009765625}
 --- !u!1 &7664009968631374930
 GameObject:
   m_ObjectHideFlags: 0
@@ -18878,6 +20004,7 @@ GameObject:
   - component: {fileID: 389505911754089118}
   - component: {fileID: 7933207975786273771}
   - component: {fileID: 412390491232831564}
+  - component: {fileID: 8935149225772635705}
   m_Layer: 0
   m_Name: faro_7
   m_TagString: Untagged
@@ -18946,6 +20073,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &8935149225772635705
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7693276655622241626}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 278.2578, y: 1398.3823, z: 278.2588}
+  m_Center: {x: -0.000030517578, y: -0.0010375977, z: 0.001159668}
 --- !u!1 &7873708132642271873
 GameObject:
   m_ObjectHideFlags: 0
@@ -18957,6 +20097,7 @@ GameObject:
   - component: {fileID: 888486491156187980}
   - component: {fileID: 6352261975166307875}
   - component: {fileID: 9129042338732501074}
+  - component: {fileID: 6234084544556664740}
   m_Layer: 0
   m_Name: bola_de_nieve_16
   m_TagString: Untagged
@@ -19025,6 +20166,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &6234084544556664740
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7873708132642271873}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.0015258789, y: -0.000091552734, z: -0.0010375977}
 --- !u!1 &7939200502540304872
 GameObject:
   m_ObjectHideFlags: 0
@@ -19229,6 +20383,7 @@ GameObject:
   - component: {fileID: 2876656527572610510}
   - component: {fileID: 2806703764409462995}
   - component: {fileID: 8866807554881540236}
+  - component: {fileID: 9119239073242088834}
   m_Layer: 0
   m_Name: piedra_28
   m_TagString: Untagged
@@ -19297,6 +20452,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &9119239073242088834
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8008924645278412993}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300126, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &8072386382110738267
 GameObject:
   m_ObjectHideFlags: 0
@@ -19387,6 +20556,7 @@ GameObject:
   - component: {fileID: 305280745536490165}
   - component: {fileID: 3449173985627323899}
   - component: {fileID: 4976564634338707615}
+  - component: {fileID: 952387234015742883}
   m_Layer: 0
   m_Name: piedra_37
   m_TagString: Untagged
@@ -19406,7 +20576,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 442535306952270800}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3449173985627323899
 MeshFilter:
@@ -19455,6 +20625,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &952387234015742883
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8103295787044919072}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300116, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &8107016279213771885
 GameObject:
   m_ObjectHideFlags: 0
@@ -19559,6 +20743,7 @@ GameObject:
   - component: {fileID: 8281762261962129828}
   - component: {fileID: 1500236645891407248}
   - component: {fileID: 7124644378715197326}
+  - component: {fileID: 8210062303790565232}
   m_Layer: 0
   m_Name: cubo_de_nieve_11
   m_TagString: Untagged
@@ -19627,6 +20812,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8210062303790565232
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8191453947680851866}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300086, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &8225140344344151166
 GameObject:
   m_ObjectHideFlags: 0
@@ -19796,6 +20995,7 @@ GameObject:
   - component: {fileID: 7403306067054117048}
   - component: {fileID: 4040376299163829385}
   - component: {fileID: 6825659387641942755}
+  - component: {fileID: 1466312907350675631}
   m_Layer: 0
   m_Name: piedra_26
   m_TagString: Untagged
@@ -19864,6 +21064,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1466312907350675631
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8431271881779972655}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300184, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &8466100498981215052
 GameObject:
   m_ObjectHideFlags: 0
@@ -19987,6 +21201,7 @@ GameObject:
   - component: {fileID: 8121556235557850709}
   - component: {fileID: 9115331954635076303}
   - component: {fileID: 4693100814176549444}
+  - component: {fileID: 4001690494259119768}
   m_Layer: 0
   m_Name: bola_de_nieve_29
   m_TagString: Untagged
@@ -20055,6 +21270,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &4001690494259119768
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8500562653739914991}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.0015258789, y: -0.000091552734, z: -0.00088500977}
 --- !u!1 &8515955858675540948
 GameObject:
   m_ObjectHideFlags: 0
@@ -20145,6 +21373,7 @@ GameObject:
   - component: {fileID: 4056174923894114640}
   - component: {fileID: 3241045027859001831}
   - component: {fileID: 1826619294937676320}
+  - component: {fileID: 7116898322143447998}
   m_Layer: 0
   m_Name: bola_de_nieve_6
   m_TagString: Untagged
@@ -20213,6 +21442,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &7116898322143447998
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8625172782278968682}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.00030517578, y: -0.000061035156, z: -0.000030517578}
 --- !u!1 &8635504866982043623
 GameObject:
   m_ObjectHideFlags: 0
@@ -20431,6 +21673,7 @@ GameObject:
   - component: {fileID: 8298573687262667419}
   - component: {fileID: 4782274726582004516}
   - component: {fileID: 1734779701848354897}
+  - component: {fileID: 1436307804915197691}
   m_Layer: 0
   m_Name: piedra_2
   m_TagString: Untagged
@@ -20499,6 +21742,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1436307804915197691
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8729965276180108764}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300136, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &8759870752977816992
 GameObject:
   m_ObjectHideFlags: 0
@@ -20589,6 +21846,7 @@ GameObject:
   - component: {fileID: 6330556772178353193}
   - component: {fileID: 7307445001945103166}
   - component: {fileID: 5062829257041319831}
+  - component: {fileID: 4339570510680016235}
   m_Layer: 0
   m_Name: piedra_24
   m_TagString: Untagged
@@ -20657,6 +21915,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4339570510680016235
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8794820836375712137}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300180, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &8814682694315689410
 GameObject:
   m_ObjectHideFlags: 0
@@ -20668,6 +21940,7 @@ GameObject:
   - component: {fileID: 7507038244030411592}
   - component: {fileID: 1181021207892706579}
   - component: {fileID: 1931337041346982636}
+  - component: {fileID: 5738911719334944730}
   m_Layer: 0
   m_Name: bola_de_nieve_11
   m_TagString: Untagged
@@ -20736,6 +22009,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &5738911719334944730
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8814682694315689410}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.00019836426, y: -0.000091552734, z: -0.0010223389}
 --- !u!1 &8925188820811012169
 GameObject:
   m_ObjectHideFlags: 0
@@ -20984,6 +22270,7 @@ GameObject:
   - component: {fileID: 2466527601339356784}
   - component: {fileID: 7375996884456532466}
   - component: {fileID: 5065193762666828940}
+  - component: {fileID: 5808524994603027848}
   m_Layer: 0
   m_Name: bola_de_nieve_12
   m_TagString: Untagged
@@ -21052,6 +22339,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &5808524994603027848
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9026110381552099447}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.0009765625, y: -0.000091552734, z: -0.00010681152}
 --- !u!1 &9074488935211917200
 GameObject:
   m_ObjectHideFlags: 0
@@ -21221,6 +22521,7 @@ GameObject:
   - component: {fileID: 5081228940321213804}
   - component: {fileID: 9210013565281853410}
   - component: {fileID: 1221220472173766227}
+  - component: {fileID: 6834687173006678144}
   m_Layer: 0
   m_Name: piedra_23
   m_TagString: Untagged
@@ -21289,6 +22590,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6834687173006678144
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9099350065617739191}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300132, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1 &9109543088080444394
 GameObject:
   m_ObjectHideFlags: 0
@@ -21300,6 +22615,7 @@ GameObject:
   - component: {fileID: 613971535449167347}
   - component: {fileID: 7684925689903622279}
   - component: {fileID: 7873331428014041326}
+  - component: {fileID: 5091986859377639377}
   m_Layer: 0
   m_Name: bola_de_nieve_13
   m_TagString: Untagged
@@ -21368,6 +22684,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &5091986859377639377
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9109543088080444394}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 136.99805
+  m_Center: {x: -0.0009765625, y: -0.000091552734, z: -0.00090026855}
 --- !u!1 &9118274228300180454
 GameObject:
   m_ObjectHideFlags: 0
@@ -21423,6 +22752,7 @@ GameObject:
   - component: {fileID: 6755953992934172459}
   - component: {fileID: 3212258736493552624}
   - component: {fileID: 7027584500198809018}
+  - component: {fileID: 2917404341716242223}
   m_Layer: 0
   m_Name: piedra_9
   m_TagString: Untagged
@@ -21491,6 +22821,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2917404341716242223
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9209593736498859561}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300162, guid: 9ed514675971d8f428ab0521f41e73f4, type: 3}
 --- !u!1001 &504799770905865794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21941,6 +23285,96 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1451996290226563986}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1917493582044682279
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 442535306952270800}
+    m_Modifications:
+    - target: {fileID: 4239708043648937059, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_Name
+      value: piedra_32 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16800
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3062.0942
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8936.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9853087
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.17078304
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -160.33301
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7562977
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7562977
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7562977
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 51466fdee4f2a3c4c9f5a43ee3467e71, type: 3}
+--- !u!4 &2749224935240987678 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+    type: 3}
+  m_PrefabInstance: {fileID: 1917493582044682279}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2416045691013607581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22315,6 +23749,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1736355409053855905, guid: dca8b64aa6acd734e9ce8813e9398d96,
     type: 3}
   m_PrefabInstance: {fileID: 3724456389811296052}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3775139040586026831
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 442535306952270800}
+    m_Modifications:
+    - target: {fileID: 4239708043648937059, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_Name
+      value: piedra_32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14767.988
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3062.094
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8888.354
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 51466fdee4f2a3c4c9f5a43ee3467e71, type: 3}
+--- !u!4 &637408019237626742 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4376227543866551353, guid: 51466fdee4f2a3c4c9f5a43ee3467e71,
+    type: 3}
+  m_PrefabInstance: {fileID: 3775139040586026831}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5180665277730732054
 PrefabInstance:
@@ -22985,15 +24494,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca8b64aa6acd734e9ce8813e9398d96, type: 3}
---- !u!1 &270677641769866174 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7637482495075248694, guid: dca8b64aa6acd734e9ce8813e9398d96,
-    type: 3}
-  m_PrefabInstance: {fileID: 7655110275630905736}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8224888172632836393 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1736355409053855905, guid: dca8b64aa6acd734e9ce8813e9398d96,
+    type: 3}
+  m_PrefabInstance: {fileID: 7655110275630905736}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &270677641769866174 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7637482495075248694, guid: dca8b64aa6acd734e9ce8813e9398d96,
     type: 3}
   m_PrefabInstance: {fileID: 7655110275630905736}
   m_PrefabAsset: {fileID: 0}
