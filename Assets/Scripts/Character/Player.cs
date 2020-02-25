@@ -141,8 +141,8 @@ public class Player : MonobehaviourSingleton<Player>
                 SwordAttack();
             }
             Move();
-            //RotateToMouse();
-            RotateWithJoystick();
+            RotateToMouse();
+            //RotateWithJoystick();
 
             AkSoundEngine.SetRTPCValue("vida_hamburguesa", life);
             AkSoundEngine.SetRTPCValue("mana_hamburguesa", soulsCollected);
