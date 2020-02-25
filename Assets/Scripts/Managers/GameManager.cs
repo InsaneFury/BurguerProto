@@ -79,7 +79,10 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         player.canPlay = true;
         //Audio
         AkSoundEngine.PostEvent("Inicio_gameplay", gameObject);
-        JukeBoxAudio.Get().PlayJukeBoxAudio();
+        if (JukeBoxAudio.Get())
+        {
+            JukeBoxAudio.Get().PlayJukeBoxAudio();
+        }
         UIManager.Get().ActiveInGameUI();
     }
 
