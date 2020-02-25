@@ -13262,6 +13262,80 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &498078179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 498078181}
+  - component: {fileID: 498078180}
+  m_Layer: 0
+  m_Name: WaterReflectionMain Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!20 &498078180
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498078179}
+  m_Enabled: 0
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
+  m_projectionMatrixMode: 0
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967279
+  m_RenderingPath: 1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &498078181
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498078179}
+  m_LocalRotation: {x: 0.5359618, y: 0.066143624, z: 0.042054605, w: -0.8405959}
+  m_LocalPosition: {x: 12.000802, y: -168.45241, z: -80.413864}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &508316563
 GameObject:
   m_ObjectHideFlags: 0
@@ -40473,8 +40547,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482614792}
-  m_LocalRotation: {x: 0.061498825, y: -0.19045106, z: 0.01195263, w: 0.97969556}
-  m_LocalPosition: {x: 71.01, y: -1.5042, z: 37.81077}
+  m_LocalRotation: {x: -0.17190737, y: 0.50179136, z: 0.102676146, w: 0.84149325}
+  m_LocalPosition: {x: 36.669407, y: -32.515816, z: -49.93515}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -86310,6 +86384,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 416789902, guid: a13d0e8fbabd7644fb63bb8659a2f430, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 416789904, guid: a13d0e8fbabd7644fb63bb8659a2f430, type: 3}
       propertyPath: m_Size.x
       value: 591.0795
@@ -86321,6 +86399,10 @@ PrefabInstance:
     - target: {fileID: 540591066, guid: a13d0e8fbabd7644fb63bb8659a2f430, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 540591066, guid: a13d0e8fbabd7644fb63bb8659a2f430, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 540591068, guid: a13d0e8fbabd7644fb63bb8659a2f430, type: 3}
       propertyPath: m_Size.x
@@ -86338,6 +86420,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 657503904, guid: a13d0e8fbabd7644fb63bb8659a2f430, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 657503906, guid: a13d0e8fbabd7644fb63bb8659a2f430, type: 3}
       propertyPath: m_Size.x
       value: 661.11774
@@ -86349,6 +86435,10 @@ PrefabInstance:
     - target: {fileID: 2005952459, guid: a13d0e8fbabd7644fb63bb8659a2f430, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005952459, guid: a13d0e8fbabd7644fb63bb8659a2f430, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2005952461, guid: a13d0e8fbabd7644fb63bb8659a2f430, type: 3}
       propertyPath: m_Size.x
