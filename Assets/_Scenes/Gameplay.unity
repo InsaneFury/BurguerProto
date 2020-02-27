@@ -11542,7 +11542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPersistant: 0
   gameMode: 0
-  gameDifficulty: 1
+  gameDifficulty: 0
   difficulties:
   - {fileID: 11400000, guid: e3161c9612018ae418a5963fe2e49f5a, type: 2}
   - {fileID: 11400000, guid: 5ffa3f9a04c2df548893da5f5c841ec2, type: 2}
@@ -11581,10 +11581,10 @@ MonoBehaviour:
   timeBetweenWaves: 10
   maxSurvivalWave: 4
   spawnPoints:
-  - {fileID: 1906870266}
-  - {fileID: 755059793}
-  - {fileID: 1613609108}
-  - {fileID: 747532856}
+  - {fileID: 1152472618}
+  - {fileID: 379159445}
+  - {fileID: 1171574560}
+  - {fileID: 1635827839}
   spawnedEnemies: []
   survivalEnemiesLimit: 30
   minEnemySize: 0.8
