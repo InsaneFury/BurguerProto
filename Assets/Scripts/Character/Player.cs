@@ -124,6 +124,9 @@ public class Player : MonobehaviourSingleton<Player>
 
     void Update()
     {
+        //Gamepad detection
+        Gamepad gp = Gamepad.current;
+
         if (isAlive && canPlay)
         {
             //CHEAT ZARLANGA with new input system
@@ -141,8 +144,16 @@ public class Player : MonobehaviourSingleton<Player>
                 SwordAttack();
             }
             Move();
-            RotateToMouse();
-            //RotateWithJoystick();
+
+            if (gp != null)
+            {
+                RotateWithJoystick();
+            }
+            else
+            {
+                RotateToMouse();
+            }
+            
 
             AkSoundEngine.SetRTPCValue("vida_hamburguesa", life);
             AkSoundEngine.SetRTPCValue("mana_hamburguesa", soulsCollected);

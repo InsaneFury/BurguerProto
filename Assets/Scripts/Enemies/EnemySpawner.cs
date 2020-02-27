@@ -87,8 +87,6 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
     {
         if (gManager.gameStarted)
         {
-           
-
             switch (gameMode)
             {
                 case GameMode.EnemiesDie:

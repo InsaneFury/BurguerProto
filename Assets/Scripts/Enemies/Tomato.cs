@@ -93,7 +93,7 @@ public class Tomato : Enemy
         //Audio
         AkSoundEngine.PostEvent("Muerte_enemigos", gameObject);
         Drop();
-        EnemySpawner.Get().spawnedEnemies.Remove(gameObject.transform.parent.gameObject);
+        EnemySpawner.Get().spawnedEnemies.Remove(gameObject);
         Destroy(gameObject,timeToDie);
     }
 
