@@ -25,9 +25,9 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
 
     public enum GameDifficulty
     {
-        PimientoDelPadron,
-        RedHabanero,
-        GhostPepper
+        Classic,
+        Nightmare,
+        Madness
     };
 
     public GameDifficulty gameDifficulty;
