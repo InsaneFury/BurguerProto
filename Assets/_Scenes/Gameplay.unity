@@ -2581,6 +2581,61 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1730738398}
+        m_MethodName: SetRoomGameModeText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MADNESS
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 469578454}
+        m_MethodName: SetDifficulty
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1730738398}
+        m_MethodName: SetRoomGameModeImage
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1730738398}
+        m_MethodName: SetRoomGameModeImageColor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 963068808}
+        m_MethodName: PlayUIClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &129308097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2594,7 +2649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 0}
+  m_Color: {r: 1, g: 0.84705883, b: 0, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -18623,7 +18678,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a4c1d5ce66e54fa439a5024b108be5c2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6f1dc557dd5459643bff7bdbd57ba6ea, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -48453,9 +48508,11 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: 9e0d5c7f4b0cfa844947aac0abf405c3, type: 3}
   - {fileID: 21300000, guid: f52d346a6f3984e40933fcdf4cfc5b78, type: 3}
+  - {fileID: 21300000, guid: 84f4052dd0e4b0143931fd4a274dc49f, type: 3}
   spritesColor:
   - {fileID: 21300000, guid: 1eea3e8353e51174b8f99369cb83f575, type: 3}
   - {fileID: 21300000, guid: db1e27e35e42bce44a8624cf98de501f, type: 3}
+  - {fileID: 21300000, guid: 84f4052dd0e4b0143931fd4a274dc49f, type: 3}
   enemiesKilledText: {fileID: 433333080}
   maxWaves: {fileID: 984182662}
   maxScore: {fileID: 786763345}
@@ -48490,7 +48547,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730805272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2007824727}
@@ -48502,7 +48559,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 16, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1730805274
@@ -84014,7 +84071,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007824726}
   m_LocalRotation: {x: -0, y: 0.0000000228174, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1.0001233, y: 1.0001233, z: 1.0001233}
   m_Children: []
   m_Father: {fileID: 1730805273}
@@ -84022,7 +84079,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 233.8, y: -69.000015}
+  m_AnchoredPosition: {x: 228, y: -69.000015}
   m_SizeDelta: {x: 175.82, y: 260.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2007824728
