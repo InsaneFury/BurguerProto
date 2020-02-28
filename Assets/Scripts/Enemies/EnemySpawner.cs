@@ -26,8 +26,8 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
     public enum GameDifficulty
     {
         Classic,
-        Nightmare,
-        Madness
+        Madness,
+        Nightmare
     };
 
     public GameDifficulty gameDifficulty;
@@ -35,7 +35,8 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
     public LevelDifficulty[] difficulties;
 
     [Header("Waves Settings")]
-    public Wave[] waves;
+    public Wave[] lvl1Waves;
+    public Wave[] lvl2Waves;
     [Tooltip("If is active the next wave gonna spawn only " +
              "if all enemies of the current wave die " +
              "(this function ignore timeBetweenWaves)")]
@@ -49,7 +50,8 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
     private bool isSpawning = true;
 
     [Header("Spawn Settings")]
-    public List<Transform> spawnPoints;
+    public List<Transform> lvl1SpawnPoints;
+    public List<Transform> lvl2SpawnPoints;
     public List<GameObject> spawnedEnemies;
 
     [Header("Enemies Settings")]
@@ -106,7 +108,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
                     }
                     break;
                 case GameMode.Timer:
-                    if (currentWave < waves.Length)
+                    if (currentWave < lvl1Waves.Length)
                     {
                         TimerGameMode();
                     }
@@ -130,14 +132,14 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
     }
 
     #region Spawner
-    void SpawnRandomEnemy(Wave wave)
+    void SpawnRandomEnemy(Wave wave,List<Transform> SpawnPoints)
     {
         int randEnemy = (int)Random.Range(0f, wave.enemies.Count);
-        int randSpawnPoint = (int)Random.Range(0f, spawnPoints.Count);
+        int randSpawnPoint = (int)Random.Range(0f, SpawnPoints.Count);
         float randSize = Random.Range(minEnemySize, maxEnemySize);
 
         GameObject go = Instantiate(wave.enemies[randEnemy],
-            spawnPoints[randSpawnPoint].transform.position,
+            SpawnPoints[randSpawnPoint].transform.position,
             wave.enemies[randEnemy].transform.rotation);
         go.transform.localScale = new Vector3(randSize, randSize, randSize);
         go.name = go.name.Replace("(Clone)", "");
@@ -146,12 +148,12 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
         spawnedEnemies.Add(go);
     }
 
-    IEnumerator SpawnWave(Wave wave)
+    IEnumerator SpawnWave(Wave wave, List<Transform> SpawnPoints)
     {
         for (int i = 0; i < wave.enemyAmount; i++)
         {
             if (gManager.gameStarted)
-                SpawnRandomEnemy(wave);
+                SpawnRandomEnemy(wave,SpawnPoints);
             else
                 break;
             yield return new WaitForSecondsRealtime(wave.timeBetweenEnemies);
@@ -189,7 +191,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
             AkSoundEngine.PostEvent("Comienzo_oleada", gameObject);
             isSpawning = false;
             uiManager.SetWaveNumber(currentWave + 1);
-            StartCoroutine(SpawnWave(waves[currentWave]));
+            StartCoroutine(SpawnWave(lvl1Waves[currentWave],lvl2SpawnPoints));
             currentWave++;
         }
     }
@@ -205,7 +207,11 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
             userSurvivalRecord++;
             uiManager.SetWaveNumber(userSurvivalRecord);
             ScoreManager.Get().SetMaxWave(userSurvivalRecord);
-            StartCoroutine(SpawnWave(waves[currentWave]));
+
+            if(gameDifficulty == GameDifficulty.Madness)
+                StartCoroutine(SpawnWave(lvl2Waves[currentWave],lvl2SpawnPoints));
+            else
+                StartCoroutine(SpawnWave(lvl1Waves[currentWave],lvl1SpawnPoints));
 
             if (currentWave < maxSurvivalWave)
                 currentWave++;
@@ -224,7 +230,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
             uiManager.SetWaveNumber(userSurvivalRecord);
             ScoreManager.Get().SetMaxWave(userSurvivalRecord);
 
-            StartCoroutine(SpawnWave(waves[currentWave]));
+            StartCoroutine(SpawnWave(lvl1Waves[currentWave],lvl1SpawnPoints));
 
             if (currentWave < maxSurvivalWave)
                 currentWave++;
@@ -252,9 +258,9 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
         {
             Transform child = go.transform.GetChild(0);
 
-            child.GetComponent<NavMeshAgent>().speed = difficulties[(int)gameDifficulty].tomatoSpeed;
-            child.GetComponent<Enemy>().damage = difficulties[(int)gameDifficulty].tomatoDmg;
-            child.GetComponent<Enemy>().life = difficulties[(int)gameDifficulty].tomatoLife;
+            go.GetComponent<NavMeshAgent>().speed = difficulties[(int)gameDifficulty].tomatoSpeed;
+            go.GetComponent<Enemy>().damage = difficulties[(int)gameDifficulty].tomatoDmg;
+            go.GetComponent<Enemy>().life = difficulties[(int)gameDifficulty].tomatoLife;
         }
     }
 
