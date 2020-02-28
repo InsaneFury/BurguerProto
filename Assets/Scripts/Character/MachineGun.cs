@@ -82,11 +82,20 @@ public class MachineGun : MonobehaviourSingleton<MachineGun>
     {
         if ((player.isAlive && gManager.gameStarted) && !gManager.pause)
         {
-            if (mouse.leftButton.isPressed || gd.rightTrigger.isPressed)
+            bool triggerPressed = false;
+            bool triggerRelease = false;
+            Gamepad gp = Gamepad.current;
+            if (gp != null)
+            {
+                triggerPressed = gd.rightTrigger.isPressed;
+                triggerRelease = gd.rightTrigger.wasReleasedThisFrame;
+            }
+            
+            if (mouse.leftButton.isPressed || triggerPressed)
             {
                 HoldGun();
             }
-            if (mouse.leftButton.wasReleasedThisFrame || gd.rightTrigger.wasReleasedThisFrame)
+            if (mouse.leftButton.wasReleasedThisFrame || triggerRelease)
             {
                 ReleaseGun();
             }
