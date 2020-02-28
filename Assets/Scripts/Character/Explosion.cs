@@ -34,7 +34,14 @@ public class Explosion : Weapon
 
             if (hrb != null)
             {
-                hrb.AddExplosionForce(explosionForce, explosionPos, explosionRadius);
+                if(hit.gameObject.name == "BossTomato" || hit.gameObject.name == "BossSalchicha")
+                {
+                    Debug.Log("Los Bosses no son afectados por las fuerzas de las granadas");
+                }
+                else
+                {
+                    hrb.AddExplosionForce(explosionForce, explosionPos, explosionRadius);
+                }
             }    
         }
         CameraShakeController.Get().ActiveScreenShake();

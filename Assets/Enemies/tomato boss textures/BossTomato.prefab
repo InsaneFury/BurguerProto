@@ -954,7 +954,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 2725540404366381088}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.2
+  m_Radius: 0.05
   m_Speed: 10
   m_Acceleration: 100
   avoidancePriority: 50
@@ -963,7 +963,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 0.5
+  m_Height: 0.4
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -979,10 +979,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56388d7a23509a84dbd61b7b9bdcccfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
+  damage: 25
   enemyAgent: {fileID: 0}
-  attackDistance: 8
+  attackDistance: 15
   life: 10000
+  maxLife: 10000
   healthBar: {fileID: 6714758669183863390}
   mat: {fileID: 7373794450546773388}
   popUp: {fileID: 4771802812483107025, guid: 87863029054c3f5488297a4b3215a044, type: 3}
@@ -995,7 +996,7 @@ MonoBehaviour:
   bulletDropRate: 100
   granadeDropRate: 10
   spawnPos: {fileID: 3528363971557646551}
-  flashTime: 0.1
+  flashTime: 0.2
 --- !u!114 &1214505955058015488
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     public NavMeshAgent enemyAgent;
     public float attackDistance = 2;
     public float life = 100f;
+    public float maxLife = 100f;
     public Image healthBar;
     public GameObject mat;
     public GameObject popUp;
@@ -37,7 +38,13 @@ public class Enemy : MonoBehaviour
         enemyCollider = GetComponent<SphereCollider>();
         enemyAgent = GetComponent<NavMeshAgent>();
 
-        healthBar.fillAmount = life / 100f;
+        life = maxLife;
+        healthBar.fillAmount = life / maxLife;
+    }
+
+    private void Update()
+    {
+        RefreshHealthbar();
     }
 
     protected virtual void TakeDamage(int dmg)
@@ -71,7 +78,7 @@ public class Enemy : MonoBehaviour
     {
         if (healthBar.fillAmount != life)
         {
-            healthBar.fillAmount = life / 100f;
+            healthBar.fillAmount = life / maxLife;
         }
     }
 
