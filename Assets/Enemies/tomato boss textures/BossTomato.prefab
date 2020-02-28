@@ -994,7 +994,7 @@ MonoBehaviour:
   - {fileID: 2194200365539401291, guid: d4b5fe5358fcfef4c9454a7a02e9fe3a, type: 3}
   - {fileID: 867848681458287531, guid: 4d47c94ccfd115442a83a6b85ab3e6a2, type: 3}
   bulletDropRate: 100
-  granadeDropRate: 10
+  granadeDropRate: 100
   spawnPos: {fileID: 3528363971557646551}
   flashTime: 0.2
 --- !u!114 &1214505955058015488
