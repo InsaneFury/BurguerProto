@@ -77,9 +77,9 @@ public class Enemy : MonoBehaviour
 
     private IEnumerator DamageFeedback()
     {
-        //mat.gameObject.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
+        mat.gameObject.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
         yield return new WaitForSeconds(flashTime);
-       // mat.gameObject.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
+        mat.gameObject.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
     }
 
     private void ShowPopUp(int dmg)

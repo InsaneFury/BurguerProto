@@ -44,7 +44,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
     public bool survivalMode;
 
     public float timeBetweenWaves = 30f;
-    public int maxSurvivalWave = 5;
+    public int maxSurvivalWave = 10;
 
     private int currentWave = 0;
     private bool isSpawning = true;
@@ -53,6 +53,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
     public List<Transform> lvl1SpawnPoints;
     public List<Transform> lvl2SpawnPoints;
     public List<GameObject> spawnedEnemies;
+    public Transform BossSpawnPoint;
 
     [Header("Enemies Settings")]
     public int survivalEnemiesLimit = 30;
@@ -138,14 +139,27 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
         int randSpawnPoint = (int)Random.Range(0f, SpawnPoints.Count);
         float randSize = Random.Range(minEnemySize, maxEnemySize);
 
-        GameObject go = Instantiate(wave.enemies[randEnemy],
+        if(wave.enemies[randEnemy].gameObject.name == "BossTomato" ||
+            wave.enemies[randEnemy].gameObject.name == "BossSalchicha")
+        {
+            GameObject go1 = Instantiate(wave.enemies[randEnemy],
+            BossSpawnPoint.position,wave.enemies[randEnemy].transform.rotation);
+
+            go1.name = go1.name.Replace("(Clone)", "");
+            spawnedEnemies.Add(go1);
+        }
+        else
+        {
+            GameObject go = Instantiate(wave.enemies[randEnemy],
             SpawnPoints[randSpawnPoint].transform.position,
             wave.enemies[randEnemy].transform.rotation);
-        go.transform.localScale = new Vector3(randSize, randSize, randSize);
-        go.name = go.name.Replace("(Clone)", "");
+            go.transform.localScale = new Vector3(randSize, randSize, randSize);
 
-        SetEnemyDifficulty(go);
-        spawnedEnemies.Add(go);
+            go.name = go.name.Replace("(Clone)", "");
+
+            SetEnemyDifficulty(go);
+            spawnedEnemies.Add(go);
+        }
     }
 
     IEnumerator SpawnWave(Wave wave, List<Transform> SpawnPoints)
