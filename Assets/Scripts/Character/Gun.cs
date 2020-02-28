@@ -45,9 +45,17 @@ public class Gun : MonobehaviourSingleton<Gun>
 
     public void Shoot()
     {
+
+        Gamepad gp = Gamepad.current;
+        bool joystickActive = false;
+        if((gp != null) && gd.rightTrigger.wasPressedThisFrame)
+        {
+            joystickActive = true;
+        }
+
         if ((player.isAlive && gManager.gameStarted) && !gManager.pause)
         {
-            if (mouse.leftButton.wasPressedThisFrame || gd.rightTrigger.wasPressedThisFrame && (granades > 0))
+            if (mouse.leftButton.wasPressedThisFrame || joystickActive && (granades > 0))
             {
                 granades--;
                 player.animTop.SetTrigger("attack");

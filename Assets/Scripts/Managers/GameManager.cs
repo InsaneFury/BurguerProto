@@ -90,7 +90,10 @@ public class GameManager : MonobehaviourSingleton<GameManager>
     {
         //Audio
         AkSoundEngine.PostEvent("Perder", gameObject);
-        JukeBoxAudio.Get().StopJukeBoxAudio();
+        if (JukeBoxAudio.Get())
+        {
+            JukeBoxAudio.Get().StopJukeBoxAudio();
+        }
         gameStarted = false;
         player.canPlay = false;
         gameOverText.SetActive(true);

@@ -4313,6 +4313,7 @@ MonoBehaviour:
   sword: {fileID: 2116247485}
   meleeMaxCooldown: 0.6
   currentActiveWeapon: 0
+  machineGunBullets: 0
   healthVFX: {fileID: 1370221949}
   muzzleFlash: {fileID: 1760196260}
   getDmgVFX: {fileID: 132045618}
@@ -14784,7 +14785,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2129765123}
   m_PrefabAsset: {fileID: 0}
---- !u!208 &541480648
+--- !u!208 &541480650
 NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24879,8 +24880,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 867289831}
-  m_LocalRotation: {x: 0.55992573, y: -0.000062395, z: 0.0004122023, w: -0.8285427}
-  m_LocalPosition: {x: 12.386179, y: -124.00274, z: -77.887505}
+  m_LocalRotation: {x: 0.061498825, y: -0.19045106, z: 0.01195263, w: 0.97969556}
+  m_LocalPosition: {x: 71.01, y: -1.5042, z: 37.81077}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -49034,7 +49035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1694888255
 Transform:
   m_ObjectHideFlags: 0
@@ -49043,7 +49044,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1694888254}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 215, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1983188469}
@@ -80471,7 +80472,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2129765123}
   m_PrefabAsset: {fileID: 0}
---- !u!208 &1791327492
+--- !u!208 &1791327493
 NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

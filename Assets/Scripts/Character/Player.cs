@@ -59,6 +59,7 @@ public class Player : MonobehaviourSingleton<Player>
     float comboMeleeTimer = 0f;
     bool swordIsActive = false;
     public int currentActiveWeapon;
+    public int machineGunBullets;
 
     [Header("Particles VFX")]
     public ParticleSystem healthVFX;
@@ -120,6 +121,7 @@ public class Player : MonobehaviourSingleton<Player>
         //Audio
         AkSoundEngine.SetState("Vivo_o_muerto", "Vivo");
         currentActiveWeapon = 1;
+        machineGunBullets = 100;
     }
 
     void Update()
@@ -548,7 +550,7 @@ public class Player : MonobehaviourSingleton<Player>
         getDmgVFX.SetActive(false);
         soulsCollected = 100;
         Gun.Get().granades = 2;
-        MachineGun.Get().bullets = 100;
+        //MachineGun.Get().bullets = 100;
 
         //Back to default weapon
         machineGunIsActive = false;

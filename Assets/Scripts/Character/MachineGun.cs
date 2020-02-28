@@ -43,7 +43,7 @@ public class MachineGun : MonobehaviourSingleton<MachineGun>
 
     void Start()
     {
-        
+        //bullets = player.machineGunBullets;
         gManager = GameManager.Get();
         foreach (Pool pool in pools)
         {
