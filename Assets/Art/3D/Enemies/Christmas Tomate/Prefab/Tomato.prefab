@@ -1651,7 +1651,7 @@ GameObject:
   - component: {fileID: 1641348845296233420}
   - component: {fileID: 7924232938805092606}
   m_Layer: 9
-  m_Name: Tomato 1
+  m_Name: Tomato
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1762,8 +1762,9 @@ MonoBehaviour:
   enemyAgent: {fileID: 0}
   attackDistance: 6
   life: 100
+  maxLife: 100
   healthBar: {fileID: 5164970923299813452}
-  mat: {fileID: 0}
+  mat: {fileID: 1978970952719888498}
   popUp: {fileID: 4771802812483107025, guid: 87863029054c3f5488297a4b3215a044, type: 3}
   timeToDie: 2
   enemyCollider: {fileID: 6569981041367088680}
