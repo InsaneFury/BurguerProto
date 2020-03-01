@@ -6,8 +6,6 @@
   <CreateWwiseListener>true</CreateWwiseListener>
   <GenerateSoundBanksAsPreBuildStep>false</GenerateSoundBanksAsPreBuildStep>
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
-  <SoundbankPath>Audio/GeneratedSoundBanks</SoundbankPath>
-  <WwiseInstallationPathMac />
-  <WwiseInstallationPathWindows>D:\Wwise</WwiseInstallationPathWindows>
-  <WwiseProjectPath>../../Fast Food Nightmares/FastFoodNightmares_WwiseProject/FastFoodNightmares_WwiseProject.wproj</WwiseProjectPath>
+  <SoundbankPath>Audio\GeneratedSoundBanks</SoundbankPath>
+  <WwiseProjectPath>../FastFoodNightmares_WwiseProject/Fast Food Nightmare Event List.wproj</WwiseProjectPath>
 </WwiseSettings>

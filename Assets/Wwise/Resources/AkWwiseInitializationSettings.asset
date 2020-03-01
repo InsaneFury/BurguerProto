@@ -13,10 +13,8 @@ MonoBehaviour:
   m_Name: AkWwiseInitializationSettings
   m_EditorClassIdentifier: 
   PlatformSettingsNameList:
-  - Mac
   - Windows
   PlatformSettingsList:
-  - {fileID: 11400000, guid: 810f95635bd9dcb4b808532950fad8d3, type: 2}
   - {fileID: 11400000, guid: 261583e7f8bb01c41bb479da4b4041bc, type: 2}
   InvalidReferencePlatforms: []
   UserSettings:
@@ -65,6 +63,7 @@ MonoBehaviour:
       m_DiffractionShadowAttenuationFactor: 2
       m_DiffractionShadowDegrees: 30
     m_RenderDuringFocusLoss: 0
+    m_UseAsyncOpen: 0
   CommsSettings:
     m_PoolSize: 262144
     m_DiscoveryBroadcastPort: 24024

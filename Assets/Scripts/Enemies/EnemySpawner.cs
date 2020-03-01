@@ -244,7 +244,10 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
             uiManager.SetWaveNumber(userSurvivalRecord);
             ScoreManager.Get().SetMaxWave(userSurvivalRecord);
 
-            StartCoroutine(SpawnWave(lvl1Waves[currentWave],lvl1SpawnPoints));
+            if (gameDifficulty == GameDifficulty.Madness)
+                StartCoroutine(SpawnWave(lvl2Waves[currentWave], lvl2SpawnPoints));
+            else
+                StartCoroutine(SpawnWave(lvl1Waves[currentWave], lvl1SpawnPoints));
 
             if (currentWave < maxSurvivalWave)
                 currentWave++;
