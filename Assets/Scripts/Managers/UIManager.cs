@@ -136,11 +136,6 @@ public class UIManager : MonobehaviourSingleton<UIManager>
             currentAmmo.text = Gun.Get().granades.ToString();
             currentAmmoGo.SetActive(true);
         }
-        if (player.currentActiveWeapon >= 2)
-        {
-            infinitSymbol.SetActive(true);
-            currentAmmoGo.SetActive(false);
-        }
     }
     #endregion
 

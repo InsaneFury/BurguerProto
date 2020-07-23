@@ -55,10 +55,6 @@ public class Player : MonobehaviourSingleton<Player>
     [HideInInspector]
     public Animator animMachineGun;
     public Gun granade;
-    public GameObject sword;
-    public float meleeMaxCooldown = 5f;
-    float comboMeleeTimer = 0f;
-    bool swordIsActive = false;
     public int currentActiveWeapon;
     public int machineGunBullets;
 
@@ -118,7 +114,6 @@ public class Player : MonobehaviourSingleton<Player>
         rb = GetComponent<Rigidbody>();
         originalLife = life;
         animMachineGun = machineGun.GetComponent<Animator>();
-        comboMeleeTimer = meleeMaxCooldown;
         //Audio
         AkSoundEngine.SetState("Vivo_o_muerto", "Vivo");
         currentActiveWeapon = 1;
@@ -136,15 +131,6 @@ public class Player : MonobehaviourSingleton<Player>
             if (kb.zKey.wasPressedThisFrame)
             {
                 BecomeInmortal();
-            }
-
-            if (isMeleeing)
-            {
-                comboMeleeTimer -= Time.deltaTime;
-            }
-            if (swordIsActive)
-            {
-                SwordAttack();
             }
             Move();
 
@@ -401,49 +387,7 @@ public class Player : MonobehaviourSingleton<Player>
         }
     }
 
-    void SwordAttack()
-    {
-        if (swordIsActive)
-        {
-            if (comboMeleeTimer <= 0)
-            {
-                comboCounter = 0;
-                isMeleeing = false;
-
-                sword.GetComponent<BoxCollider>().enabled = false;
-                animBottom.SetBool("exitCombo", true);
-                animTop.SetBool("exitCombo", true);
-
-                animTop.ResetTrigger("swordOne");
-                animTop.SetBool("swordTwo", false);
-                animTop.SetBool("swordThree", false);
-                comboMeleeTimer = meleeMaxCooldown;
-            }
-
-            StartCoroutine("ResetAnimationsTriggers");
-            comboCounter++;
-
-            if (comboCounter == 1)
-            {
-                animTop.SetTrigger("swordOne");
-                comboMeleeTimer = meleeMaxCooldown;
-                isMeleeing = true;
-                sword.GetComponent<BoxCollider>().enabled = true;
-            }
-            if ((comboCounter == 2) && (comboMeleeTimer > 0))
-            {
-                animTop.SetBool("swordTwo", true);
-                comboMeleeTimer = meleeMaxCooldown;
-                sword.GetComponent<BoxCollider>().enabled = true;
-            }
-            if ((comboCounter == 3) && (comboMeleeTimer > 0))
-            {
-                animTop.SetBool("swordThree", true);
-                comboMeleeTimer = meleeMaxCooldown;
-                sword.GetComponent<BoxCollider>().enabled = true;
-            }
-        }
-    }
+    
 
     //Refactorizar WeaponChanger
     void WeaponChanger()
@@ -465,10 +409,6 @@ public class Player : MonobehaviourSingleton<Player>
                     machineGunIsActive = true;
                     machineGun.SetActive(machineGunIsActive);
                     granade.enabled = false;
-                    sword.SetActive(false);
-                    swordIsActive = false;
-                    animBottom.SetBool("exitCombo", true);
-                    animTop.SetBool("exitCombo", true);
                     animBottom.SetTrigger("resetMove");
                     animTop.SetTrigger("resetMove");
 
@@ -486,29 +426,6 @@ public class Player : MonobehaviourSingleton<Player>
                     machineGunIsActive = false;
                     machineGun.SetActive(machineGunIsActive);
                     granade.enabled = true;
-                    sword.SetActive(false);
-                    swordIsActive = false;
-                    animBottom.SetBool("exitCombo", true);
-                    animTop.SetBool("exitCombo", true);
-                    animBottom.SetTrigger("resetMove");
-                    animTop.SetTrigger("resetMove");
-
-                    if (OnChangeWeapon != null)
-                        OnChangeWeapon(this);
-                }
-                break;
-            case 2:
-                if (!swordIsActive)
-                {
-                    currentActiveWeapon = 2;
-                    //Audio
-                    AkSoundEngine.PostEvent("Espada_cambio", gameObject);
-
-                    machineGunIsActive = false;
-                    machineGun.SetActive(machineGunIsActive);
-                    granade.enabled = false;
-                    sword.SetActive(true);
-                    swordIsActive = true;
                     animBottom.SetTrigger("resetMove");
                     animTop.SetTrigger("resetMove");
 
@@ -519,25 +436,10 @@ public class Player : MonobehaviourSingleton<Player>
             default:
                 break;
         }
+        animTop.SetBool("machineGun", machineGunIsActive);
 
-
-        if (machineGunIsActive)
-        {
-            animTop.SetBool("machineGun", machineGunIsActive);
-        }
-        else
-        {
-            animTop.SetBool("machineGun", machineGunIsActive);
-        }
     }
 
-    IEnumerator ResetAnimationsTriggers()
-    {
-
-        yield return new WaitForSecondsRealtime(1);
-        animBottom.SetBool("exitCombo", false);
-        animTop.SetBool("exitCombo", false);
-    }
 
     public void ResetStats()
     {
@@ -557,8 +459,6 @@ public class Player : MonobehaviourSingleton<Player>
         machineGunIsActive = false;
         machineGun.SetActive(machineGunIsActive);
         granade.enabled = true;
-        sword.SetActive(false);
-        swordIsActive = false;
     }
 
     //INPUTS FUNCTIONS
