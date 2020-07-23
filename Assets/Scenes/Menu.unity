@@ -1111,6 +1111,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Margin: 20
   Layer: 0
+  Easing: 8
+  x: 0
+  y: 0
+  parallaxPosition: {x: 0, y: 0}
+  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &81716102
 GameObject:
   m_ObjectHideFlags: 0
@@ -2681,6 +2686,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Margin: 10
   Layer: 1
+  Easing: 8
+  x: 0
+  y: 0
+  parallaxPosition: {x: 0, y: 0}
+  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &163180377
 GameObject:
   m_ObjectHideFlags: 0
