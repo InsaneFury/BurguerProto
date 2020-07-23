@@ -40,7 +40,7 @@ public class GameManager : MonobehaviourSingleton<GameManager>
     {
         sManager = ScoreManager.Get();
         //Audio
-        AkSoundEngine.PostEvent("Menu", gameObject);
+        //AkSoundEngine.PostEvent("Menu", gameObject);
         UIManager.Get().version.text ="v"+ Application.version;
         
         profile.TryGetSettings(out cg);
@@ -78,7 +78,7 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         gameStarted = true;
         player.canPlay = true;
         //Audio
-        AkSoundEngine.PostEvent("Inicio_gameplay", gameObject);
+        //AkSoundEngine.PostEvent("Inicio_gameplay", gameObject);
         if (JukeBoxAudio.Get())
         {
             JukeBoxAudio.Get().PlayJukeBoxAudio();
@@ -98,6 +98,7 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         player.canPlay = false;
         gameOverText.SetActive(true);
         cg.saturation.value = new FloatParameter() { value = gameOverSaturation };
+        EnemySpawner.Get().ResetSpawner();
         UIManager.Get().SetGameOverResults(sManager.enemiesKilled, sManager.maxWave, sManager.score);
     }
 
