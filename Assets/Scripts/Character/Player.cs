@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
+using UnityEditor;
 
 public class Player : MonobehaviourSingleton<Player>
 {
@@ -324,9 +325,7 @@ public class Player : MonobehaviourSingleton<Player>
     void Dash()
     {
         if (soulsCollected < dashCost)
-        {
             return;
-        }
 
         soulsCollected -= dashCost;
 
@@ -371,16 +370,18 @@ public class Player : MonobehaviourSingleton<Player>
 
     void Heal()
     {
-        bool canHeal = (soulsCollected >= healCost) && (life < originalLife);
+        bool canHeal = (soulsCollected >= healCost);
 
         if (canHeal)
         {
             life += healAmount;
+            if (life > originalLife)
+                life = originalLife;
+
             soulsCollected -= healCost;
 
             //Audio
             AkSoundEngine.PostEvent("Curar_vida", gameObject);
-
             healthVFX.Play();
         }
     }

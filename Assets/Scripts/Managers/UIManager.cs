@@ -181,23 +181,11 @@ public class UIManager : MonobehaviourSingleton<UIManager>
 
     public void RefreshSkillsIcons()
     {
-        if (player.isDashing || (player.soulsCollected <= 0))
-        {
-            dashSkill.fillAmount = 0;
-        }
-        else
-        {
-            dashSkill.fillAmount = 1;
-        }
-        if (player.soulsCollected < player.healCost)
-        {
-            healthSkill.fillAmount = 0;
-        }
-        else
-        {
-            healthSkill.fillAmount = 1;
-        }
+        int dashFillAmount = player.isDashing || (player.soulsCollected < player.dashCost) ? 0 : 1;
+        dashSkill.fillAmount = dashFillAmount;
 
+        int healtFillAmount = (player.soulsCollected < player.healCost) ? 0 : 1;
+        healthSkill.fillAmount = healtFillAmount;
     }
 
     #endregion
