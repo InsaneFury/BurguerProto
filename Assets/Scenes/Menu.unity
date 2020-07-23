@@ -1032,6 +1032,7 @@ GameObject:
   - component: {fileID: 78455503}
   - component: {fileID: 78455505}
   - component: {fileID: 78455504}
+  - component: {fileID: 78455506}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -1057,7 +1058,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 2010.4238, y: 1130.8633}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &78455504
 MonoBehaviour:
@@ -1096,6 +1097,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78455502}
   m_CullTransparentMesh: 0
+--- !u!114 &78455506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78455502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4c2b769636afa469757019f1888d6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Margin: 20
+  Layer: 0
 --- !u!1 &81716102
 GameObject:
   m_ObjectHideFlags: 0
@@ -2588,6 +2603,7 @@ GameObject:
   - component: {fileID: 160367860}
   - component: {fileID: 160367862}
   - component: {fileID: 160367861}
+  - component: {fileID: 160367863}
   m_Layer: 5
   m_Name: ChromaticAberration
   m_TagString: Untagged
@@ -2612,7 +2628,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 2008.1694, y: 1129.5952}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &160367861
 MonoBehaviour:
@@ -2651,6 +2667,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160367859}
   m_CullTransparentMesh: 0
+--- !u!114 &160367863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160367859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4c2b769636afa469757019f1888d6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Margin: 10
+  Layer: 1
 --- !u!1 &163180377
 GameObject:
   m_ObjectHideFlags: 0
