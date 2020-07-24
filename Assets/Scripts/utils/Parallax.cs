@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Parallax : MonoBehaviour
+public partial class Parallax : MonoBehaviour
 {
+
     [Header("Settings")]
     public float Margin;
     public float Layer;
