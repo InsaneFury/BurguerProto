@@ -24,7 +24,6 @@ public class Aji : Enemy
     Player player;
 
     [Header("Aji")]
-    public GameObject explosion;
     public GameObject explotionParticle;
 
     void Start()
@@ -82,7 +81,6 @@ public class Aji : Enemy
     protected override void Attack()
     {
         Instantiate(explotionParticle, transform.position, Quaternion.identity);
-        explosion.SetActive(true);
     }
 
     protected override void TakeDamage(int dmg)
@@ -101,6 +99,7 @@ public class Aji : Enemy
         //Audio
         AkSoundEngine.PostEvent("Muerte_enemigos", gameObject);
         Drop();
+        Instantiate(explotionParticle, transform.position, Quaternion.identity);
         EnemySpawner.Get().spawnedEnemies.Remove(gameObject);
         Destroy(gameObject);
     }
