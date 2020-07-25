@@ -8,8 +8,13 @@ using UnityEngine.UI;
 
 public partial class LoadingScenesManager : MonobehaviourSingleton<LoadingScenesManager>
 {
+    [Header("Screen Settings")]
     public GameObject loadingScreen;
     public Image progressBar;
+    public TextMeshProUGUI loadingPercentage;
+
+    [Space]
+    [Header("Tips Settings")]
     public TextMeshProUGUI tipsText;
     public CanvasGroup alphaCanvas;
     public string[] tips;
@@ -18,13 +23,28 @@ public partial class LoadingScenesManager : MonobehaviourSingleton<LoadingScenes
 
     private List<AsyncOperation> scenesLoading = new List<AsyncOperation>();
     private float totalSceneProgress;
-    public override void Awake()
+    private int tipCount;
+    private SceneIndexes currentSceneLoaded;
+    public override void Awake() => base.Awake();
+
+    void Start() => StartGameIntro();
+    
+    void StartGameIntro()
     {
-        base.Awake();
+        currentSceneLoaded = SceneIndexes.INTRO;
+        SceneManager.LoadSceneAsync((int)SceneIndexes.INTRO, LoadSceneMode.Additive);
     }
-    void Start()
+
+    public void LoadScene(SceneIndexes sceneToLoad)
     {
-        SceneManager.LoadSceneAsync((int)SceneIndexes.MENU, LoadSceneMode.Additive);
+        loadingPercentage.text = "0%";
+        loadingScreen.gameObject.SetActive(true);
+        StartCoroutine(GenerateTips());
+
+        scenesLoading.Add(SceneManager.UnloadSceneAsync((int)currentSceneLoaded));
+        scenesLoading.Add(SceneManager.LoadSceneAsync((int)sceneToLoad, LoadSceneMode.Additive));
+        currentSceneLoaded = sceneToLoad;
+        StartCoroutine(GetSceneLoadProgress());
     }
 
     public void LoadGame()
@@ -52,6 +72,9 @@ public partial class LoadingScenesManager : MonobehaviourSingleton<LoadingScenes
                 }
 
                 totalSceneProgress = (totalSceneProgress / scenesLoading.Count);
+                //0.9f is a value default, cuz' unity asyncOperations load max to 0.9f and then use the 0.1f to active.
+                totalSceneProgress = Mathf.Clamp01(totalSceneProgress / 0.9f);
+                loadingPercentage.text = $"{Mathf.RoundToInt(totalSceneProgress * 100f)}%";
                 progressBar.fillAmount = totalSceneProgress;
                 yield return null;
             }
@@ -61,7 +84,6 @@ public partial class LoadingScenesManager : MonobehaviourSingleton<LoadingScenes
         loadingScreen.gameObject.SetActive(false);
     }
 
-    public int tipCount;
     public IEnumerator GenerateTips()
     {
         tipCount = Random.Range(0, tips.Length);

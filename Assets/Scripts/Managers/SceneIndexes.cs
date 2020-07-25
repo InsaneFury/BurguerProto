@@ -2,7 +2,9 @@
 using System.Collections;
 public enum SceneIndexes
 {
-    MENU = 1,
+    LOADING_SCREEN = 0,
+    INTRO,
+    MENU,
     LEVEL_1,
     LEVEL_2
 }

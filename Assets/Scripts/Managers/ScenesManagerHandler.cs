@@ -1,17 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class ScenesManagerHandler : MonoBehaviour
+﻿public class ScenesManagerHandler : MonobehaviourSingleton<ScenesManagerHandler>
 {
     LoadingScenesManager loadingManager;
 
-    private void Awake()
+    public override void Awake()
     {
+        base.Awake();
         loadingManager = FindObjectOfType<LoadingScenesManager>();
     }
-    public void LoadSceneHandler()
+    
+    public void LoadSceneHandler(int sceneToLoad)
     {
-        loadingManager.LoadGame();
+        loadingManager.LoadScene((SceneIndexes)sceneToLoad);
     }
 }
