@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 
@@ -23,11 +24,12 @@ public class GameManager : MonobehaviourSingleton<GameManager>
 
     [Header("GameOver")]
     public GameObject gameOverText;
-    public PostProcessProfile profile;
-    public FloatParameter gameOverSaturation;
-    ColorGrading cg;
+    public Volume postProcessingProfile;
+    public ClampedFloatParameter saturation;
 
-    ScoreManager sManager;
+    private ColorAdjustments colorAdjustments;
+    private float gameOverColorSaturation = -100f;
+    private ScoreManager sManager;
 
     public override void Awake()
     {
@@ -42,9 +44,9 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         //Audio
         //AkSoundEngine.PostEvent("Menu", gameObject);
         UIManager.Get().version.text ="v"+ Application.version;
-        
-        profile.TryGetSettings(out cg);
-        cg.saturation.value = new FloatParameter() { value = 0 };
+
+        postProcessingProfile.profile.TryGet(out colorAdjustments);
+        colorAdjustments.saturation.value = 0f;
     }
 
     void Update()
@@ -97,7 +99,7 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         gameStarted = false;
         player.canPlay = false;
         gameOverText.SetActive(true);
-        cg.saturation.value = new FloatParameter() { value = gameOverSaturation };
+        colorAdjustments.saturation.value = gameOverColorSaturation;
         EnemySpawner.Get().ResetSpawner();
         UIManager.Get().SetGameOverResults(sManager.enemiesKilled, sManager.maxWave, sManager.score);
     }
@@ -129,7 +131,7 @@ public class GameManager : MonobehaviourSingleton<GameManager>
     {
         EnemySpawner.Get().ResetSpawner();
         ResetPlayer();
-        cg.saturation.value = new FloatParameter() { value = 0 };
+        colorAdjustments.saturation.value = 0f;
         ActiveGame();
         gameOverText.SetActive(false);
         ScoreManager.Get().score = 0;
