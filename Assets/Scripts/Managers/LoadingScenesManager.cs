@@ -14,6 +14,12 @@ public partial class LoadingScenesManager : MonobehaviourSingleton<LoadingScenes
     public TextMeshProUGUI loadingPercentage;
 
     [Space]
+    [Header("Shader Settings")]
+    public Image loadingImage;
+    public float transitionSpeed = 2f;
+    private bool load = false;
+
+    [Space]
     [Header("Tips Settings")]
     public TextMeshProUGUI tipsText;
     public CanvasGroup alphaCanvas;
@@ -28,11 +34,19 @@ public partial class LoadingScenesManager : MonobehaviourSingleton<LoadingScenes
     public override void Awake() => base.Awake();
 
     void Start() => StartGameIntro();
-    
+
     void StartGameIntro()
     {
-        currentSceneLoaded = SceneIndexes.INTRO;
-        SceneManager.LoadSceneAsync((int)SceneIndexes.INTRO, LoadSceneMode.Additive);
+        //currentSceneLoaded = SceneIndexes.INTRO;
+        //SceneManager.LoadSceneAsync((int)SceneIndexes.INTRO, LoadSceneMode.Additive);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S))
+            load = !load;
+
+            ShaderLoadTransition();
     }
 
     public void LoadScene(SceneIndexes sceneToLoad)
@@ -40,21 +54,11 @@ public partial class LoadingScenesManager : MonobehaviourSingleton<LoadingScenes
         loadingPercentage.text = "0%";
         loadingScreen.gameObject.SetActive(true);
         StartCoroutine(GenerateTips());
+        load = true;
 
         scenesLoading.Add(SceneManager.UnloadSceneAsync((int)currentSceneLoaded));
         scenesLoading.Add(SceneManager.LoadSceneAsync((int)sceneToLoad, LoadSceneMode.Additive));
         currentSceneLoaded = sceneToLoad;
-        StartCoroutine(GetSceneLoadProgress());
-    }
-
-    public void LoadGame()
-    {
-        loadingScreen.gameObject.SetActive(true);
-        StartCoroutine(GenerateTips());
-
-        scenesLoading.Add(SceneManager.UnloadSceneAsync((int)SceneIndexes.MENU));
-        scenesLoading.Add(SceneManager.LoadSceneAsync((int)SceneIndexes.LEVEL_1, LoadSceneMode.Additive));
-
         StartCoroutine(GetSceneLoadProgress());
     }
 
@@ -81,6 +85,8 @@ public partial class LoadingScenesManager : MonobehaviourSingleton<LoadingScenes
         }
 
         yield return new WaitForSeconds(fakeWaitLoadingTime);
+        load = false;
+        if(loadingImage.material.GetFloat("_Cutoff") == 1f)
         loadingScreen.gameObject.SetActive(false);
     }
 
@@ -104,4 +110,21 @@ public partial class LoadingScenesManager : MonobehaviourSingleton<LoadingScenes
             LeanTween.alphaCanvas(alphaCanvas, 1.0f, 0.5f);
         }
     }
+
+    public void ShaderLoadTransition()
+    {
+        if (load)
+        {
+            loadingImage.material.SetFloat("_Cutoff",
+        Mathf.MoveTowards(loadingImage.material.GetFloat("_Cutoff"),
+        1f, transitionSpeed * Time.deltaTime));
+        }
+        else
+        {
+            loadingImage.material.SetFloat("_Cutoff",
+                    Mathf.MoveTowards(loadingImage.material.GetFloat("_Cutoff"),
+                    -1f, transitionSpeed * Time.deltaTime));
+        }
+    }
+
 }
