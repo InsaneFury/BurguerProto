@@ -15,7 +15,7 @@ public partial class Parallax : MonoBehaviour
     [SerializeField] float y;
     [SerializeField] Vector2 parallaxPosition;
     [SerializeField] Vector3 pos;
-    void Start() => pos = transform.position;
+    void Start() => pos = transform.localPosition;
     
     void Update()
     {
@@ -31,6 +31,6 @@ public partial class Parallax : MonoBehaviour
 
         Vector3 direction = new Vector3(x, y, 0f);
         Vector3 depth = new Vector3(0f, 0f, Layer);
-        transform.position = pos - direction / 500f * Margin + depth;
+        transform.localPosition = pos - direction / 500f * Margin + depth;
     }
 }
