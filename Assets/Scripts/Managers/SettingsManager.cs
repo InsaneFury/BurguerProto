@@ -24,11 +24,8 @@ public class SettingsManager : MonoBehaviour
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
     public void SetFullScreen(bool isFullscreen) => Screen.fullScreen = isFullscreen;
-    public void SetAntiAliasing(int antiAliasingLevel) { }
-    public void SetBloom(bool bloom) { }
-    public void SetFog(bool fog) { }
-    public void SetAmbientOcclusion(bool ao) { }
-
+    public void SetVSync(bool vSync) => QualitySettings.vSyncCount = vSync ? 1 : 0;
+    public void SetAntiAliasing(int antiAliasing) => QualitySettings.antiAliasing = antiAliasing;
     private void GetResolutions()
     {
         resolutions = Screen.resolutions;
