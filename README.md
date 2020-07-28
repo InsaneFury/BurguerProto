@@ -1,5 +1,5 @@
 <p align="center">
-<img src="logo.gif" alt="Fast Food Nightmares"/>
+<img src="logo.png" alt="Fast Food Nightmares"/>
 </p>
 
 # Fast Food Nightmares
