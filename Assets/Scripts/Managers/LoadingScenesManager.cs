@@ -12,12 +12,7 @@ public partial class LoadingScenesManager : MonobehaviourSingleton<LoadingScenes
     public GameObject loadingScreen;
     public Image progressBar;
     public TextMeshProUGUI loadingPercentage;
-
-    [Space]
-    [Header("Shader Settings")]
-    public Image loadingImage;
-    public float transitionSpeed = 2f;
-    private bool load = false;
+    public float loadingFakeTime = 5f;
 
     [Space]
     [Header("Tips Settings")]
@@ -25,8 +20,8 @@ public partial class LoadingScenesManager : MonobehaviourSingleton<LoadingScenes
     public CanvasGroup alphaCanvas;
     public string[] tips;
     public float tipsIntervaleTime = 1f;
-    public float fakeWaitLoadingTime = 3f;
 
+    private float timeLoading = 0f;
     private List<AsyncOperation> scenesLoading = new List<AsyncOperation>();
     private float totalSceneProgress;
     private int tipCount;
@@ -37,16 +32,8 @@ public partial class LoadingScenesManager : MonobehaviourSingleton<LoadingScenes
 
     void StartGameIntro()
     {
-        //currentSceneLoaded = SceneIndexes.INTRO;
-        //SceneManager.LoadSceneAsync((int)SceneIndexes.INTRO, LoadSceneMode.Additive);
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.S))
-            load = !load;
-
-            ShaderLoadTransition();
+        currentSceneLoaded = SceneIndexes.INTRO;
+        SceneManager.LoadSceneAsync((int)SceneIndexes.INTRO, LoadSceneMode.Additive);
     }
 
     public void LoadScene(SceneIndexes sceneToLoad)
@@ -54,7 +41,6 @@ public partial class LoadingScenesManager : MonobehaviourSingleton<LoadingScenes
         loadingPercentage.text = "0%";
         loadingScreen.gameObject.SetActive(true);
         StartCoroutine(GenerateTips());
-        load = true;
 
         scenesLoading.Add(SceneManager.UnloadSceneAsync((int)currentSceneLoaded));
         scenesLoading.Add(SceneManager.LoadSceneAsync((int)sceneToLoad, LoadSceneMode.Additive));
@@ -64,29 +50,36 @@ public partial class LoadingScenesManager : MonobehaviourSingleton<LoadingScenes
 
     public IEnumerator GetSceneLoadProgress()
     {
+        totalSceneProgress = 0f;
+        timeLoading = 0f;
+
         for (int i = 0; i < scenesLoading.Count; i++)
         {
+            scenesLoading[i].allowSceneActivation = false;
             while (!scenesLoading[i].isDone)
             {
-                totalSceneProgress = 0f;
+                timeLoading += Time.deltaTime;
 
                 foreach (AsyncOperation operation in scenesLoading)
-                {
                     totalSceneProgress += operation.progress;
-                }
 
-                totalSceneProgress = (totalSceneProgress / scenesLoading.Count);
-                //0.9f is a value default, cuz' unity asyncOperations load max to 0.9f and then use the 0.1f to active.
-                totalSceneProgress = Mathf.Clamp01(totalSceneProgress / 0.9f);
+                totalSceneProgress = (totalSceneProgress / scenesLoading.Count) + 0.1f;
+                totalSceneProgress = (totalSceneProgress * timeLoading) / loadingFakeTime;
+
                 loadingPercentage.text = $"{Mathf.RoundToInt(totalSceneProgress * 100f)}%";
                 progressBar.fillAmount = totalSceneProgress;
+
+                //Loading Complete
+                if (totalSceneProgress >= 1f)
+                {
+                    for (int j = 0; j < scenesLoading.Count; j++)
+                    {
+                        scenesLoading[j].allowSceneActivation = true;
+                    }
+                }
                 yield return null;
             }
         }
-
-        yield return new WaitForSeconds(fakeWaitLoadingTime);
-        load = false;
-        if(loadingImage.material.GetFloat("_Cutoff") == 1f)
         loadingScreen.gameObject.SetActive(false);
     }
 
@@ -109,22 +102,5 @@ public partial class LoadingScenesManager : MonobehaviourSingleton<LoadingScenes
 
             LeanTween.alphaCanvas(alphaCanvas, 1.0f, 0.5f);
         }
-    }
-
-    public void ShaderLoadTransition()
-    {
-        if (load)
-        {
-            loadingImage.material.SetFloat("_Cutoff",
-        Mathf.MoveTowards(loadingImage.material.GetFloat("_Cutoff"),
-        1f, transitionSpeed * Time.deltaTime));
-        }
-        else
-        {
-            loadingImage.material.SetFloat("_Cutoff",
-                    Mathf.MoveTowards(loadingImage.material.GetFloat("_Cutoff"),
-                    -1f, transitionSpeed * Time.deltaTime));
-        }
-    }
-
+    }  
 }
