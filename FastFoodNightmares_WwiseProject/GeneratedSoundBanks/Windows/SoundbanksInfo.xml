@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
 	<RootPaths>
-		<ProjectRoot>E:\Arturia\Image Campus\FAST FOOD NIGHTMARE\Fast Food Nightmares v0.10a\Fast Food Nightmare Event List\</ProjectRoot>
-		<SourceFilesRoot>E:\Arturia\Image Campus\FAST FOOD NIGHTMARE\Fast Food Nightmares v0.10a\Fast Food Nightmare Event List\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>E:\Arturia\Image Campus\Fast Food Nightmares v0.10a\Fast Food Nightmares\Fast Food Nightmares_Data\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\</ProjectRoot>
+		<SourceFilesRoot>E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>E:\Arturia\Image Campus\FAST FOOD NIGHTMARE\Fast Food Nightmares v0.10a\Fast Food Nightmare Event List\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -15,349 +15,42 @@
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<GameParameters>
+				<GameParameter Id="1006694123" Name="music_volume" ObjectPath="\Game Parameters\Default Work Unit\music_volume"/>
+				<GameParameter Id="1564184899" Name="sfx_volume" ObjectPath="\Game Parameters\Default Work Unit\sfx_volume"/>
+				<GameParameter Id="2822317760" Name="general_volume" ObjectPath="\Game Parameters\Default Work Unit\general_volume"/>
+			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="3161908922" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="193658694" Name="Ataque_boss" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Ataque_boss"/>
-				<Event Id="4098331468" Name="Ataque_enemigos" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Ataque_enemigos"/>
-				<Event Id="1604160490" Name="Comienzo_oleada" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Comienzo_oleada"/>
-				<Event Id="4082639641" Name="Curar_vida" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Curar_vida"/>
-				<Event Id="4059334902" Name="Damage_boss" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Damage_boss"/>
-				<Event Id="2244913564" Name="Damage_enemigos" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Damage_enemigos"/>
-				<Event Id="1567401025" Name="Damage_hamburguesa" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Damage_hamburguesa"/>
-				<Event Id="1942692385" Name="Dash" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Dash"/>
-				<Event Id="2655057481" Name="Espada_cambio" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Espada_cambio"/>
-				<Event Id="3311887745" Name="Espada_impacto" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Espada_impacto"/>
-				<Event Id="4243659193" Name="Fantasmas_enemigos" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Fantasmas_enemigos"/>
-				<Event Id="581321845" Name="Granada_cambio" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Granada_cambio"/>
-				<Event Id="3531178621" Name="Granada_explosion" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Granada_explosion"/>
-				<Event Id="3436479489" Name="Impacto_objetos" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Impacto_objetos"/>
-				<Event Id="2658298240" Name="Inicio" ObjectPath="\Events\Default Work Unit\Eventos_Generales\Inicio"/>
-				<Event Id="3425974687" Name="Inicio_gameplay" ObjectPath="\Events\Default Work Unit\Eventos_Generales\Inicio_gameplay"/>
-				<Event Id="2567272520" Name="lanzallamas_aji" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\lanzallamas_aji"/>
-				<Event Id="2845818466" Name="Mch_Gun_cambio" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Mch_Gun_cambio"/>
-				<Event Id="3602564457" Name="Mch_Gun_disparo" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Mch_Gun_disparo"/>
-				<Event Id="2607556080" Name="Menu" ObjectPath="\Events\Default Work Unit\Eventos_Generales\Menu"/>
-				<Event Id="3971714355" Name="Mov_boss" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Mov_boss"/>
-				<Event Id="2241940529" Name="Mov_enemigos" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Mov_enemigos"/>
-				<Event Id="803525678" Name="Mov_hamburguesa" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Mov_hamburguesa"/>
-				<Event Id="4023256677" Name="Muerte_boss" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Muerte_boss"/>
-				<Event Id="40152227" Name="Muerte_enemigos" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Muerte_enemigos"/>
-				<Event Id="2349829932" Name="Muerte_hamburguesa" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Muerte_hamburguesa"/>
-				<Event Id="2659475283" Name="Pausa_OFF" ObjectPath="\Events\Default Work Unit\Eventos_Generales\Pausa_OFF"/>
-				<Event Id="549173535" Name="Pausa_ON" ObjectPath="\Events\Default Work Unit\Eventos_Generales\Pausa_ON"/>
-				<Event Id="2433235219" Name="Perder" ObjectPath="\Events\Default Work Unit\Eventos_Generales\Perder"/>
-				<Event Id="1508312369" Name="popupalert" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\popupalert"/>
-				<Event Id="1203400786" Name="Restart" ObjectPath="\Events\Default Work Unit\Eventos_Generales\Restart"/>
-				<Event Id="4206091493" Name="Rocola_damage" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Rocola_damage"/>
-				<Event Id="3415832814" Name="Rocola_Start" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Rocola_Start"/>
-				<Event Id="1875703502" Name="Rocola_Stop" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Rocola_Stop"/>
-				<Event Id="2249769530" Name="UI_Click" ObjectPath="\Events\Default Work Unit\Eventos_Generales\UI_Click"/>
-				<Event Id="4247065354" Name="Voz_boss" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Voz_boss"/>
-				<Event Id="1323470984" Name="Voz_enemigos" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Voz_enemigos"/>
-				<Event Id="3121871613" Name="Voz_hamburguesa" ObjectPath="\Events\Default Work Unit\Eventos_Específicos\Voz_hamburguesa"/>
+				<Event Id="2088000327" Name="player_sword_attack" ObjectPath="\Events\Default Work Unit\player_sword_attack">
+					<IncludedMemoryFiles>
+						<File Id="92482279" Language="SFX">
+							<ShortName>Fast Action Swish_HW 05.wav</ShortName>
+							<Path>SFX\Fast Action Swish_HW 05_5AB55FB7.wem</Path>
+						</File>
+						<File Id="456638238" Language="SFX">
+							<ShortName>Fast Action Swish_HW 05.wav</ShortName>
+							<Path>SFX\Fast Action Swish_HW 05_88D4DE67.wem</Path>
+						</File>
+						<File Id="571465909" Language="SFX">
+							<ShortName>Fast Action Swish_HW 05.wav</ShortName>
+							<Path>SFX\Fast Action Swish_HW 05_1CE0CD73.wem</Path>
+						</File>
+						<File Id="572778280" Language="SFX">
+							<ShortName>Fast Action Swish_HW 05.wav</ShortName>
+							<Path>SFX\Fast Action Swish_HW 05_5DCF8E79.wem</Path>
+						</File>
+						<File Id="598615803" Language="SFX">
+							<ShortName>Fast Action Swish_HW 05.wav</ShortName>
+							<Path>SFX\Fast Action Swish_HW 05_A4E0AE8B.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 			</IncludedEvents>
-			<IncludedMemoryFiles>
-				<File Id="4839449" Language="SFX">
-					<ShortName>Espresso Machine 02.wav</ShortName>
-					<Path>SFX\Espresso Machine 02_E9FAED8E.wem</Path>
-				</File>
-				<File Id="30502215" Language="SFX">
-					<ShortName>verduras aplastadas 2.wav</ShortName>
-					<Path>SFX\verduras aplastadas 2_36DF168B.wem</Path>
-				</File>
-				<File Id="48888578" Language="SFX">
-					<ShortName>Fast Action Swish_HW 05.wav</ShortName>
-					<Path>SFX\Fast Action Swish_HW 05_54843DC5.wem</Path>
-				</File>
-				<File Id="60609718" Language="SFX">
-					<ShortName>click 6.wav</ShortName>
-					<Path>SFX\click 6_305F6CDE.wem</Path>
-				</File>
-				<File Id="107383592" Language="SFX">
-					<ShortName>salpicada 4.wav</ShortName>
-					<Path>SFX\salpicada 4_20F49546.wem</Path>
-				</File>
-				<File Id="113659719" Language="SFX">
-					<ShortName>Juicy Crack and Break_VM 01.wav</ShortName>
-					<Path>SFX\Juicy Crack and Break_VM 01_06709C30.wem</Path>
-				</File>
-				<File Id="123317364" Language="SFX">
-					<ShortName>Vegetable Carnage, Tomato, Squish, Slow, Soft Strength, Wet, Mono.wav</ShortName>
-					<Path>SFX\Vegetable Carnage, Tomato, Squish, Slow, Soft Strength, Wet, Mono_881AD750.wem</Path>
-				</File>
-				<File Id="161873853" Language="SFX">
-					<ShortName>amb_stems_RA_40_Restaurant_Bar_Night_Fridges_Empty_Room Tone_Neumann KM184 ORTF.wav</ShortName>
-					<Path>SFX\amb_stems_RA_40_Restaurant_Bar_Night_Fridges_Empty_Room Tone_Neumann KM184 ORTF_1A03E2F2.wem</Path>
-				</File>
-				<File Id="173586619" Language="SFX">
-					<ShortName>salpicada 5.wav</ShortName>
-					<Path>SFX\salpicada 5_E86678C0.wem</Path>
-				</File>
-				<File Id="183735320" Language="SFX">
-					<ShortName>amb_stems_roomtone_overhead_fan_002.wav</ShortName>
-					<Path>SFX\amb_stems_roomtone_overhead_fan_002_BB236650.wem</Path>
-				</File>
-				<File Id="188314216" Language="SFX">
-					<ShortName>salpicada 4.wav</ShortName>
-					<Path>SFX\salpicada 4_E876BF2F.wem</Path>
-				</File>
-				<File Id="192027580" Language="SFX">
-					<ShortName>Luciernaga.wav</ShortName>
-					<Path>SFX\Luciernaga_75741989.wem</Path>
-				</File>
-				<File Id="208708728" Language="SFX">
-					<ShortName>Bombo_Corte.wav</ShortName>
-					<Path>SFX\Bombo_Corte_8205A246.wem</Path>
-				</File>
-				<File Id="212168385" Language="SFX">
-					<ShortName>verduras aplastadas 1.wav</ShortName>
-					<Path>SFX\verduras aplastadas 1_F706A638.wem</Path>
-				</File>
-				<File Id="227599732" Language="SFX">
-					<ShortName>Squishes_Orange_3.wav</ShortName>
-					<Path>SFX\Squishes_Orange_3_E97AE674.wem</Path>
-				</File>
-				<File Id="248984296" Language="SFX">
-					<ShortName>sfx_teleport_in3.wav</ShortName>
-					<Path>SFX\sfx_teleport_in3_8205A246.wem</Path>
-				</File>
-				<File Id="258867803" Language="SFX">
-					<ShortName>Fast Action Swish_HW 05.wav</ShortName>
-					<Path>SFX\Fast Action Swish_HW 05_B8E791F8.wem</Path>
-				</File>
-				<File Id="274469972" Language="SFX">
-					<ShortName>Whoosh 5.wav</ShortName>
-					<Path>SFX\Whoosh 5_1CC17795.wem</Path>
-				</File>
-				<File Id="286930809" Language="SFX">
-					<ShortName>Fast Action Swish_HW 05.wav</ShortName>
-					<Path>SFX\Fast Action Swish_HW 05_D6087E0C.wem</Path>
-				</File>
-				<File Id="310623159" Language="SFX">
-					<ShortName>verduras aplastadas 1.wav</ShortName>
-					<Path>SFX\verduras aplastadas 1_24862BFD.wem</Path>
-				</File>
-				<File Id="311924027" Language="SFX">
-					<ShortName>gameplay_restbroken_hard.wav</ShortName>
-					<Path>SFX\gameplay_restbroken_hard_735590DC.wem</Path>
-				</File>
-				<File Id="333853002" Language="SFX">
-					<ShortName>Whoosh 5.wav</ShortName>
-					<Path>SFX\Whoosh 5_C7A39A2B.wem</Path>
-				</File>
-				<File Id="348681231" Language="SFX">
-					<ShortName>salpicada 5.wav</ShortName>
-					<Path>SFX\salpicada 5_4BC6D2F0.wem</Path>
-				</File>
-				<File Id="375576445" Language="SFX">
-					<ShortName>salpicada 5.wav</ShortName>
-					<Path>SFX\salpicada 5_4D464978.wem</Path>
-				</File>
-				<File Id="377737012" Language="SFX">
-					<ShortName>Espresso Machine 02.wav</ShortName>
-					<Path>SFX\Espresso Machine 02_7BD41433.wem</Path>
-				</File>
-				<File Id="394831162" Language="SFX">
-					<ShortName>salpicada 4.wav</ShortName>
-					<Path>SFX\salpicada 4_33FF1893.wem</Path>
-				</File>
-				<File Id="414823668" Language="SFX">
-					<ShortName>Whoosh 5.wav</ShortName>
-					<Path>SFX\Whoosh 5_0CB93EBF.wem</Path>
-				</File>
-				<File Id="422624752" Language="SFX">
-					<ShortName>Whoosh 5.wav</ShortName>
-					<Path>SFX\Whoosh 5_9BEAC38D.wem</Path>
-				</File>
-				<File Id="452944095" Language="SFX">
-					<ShortName>verduras aplastadas 1.wav</ShortName>
-					<Path>SFX\verduras aplastadas 1_FEBA73FB.wem</Path>
-				</File>
-				<File Id="470549560" Language="SFX">
-					<ShortName>gameplay_rest_easy.wav</ShortName>
-					<Path>SFX\gameplay_rest_easy_735590DC.wem</Path>
-				</File>
-				<File Id="471383629" Language="SFX">
-					<ShortName>explosion_large_08.wav</ShortName>
-					<Path>SFX\explosion_large_08_E833BC8A.wem</Path>
-				</File>
-				<File Id="473724882" Language="SFX">
-					<ShortName>salpicada 5.wav</ShortName>
-					<Path>SFX\salpicada 5_2FA5ED4B.wem</Path>
-				</File>
-				<File Id="489849936" Language="SFX">
-					<ShortName>Fast Action Swish_HW 05.wav</ShortName>
-					<Path>SFX\Fast Action Swish_HW 05_0941AAB9.wem</Path>
-				</File>
-				<File Id="536275234" Language="SFX">
-					<ShortName>gun_semi_auto_rifle_cock_02.wav</ShortName>
-					<Path>SFX\gun_semi_auto_rifle_cock_02_8205A246.wem</Path>
-				</File>
-				<File Id="545290624" Language="SFX">
-					<ShortName>Hisses Dry 16.M.wav</ShortName>
-					<Path>SFX\Hisses Dry 16.M_8205A246.wem</Path>
-				</File>
-				<File Id="549138572" Language="SFX">
-					<ShortName>lanzallamas.wav</ShortName>
-					<Path>SFX\lanzallamas_47BBFC0C.wem</Path>
-				</File>
-				<File Id="554029261" Language="SFX">
-					<ShortName>salpicada 4.wav</ShortName>
-					<Path>SFX\salpicada 4_A7BFC665.wem</Path>
-				</File>
-				<File Id="565682572" Language="SFX">
-					<ShortName>salpicada 5.wav</ShortName>
-					<Path>SFX\salpicada 5_7400626C.wem</Path>
-				</File>
-				<File Id="569853219" Language="SFX">
-					<ShortName>Luciernaga.wav</ShortName>
-					<Path>SFX\Luciernaga_1DF7EB71.wem</Path>
-				</File>
-				<File Id="583319958" Language="SFX">
-					<ShortName>verduras aplastadas 2.wav</ShortName>
-					<Path>SFX\verduras aplastadas 2_B9520C02.wem</Path>
-				</File>
-				<File Id="584857983" Language="SFX">
-					<ShortName>Zombie Subject C Zombie Brat Groan (9).wav</ShortName>
-					<Path>SFX\Zombie Subject C Zombie Brat Groan (9)_8205A246.wem</Path>
-				</File>
-				<File Id="587591818" Language="SFX">
-					<ShortName>popup.wav</ShortName>
-					<Path>SFX\popup_8205A246.wem</Path>
-				</File>
-				<File Id="627577274" Language="SFX">
-					<ShortName>gameplay_restbroken_easy.wav</ShortName>
-					<Path>SFX\gameplay_restbroken_easy_735590DC.wem</Path>
-				</File>
-				<File Id="628269664" Language="SFX">
-					<ShortName>salpicada 5.wav</ShortName>
-					<Path>SFX\salpicada 5_37F04911.wem</Path>
-				</File>
-				<File Id="629944078" Language="SFX">
-					<ShortName>Heartbeat,Sound Design,Pulse,Throb,Steady,Accelerate,Panic,Fear.wav</ShortName>
-					<Path>SFX\Heartbeat,Sound Design,Pulse,Throb,Steady,Accelerate,Panic,Fear_3AFC8609.wem</Path>
-				</File>
-				<File Id="655521927" Language="SFX">
-					<ShortName>gameplay_rest_hard.wav</ShortName>
-					<Path>SFX\gameplay_rest_hard_735590DC.wem</Path>
-				</File>
-				<File Id="657046840" Language="SFX">
-					<ShortName>salpicada 4.wav</ShortName>
-					<Path>SFX\salpicada 4_12940493.wem</Path>
-				</File>
-				<File Id="667219373" Language="SFX">
-					<ShortName>Fast Action Swish_HW 05.wav</ShortName>
-					<Path>SFX\Fast Action Swish_HW 05_E974AA1B.wem</Path>
-				</File>
-				<File Id="678971282" Language="SFX">
-					<ShortName>golpe 4.wav</ShortName>
-					<Path>SFX\golpe 4_8AD7F93F.wem</Path>
-				</File>
-				<File Id="681519440" Language="SFX">
-					<ShortName>Monster_Struggle_Grunt_240.wav</ShortName>
-					<Path>SFX\Monster_Struggle_Grunt_240_8205A246.wem</Path>
-				</File>
-				<File Id="693967265" Language="SFX">
-					<ShortName>Whoosh 5.wav</ShortName>
-					<Path>SFX\Whoosh 5_40071F9F.wem</Path>
-				</File>
-				<File Id="761658493" Language="SFX">
-					<ShortName>destransformarse.wav</ShortName>
-					<Path>SFX\destransformarse_8205A246.wem</Path>
-				</File>
-				<File Id="775001895" Language="SFX">
-					<ShortName>creature 4.wav</ShortName>
-					<Path>SFX\creature 4_C0A01E8F.wem</Path>
-				</File>
-				<File Id="788435645" Language="SFX">
-					<ShortName>footstep_ice_crunchy_run_01.wav</ShortName>
-					<Path>SFX\footstep_ice_crunchy_run_01_8205A246.wem</Path>
-				</File>
-				<File Id="797325895" Language="SFX">
-					<ShortName>verduras aplastadas 1.wav</ShortName>
-					<Path>SFX\verduras aplastadas 1_D0BC7F73.wem</Path>
-				</File>
-				<File Id="799881096" Language="SFX">
-					<ShortName>Juicy Burst_VM 03.wav</ShortName>
-					<Path>SFX\Juicy Burst_VM 03_122ABA3F.wem</Path>
-				</File>
-				<File Id="805398724" Language="SFX">
-					<ShortName>creature 4.wav</ShortName>
-					<Path>SFX\creature 4_34B0FB58.wem</Path>
-				</File>
-				<File Id="809684932" Language="SFX">
-					<ShortName>verduras aplastadas 2.wav</ShortName>
-					<Path>SFX\verduras aplastadas 2_34FF6391.wem</Path>
-				</File>
-				<File Id="838310805" Language="SFX">
-					<ShortName>Luciernaga.wav</ShortName>
-					<Path>SFX\Luciernaga_57406ADD.wem</Path>
-				</File>
-				<File Id="848533471" Language="SFX">
-					<ShortName>Scracht.wav</ShortName>
-					<Path>SFX\Scracht_8205A246.wem</Path>
-				</File>
-				<File Id="849230674" Language="SFX">
-					<ShortName>salpicada 4.wav</ShortName>
-					<Path>SFX\salpicada 4_7B5221C8.wem</Path>
-				</File>
-				<File Id="849464546" Language="SFX">
-					<ShortName>disparos.wav</ShortName>
-					<Path>SFX\disparos_7D9664EC.wem</Path>
-				</File>
-				<File Id="861853852" Language="SFX">
-					<ShortName>Espresso Machine 02.wav</ShortName>
-					<Path>SFX\Espresso Machine 02_93786216.wem</Path>
-				</File>
-				<File Id="882262350" Language="SFX">
-					<ShortName>amb_stems_EMF_Toaster.wav</ShortName>
-					<Path>SFX\amb_stems_EMF_Toaster_8205A246.wem</Path>
-				</File>
-				<File Id="884042725" Language="SFX">
-					<ShortName>gameplay_restbroken_normal.wav</ShortName>
-					<Path>SFX\gameplay_restbroken_normal_735590DC.wem</Path>
-				</File>
-				<File Id="892944817" Language="SFX">
-					<ShortName>Whoosh 5.wav</ShortName>
-					<Path>SFX\Whoosh 5_66010326.wem</Path>
-				</File>
-				<File Id="895308598" Language="SFX">
-					<ShortName>comic terror.wav</ShortName>
-					<Path>SFX\comic terror_735590DC.wem</Path>
-				</File>
-				<File Id="930231099" Language="SFX">
-					<ShortName>salpicada 4.wav</ShortName>
-					<Path>SFX\salpicada 4_96991D9E.wem</Path>
-				</File>
-				<File Id="935291530" Language="SFX">
-					<ShortName>gameplay_rest_normal.wav</ShortName>
-					<Path>SFX\gameplay_rest_normal_735590DC.wem</Path>
-				</File>
-				<File Id="943007849" Language="SFX">
-					<ShortName>footstep_ice_crunchy_run_02.wav</ShortName>
-					<Path>SFX\footstep_ice_crunchy_run_02_84185363.wem</Path>
-				</File>
-				<File Id="944014107" Language="SFX">
-					<ShortName>verduras aplastadas 2.wav</ShortName>
-					<Path>SFX\verduras aplastadas 2_4ADE52C2.wem</Path>
-				</File>
-				<File Id="963263022" Language="SFX">
-					<ShortName>handling espada 2.wav</ShortName>
-					<Path>SFX\handling espada 2_4C93E5E8.wem</Path>
-				</File>
-				<File Id="988067828" Language="SFX">
-					<ShortName>salpicada 4.wav</ShortName>
-					<Path>SFX\salpicada 4_CCA9E1B2.wem</Path>
-				</File>
-				<File Id="1038329570" Language="SFX">
-					<ShortName>creature 5.wav</ShortName>
-					<Path>SFX\creature 5_260BCDB8.wem</Path>
-				</File>
-			</IncludedMemoryFiles>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

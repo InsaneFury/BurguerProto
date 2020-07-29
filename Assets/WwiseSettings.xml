@@ -6,6 +6,9 @@
   <CreateWwiseListener>true</CreateWwiseListener>
   <GenerateSoundBanksAsPreBuildStep>false</GenerateSoundBanksAsPreBuildStep>
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
+  <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
   <SoundbankPath>Audio\GeneratedSoundBanks</SoundbankPath>
-  <WwiseProjectPath>../FastFoodNightmares_WwiseProject/Fast Food Nightmare Event List.wproj</WwiseProjectPath>
+  <WwiseInstallationPathMac />
+  <WwiseInstallationPathWindows>D:\Archivos de programa D\Wwise\Wwise 2019.2.4.7329</WwiseInstallationPathWindows>
+  <WwiseProjectPath>../../FastFoodNightmares/FastFoodNightmares_WwiseProject/Fast Food Nightmare Event List.wproj</WwiseProjectPath>
 </WwiseSettings>

@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{BADEE368-2564-4C2D-9A0B-1D0717650148}" SchemaVersion="94">
+<WwiseDocument Type="WorkUnit" ID="{05106755-05E9-4D2B-9B8A-33E5C0F1F1DF}" SchemaVersion="97">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{BADEE368-2564-4C2D-9A0B-1D0717650148}" PersistMode="Standalone">
-			<PropertyList>
-				<Property Name="Color" Type="int16" Value="8"/>
-				<Property Name="OverrideColor" Type="bool" Value="True"/>
-			</PropertyList>
+		<WorkUnit Name="Default Work Unit" ID="{05106755-05E9-4D2B-9B8A-33E5C0F1F1DF}" PersistMode="Standalone">
 			<ChildrenList>
-				<GameParameter Name="vida_hamburguesa" ID="{3087EB13-DD1E-49EF-8878-A0E50C15A886}"/>
-				<GameParameter Name="mana_hamburguesa" ID="{62111FB2-4B11-4E94-90C3-36F6D8A2C055}"/>
-				<GameParameter Name="waves_time" ID="{DAB0B4CB-9DCC-4F94-A72E-DDAEC14A593C}"/>
-				<GameParameter Name="Zoom_camara" ID="{791A03D2-2203-4752-8755-BA93729C5244}"/>
-				<GameParameter Name="Cantidad_enemigos" ID="{1A52A7D7-1F5A-4DB3-9161-D612506EC9F4}"/>
-				<GameParameter Name="Distancia_enemigos" ID="{482E7846-4A03-4266-9442-586AA2032CF3}"/>
-				<GameParameter Name="Damage_rocola" ID="{98E482D6-CACD-4109-A930-24BBD7FAF0AF}"/>
+				<GameParameter Name="general_volume" ID="{1C5E5874-0CB1-4196-A5D8-69EDBFB364AC}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="music_volume" ID="{58A7CE94-02A4-4814-8FDC-06F73BEEAF45}"/>
+				<GameParameter Name="sfx_volume" ID="{E6278544-A58E-41D0-A567-1D22D2D52FDD}"/>
+				<GameParameter Name="player_health" ID="{955CA7F5-48B4-4454-9A57-7B3243D979E8}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

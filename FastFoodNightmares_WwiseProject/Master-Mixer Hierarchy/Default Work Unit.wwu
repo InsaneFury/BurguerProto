@@ -1,14 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{020CDD13-7FA1-4EF0-91FC-DDA738734A68}" SchemaVersion="94">
+<WwiseDocument Type="WorkUnit" ID="{16F27715-F201-4C18-B47C-2999AEE9AD69}" SchemaVersion="97">
 	<Busses>
-		<WorkUnit Name="Default Work Unit" ID="{020CDD13-7FA1-4EF0-91FC-DDA738734A68}" PersistMode="Standalone">
+		<WorkUnit Name="Default Work Unit" ID="{16F27715-F201-4C18-B47C-2999AEE9AD69}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="BusVolume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{1F2CE989-FB0C-4144-8027-2E53AA22DD82}" ShortID="804061515">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="general_volume" ID="{1C5E5874-0CB1-4196-A5D8-69EDBFB364AC}" WorkUnitID="{05106755-05E9-4D2B-9B8A-33E5C0F1F1DF}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{7C63E6CB-2C2D-4850-AE33-3E53157AF98E}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice">
-							<ObjectRef Name="System" ID="{F9A9EB7F-F181-45C1-A2CA-9E3235201964}" WorkUnitID="{A7D9B23E-110E-47D4-81DE-4E6147F5EEDF}"/>
+							<ObjectRef Name="System" ID="{882F377D-7DDC-4E46-A227-C1E8C63B35A8}" WorkUnitID="{92E7A314-CC88-4285-B425-C864B899BA0B}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="SFX" ID="{5059954F-D46F-48B9-A8A5-9CA8E924B9C9}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{D91ACF8F-6313-44A7-8D7A-46B45153642E}" ShortID="689738033">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="sfx_volume" ID="{E6278544-A58E-41D0-A567-1D22D2D52FDD}" WorkUnitID="{05106755-05E9-4D2B-9B8A-33E5C0F1F1DF}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{6591A801-5EEF-47FE-8F47-F8C2B073355C}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+								<Property Name="Color" Type="int16" Value="8"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
+						<Bus Name="MUSIC" ID="{924AE369-0D55-4C34-8ADE-BBA6962745DF}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{11102759-81D9-40D2-9284-E64AF988EE66}" ShortID="593391581">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="music_volume" ID="{58A7CE94-02A4-4814-8FDC-06F73BEEAF45}" WorkUnitID="{05106755-05E9-4D2B-9B8A-33E5C0F1F1DF}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{AF335DEB-AC18-49A2-B257-E2F210521FD1}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+								<Property Name="Color" Type="int16" Value="13"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
+					</ChildrenList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

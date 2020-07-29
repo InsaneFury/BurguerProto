@@ -8,7 +8,8 @@
 public static class AkWwiseProjectInfo
 {
 	private const string DataFileName = "AkWwiseProjectData.asset";
-	private static string DataRelativeDirectory = System.IO.Path.Combine(System.IO.Path.Combine("Wwise", "Editor"), "ProjectData");
+	private static string WwiseEditorDirectory = System.IO.Path.Combine("Wwise", "Editor");
+	private static string DataRelativeDirectory = System.IO.Path.Combine(WwiseEditorDirectory, "ProjectData");
 	private static string DataRelativePath = System.IO.Path.Combine(DataRelativeDirectory, DataFileName);
 	private static string DataAssetPath = System.IO.Path.Combine("Assets", DataRelativePath);
 
@@ -44,7 +45,19 @@ public static class AkWwiseProjectInfo
 					if (dataExists)
 						UnityEngine.Debug.LogWarning("WwiseUnity: Unable to load asset at <" + dataAbsolutePath + ">.");
 					else
-						UnityEditor.AssetDatabase.CreateAsset(m_Data, DataAssetPath);
+					{
+#if UNITY_2019_3_OR_LATER
+						if (UnityEditor.EditorSettings.assetPipelineMode == UnityEditor.AssetPipelineMode.Version2)
+						{
+							UnityEditor.EditorApplication.delayCall += () => UnityEditor.AssetDatabase.CreateAsset(m_Data, DataAssetPath);
+						}
+						else
+#else
+						{
+							UnityEditor.AssetDatabase.CreateAsset(m_Data, DataAssetPath);
+						}
+#endif
+					}
 				}
 			}
 			catch (System.Exception e)

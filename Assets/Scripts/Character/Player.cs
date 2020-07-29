@@ -115,7 +115,7 @@ public class Player : MonobehaviourSingleton<Player>
         originalLife = life;
         animMachineGun = machineGun.GetComponent<Animator>();
         //Audio
-        AkSoundEngine.SetState("Vivo_o_muerto", "Vivo");
+        //AkSoundEngine.SetState("Vivo_o_muerto", "Vivo");
         currentActiveWeapon = 1;
         machineGunBullets = 100;
     }
@@ -124,6 +124,9 @@ public class Player : MonobehaviourSingleton<Player>
     {
         //Gamepad detection
         Gamepad gp = Gamepad.current;
+
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+            AkSoundEngine.PostEvent("player_sword_attack", gameObject);
 
         if (isAlive && canPlay)
         {
@@ -144,8 +147,8 @@ public class Player : MonobehaviourSingleton<Player>
             }
             
 
-            AkSoundEngine.SetRTPCValue("vida_hamburguesa", life);
-            AkSoundEngine.SetRTPCValue("mana_hamburguesa", soulsCollected);
+            //AkSoundEngine.SetRTPCValue("vida_hamburguesa", life);
+            //AkSoundEngine.SetRTPCValue("mana_hamburguesa", soulsCollected);
         }
     }
 
@@ -270,8 +273,8 @@ public class Player : MonobehaviourSingleton<Player>
                     life -= dmg;
 
                 //Audio
-                AkSoundEngine.PostEvent("Voz_hamburguesa", gameObject);
-                AkSoundEngine.PostEvent("Damage_hamburguesa", gameObject);
+                //AkSoundEngine.PostEvent("Voz_hamburguesa", gameObject);
+                //AkSoundEngine.PostEvent("Damage_hamburguesa", gameObject);
                 StartCoroutine(GettingDmgVFX());
             }
             else
@@ -289,7 +292,7 @@ public class Player : MonobehaviourSingleton<Player>
         if (other.CompareTag("Soul"))
         {
             //Audio
-            AkSoundEngine.PostEvent("Fantasmas_enemigos", gameObject);
+            //AkSoundEngine.PostEvent("Fantasmas_enemigos", gameObject);
             if (soulsCollected < maxSoulsCollected)
             {
                 soulsCollected += (int)UnityEngine.Random.Range(soulGainRange.x, soulGainRange.y);
@@ -318,7 +321,7 @@ public class Player : MonobehaviourSingleton<Player>
         StartCoroutine(ActiveDashTrail());
 
         //Audio
-        AkSoundEngine.PostEvent("Dash", gameObject);
+        //AkSoundEngine.PostEvent("Dash", gameObject);
 
         if (playerMove == Vector3.zero)
         {
@@ -367,7 +370,7 @@ public class Player : MonobehaviourSingleton<Player>
             soulsCollected -= healCost;
 
             //Audio
-            AkSoundEngine.PostEvent("Curar_vida", gameObject);
+            //AkSoundEngine.PostEvent("Curar_vida", gameObject);
             healthVFX.Play();
         }
     }
@@ -379,8 +382,8 @@ public class Player : MonobehaviourSingleton<Player>
             isAlive = false;
 
             //Audio
-            AkSoundEngine.PostEvent("Muerte_hamburguesa", gameObject);
-            AkSoundEngine.SetState("Vivo_o_muerto", "Muerto");
+            //AkSoundEngine.PostEvent("Muerte_hamburguesa", gameObject);
+            //AkSoundEngine.SetState("Vivo_o_muerto", "Muerto");
 
             animBottom.SetBool("death", true);
             animTop.SetBool("death", true);
@@ -404,7 +407,7 @@ public class Player : MonobehaviourSingleton<Player>
                 {
                     currentActiveWeapon = 0;
                     //Audio
-                    AkSoundEngine.PostEvent("Mch_Gun_cambio", gameObject);
+                   // AkSoundEngine.PostEvent("Mch_Gun_cambio", gameObject);
 
                     machineGunIsActive = true;
                     machineGun.SetActive(machineGunIsActive);
@@ -421,7 +424,7 @@ public class Player : MonobehaviourSingleton<Player>
                 {
                     currentActiveWeapon = 1;
                     //Audio
-                    AkSoundEngine.PostEvent("Granada_cambio", gameObject);
+                    //AkSoundEngine.PostEvent("Granada_cambio", gameObject);
 
                     machineGunIsActive = false;
                     machineGun.SetActive(machineGunIsActive);
@@ -444,7 +447,7 @@ public class Player : MonobehaviourSingleton<Player>
     public void ResetStats()
     {
         //Audio
-        AkSoundEngine.SetState("Vivo_o_muerto", "Vivo");
+        //AkSoundEngine.SetState("Vivo_o_muerto", "Vivo");
 
         animBottom.SetBool("death", false);
         animTop.SetBool("death", false);

@@ -1,46 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{3AD0D04D-A004-4A9A-9916-59E6759F5D39}" SchemaVersion="94">
+<WwiseDocument Type="WorkUnit" ID="{3F30D706-E73A-4FA0-BA5C-C1D0FA4E47E2}" SchemaVersion="97">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{3AD0D04D-A004-4A9A-9916-59E6759F5D39}" PersistMode="Standalone">
+		<WorkUnit Name="Default Work Unit" ID="{3F30D706-E73A-4FA0-BA5C-C1D0FA4E47E2}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundBank Name="main" ID="{251EC03E-29D4-458F-939A-6FF5F22C057A}">
+				<SoundBank Name="main" ID="{CF5A5490-93FE-4E44-9038-AE5CD777B7C0}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Menu" ID="{262C29ED-4F46-400A-87C8-E47C0D1A6016}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Inicio_gameplay" ID="{20B54143-36B3-401C-99D4-00CC42FE7CB0}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Inicio" ID="{0DA8BF38-A383-4049-A089-22B62939672B}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Mov_enemigos" ID="{792524B3-FCBF-4059-A741-C833DF358C10}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Ataque_boss" ID="{4EBF3907-354C-409E-B499-1E723471665B}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Mch_Gun_disparo" ID="{14AA2666-14CE-4105-924F-124CD7A075CF}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Granada_cambio" ID="{DD99996E-8E48-4117-9A19-FD54B48B88FD}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Espada_impacto" ID="{80C81289-4310-4186-A133-23DA6C5EB9D2}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Perder" ID="{DBD9882C-720F-4198-B158-72545F0FB53D}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Voz_boss" ID="{CA298AC5-9654-43AE-AF5B-B201FF165A22}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Curar_vida" ID="{EAF7FD53-EA76-4400-A5E8-DE1D9F108936}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Rocola_Start" ID="{19785E47-C994-442E-87E0-50B350BDD667}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Voz_hamburguesa" ID="{13D10BFA-F6BA-44AB-83DF-D0FDD0A65D57}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Muerte_enemigos" ID="{48D92C83-972E-4500-9311-7AC9C45F7B67}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Impacto_objetos" ID="{A76EF9A9-46AE-454C-B8AC-895C9C933767}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Comienzo_oleada" ID="{CFC833F6-4084-4579-A751-B18FCA6FDD38}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Granada_explosion" ID="{75B4309B-336E-4661-A57A-BE4921C7DAD3}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Mov_hamburguesa" ID="{AEDD7473-0053-46B1-B21C-08B26A149FF8}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Damage_hamburguesa" ID="{1078CC13-2FE6-4700-8A97-A6ABBD5D232E}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Pausa_ON" ID="{89F2D01A-27EB-470E-804A-ECD875B2517D}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Restart" ID="{27CB8CC6-8D90-478B-8267-7D4B043D5AC1}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Mch_Gun_cambio" ID="{4F28676B-BEFB-4812-B0E2-E031A1776038}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="UI_Click" ID="{A8D8DCB0-A177-486B-A9E7-D674EAFC01FF}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Fantasmas_enemigos" ID="{2434BC3E-7048-4988-95C0-B2686E034687}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Muerte_hamburguesa" ID="{EEC6ADBA-84BC-4A00-966B-E0A1AFEC7564}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Pausa_OFF" ID="{0FB6F297-F28C-4A53-BC3D-BFC16B343380}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Ataque_enemigos" ID="{9AB17A44-E738-4ADE-A279-14542101F88A}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Mov_boss" ID="{AA414164-53CB-4B61-AADD-9E89839C04AC}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Damage_boss" ID="{375C7D76-5A85-4B68-8CC4-38AB93A4C4F9}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Muerte_boss" ID="{CCF28D3C-0538-4BA9-AB20-8F44D6063670}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Espada_cambio" ID="{D73E4494-B0F9-4D21-B453-D575A5BED3D1}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Damage_enemigos" ID="{CFCE54D6-27BD-4D36-9C3B-29C084033211}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Dash" ID="{2584DBF6-BC13-4D70-B9B4-FFEB1EBC7478}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Rocola_Stop" ID="{F7DEFDD1-9AF3-4E35-9BA9-4FA824BAEAE5}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Rocola_damage" ID="{CA13A282-0056-4EF0-8EF3-1AD2BB583B33}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Voz_enemigos" ID="{EAA6F798-13C0-4F91-BE7D-8D7707BAD247}" WorkUnitID="{C37A0955-7293-44DC-99E8-77CE3666D4B4}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="player_sword_attack" ID="{74C7E77C-2F1B-4702-BEA9-A178E4CDD5DD}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

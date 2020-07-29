@@ -1,27 +1,12 @@
-State Group	ID	Name			Wwise Object Path	Notes
-	89505537	Gameplay			\Default Work Unit\Gameplay	
-	586195148	Vivo_o_muerto			\Default Work Unit\Vivo_o_muerto	
-	2615536764	Dificultad			\Default Work Unit\Dificultad	
-	3441103852	Escenario			\Default Work Unit\Escenario	
-
-State	ID	Name	State Group			Notes
-	0	None	Gameplay			
-	675784008	Batalla	Gameplay			
-	1560169506	Boss	Gameplay			
-	2902310089	Exploracion	Gameplay			
-	0	None	Vivo_o_muerto			
-	3454063807	Vivo	Vivo_o_muerto			
-	4243306045	Muerto	Vivo_o_muerto			
-	0	None	Dificultad			
-	1160234136	Normal	Dificultad			
-	2890145494	Facil	Dificultad			
-	2989595257	Dificil	Dificultad			
-	0	None	Escenario			
-	69111605	Restaurante	Escenario			
-	75746210	Lugar_nuevo	Escenario			
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1006694123	music_volume			\Default Work Unit\music_volume	
+	1564184899	sfx_volume			\Default Work Unit\sfx_volume	
+	2822317760	general_volume			\Default Work Unit\general_volume	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	MUSIC			\Default Work Unit\Master Audio Bus\MUSIC	
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

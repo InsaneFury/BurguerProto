@@ -125,7 +125,7 @@ public class MachineGun : MonobehaviourSingleton<MachineGun>
                 bullets--;
 
                 //Audio
-                AkSoundEngine.PostEvent("Mch_Gun_disparo", gameObject);
+                //AkSoundEngine.PostEvent("Mch_Gun_disparo", gameObject);
 
                 Shoot();
                 player.animMachineGun.SetBool("attack", true);

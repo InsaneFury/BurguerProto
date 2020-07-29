@@ -102,7 +102,9 @@ public class AkPluginActivator
 			{ PluginID.iZTrashMultibandDistortion, "iZTrashMultibandDistortionFX" },
 			{ PluginID.McDSPFutzBox, "McDSPFutzBoxFX" },
 			{ PluginID.McDSPLimiter, "McDSPLimiterFX" },
-			{ PluginID.ResonanceAudio, "ResonanceAudioFX" }
+			{ PluginID.ResonanceAudio, "ResonanceAudioFX" },
+			{ PluginID.IgniterLive, "IgniterLiveSource" },
+			{ PluginID.IgniterLiveSynth, "IgniterLiveSource" }
 		};
 
 	static AkPluginActivator()
@@ -195,21 +197,19 @@ public class AkPluginActivator
 			case UnityEditor.BuildTarget.tvOS:
 				return "tvOS";
 
+#if !UNITY_2019_2_OR_NEWER
 			case UnityEditor.BuildTarget.StandaloneLinux:
 				UnityEngine.Debug.LogError("WwiseUnity: The Linux Wwise Unity integration does not support the 32 bits architecture");
 				return "Linux";
-				
-			case UnityEditor.BuildTarget.StandaloneLinux64:
+
 			case UnityEditor.BuildTarget.StandaloneLinuxUniversal:
 				return "Linux";
-
-#if UNITY_2017_3_OR_NEWER
-			case UnityEditor.BuildTarget.StandaloneOSX:
-#else
-			case UnityEditor.BuildTarget.StandaloneOSXIntel:
-			case UnityEditor.BuildTarget.StandaloneOSXIntel64:
-			case UnityEditor.BuildTarget.StandaloneOSXUniversal:
 #endif
+
+			case UnityEditor.BuildTarget.StandaloneLinux64:
+				return "Linux";
+
+			case UnityEditor.BuildTarget.StandaloneOSX:
 				return "Mac";
 
 			case (UnityEditor.BuildTarget)39: // UnityEditor.BuildTarget.Lumin
@@ -217,11 +217,6 @@ public class AkPluginActivator
 
 			case UnityEditor.BuildTarget.PS4:
 				return "PS4";
-
-#if !UNITY_2018_3_OR_NEWER
-			case UnityEditor.BuildTarget.PSP2:
-				return "Vita";
-#endif
 
 			case UnityEditor.BuildTarget.StandaloneWindows:
 			case UnityEditor.BuildTarget.StandaloneWindows64:
@@ -233,10 +228,8 @@ public class AkPluginActivator
 			case UnityEditor.BuildTarget.XboxOne:
 				return "XboxOne";
 
-#if UNITY_5_6_OR_NEWER
 			case UnityEditor.BuildTarget.Switch:
 				return "Switch";
-#endif
 
 #if UNITY_2019_3_OR_NEWER
 			case UnityEditor.BuildTarget.Stadia:
@@ -323,6 +316,24 @@ public class AkPluginActivator
 		}
 	}
 
+	private static void SetStandalonePlatformData(UnityEditor.PluginImporter pluginImporter, string platformName, string architecture)
+	{
+		var isLinux = platformName == "Linux";
+		var isWindows = platformName == "Windows";
+		var isMac = platformName == "Mac";
+		var isX86 = architecture == "x86";
+		var isX64 = architecture == "x86_64";
+
+#if !UNITY_2019_2_OR_NEWER
+		pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneLinux, "CPU", isLinux && isX86 ? "x86" : "None");
+		pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneLinuxUniversal, "CPU", !isLinux ? "None" : isX86 ? "x86" : isX64 ? "x86_64" : "None");
+#endif
+		pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneLinux64, "CPU", isLinux && isX64 ? "x86_64" : "None");
+		pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneWindows, "CPU", isWindows && isX86 ? "AnyCPU" : "None");
+		pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneWindows64, "CPU", isWindows && isX64 ? "AnyCPU" : "None");
+		pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneOSX, "CPU", isMac ? "AnyCPU" : "None");
+	}
+
 	public static void ActivatePluginsForDeployment(UnityEditor.BuildTarget target, bool Activate)
 	{
 		if (Activate)
@@ -383,50 +394,17 @@ public class AkPluginActivator
 					pluginArch = splitPath[5];
 					pluginConfig = splitPath[6];
 
-					if (pluginArch == "x86")
-					{
-						pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneLinux, "CPU", "x86");
-						pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneLinux64, "CPU", "None");
-						pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneLinuxUniversal, "CPU", "x86");
-					}
-					else if (pluginArch == "x86_64")
-					{
-						pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneLinux, "CPU", "None");
-						pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneLinux64, "CPU", "x86_64");
-						pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneLinuxUniversal, "CPU", "x86_64");
-					}
-					else
+					if (pluginArch != "x86" && pluginArch != "x86_64")
 					{
 						UnityEngine.Debug.Log("WwiseUnity: Architecture not found: " + pluginArch);
 						continue;
 					}
-
-#if UNITY_2017_3_OR_NEWER
-					pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneOSX, "CPU", "None");
-#else
-					pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneOSXIntel, "CPU", "None");
-					pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneOSXIntel64, "CPU", "None");
-					pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneOSXUniversal, "CPU", "None");
-#endif
-					pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneWindows, "CPU", "None");
-					pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneWindows64, "CPU", "None");
+					SetStandalonePlatformData(pluginImporter, pluginPlatform, pluginArch);
 					break;
 
 				case "Mac":
 					pluginConfig = splitPath[5];
-					pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneLinux, "CPU", "None");
-					pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneLinux64, "CPU", "None");
-					pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneLinuxUniversal, "CPU", "None");
-
-#if UNITY_2017_3_OR_NEWER
-					pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneOSX, "CPU", "AnyCPU");
-#else
-					pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneOSXIntel, "CPU", "AnyCPU");
-					pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneOSXIntel64, "CPU", "AnyCPU");
-					pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneOSXUniversal, "CPU", "AnyCPU");
-#endif
-					pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneWindows, "CPU", "None");
-					pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneWindows64, "CPU", "None");
+					SetStandalonePlatformData(pluginImporter, pluginPlatform, pluginArch);
 					break;
 
 				case "WSA":
@@ -457,32 +435,12 @@ public class AkPluginActivator
 					pluginArch = splitPath[5];
 					pluginConfig = splitPath[6];
 
-					if (pluginArch == "x86")
-					{
-						pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneWindows, "CPU", "AnyCPU");
-						pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneWindows64, "CPU", "None");
-					}
-					else if (pluginArch == "x86_64")
-					{
-						pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneWindows, "CPU", "None");
-						pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneWindows64, "CPU", "AnyCPU");
-					}
-					else
+					if (pluginArch != "x86" && pluginArch != "x86_64")
 					{
 						UnityEngine.Debug.Log("WwiseUnity: Architecture not found: " + pluginArch);
 						continue;
 					}
-
-					pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneLinux, "CPU", "None");
-					pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneLinux64, "CPU", "None");
-					pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneLinuxUniversal, "CPU", "None");
-#if UNITY_2017_3_OR_NEWER
-					pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneOSX, "CPU", "None");
-#else
-					pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneOSXIntel, "CPU", "None");
-					pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneOSXIntel64, "CPU", "None");
-					pluginImporter.SetPlatformData(UnityEditor.BuildTarget.StandaloneOSXUniversal, "CPU", "None");
-#endif
+					SetStandalonePlatformData(pluginImporter, pluginPlatform, pluginArch);
 					break;
 
 				case "Switch":
@@ -735,8 +693,8 @@ public class AkPluginActivator
 		//Gather all GeneratedSoundBanks folder from the project
 		var allPaths = AkUtilities.GetAllBankPaths();
 		var bNeedRefresh = false;
-		var projectPath = System.IO.Path.GetDirectoryName(AkUtilities.GetFullPath(UnityEngine.Application.dataPath,
-			WwiseSettings.LoadSettings().WwiseProjectPath));
+		var projectPath = AkWwiseEditorSettings.WwiseProjectAbsolutePath;
+		var baseSoundBankPath = AkBasePathGetter.GetFullSoundBankPathEditor();
 
 		AkWwiseInitializationSettings.UpdatePlatforms();
 
@@ -760,8 +718,7 @@ public class AkPluginActivator
 					if (!System.IO.File.Exists(pluginFile))
 					{
 						//Try in StreamingAssets too.
-						pluginFile = System.IO.Path.Combine(System.IO.Path.Combine(AkBasePathGetter.GetFullSoundBankPath(), customPF),
-							"PluginInfo.xml");
+						pluginFile = System.IO.Path.Combine(System.IO.Path.Combine(baseSoundBankPath, customPF), "PluginInfo.xml");
 						if (!System.IO.File.Exists(pluginFile))
 							continue;
 					}
@@ -1118,7 +1075,9 @@ void *_pluginName_##_fp = (void*)&_pluginName_##Registration;
 		iZTrashMultibandDistortion = 0x91033,
 		McDSPFutzBox = 0x6E1003,
 		McDSPLimiter = 0x671003,
-		ResonanceAudio = 0x641103
+		ResonanceAudio = 0x641103,
+		IgniterLive = 0x5110D2,
+		IgniterLiveSynth = 0x5210D2
 	}
 
 	private class AkPluginInfo
