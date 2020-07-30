@@ -38,7 +38,6 @@ public class MachineGun : MonobehaviourSingleton<MachineGun>
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
         mouse = InputSystem.GetDevice<Mouse>();
         gd = InputSystem.GetDevice<Gamepad>();
-
     }
 
     void Start()
