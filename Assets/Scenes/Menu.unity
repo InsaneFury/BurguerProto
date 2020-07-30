@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 28261587}
   m_Layer: 5
   m_Name: Fire
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3752,7 +3752,7 @@ GameObject:
   - component: {fileID: 362471375}
   m_Layer: 5
   m_Name: E
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9923,7 +9923,7 @@ GameObject:
   - component: {fileID: 885396763}
   m_Layer: 5
   m_Name: D
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11357,7 +11357,7 @@ GameObject:
   - component: {fileID: 1043089922}
   m_Layer: 5
   m_Name: W
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14268,7 +14268,7 @@ GameObject:
   - component: {fileID: 1269408027}
   m_Layer: 5
   m_Name: A
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16777,7 +16777,7 @@ GameObject:
   - component: {fileID: 1432460100}
   m_Layer: 5
   m_Name: ChangeWeapon
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17564,7 +17564,7 @@ GameObject:
   - component: {fileID: 1501753758}
   m_Layer: 5
   m_Name: Title
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17911,7 +17911,7 @@ GameObject:
   - component: {fileID: 1520945045}
   m_Layer: 5
   m_Name: S
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19028,7 +19028,7 @@ GameObject:
   - component: {fileID: 1673505594}
   m_Layer: 5
   m_Name: Dash
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
