@@ -13,7 +13,6 @@ public class ComicController : MonoBehaviour
         currentlayers = new List<GameObject>();
         LoadLayers();
     }
-    void Start() => HideAll();
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -24,6 +23,8 @@ public class ComicController : MonoBehaviour
     {
         for (int i = 0; i < currentlayers.Count; i++)
             currentlayers[i].SetActive(false);
+        currentlayers[0].SetActive(true);
+        currentBlock++;
     }
 
     private void ActiveNextBlock()
@@ -33,31 +34,35 @@ public class ComicController : MonoBehaviour
             currentlayers[currentBlock].SetActive(true);
             currentBlock++;
         }
+        else if (currentBlock >= currentlayers.Count)
+        {
+            currentBlock = 0;
+            ClosePage();
+            currentPage++;
+            if (currentPage > 1)
+            {
+                ScenesManagerHandler.Get().LoadSceneHandler((int)SceneIndexes.MENU);
+                return;
+            }
+            LoadLayers();
+        }
+            
     }
 
     private void LoadLayers()
     {
-        ClosePage();
+        currentlayers.Clear();
         for (int i = 0; i < pages[currentPage].transform.childCount; i++)
         {
             currentlayers.Add(pages[currentPage].transform.GetChild(i).gameObject);
         }
-            
+        HideAll();
     }
     private void ClosePage()
     {
         if (currentlayers.Count > 0)
         {
-            for (int i = 0; i < currentlayers.Count; i++)
-            {
-                currentlayers[i].GetComponent<TweenAnimation>().OnClose();
-            }
-            currentlayers.Clear();
+            pages[currentPage].GetComponent<TweenAnimation>().OnClose();
         } 
-    }
-    private void ActiveNextPage()
-    {
-        currentPage++;
-        LoadLayers();
     }
 }
