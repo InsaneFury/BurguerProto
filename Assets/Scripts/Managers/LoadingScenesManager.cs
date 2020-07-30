@@ -38,8 +38,9 @@ public partial class LoadingScenesManager : MonobehaviourSingleton<LoadingScenes
 
     public void LoadScene(SceneIndexes sceneToLoad)
     {
-        loadingPercentage.text = "0%";
         loadingScreen.gameObject.SetActive(true);
+        loadingPercentage.text = "0%";
+        
         StartCoroutine(GenerateTips());
 
         scenesLoading.Add(SceneManager.UnloadSceneAsync((int)currentSceneLoaded));

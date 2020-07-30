@@ -1,5 +1,7 @@
 ﻿public class ScenesManagerHandler : MonobehaviourSingleton<ScenesManagerHandler>
 {
+    public SceneIndexes scene;
+
     LoadingScenesManager loadingManager;
 
     public override void Awake()
@@ -12,4 +14,10 @@
     {
         loadingManager.LoadScene((SceneIndexes)sceneToLoad);
     }
+
+    public void LoadMap()
+    {
+        loadingManager.LoadScene(scene);
+    }
+
 }
