@@ -58,9 +58,6 @@ public class TweenAnimation : MonoBehaviour
     }
     private void OnEnable()
     {
-        if (childs.Count <= 0)
-            LoadChilds();
-
         SetScaleToZero();
         InAnimation(gameObject,inDuration,inDelay);
 
@@ -137,7 +134,7 @@ public class TweenAnimation : MonoBehaviour
     }
     private void LoadChilds()
     {
-        Transform[] tsChilds = GetComponentsInChildren<Transform>();
+        Transform[] tsChilds = GetComponentsInChildren<Transform>(true);
         for (int i = 0; i < tsChilds.Length; i++)
         {
             if(tsChilds[i].CompareTag("animated"))

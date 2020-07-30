@@ -9,24 +9,26 @@ public class MenuHandler : MonoBehaviour
 
     private void Start() => ResetAll();
     public void ActiveMenu(int activeMenu) => SetAllSettingsMenus(activeMenu);
-    public void ResetAll() => SetAllSettingsMenus(0, true);
-    private void SetAllSettingsMenus(int activeMenu = 0, bool hideAll = false)
+    public void ResetAll()
     {
         for (int i = 0; i < settingsMenus.Length; i++)
         {
-            if (settingsMenus[i].activeSelf)
-            {
-                //if(settingsMenus[i].GetComponent<TweenAnimation>())
-                //    settingsMenus[i].GetComponent<TweenAnimation>().OnClose();
-                //else
-                    settingsMenus[i].SetActive(false);
-            }
-            
-            if ((i == activeMenu) && !hideAll)
-                settingsMenus[i].SetActive(true);
+            if (settingsMenus[i].GetComponent<TweenAnimation>())
+                settingsMenus[i].GetComponent<TweenAnimation>().OnClose();
+            else
+                settingsMenus[i].SetActive(false);
         }
     }
-
+    public void SetAllSettingsMenus(int activeMenu = 0)
+    {
+        for (int i = 0; i < settingsMenus.Length; i++)
+        {
+            if ((i == activeMenu))
+                settingsMenus[i].SetActive(true);
+            else
+                settingsMenus[i].GetComponent<TweenAnimation>().OnClose();
+        }
+    }
     public void QuitGame()
     {
 #if UNITY_EDITOR
