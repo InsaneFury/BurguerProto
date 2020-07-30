@@ -12,6 +12,8 @@ TagManager:
   - Bullet
   - Granade
   - Ammo
+  - FxTemporaire
+  - animated
   layers:
   - Default
   - TransparentFX

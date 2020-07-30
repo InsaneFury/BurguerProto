@@ -14,7 +14,14 @@ public class MenuHandler : MonoBehaviour
     {
         for (int i = 0; i < settingsMenus.Length; i++)
         {
-            settingsMenus[i].SetActive(false);
+            if (settingsMenus[i].activeSelf)
+            {
+                //if(settingsMenus[i].GetComponent<TweenAnimation>())
+                //    settingsMenus[i].GetComponent<TweenAnimation>().OnClose();
+                //else
+                    settingsMenus[i].SetActive(false);
+            }
+            
             if ((i == activeMenu) && !hideAll)
                 settingsMenus[i].SetActive(true);
         }

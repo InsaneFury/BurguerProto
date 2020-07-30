@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 000278eda5d00c1419222cd27f13824c,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -445,9 +445,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1516140964}
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 1516140967}
+          m_MethodName: OnClose
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 80524047}
   m_Layer: 5
   m_Name: Map1
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -766,7 +766,7 @@ GameObject:
   - component: {fileID: 110337153}
   m_Layer: 5
   m_Name: MusicVolume
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1965,7 +1965,7 @@ GameObject:
   - component: {fileID: 206408778}
   m_Layer: 5
   m_Name: Nightmare
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2777,7 +2777,7 @@ GameObject:
   - component: {fileID: 307114657}
   m_Layer: 5
   m_Name: Levels
-  m_TagString: Untagged
+  m_TagString: Animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4152,7 +4152,7 @@ GameObject:
   - component: {fileID: 474351724}
   m_Layer: 5
   m_Name: Graphics
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4164,7 +4164,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474351723}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4173,8 +4173,8 @@ RectTransform:
   - {fileID: 1965287543}
   - {fileID: 2082915012}
   - {fileID: 1044403694}
-  m_Father: {fileID: 1961142835}
-  m_RootOrder: 1
+  m_Father: {fileID: 1742421206}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5036,7 +5036,7 @@ GameObject:
   - component: {fileID: 516547247}
   m_Layer: 5
   m_Name: Mute Toggle
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5111,7 +5111,7 @@ GameObject:
   - component: {fileID: 532863394}
   m_Layer: 5
   m_Name: Map2
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6394,7 +6394,7 @@ GameObject:
   - component: {fileID: 642767208}
   m_Layer: 5
   m_Name: Audio
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6406,7 +6406,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642767207}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6415,8 +6415,8 @@ RectTransform:
   - {fileID: 1997382721}
   - {fileID: 110337153}
   - {fileID: 516547247}
-  m_Father: {fileID: 1961142835}
-  m_RootOrder: 3
+  m_Father: {fileID: 1742421206}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7713,7 +7713,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &763958210
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7721,12 +7721,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763958209}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1961142835}
-  m_RootOrder: 2
+  m_Father: {fileID: 1742421206}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8574,7 +8574,7 @@ GameObject:
   - component: {fileID: 933933824}
   m_Layer: 5
   m_Name: Go
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9615,7 +9615,7 @@ GameObject:
   - component: {fileID: 1044403694}
   m_Layer: 5
   m_Name: Fullscreen Toggle
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10615,7 +10615,7 @@ GameObject:
   - component: {fileID: 1095760505}
   m_Layer: 5
   m_Name: Easy
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10993,7 +10993,7 @@ GameObject:
   - component: {fileID: 1154626497}
   m_Layer: 5
   m_Name: DifficultyText
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11981,7 +11981,7 @@ GameObject:
   - component: {fileID: 1262374989}
   m_Layer: 5
   m_Name: LevelsText
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14570,7 +14570,7 @@ GameObject:
   - component: {fileID: 1464521138}
   m_Layer: 5
   m_Name: SettingsOptions
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14971,9 +14971,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1516140965}
   - component: {fileID: 1516140966}
+  - component: {fileID: 1516140967}
   m_Layer: 5
   m_Name: MenuModes
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15013,6 +15014,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AllowSwitchOff: 0
+--- !u!114 &1516140967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516140964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8037b5a47d299e5479cc2817235bec04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inEaseType: 30
+  inDuration: 0.6
+  inDelay: 0
+  customInCurve: 0
+  inCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  outEaseType: 18
+  outDuration: 0.3
+  outDelay: 0
+  customOutCurve: 0
+  outCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animateChilds: 1
+  randomDuration: 1
+  inMinDuration: 0.6
+  inMaxDuration: 1
+  outMinDuration: 0.1
+  outMaxDuration: 0.3
+  childs: []
+  OnCompleteInCallback:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCompleteOutCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1516140964}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1524394556
 GameObject:
   m_ObjectHideFlags: 0
@@ -15714,7 +15771,7 @@ GameObject:
   - component: {fileID: 1672108628}
   m_Layer: 5
   m_Name: MasterVolume
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16154,6 +16211,90 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1742421205
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1742421206}
+  - component: {fileID: 1742421207}
+  m_Layer: 5
+  m_Name: SettingsDetails
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1742421206
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742421205}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 474351724}
+  - {fileID: 763958210}
+  - {fileID: 642767208}
+  m_Father: {fileID: 1961142835}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1742421207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742421205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8037b5a47d299e5479cc2817235bec04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inEaseType: 24
+  inDuration: 0.6
+  inDelay: 0
+  customInCurve: 0
+  inCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  outEaseType: 18
+  outDuration: 0.3
+  outDelay: 0
+  customOutCurve: 0
+  outCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animateChilds: 1
+  randomDuration: 1
+  inMinDuration: 0.6
+  inMaxDuration: 1
+  outMinDuration: 0.1
+  outMaxDuration: 0.3
+  childs: []
+  OnCompleteInCallback:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCompleteOutCallback:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1747225598
 GameObject:
   m_ObjectHideFlags: 0
@@ -16167,7 +16308,7 @@ GameObject:
   - component: {fileID: 1747225600}
   m_Layer: 5
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16181,7 +16322,7 @@ RectTransform:
   m_GameObject: {fileID: 1747225598}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.61719, y: 0.61719, z: 0.61719}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 642767208}
   m_RootOrder: 0
@@ -16189,7 +16330,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -396, y: -248}
-  m_SizeDelta: {x: 1024, y: 1024}
+  m_SizeDelta: {x: 1024, y: 630.297}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1747225600
 MonoBehaviour:
@@ -16205,7 +16346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -18377,7 +18518,7 @@ GameObject:
   - component: {fileID: 1937932056}
   m_Layer: 5
   m_Name: Quality
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18782,9 +18923,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1464521138}
-  - {fileID: 474351724}
-  - {fileID: 763958210}
-  - {fileID: 642767208}
+  - {fileID: 1742421206}
   m_Father: {fileID: 1792145141}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18880,7 +19019,7 @@ GameObject:
   - component: {fileID: 1965287544}
   m_Layer: 5
   m_Name: Resolution
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19231,7 +19370,7 @@ GameObject:
   - component: {fileID: 1997382721}
   m_Layer: 5
   m_Name: SFXVolume
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19926,7 +20065,7 @@ GameObject:
   - component: {fileID: 2057477236}
   m_Layer: 5
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19964,7 +20103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -19998,7 +20137,7 @@ GameObject:
   - component: {fileID: 2082915012}
   m_Layer: 5
   m_Name: VSync Toggle
-  m_TagString: Untagged
+  m_TagString: animated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
