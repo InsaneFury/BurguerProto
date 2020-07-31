@@ -74,12 +74,12 @@ public class GameManager : MonobehaviourSingleton<GameManager>
 
             if (pause)
             {
-                player.canPlay = !pause;
+                player.canPlay = false;
                 AkSoundEngine.PostEvent("ui_pause_on", gameObject);
             }
             else
             {
-                player.canPlay = pause;
+                player.canPlay = true;
                 AkSoundEngine.PostEvent("ui_pause_off", gameObject);
             }
         }
