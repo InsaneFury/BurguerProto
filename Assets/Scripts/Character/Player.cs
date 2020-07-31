@@ -223,7 +223,7 @@ public class Player : MonobehaviourSingleton<Player>
         animTop.SetFloat("horizontal", horizontal);
         animTop.SetFloat("vertical", vertical);
 
-        rb.AddForce(playerMove * speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
+        rb.AddForce(playerMove * speed * Time.deltaTime, ForceMode.VelocityChange);
 
     }
     private void RotateToMouse()
