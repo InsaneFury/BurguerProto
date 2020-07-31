@@ -118,16 +118,12 @@ public class Player : MonobehaviourSingleton<Player>
         currentActiveWeapon = 1;
         WeaponChanger();
         machineGunBullets = 100;
-        //AkSoundEngine.SetState("Vivo_o_muerto", "Vivo");
     }
 
     void Update()
     {
         //Gamepad detection
         Gamepad gp = Gamepad.current;
-
-        //if (Input.GetKeyDown(KeyCode.Alpha7))
-            //AkSoundEngine.PostEvent("player_sword_attack", gameObject);
             
         if (isAlive && canPlay)
         {
@@ -140,14 +136,10 @@ public class Player : MonobehaviourSingleton<Player>
 
             if (gp != null) RotateWithJoystick(); 
             else RotateToMouse();
-
-            //AkSoundEngine.SetRTPCValue("vida_hamburguesa", life);
-            //AkSoundEngine.SetRTPCValue("mana_hamburguesa", soulsCollected);
         }
     }
     public void ResetStats()
     {
-        //AkSoundEngine.SetState("Vivo_o_muerto", "Vivo");
         animBottom.SetBool("death", false);
         animTop.SetBool("death", false);
         life = originalLife;
@@ -177,8 +169,7 @@ public class Player : MonobehaviourSingleton<Player>
         {
             if (life > 0)
                 life -= dmg;
-            //AkSoundEngine.PostEvent("Voz_hamburguesa", gameObject);
-            //AkSoundEngine.PostEvent("Damage_hamburguesa", gameObject);
+            AkSoundEngine.PostEvent("player_get_damage", gameObject);
             StartCoroutine(GettingDmgVFX());
         }
         else
@@ -300,7 +291,7 @@ public class Player : MonobehaviourSingleton<Player>
             return;
         soulsCollected -= dashCost;
         StartCoroutine(ActiveDashTrail());
-        //AkSoundEngine.PostEvent("Dash", gameObject);
+        AkSoundEngine.PostEvent("player_dash", gameObject);
         rb.velocity = (playerMove == Vector3.zero ? cameraForward : playerMove) * dashSpeed;
     }
     private IEnumerator ActiveDashTrail()
@@ -334,15 +325,14 @@ public class Player : MonobehaviourSingleton<Player>
             life = originalLife;
 
         soulsCollected -= healCost;
-        //AkSoundEngine.PostEvent("Curar_vida", gameObject);
+        AkSoundEngine.PostEvent("player_heal", gameObject);
         healthVFX.Play();
     }
     private void Death()
     {
         if (life > 0) return;
         isAlive = false;
-        //AkSoundEngine.PostEvent("Muerte_hamburguesa", gameObject);
-        //AkSoundEngine.SetState("Vivo_o_muerto", "Muerto");
+        AkSoundEngine.PostEvent("player_dead", gameObject);
         animBottom.SetBool("death", true);
         animTop.SetBool("death", true);
         OnPlayerDead?.Invoke(this);
@@ -360,6 +350,7 @@ public class Player : MonobehaviourSingleton<Player>
             machineGun.SetActive(true);
             machineGunIsActive = true;
             animTop.SetBool("machineGun", true);
+            AkSoundEngine.PostEvent("player_change_machinegun", gameObject);
         }
         else if(currentActiveWeapon == 1)
         {
@@ -367,6 +358,7 @@ public class Player : MonobehaviourSingleton<Player>
             machineGun.SetActive(false);
             machineGunIsActive = false;
             animTop.SetBool("machineGun", false);
+            AkSoundEngine.PostEvent("player_change_grenade", gameObject);
         }
         
         /*
@@ -383,7 +375,7 @@ public class Player : MonobehaviourSingleton<Player>
     {
         if (other.CompareTag("Soul"))
         {
-            //AkSoundEngine.PostEvent("Fantasmas_enemigos", gameObject);
+            AkSoundEngine.PostEvent("player_pick_ghost", gameObject);
             if (soulsCollected < maxSoulsCollected)
             {
                 soulsCollected += (int)UnityEngine.Random.Range(soulGainRange.x, soulGainRange.y);

@@ -28,10 +28,10 @@ MonoBehaviour:
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
-    ParentPath: 
-    guid: 00000000000000000000000000000000
+    ParentPath: Default Work Unit
+    guid: 06d7303f3ae7a04fba5cc1d0fa4e47e2
     GuidInternal: 
-    m_lastTime: -8586056229656542539
+    m_lastTime: -8586054558576764896
     List:
     - name: main
       guid: 90545acffe93444e9038ae5cd777b7c0
@@ -44,20 +44,428 @@ MonoBehaviour:
       Path: Default Work Unit\main
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
-    ParentPath: 
-    guid: 00000000000000000000000000000000
+    ParentPath: Default Work Unit
+    guid: 15b8f79a1876c44393e7a4a67801ac0c
     GuidInternal: 
-    m_lastTime: -8586056263639474290
+    m_lastTime: -8586054573733388084
     List:
-    - name: player_sword_attack
-      guid: 7ce7c7741b2f0247bea9a178e4cdd5dd
-      id: 2088000327
+    - name: boss_dead
+      guid: 1a88ed83cc292445ac9b8f75257e38b0
+      id: 1165767839
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: player_sword_attack
+      - ElementName: boss_dead
         ObjectType: 3
-      Path: Default Work Unit\player_sword_attack
+      Path: Default Work Unit\boss_dead
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: boss_get_damage
+      guid: cb92b198909063438b8981219e3f4995
+      id: 509953065
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: boss_get_damage
+        ObjectType: 3
+      Path: Default Work Unit\boss_get_damage
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: boss_hit
+      guid: 25c5a020b693be46a20a4a8e3e13e7bb
+      id: 1142827732
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: boss_hit
+        ObjectType: 3
+      Path: Default Work Unit\boss_hit
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: boss_random_vocal
+      guid: f81f4c4697ee7b44ba35883dfc272c0a
+      id: 927518902
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: boss_random_vocal
+        ObjectType: 3
+      Path: Default Work Unit\boss_random_vocal
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: boss_walk
+      guid: 029c4af11b7b644bbb2a2aacf645f507
+      id: 860246146
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: boss_walk
+        ObjectType: 3
+      Path: Default Work Unit\boss_walk
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: enemy_dead
+      guid: e2ec75c7249cd346a83e53ea0a9827b2
+      id: 3805217580
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: enemy_dead
+        ObjectType: 3
+      Path: Default Work Unit\enemy_dead
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: enemy_explosion
+      guid: f79088238d348d419ee846333fbe6cf5
+      id: 2119594611
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: enemy_explosion
+        ObjectType: 3
+      Path: Default Work Unit\enemy_explosion
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: enemy_get_damage
+      guid: 1376acb1c31b444292242564a4e50aae
+      id: 2056094210
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: enemy_get_damage
+        ObjectType: 3
+      Path: Default Work Unit\enemy_get_damage
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: enemy_hit
+      guid: 96ce09f99507cc498ee6da98c69c01a9
+      id: 1010055213
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: enemy_hit
+        ObjectType: 3
+      Path: Default Work Unit\enemy_hit
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: enemy_random_vocal
+      guid: 1809ff8d8b59474f8c5dc6a85ad4fd9b
+      id: 3542491801
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: enemy_random_vocal
+        ObjectType: 3
+      Path: Default Work Unit\enemy_random_vocal
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: enemy_walk
+      guid: 96c293ca94467d45adaf538b068a3fee
+      id: 582686005
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: enemy_walk
+        ObjectType: 3
+      Path: Default Work Unit\enemy_walk
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: gameplay_start_wave
+      guid: ef22ec38390e1e41b813095f5a570645
+      id: 3663014476
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: gameplay_start_wave
+        ObjectType: 3
+      Path: Default Work Unit\gameplay_start_wave
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: player_change_grenade
+      guid: bdfd88cfc126fe4e9ca393db35b5330a
+      id: 2609441506
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: player_change_grenade
+        ObjectType: 3
+      Path: Default Work Unit\player_change_grenade
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: player_change_machinegun
+      guid: 86b03a641744c7478f95b60cabc25c33
+      id: 1499643359
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: player_change_machinegun
+        ObjectType: 3
+      Path: Default Work Unit\player_change_machinegun
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: player_dash
+      guid: db6d97f4734e4c4cbec926431fb705f6
+      id: 2394582229
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: player_dash
+        ObjectType: 3
+      Path: Default Work Unit\player_dash
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: player_dead
+      guid: 7ce7c7741b2f0247bea9a178e4cdd5dd
+      id: 2226114503
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: player_dead
+        ObjectType: 3
+      Path: Default Work Unit\player_dead
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: player_get_damage
+      guid: 75c2806beabfcf4b84def21f7a4d1f29
+      id: 176926289
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: player_get_damage
+        ObjectType: 3
+      Path: Default Work Unit\player_get_damage
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: player_grenade_explosion
+      guid: c6966760862fce4d912b4090721575f9
+      id: 3088845913
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: player_grenade_explosion
+        ObjectType: 3
+      Path: Default Work Unit\player_grenade_explosion
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: player_heal
+      guid: be4bc17ab300c4478cb80aea153350a9
+      id: 780312891
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: player_heal
+        ObjectType: 3
+      Path: Default Work Unit\player_heal
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: player_machinegun_shoot
+      guid: 36111b3be879e34ab6c53bef52c3149f
+      id: 1439776510
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: player_machinegun_shoot
+        ObjectType: 3
+      Path: Default Work Unit\player_machinegun_shoot
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: player_pick_ghost
+      guid: bfced735534a3842b1014d8ff440712e
+      id: 362896034
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: player_pick_ghost
+        ObjectType: 3
+      Path: Default Work Unit\player_pick_ghost
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: player_walk
+      guid: 9f52d5e9c26c56458bac112bd626d347
+      id: 2147561130
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: player_walk
+        ObjectType: 3
+      Path: Default Work Unit\player_walk
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ui_battle_level_one
+      guid: 0d2f8901f482e54bbb5f1df3dbe6ee19
+      id: 632270382
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ui_battle_level_one
+        ObjectType: 3
+      Path: Default Work Unit\ui_battle_level_one
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ui_battle_level_two
+      guid: c77370fdc93a0b48bf41d22f03fe15fb
+      id: 745917904
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ui_battle_level_two
+        ObjectType: 3
+      Path: Default Work Unit\ui_battle_level_two
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ui_button_click
+      guid: d3b2e5f6f26de445ab219e1005dc2d5c
+      id: 1664509575
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ui_button_click
+        ObjectType: 3
+      Path: Default Work Unit\ui_button_click
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ui_comic
+      guid: 5991552a7755754d832ecb1885411aaa
+      id: 1074698385
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ui_comic
+        ObjectType: 3
+      Path: Default Work Unit\ui_comic
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ui_game_over
+      guid: 4068d3f8a1e2da48b443bddeab668385
+      id: 3609978017
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ui_game_over
+        ObjectType: 3
+      Path: Default Work Unit\ui_game_over
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ui_loading_screen
+      guid: de985f209771ed4a9ffd4b6329088784
+      id: 326659353
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ui_loading_screen
+        ObjectType: 3
+      Path: Default Work Unit\ui_loading_screen
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ui_menu
+      guid: 6b99f2bd6d780144abbcfd6cdbee1ee4
+      id: 2511555531
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ui_menu
+        ObjectType: 3
+      Path: Default Work Unit\ui_menu
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ui_mute
+      guid: 08566aa3aed9e0438977a02beb17d4a9
+      id: 2614884293
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ui_mute
+        ObjectType: 3
+      Path: Default Work Unit\ui_mute
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ui_pause_off
+      guid: 68ac3c556522e74b8319bf41af84678b
+      id: 952138190
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ui_pause_off
+        ObjectType: 3
+      Path: Default Work Unit\ui_pause_off
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ui_pause_on
+      guid: 87d1fcfb99e4454593e620c4fec2562d
+      id: 1731872944
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ui_pause_on
+        ObjectType: 3
+      Path: Default Work Unit\ui_pause_on
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ui_start_level_one
+      guid: b42bcd2d4fad284dbcfee4b184ba7fb1
+      id: 2689326664
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ui_start_level_one
+        ObjectType: 3
+      Path: Default Work Unit\ui_start_level_one
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ui_start_level_two
+      guid: 3348ae09092d914ebeaa383f0ac1eaa5
+      id: 2270724778
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ui_start_level_two
+        ObjectType: 3
+      Path: Default Work Unit\ui_start_level_two
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ui_unmute
+      guid: eb898cbe62c43f45a4df45ae060da9aa
+      id: 3187239268
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ui_unmute
+        ObjectType: 3
+      Path: Default Work Unit\ui_unmute
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -106,18 +514,110 @@ MonoBehaviour:
       Path: Default Work Unit\sfx_volume
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
-    ParentPath: 
-    guid: 00000000000000000000000000000000
+    ParentPath: Default Work Unit
+    guid: 39367f4764a31d44b3f7453c1c153ada
     GuidInternal: 
-    m_lastTime: -8586058932673256048
-    List: []
+    m_lastTime: -8586055325621991288
+    List:
+    - name: Start
+      guid: 1a4fe1798594074088100cd4d1a6a2f4
+      id: 1281810935
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Start
+        ObjectType: 9
+      Path: Default Work Unit\Start
+      values:
+      - name: comic
+        guid: 16ccb81c1c84424a8fe5dd60691caf4c
+        id: 2450840244
+        PathAndIcons:
+        - ElementName: comic
+          ObjectType: 8
+      - name: game_over
+        guid: 53ee6b49166f5f4aabcd79d4d6f8b4b8
+        id: 1432716332
+        PathAndIcons:
+        - ElementName: game_over
+          ObjectType: 8
+      - name: level_one_ambient
+        guid: 264b988ad5dbad41b3c9ffab987ab2d5
+        id: 3848109621
+        PathAndIcons:
+        - ElementName: level_one_ambient
+          ObjectType: 8
+      - name: level_one_battle
+        guid: 6cd5bd539fac6d47b2f0c668b40b0ebb
+        id: 217363681
+        PathAndIcons:
+        - ElementName: level_one_battle
+          ObjectType: 8
+      - name: level_two_ambient
+        guid: 88b0164b57a1b747b8fb1d3179035e78
+        id: 4294684739
+        PathAndIcons:
+        - ElementName: level_two_ambient
+          ObjectType: 8
+      - name: level_two_battle
+        guid: da476ac8694237458b8de482a357af8f
+        id: 1978974495
+        PathAndIcons:
+        - ElementName: level_two_battle
+          ObjectType: 8
+      - name: loading_screen
+        guid: d83fe8692db975439cd1318cf7a818f6
+        id: 1792793154
+        PathAndIcons:
+        - ElementName: loading_screen
+          ObjectType: 8
+      - name: menu
+        guid: 4aae1871ca557046b2dd7169e6db97f9
+        id: 2607556080
+        PathAndIcons:
+        - ElementName: menu
+          ObjectType: 8
+      - name: None
+        guid: c8734dfd9f353a44b4f3cd0f01a45bcc
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
-    ParentPath: 
-    guid: 00000000000000000000000000000000
+    ParentPath: Default Work Unit
+    guid: 2defe3e7b154714bae52357fc5c17b5a
     GuidInternal: 
-    m_lastTime: -8586058932673035969
-    List: []
+    m_lastTime: -8586055751387551597
+    List:
+    - name: Surface
+      guid: 678befcf0b6f2949aecbe3795373d754
+      id: 1834394558
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Surface
+        ObjectType: 11
+      Path: Default Work Unit\Surface
+      values:
+      - name: concrete
+        guid: 47ef5bceee44f542b68caac21bc12926
+        id: 841620460
+        PathAndIcons:
+        - ElementName: concrete
+          ObjectType: 10
+      - name: snow
+        guid: cdf0a3adc92a3f499bddce69776447f4
+        id: 787898836
+        PathAndIcons:
+        - ElementName: snow
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPath: 
@@ -127,9 +627,5 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Fast Food Nightmare Event List
-  - /Fast Food Nightmare Event List/Events
-  - /Fast Food Nightmare Event List/Events/Default Work Unit
-  - /Fast Food Nightmare Event List/SoundBanks
-  - /Fast Food Nightmare Event List/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

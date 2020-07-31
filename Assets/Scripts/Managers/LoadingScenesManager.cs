@@ -34,10 +34,12 @@ public partial class LoadingScenesManager : MonobehaviourSingleton<LoadingScenes
     {
         currentSceneLoaded = SceneIndexes.INTRO;
         SceneManager.LoadSceneAsync((int)SceneIndexes.INTRO, LoadSceneMode.Additive);
+        SetSceneAudio(SceneIndexes.INTRO);
     }
 
     public void LoadScene(SceneIndexes sceneToLoad)
     {
+        SetSceneAudio(sceneToLoad);
         loadingScreen.gameObject.SetActive(true);
         loadingPercentage.text = "0%";
         
@@ -103,5 +105,40 @@ public partial class LoadingScenesManager : MonobehaviourSingleton<LoadingScenes
 
             LeanTween.alphaCanvas(alphaCanvas, 1.0f, 0.5f);
         }
-    }  
+    }
+
+    public void SetSceneAudio(int sceneToAudio)
+    {
+        SetSceneAudio((SceneIndexes)sceneToAudio);
+    }
+
+    public void SetSceneAudio(SceneIndexes sceneToAudio)
+    {
+        if (sceneToAudio == SceneIndexes.INTRO)
+        {
+            AkSoundEngine.SetState("Start", "comic");
+            AkSoundEngine.PostEvent("ui_comic", gameObject);
+        }
+            
+        if (sceneToAudio == SceneIndexes.LOADING_SCREEN)
+        {
+            AkSoundEngine.SetState("Start", "loading_screen");
+            AkSoundEngine.PostEvent("ui_loading_screen", gameObject);
+        }
+        if (sceneToAudio == SceneIndexes.MENU)
+        {
+            AkSoundEngine.SetState("Start", "menu");
+            AkSoundEngine.PostEvent("ui_menu", gameObject);
+        }
+        if (sceneToAudio == SceneIndexes.LEVEL_1)
+        {
+            AkSoundEngine.SetState("Start", "level_one_ambient");
+            AkSoundEngine.PostEvent("ui_start_level_one", gameObject);
+        }
+        if (sceneToAudio == SceneIndexes.LEVEL_2)
+        {
+            AkSoundEngine.SetState("Start", "level_two_ambient");
+            AkSoundEngine.PostEvent("ui_start_level_two", gameObject);
+        }
+    }
 }

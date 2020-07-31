@@ -52,8 +52,7 @@ public class Enemy : MonoBehaviour
         if (popUp && life > 0)
         {
             ShowPopUp(dmg);
-            //Audio
-            AkSoundEngine.PostEvent("Damage_enemigos", gameObject);
+            AkSoundEngine.PostEvent("enemy_get_damage", gameObject);
         }
         if (life > 0)
         {

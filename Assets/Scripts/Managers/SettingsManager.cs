@@ -52,9 +52,19 @@ public class SettingsManager : MonoBehaviour
     #endregion
 
     #region Audio
-    public void SetMasterVolume(float masterVolume) => Debug.Log($"MasterVolume: {masterVolume}");
-    public void SetSFXVolume(float sfxVolume) => Debug.Log($"SFXVolume: {sfxVolume}");
-    public void SetMusicVolume(float musicVolume) => Debug.Log($"MusicVolume: {musicVolume}");
-    public void SetMute(bool mute) => Debug.Log($"Muted: {mute}");
+    public void SetMasterVolume(float masterVolume)
+    {
+        float master = masterVolume * 100f;
+        AkSoundEngine.SetRTPCValue("general_volume", master);
+    }
+    public void SetSFXVolume(float sfxVolume) => AkSoundEngine.SetRTPCValue("sfx_volume", sfxVolume * 100f);
+    public void SetMusicVolume(float musicVolume) => AkSoundEngine.SetRTPCValue("music_volume", musicVolume*100f);
+    public void SetMute(bool mute)
+    {
+        if(mute)
+            AkSoundEngine.PostEvent("ui_mute", gameObject);
+        else
+            AkSoundEngine.PostEvent("ui_unmute", gameObject);
+    }
     #endregion
 }

@@ -62,9 +62,8 @@ public class Aji : Enemy
     {
         if (distance < attackDistance)
         {
-            //Audio
-            //AkSoundEngine.PostEvent("Voz_enemigos", gameObject);
-            //AkSoundEngine.PostEvent("Ataque_enemigos", gameObject);
+            AkSoundEngine.PostEvent("enemy_random_vocal", gameObject);
+            AkSoundEngine.PostEvent("enemy_explosion", gameObject);
             player.TakeDamage(damage);
         }
         else
@@ -96,8 +95,7 @@ public class Aji : Enemy
 
     protected override void Die()
     {
-        //Audio
-        AkSoundEngine.PostEvent("Muerte_enemigos", gameObject);
+        AkSoundEngine.PostEvent("enemy_dead", gameObject);
         Drop();
         Instantiate(explotionParticle, transform.position, Quaternion.identity);
         EnemySpawner.Get().spawnedEnemies.Remove(gameObject);

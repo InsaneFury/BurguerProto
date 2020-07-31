@@ -60,9 +60,8 @@ public class Tomato : Enemy
     {
         if (distance < attackDistance)
         {
-            //Audio
-            //AkSoundEngine.PostEvent("Voz_enemigos", gameObject);
-            //AkSoundEngine.PostEvent("Ataque_enemigos", gameObject);
+            AkSoundEngine.PostEvent("enemy_random_vocal", gameObject);
+            AkSoundEngine.PostEvent("enemy_hit", gameObject);
             player.TakeDamage(damage);
         }
         else
@@ -90,8 +89,7 @@ public class Tomato : Enemy
 
     protected override void Die()
     {
-        //Audio
-        //AkSoundEngine.PostEvent("Muerte_enemigos", gameObject);
+        AkSoundEngine.PostEvent("enemy_dead", gameObject);
         Drop();
         EnemySpawner.Get().spawnedEnemies.Remove(gameObject);
         Destroy(gameObject,timeToDie);

@@ -7,29 +7,15 @@ public class UIAudioManager : MonoBehaviour
 
     public void PlayUIClick()
     {
-        AkSoundEngine.PostEvent("UI_Click", gameObject);
-    }
-
-    public void PlayEasyDifficultySounds()
-    {
-        AkSoundEngine.SetState("Dificultad", "Facil");
-    }
-
-    public void PlayNormalDifficultySounds()
-    {
-        AkSoundEngine.SetState("Dificultad", "Normal");
-    }
-
-    public void PlayHardDifficultySounds()
-    {
-        AkSoundEngine.SetState("Dificultad", "Dificil");
+        AkSoundEngine.PostEvent("ui_button_click", gameObject);
     }
 
     public void BackToMenu()
     {
-        AkSoundEngine.StopAll();
+        //AkSoundEngine.StopAll();
 
-        //AkSoundEngine.PostEvent("volver_menu", gameObject);
+        AkSoundEngine.PostEvent("volver_menu", gameObject);
         AkSoundEngine.PostEvent("Menu", gameObject);
     }
+
 }

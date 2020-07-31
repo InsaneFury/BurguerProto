@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{E7E3EF2D-54B1-4B71-AE52-357FC5C17B5A}" SchemaVersion="97">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{E7E3EF2D-54B1-4B71-AE52-357FC5C17B5A}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{E7E3EF2D-54B1-4B71-AE52-357FC5C17B5A}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Surface" ID="{CFEF8B67-6F0B-4929-AECB-E3795373D754}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="concrete" ID="{CE5BEF47-44EE-42F5-B68C-AAC21BC12926}"/>
+						<Switch Name="snow" ID="{ADA3F0CD-2AC9-493F-9BDD-CE69776447F4}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

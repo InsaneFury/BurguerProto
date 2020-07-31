@@ -1,3 +1,17 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	1281810935	Start			\Default Work Unit\Start	
+
+State	ID	Name	State Group			Notes
+	217363681	level_one_battle	Start			
+	748895195	None	Start			
+	1432716332	game_over	Start			
+	1792793154	loading_screen	Start			
+	1978974495	level_two_battle	Start			
+	2450840244	comic	Start			
+	2607556080	menu	Start			
+	3848109621	level_one_ambient	Start			
+	4294684739	level_two_ambient	Start			
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1006694123	music_volume			\Default Work Unit\music_volume	
 	1564184899	sfx_volume			\Default Work Unit\sfx_volume	

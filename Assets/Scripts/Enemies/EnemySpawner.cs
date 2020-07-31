@@ -66,6 +66,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
 
     GameManager gManager;
     UIManager uiManager;
+    ScenesManagerHandler sceneHandler;
 
     public float timer = 0;
     [HideInInspector]
@@ -80,6 +81,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
 
     void Start()
     {
+        sceneHandler = ScenesManagerHandler.Get();
         spawnedEnemies = new List<GameObject>();
         gManager = GameManager.Get();
         uiManager = UIManager.Get();
@@ -94,9 +96,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
         {
             SetDifficulty((int)GameDifficulty.Madness);
             SetGameMode((int)GameMode.Survival);
-        }
-
-        
+        }  
     }
 
     private void Update()
@@ -177,6 +177,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
 
     IEnumerator SpawnWave(Wave wave, List<Transform> SpawnPoints)
     {
+        SetCurrentAudio();
         for (int i = 0; i < wave.enemyAmount; i++)
         {
             if (gManager.gameStarted)
@@ -214,8 +215,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
     {
         if (seconds <= 0 && isSpawning)
         {
-            //Audio
-            //AkSoundEngine.PostEvent("Comienzo_oleada", gameObject);
+            AkSoundEngine.PostEvent("gameplay_start_wave", gameObject);
             isSpawning = false;
             uiManager.SetWaveNumber(currentWave + 1);
             StartCoroutine(SpawnWave(lvl1Waves[currentWave],lvl1SpawnPoints));
@@ -227,8 +227,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
     {
         if ((spawnedEnemies.Count == 0) && isSpawning && (seconds <= 0))
         {
-            //Audio
-            //AkSoundEngine.PostEvent("Comienzo_oleada", gameObject);
+            AkSoundEngine.PostEvent("gameplay_start_wave", gameObject);
             isSpawning = false;
 
             userSurvivalRecord++;
@@ -246,8 +245,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
     {
         if (seconds <= 0 && isSpawning)
         {
-            //Audio
-            //AkSoundEngine.PostEvent("Comienzo_oleada", gameObject);
+            AkSoundEngine.PostEvent("gameplay_start_wave", gameObject);
             isSpawning = false;
 
             userSurvivalRecord++;
@@ -301,12 +299,25 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
         {
             timer -= Time.deltaTime;
             seconds = (int)(timer % 60);
-           // AkSoundEngine.SetRTPCValue("waves_time", seconds);
 
             if (seconds == 5)
             {
                 uiManager.ActivePopUpAlert("WARNING!", "Next wave is coming");
             }
+        }
+    }
+
+    public void SetCurrentAudio()
+    {
+        if((currentWave == 1) &&(sceneHandler.scene == SceneIndexes.LEVEL_1))
+        {
+            AkSoundEngine.SetState("MUSIC", "level_one_battle");
+            AkSoundEngine.PostEvent("ui_battle_level_one", gameObject);
+        }
+        if ((currentWave == 1) && (sceneHandler.scene == SceneIndexes.LEVEL_2))
+        {
+            AkSoundEngine.SetState("MUSIC", "level_two_battle");
+            AkSoundEngine.PostEvent("ui_battle_level_two", gameObject);
         }
     }
 

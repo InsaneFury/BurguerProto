@@ -124,8 +124,7 @@ public class MachineGun : MonobehaviourSingleton<MachineGun>
                 timeToFire = Time.time + 1f / fireRate;
                 bullets--;
 
-                //Audio
-                //AkSoundEngine.PostEvent("Mch_Gun_disparo", gameObject);
+                AkSoundEngine.PostEvent("player_machinegun_shoot", gameObject);
 
                 Shoot();
                 player.animMachineGun.SetBool("attack", true);

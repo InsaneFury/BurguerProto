@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{7BFEAE3B-F37E-49AD-BF02-1EE53398153F}" SchemaVersion="97">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{7BFEAE3B-F37E-49AD-BF02-1EE53398153F}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{7BFEAE3B-F37E-49AD-BF02-1EE53398153F}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="New_Wwise_Gain" ID="{0195B24E-AE73-4424-AB6F-3E2A0256D544}" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+					<PropertyList>
+						<Property Name="FullBandGain" Type="Real32" Value="15"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Wwise_Guitar_Distortion" ID="{D11D00D0-AB8C-4F46-AE49-01A02F8627A7}" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+					<PropertyList>
+						<Property Name="PostEQBand1Enable" Type="bool" Value="True"/>
+						<Property Name="PostEQBand1Gain" Type="Real32" Value="0.5"/>
+						<Property Name="PreEQBand1Enable" Type="bool" Value="True"/>
+						<Property Name="PreEQBand1Frequency" Type="Real32" Value="347"/>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>

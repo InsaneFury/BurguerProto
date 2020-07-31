@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Granade : MonobehaviourSingleton<Granade>
 {
-    public GameObject bullet;
+    public GameObject granadePrefab;
     public float bulletSize = 0.1f;
     public float maxBulletSize = 0.9f;
     public float speedOfIncrease = 0.1f;
@@ -30,7 +30,7 @@ public class Granade : MonobehaviourSingleton<Granade>
         gamepad = InputSystem.GetDevice<Gamepad>();
         player = Player.Get();
         gameManager = GameManager.Get();
-        bulletSize = bullet.transform.localScale.x;
+        bulletSize = granadePrefab.transform.localScale.x;
     }
 
     private void Update()
@@ -58,7 +58,7 @@ public class Granade : MonobehaviourSingleton<Granade>
     public void InstantiateGranade()
     {
         Vector3 spawnPos = Player.Get().transform.position;
-        GameObject b = Instantiate(bullet, spawnPos + player.Top.transform.forward * dropDistance, player.transform.rotation);
+        GameObject b = Instantiate(granadePrefab, spawnPos + player.Top.transform.forward * dropDistance, player.transform.rotation);
         b.GetComponent<Rigidbody>().AddForce(player.Top.transform.forward * shootPower * Time.fixedDeltaTime, ForceMode.Impulse);
     }
 }

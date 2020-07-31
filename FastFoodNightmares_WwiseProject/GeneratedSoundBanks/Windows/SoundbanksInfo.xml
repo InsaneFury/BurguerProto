@@ -26,31 +26,557 @@
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2088000327" Name="player_sword_attack" ObjectPath="\Events\Default Work Unit\player_sword_attack">
+				<Event Id="1165767839" Name="boss_dead" ObjectPath="\Events\Default Work Unit\boss_dead">
 					<IncludedMemoryFiles>
-						<File Id="92482279" Language="SFX">
-							<ShortName>Fast Action Swish_HW 05.wav</ShortName>
-							<Path>SFX\Fast Action Swish_HW 05_5AB55FB7.wem</Path>
-						</File>
-						<File Id="456638238" Language="SFX">
-							<ShortName>Fast Action Swish_HW 05.wav</ShortName>
-							<Path>SFX\Fast Action Swish_HW 05_88D4DE67.wem</Path>
-						</File>
-						<File Id="571465909" Language="SFX">
-							<ShortName>Fast Action Swish_HW 05.wav</ShortName>
-							<Path>SFX\Fast Action Swish_HW 05_1CE0CD73.wem</Path>
-						</File>
-						<File Id="572778280" Language="SFX">
-							<ShortName>Fast Action Swish_HW 05.wav</ShortName>
-							<Path>SFX\Fast Action Swish_HW 05_5DCF8E79.wem</Path>
-						</File>
-						<File Id="598615803" Language="SFX">
-							<ShortName>Fast Action Swish_HW 05.wav</ShortName>
-							<Path>SFX\Fast Action Swish_HW 05_A4E0AE8B.wem</Path>
+						<File Id="453727089" Language="SFX">
+							<ShortName>verduras aplastadas 1.wav</ShortName>
+							<Path>SFX\verduras aplastadas 1_4C77450A.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="509953065" Name="boss_get_damage" ObjectPath="\Events\Default Work Unit\boss_get_damage">
+					<IncludedMemoryFiles>
+						<File Id="338169922" Language="SFX">
+							<ShortName>salpicada 4.wav</ShortName>
+							<Path>SFX\salpicada 4_D15B8755.wem</Path>
+						</File>
+						<File Id="536469864" Language="SFX">
+							<ShortName>salpicada 4.wav</ShortName>
+							<Path>SFX\salpicada 4_87D81886.wem</Path>
+						</File>
+						<File Id="734832010" Language="SFX">
+							<ShortName>salpicada 4.wav</ShortName>
+							<Path>SFX\salpicada 4_56DBD36E.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1142827732" Name="boss_hit" ObjectPath="\Events\Default Work Unit\boss_hit">
+					<IncludedMemoryFiles>
+						<File Id="576445621" Language="SFX">
+							<ShortName>Whoosh 5.wav</ShortName>
+							<Path>SFX\Whoosh 5_1B8E19B5.wem</Path>
+						</File>
+						<File Id="628654353" Language="SFX">
+							<ShortName>Whoosh 5.wav</ShortName>
+							<Path>SFX\Whoosh 5_C05BE941.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="927518902" Name="boss_random_vocal" ObjectPath="\Events\Default Work Unit\boss_random_vocal">
+					<IncludedMemoryFiles>
+						<File Id="651556113" Language="SFX">
+							<ShortName>creature 4.wav</ShortName>
+							<Path>SFX\creature 4_1E3BFB85.wem</Path>
+						</File>
+						<File Id="655124528" Language="SFX">
+							<ShortName>Monster_Struggle_Grunt_240.wav</ShortName>
+							<Path>SFX\Monster_Struggle_Grunt_240_CD8EDA95.wem</Path>
+						</File>
+						<File Id="751754252" Language="SFX">
+							<ShortName>Zombie Subject C Zombie Brat Groan (9).wav</ShortName>
+							<Path>SFX\Zombie Subject C Zombie Brat Groan (9)_CD8EDA95.wem</Path>
+						</File>
+						<File Id="841950862" Language="SFX">
+							<ShortName>Hisses Dry 16.M.wav</ShortName>
+							<Path>SFX\Hisses Dry 16.M_4ADA63D0.wem</Path>
+						</File>
+						<File Id="908313694" Language="SFX">
+							<ShortName>creature 5.wav</ShortName>
+							<Path>SFX\creature 5_44514D49.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="860246146" Name="boss_walk" ObjectPath="\Events\Default Work Unit\boss_walk">
+					<IncludedMemoryFiles>
+						<File Id="296468668" Language="SFX">
+							<ShortName>footstep_ice_crunchy_run_02.wav</ShortName>
+							<Path>SFX\footstep_ice_crunchy_run_02_0031CD92.wem</Path>
+						</File>
+						<File Id="405796298" Language="SFX">
+							<ShortName>footstep_ice_crunchy_run_01.wav</ShortName>
+							<Path>SFX\footstep_ice_crunchy_run_01_0031CD92.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{CE5BEF47-44EE-42F5-B68C-AAC21BC12926}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{ADA3F0CD-2AC9-493F-9BDD-CE69776447F4}">
+							<Media>
+								<File Id="405796298"/>
+								<File Id="296468668"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{CE5BEF47-44EE-42F5-B68C-AAC21BC12926}">
+							<Media>
+								<File Id="405796298"/>
+								<File Id="296468668"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3805217580" Name="enemy_dead" ObjectPath="\Events\Default Work Unit\enemy_dead">
+					<IncludedMemoryFiles>
+						<File Id="317383924" Language="SFX">
+							<ShortName>Juicy Burst_VM 03.wav</ShortName>
+							<Path>SFX\Juicy Burst_VM 03_CD8EDA95.wem</Path>
+						</File>
+						<File Id="427303395" Language="SFX">
+							<ShortName>verduras aplastadas 1.wav</ShortName>
+							<Path>SFX\verduras aplastadas 1_C08A8BC0.wem</Path>
+						</File>
+						<File Id="435365801" Language="SFX">
+							<ShortName>verduras aplastadas 1.wav</ShortName>
+							<Path>SFX\verduras aplastadas 1_34E4E8FB.wem</Path>
+						</File>
+						<File Id="453727089" Language="SFX">
+							<ShortName>verduras aplastadas 1.wav</ShortName>
+							<Path>SFX\verduras aplastadas 1_4C77450A.wem</Path>
+						</File>
+						<File Id="640086825" Language="SFX">
+							<ShortName>Juicy Crack and Break_VM 01.wav</ShortName>
+							<Path>SFX\Juicy Crack and Break_VM 01_CD8EDA95.wem</Path>
+						</File>
+						<File Id="885419676" Language="SFX">
+							<ShortName>verduras aplastadas 1.wav</ShortName>
+							<Path>SFX\verduras aplastadas 1_47C1F40C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2119594611" Name="enemy_explosion" ObjectPath="\Events\Default Work Unit\enemy_explosion">
+					<IncludedMemoryFiles>
+						<File Id="830001728" Language="SFX">
+							<ShortName>verduras aplastadas 1.wav</ShortName>
+							<Path>SFX\verduras aplastadas 1_1969A104.wem</Path>
+						</File>
+						<File Id="899336527" Language="SFX">
+							<ShortName>verduras aplastadas 1.wav</ShortName>
+							<Path>SFX\verduras aplastadas 1_BFBE7415.wem</Path>
+						</File>
+						<File Id="916872762" Language="SFX">
+							<ShortName>explosion_large_08.wav</ShortName>
+							<Path>SFX\explosion_large_08_CD8EDA95.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2056094210" Name="enemy_get_damage" ObjectPath="\Events\Default Work Unit\enemy_get_damage">
+					<IncludedMemoryFiles>
+						<File Id="47986279" Language="SFX">
+							<ShortName>salpicada 5.wav</ShortName>
+							<Path>SFX\salpicada 5_A48C010B.wem</Path>
+						</File>
+						<File Id="118469236" Language="SFX">
+							<ShortName>salpicada 5.wav</ShortName>
+							<Path>SFX\salpicada 5_EF5F82ED.wem</Path>
+						</File>
+						<File Id="412758676" Language="SFX">
+							<ShortName>salpicada 4.wav</ShortName>
+							<Path>SFX\salpicada 4_8B396C3E.wem</Path>
+						</File>
+						<File Id="429997397" Language="SFX">
+							<ShortName>salpicada 5.wav</ShortName>
+							<Path>SFX\salpicada 5_D2A7E267.wem</Path>
+						</File>
+						<File Id="433326066" Language="SFX">
+							<ShortName>salpicada 4.wav</ShortName>
+							<Path>SFX\salpicada 4_A4581B49.wem</Path>
+						</File>
+						<File Id="612544327" Language="SFX">
+							<ShortName>salpicada 4.wav</ShortName>
+							<Path>SFX\salpicada 4_B5FC9821.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1010055213" Name="enemy_hit" ObjectPath="\Events\Default Work Unit\enemy_hit">
+					<IncludedMemoryFiles>
+						<File Id="150665725" Language="SFX">
+							<ShortName>Whoosh 5.wav</ShortName>
+							<Path>SFX\Whoosh 5_FD60534F.wem</Path>
+						</File>
+						<File Id="576445621" Language="SFX">
+							<ShortName>Whoosh 5.wav</ShortName>
+							<Path>SFX\Whoosh 5_1B8E19B5.wem</Path>
+						</File>
+						<File Id="628654353" Language="SFX">
+							<ShortName>Whoosh 5.wav</ShortName>
+							<Path>SFX\Whoosh 5_C05BE941.wem</Path>
+						</File>
+						<File Id="934696961" Language="SFX">
+							<ShortName>Whoosh 5.wav</ShortName>
+							<Path>SFX\Whoosh 5_C2D38FAF.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3542491801" Name="enemy_random_vocal" ObjectPath="\Events\Default Work Unit\enemy_random_vocal">
+					<IncludedMemoryFiles>
+						<File Id="651556113" Language="SFX">
+							<ShortName>creature 4.wav</ShortName>
+							<Path>SFX\creature 4_1E3BFB85.wem</Path>
+						</File>
+						<File Id="655124528" Language="SFX">
+							<ShortName>Monster_Struggle_Grunt_240.wav</ShortName>
+							<Path>SFX\Monster_Struggle_Grunt_240_CD8EDA95.wem</Path>
+						</File>
+						<File Id="751754252" Language="SFX">
+							<ShortName>Zombie Subject C Zombie Brat Groan (9).wav</ShortName>
+							<Path>SFX\Zombie Subject C Zombie Brat Groan (9)_CD8EDA95.wem</Path>
+						</File>
+						<File Id="841950862" Language="SFX">
+							<ShortName>Hisses Dry 16.M.wav</ShortName>
+							<Path>SFX\Hisses Dry 16.M_4ADA63D0.wem</Path>
+						</File>
+						<File Id="908313694" Language="SFX">
+							<ShortName>creature 5.wav</ShortName>
+							<Path>SFX\creature 5_44514D49.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="582686005" Name="enemy_walk" ObjectPath="\Events\Default Work Unit\enemy_walk">
+					<IncludedMemoryFiles>
+						<File Id="258078433" Language="SFX">
+							<ShortName>footstep_ice_crunchy_run_01.wav</ShortName>
+							<Path>SFX\footstep_ice_crunchy_run_01_CD8EDA95.wem</Path>
+						</File>
+						<File Id="1057034511" Language="SFX">
+							<ShortName>footstep_ice_crunchy_run_02.wav</ShortName>
+							<Path>SFX\footstep_ice_crunchy_run_02_CD8EDA95.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{CE5BEF47-44EE-42F5-B68C-AAC21BC12926}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{ADA3F0CD-2AC9-493F-9BDD-CE69776447F4}">
+							<Media>
+								<File Id="258078433"/>
+								<File Id="1057034511"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{CE5BEF47-44EE-42F5-B68C-AAC21BC12926}">
+							<Media>
+								<File Id="258078433"/>
+								<File Id="1057034511"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3663014476" Name="gameplay_start_wave" ObjectPath="\Events\Default Work Unit\gameplay_start_wave">
+					<IncludedMemoryFiles>
+						<File Id="121230922" Language="SFX">
+							<ShortName>Bombo_Corte.wav</ShortName>
+							<Path>SFX\Bombo_Corte_CD8EDA95.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2609441506" Name="player_change_grenade" ObjectPath="\Events\Default Work Unit\player_change_grenade">
+					<IncludedMemoryFiles>
+						<File Id="764568390" Language="SFX">
+							<ShortName>golpe 4.wav</ShortName>
+							<Path>SFX\golpe 4_C2EC71F8.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1499643359" Name="player_change_machinegun" ObjectPath="\Events\Default Work Unit\player_change_machinegun">
+					<IncludedMemoryFiles>
+						<File Id="545953512" Language="SFX">
+							<ShortName>gun_semi_auto_rifle_cock_02.wav</ShortName>
+							<Path>SFX\gun_semi_auto_rifle_cock_02_CD8EDA95.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2394582229" Name="player_dash" ObjectPath="\Events\Default Work Unit\player_dash">
+					<IncludedMemoryFiles>
+						<File Id="413081588" Language="SFX">
+							<ShortName>DASH.wav</ShortName>
+							<Path>SFX\DASH_1C1D86A1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2226114503" Name="player_dead" ObjectPath="\Events\Default Work Unit\player_dead">
+					<IncludedMemoryFiles>
+						<File Id="640086825" Language="SFX">
+							<ShortName>Juicy Crack and Break_VM 01.wav</ShortName>
+							<Path>SFX\Juicy Crack and Break_VM 01_CD8EDA95.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="176926289" Name="player_get_damage" ObjectPath="\Events\Default Work Unit\player_get_damage">
+					<IncludedMemoryFiles>
+						<File Id="329607963" Language="SFX">
+							<ShortName>salpicada 5.wav</ShortName>
+							<Path>SFX\salpicada 5_E19635F5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3088845913" Name="player_grenade_explosion" ObjectPath="\Events\Default Work Unit\player_grenade_explosion">
+					<IncludedMemoryFiles>
+						<File Id="916872762" Language="SFX">
+							<ShortName>explosion_large_08.wav</ShortName>
+							<Path>SFX\explosion_large_08_CD8EDA95.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="780312891" Name="player_heal" ObjectPath="\Events\Default Work Unit\player_heal">
+					<IncludedMemoryFiles>
+						<File Id="505339731" Language="SFX">
+							<ShortName>SPELL_stems_spell - stem-001.wav</ShortName>
+							<Path>SFX\SPELL_stems_spell - stem-001_CD8EDA95.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1439776510" Name="player_machinegun_shoot" ObjectPath="\Events\Default Work Unit\player_machinegun_shoot">
+					<IncludedMemoryFiles>
+						<File Id="334660324" Language="SFX">
+							<ShortName>disparos.wav</ShortName>
+							<Path>SFX\disparos_6A14AFAA.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="362896034" Name="player_pick_ghost" ObjectPath="\Events\Default Work Unit\player_pick_ghost">
+					<IncludedMemoryFiles>
+						<File Id="448754555" Language="SFX">
+							<ShortName>Luciernaga.wav</ShortName>
+							<Path>SFX\Luciernaga_ACF03393.wem</Path>
+						</File>
+						<File Id="708179404" Language="SFX">
+							<ShortName>Luciernaga.wav</ShortName>
+							<Path>SFX\Luciernaga_26A4A805.wem</Path>
+						</File>
+						<File Id="801632523" Language="SFX">
+							<ShortName>Luciernaga.wav</ShortName>
+							<Path>SFX\Luciernaga_EC69B181.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2147561130" Name="player_walk" ObjectPath="\Events\Default Work Unit\player_walk">
+					<IncludedMemoryFiles>
+						<File Id="23342759" Language="SFX">
+							<ShortName>salpicada 4.wav</ShortName>
+							<Path>SFX\salpicada 4_B6D70D54.wem</Path>
+						</File>
+						<File Id="324553183" Language="SFX">
+							<ShortName>salpicada 4.wav</ShortName>
+							<Path>SFX\salpicada 4_7EF417A8.wem</Path>
+						</File>
+						<File Id="427827004" Language="SFX">
+							<ShortName>footstep_snow.wav</ShortName>
+							<Path>SFX\footstep_snow_E6E55EFF.wem</Path>
+						</File>
+						<File Id="527396946" Language="SFX">
+							<ShortName>footstep_snow.wav</ShortName>
+							<Path>SFX\footstep_snow_3FF48DCD.wem</Path>
+						</File>
+						<File Id="799234565" Language="SFX">
+							<ShortName>footstep_snow.wav</ShortName>
+							<Path>SFX\footstep_snow_15474120.wem</Path>
+						</File>
+						<File Id="968909548" Language="SFX">
+							<ShortName>salpicada 4.wav</ShortName>
+							<Path>SFX\salpicada 4_5EE0DC6D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{CE5BEF47-44EE-42F5-B68C-AAC21BC12926}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{CE5BEF47-44EE-42F5-B68C-AAC21BC12926}">
+							<Media>
+								<File Id="968909548"/>
+								<File Id="324553183"/>
+								<File Id="23342759"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{ADA3F0CD-2AC9-493F-9BDD-CE69776447F4}">
+							<Media>
+								<File Id="799234565"/>
+								<File Id="527396946"/>
+								<File Id="427827004"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="632270382" Name="ui_battle_level_one" ObjectPath="\Events\Default Work Unit\ui_battle_level_one">
+					<ActionSetState>
+						<ActionSetStateEntry Id="217363681" Name="level_one_battle" ObjectPath="\States\Default Work Unit\Start\level_one_battle"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="745917904" Name="ui_battle_level_two" ObjectPath="\Events\Default Work Unit\ui_battle_level_two">
+					<ActionSetState>
+						<ActionSetStateEntry Id="1978974495" Name="level_two_battle" ObjectPath="\States\Default Work Unit\Start\level_two_battle"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="1664509575" Name="ui_button_click" ObjectPath="\Events\Default Work Unit\ui_button_click">
+					<IncludedMemoryFiles>
+						<File Id="862048640" Language="SFX">
+							<ShortName>click 6.wav</ShortName>
+							<Path>SFX\click 6_370FE1D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1074698385" Name="ui_comic" ObjectPath="\Events\Default Work Unit\ui_comic">
+					<IncludedMemoryFiles>
+						<File Id="13818042" Language="SFX">
+							<ShortName>TRANSITION_SEGMENT_NAVIDAD.wav</ShortName>
+							<Path>SFX\TRANSITION_SEGMENT_NAVIDAD_3D1D1BA5.wem</Path>
+						</File>
+						<File Id="21094931" Language="SFX">
+							<ShortName>FFN_NAVIDAD_BATTLE - A.wav</ShortName>
+							<Path>SFX\FFN_NAVIDAD_BATTLE - A_3D1D1BA5.wem</Path>
+						</File>
+						<File Id="288250054" Language="SFX">
+							<ShortName>gameplay_rest_normal.wav</ShortName>
+							<Path>SFX\gameplay_rest_normal_3D1D1BA5.wem</Path>
+						</File>
+						<File Id="406932726" Language="SFX">
+							<ShortName>FFN_NAVIDAD_AMBIENT.wav</ShortName>
+							<Path>SFX\FFN_NAVIDAD_AMBIENT_3D1D1BA5.wem</Path>
+						</File>
+						<File Id="702642504" Language="SFX">
+							<ShortName>FFN_NAVIDAD_BATTLE - B.wav</ShortName>
+							<Path>SFX\FFN_NAVIDAD_BATTLE - B_3D1D1BA5.wem</Path>
+						</File>
+						<File Id="1033831336" Language="SFX">
+							<ShortName>comic terror.wav</ShortName>
+							<Path>SFX\comic terror_3D1D1BA5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{53BDD56C-AC9F-476D-B2F0-C668B40B0EBB}">
+							<Media>
+								<File Id="288250054"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{7118AE4A-55CA-4670-B2DD-7169E6DB97F9}">
+							<Media>
+								<File Id="1033831336"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{C86A47DA-4269-4537-8B8D-E482A357AF8F}">
+							<Media>
+								<File Id="21094931"/>
+								<File Id="702642504"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{4B16B088-A157-47B7-B8FB-1D3179035E78}">
+							<Media>
+								<File Id="406932726"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+					<ActionSetState>
+						<ActionSetStateEntry Id="2450840244" Name="comic" ObjectPath="\States\Default Work Unit\Start\comic"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3609978017" Name="ui_game_over" ObjectPath="\Events\Default Work Unit\ui_game_over">
+					<ActionSetState>
+						<ActionSetStateEntry Id="1432716332" Name="game_over" ObjectPath="\States\Default Work Unit\Start\game_over"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="326659353" Name="ui_loading_screen" ObjectPath="\Events\Default Work Unit\ui_loading_screen">
+					<ActionSetState>
+						<ActionSetStateEntry Id="1792793154" Name="loading_screen" ObjectPath="\States\Default Work Unit\Start\loading_screen"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2511555531" Name="ui_menu" ObjectPath="\Events\Default Work Unit\ui_menu">
+					<ActionSetState>
+						<ActionSetStateEntry Id="2607556080" Name="menu" ObjectPath="\States\Default Work Unit\Start\menu"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2614884293" Name="ui_mute" ObjectPath="\Events\Default Work Unit\ui_mute"/>
+				<Event Id="952138190" Name="ui_pause_off" ObjectPath="\Events\Default Work Unit\ui_pause_off"/>
+				<Event Id="1731872944" Name="ui_pause_on" ObjectPath="\Events\Default Work Unit\ui_pause_on"/>
+				<Event Id="2689326664" Name="ui_start_level_one" ObjectPath="\Events\Default Work Unit\ui_start_level_one">
+					<IncludedMemoryFiles>
+						<File Id="41932366" Language="SFX">
+							<ShortName>amb_stems_roomtone_overhead_fan_002.wav</ShortName>
+							<Path>SFX\amb_stems_roomtone_overhead_fan_002_4766FE73.wem</Path>
+						</File>
+						<File Id="245343320" Language="SFX">
+							<ShortName>amb_stems_EMF_Toaster.wav</ShortName>
+							<Path>SFX\amb_stems_EMF_Toaster_CD8EDA95.wem</Path>
+						</File>
+						<File Id="268348394" Language="SFX">
+							<ShortName>Espresso Machine 02.wav</ShortName>
+							<Path>SFX\Espresso Machine 02_C548B5F1.wem</Path>
+						</File>
+						<File Id="305267194" Language="SFX">
+							<ShortName>Espresso Machine 02.wav</ShortName>
+							<Path>SFX\Espresso Machine 02_41AFE44D.wem</Path>
+						</File>
+						<File Id="747830783" Language="SFX">
+							<ShortName>amb_stems_RA_40_Restaurant_Bar_Night_Fridges_Empty_Room Tone_Neumann KM184 ORTF.wav</ShortName>
+							<Path>SFX\amb_stems_RA_40_Restaurant_Bar_Night_Fridges_Empty_Room Tone_Neumann KM184 ORTF_4766FE73.wem</Path>
+						</File>
+						<File Id="873653759" Language="SFX">
+							<ShortName>Heartbeat,Sound Design,Pulse,Throb,Steady,Accelerate,Panic,Fear.wav</ShortName>
+							<Path>SFX\Heartbeat,Sound Design,Pulse,Throb,Steady,Accelerate,Panic,Fear_B0F82471.wem</Path>
+						</File>
+						<File Id="972570297" Language="SFX">
+							<ShortName>Espresso Machine 02.wav</ShortName>
+							<Path>SFX\Espresso Machine 02_EB7811F2.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionSetState>
+						<ActionSetStateEntry Id="3848109621" Name="level_one_ambient" ObjectPath="\States\Default Work Unit\Start\level_one_ambient"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2270724778" Name="ui_start_level_two" ObjectPath="\Events\Default Work Unit\ui_start_level_two">
+					<IncludedMemoryFiles>
+						<File Id="873653759" Language="SFX">
+							<ShortName>Heartbeat,Sound Design,Pulse,Throb,Steady,Accelerate,Panic,Fear.wav</ShortName>
+							<Path>SFX\Heartbeat,Sound Design,Pulse,Throb,Steady,Accelerate,Panic,Fear_B0F82471.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionSetState>
+						<ActionSetStateEntry Id="4294684739" Name="level_two_ambient" ObjectPath="\States\Default Work Unit\Start\level_two_ambient"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3187239268" Name="ui_unmute" ObjectPath="\Events\Default Work Unit\ui_unmute"/>
 			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="215992295" Name="player_health" ObjectPath="\Game Parameters\Default Work Unit\player_health"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="217363681" Name="level_one_battle" ObjectPath="\States\Default Work Unit\Start\level_one_battle">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="1281810935" Name="Start" ObjectPath="\States\Default Work Unit\Start">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Start\None"/>
+						<State Id="2607556080" Name="menu" ObjectPath="\States\Default Work Unit\Start\menu"/>
+						<State Id="3848109621" Name="level_one_ambient" ObjectPath="\States\Default Work Unit\Start\level_one_ambient"/>
+						<State Id="217363681" Name="level_one_battle" ObjectPath="\States\Default Work Unit\Start\level_one_battle"/>
+						<State Id="4294684739" Name="level_two_ambient" ObjectPath="\States\Default Work Unit\Start\level_two_ambient"/>
+						<State Id="2450840244" Name="comic" ObjectPath="\States\Default Work Unit\Start\comic"/>
+						<State Id="1978974495" Name="level_two_battle" ObjectPath="\States\Default Work Unit\Start\level_two_battle"/>
+						<State Id="1432716332" Name="game_over" ObjectPath="\States\Default Work Unit\Start\game_over"/>
+						<State Id="1792793154" Name="loading_screen" ObjectPath="\States\Default Work Unit\Start\loading_screen"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1432716332" Name="game_over" ObjectPath="\States\Default Work Unit\Start\game_over">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="1792793154" Name="loading_screen" ObjectPath="\States\Default Work Unit\Start\loading_screen">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="1978974495" Name="level_two_battle" ObjectPath="\States\Default Work Unit\Start\level_two_battle">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="2450840244" Name="comic" ObjectPath="\States\Default Work Unit\Start\comic">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="2607556080" Name="menu" ObjectPath="\States\Default Work Unit\Start\menu">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="3848109621" Name="level_one_ambient" ObjectPath="\States\Default Work Unit\Start\level_one_ambient">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="4294684739" Name="level_two_ambient" ObjectPath="\States\Default Work Unit\Start\level_two_ambient">
+					<States/>
+				</StateGroup>
+			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="1834394558" Name="Surface" ObjectPath="\Switches\Default Work Unit\Surface">
+					<Switches>
+						<Switch Id="841620460" Name="concrete" ObjectPath="\Switches\Default Work Unit\Surface\concrete"/>
+						<Switch Id="787898836" Name="snow" ObjectPath="\Switches\Default Work Unit\Surface\snow"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

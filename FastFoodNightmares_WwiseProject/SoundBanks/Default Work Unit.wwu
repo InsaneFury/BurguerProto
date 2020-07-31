@@ -5,7 +5,41 @@
 			<ChildrenList>
 				<SoundBank Name="main" ID="{CF5A5490-93FE-4E44-9038-AE5CD777B7C0}">
 					<ObjectInclusionList>
-						<ObjectRef Name="player_sword_attack" ID="{74C7E77C-2F1B-4702-BEA9-A178E4CDD5DD}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="gameplay_start_wave" ID="{38EC22EF-0E39-411E-B813-095F5A570645}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="enemy_explosion" ID="{238890F7-348D-418D-9EE8-46333FBE6CF5}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="player_pick_ghost" ID="{35D7CEBF-4A53-4238-B101-4D8FF440712E}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="enemy_get_damage" ID="{B1AC7613-1BC3-4244-9224-2564A4E50AAE}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="boss_get_damage" ID="{98B192CB-9090-4363-8B89-81219E3F4995}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ui_mute" ID="{A36A5608-D9AE-43E0-8977-A02BEB17D4A9}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ui_menu" ID="{BDF2996B-786D-4401-ABBC-FD6CDBEE1EE4}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="boss_random_vocal" ID="{464C1FF8-EE97-447B-BA35-883DFC272C0A}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="boss_dead" ID="{83ED881A-29CC-4524-AC9B-8F75257E38B0}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ui_unmute" ID="{BE8C89EB-C462-453F-A4DF-45AE060DA9AA}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ui_pause_on" ID="{FBFCD187-E499-4545-93E6-20C4FEC2562D}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="player_walk" ID="{E9D5529F-6CC2-4556-8BAC-112BD626D347}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="enemy_walk" ID="{CA93C296-4694-457D-ADAF-538B068A3FEE}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ui_button_click" ID="{F6E5B2D3-6DF2-45E4-AB21-9E1005DC2D5C}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="boss_hit" ID="{20A0C525-93B6-46BE-A20A-4A8E3E13E7BB}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="enemy_dead" ID="{C775ECE2-9C24-46D3-A83E-53EA0A9827B2}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="player_dead" ID="{74C7E77C-2F1B-4702-BEA9-A178E4CDD5DD}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="player_heal" ID="{7AC14BBE-00B3-47C4-8CB8-0AEA153350A9}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="player_change_machinegun" ID="{643AB086-4417-47C7-8F95-B60CABC25C33}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ui_battle_level_two" ID="{FD7073C7-3AC9-480B-BF41-D22F03FE15FB}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ui_game_over" ID="{F8D36840-E2A1-48DA-B443-BDDEAB668385}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="enemy_hit" ID="{F909CE96-0795-49CC-8EE6-DA98C69C01A9}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="player_machinegun_shoot" ID="{3B1B1136-79E8-4AE3-B6C5-3BEF52C3149F}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ui_loading_screen" ID="{205F98DE-7197-4AED-9FFD-4B6329088784}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="boss_walk" ID="{F14A9C02-7B1B-4B64-BB2A-2AACF645F507}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="player_get_damage" ID="{6B80C275-BFEA-4BCF-84DE-F21F7A4D1F29}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ui_battle_level_one" ID="{01892F0D-82F4-4BE5-BB5F-1DF3DBE6EE19}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ui_pause_off" ID="{553CAC68-2265-4BE7-8319-BF41AF84678B}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="player_dash" ID="{F4976DDB-4E73-4C4C-BEC9-26431FB705F6}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ui_start_level_one" ID="{2DCD2BB4-AD4F-4D28-BCFE-E4B184BA7FB1}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ui_comic" ID="{2A559159-5577-4D75-832E-CB1885411AAA}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="player_grenade_explosion" ID="{606796C6-2F86-4DCE-912B-4090721575F9}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ui_start_level_two" ID="{09AE4833-2D09-4E91-BEAA-383F0AC1EAA5}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="player_change_grenade" ID="{CF88FDBD-26C1-4EFE-9CA3-93DB35B5330A}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="enemy_random_vocal" ID="{8DFF0918-598B-4F47-8C5D-C6A85AD4FD9B}" WorkUnitID="{9AF7B815-7618-43C4-93E7-A4A67801AC0C}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

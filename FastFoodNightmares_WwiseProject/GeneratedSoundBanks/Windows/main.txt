@@ -1,10 +1,139 @@
 Event	ID	Name			Wwise Object Path	Notes
-	2088000327	player_sword_attack			\Default Work Unit\player_sword_attack	
+	176926289	player_get_damage			\Default Work Unit\player_get_damage	
+	326659353	ui_loading_screen			\Default Work Unit\ui_loading_screen	
+	362896034	player_pick_ghost			\Default Work Unit\player_pick_ghost	
+	509953065	boss_get_damage			\Default Work Unit\boss_get_damage	
+	582686005	enemy_walk			\Default Work Unit\enemy_walk	
+	632270382	ui_battle_level_one			\Default Work Unit\ui_battle_level_one	
+	745917904	ui_battle_level_two			\Default Work Unit\ui_battle_level_two	
+	780312891	player_heal			\Default Work Unit\player_heal	
+	860246146	boss_walk			\Default Work Unit\boss_walk	
+	927518902	boss_random_vocal			\Default Work Unit\boss_random_vocal	
+	952138190	ui_pause_off			\Default Work Unit\ui_pause_off	
+	1010055213	enemy_hit			\Default Work Unit\enemy_hit	
+	1074698385	ui_comic			\Default Work Unit\ui_comic	
+	1142827732	boss_hit			\Default Work Unit\boss_hit	
+	1165767839	boss_dead			\Default Work Unit\boss_dead	
+	1439776510	player_machinegun_shoot			\Default Work Unit\player_machinegun_shoot	
+	1499643359	player_change_machinegun			\Default Work Unit\player_change_machinegun	
+	1664509575	ui_button_click			\Default Work Unit\ui_button_click	
+	1731872944	ui_pause_on			\Default Work Unit\ui_pause_on	
+	2056094210	enemy_get_damage			\Default Work Unit\enemy_get_damage	
+	2119594611	enemy_explosion			\Default Work Unit\enemy_explosion	
+	2147561130	player_walk			\Default Work Unit\player_walk	
+	2226114503	player_dead			\Default Work Unit\player_dead	
+	2270724778	ui_start_level_two			\Default Work Unit\ui_start_level_two	
+	2394582229	player_dash			\Default Work Unit\player_dash	
+	2511555531	ui_menu			\Default Work Unit\ui_menu	
+	2609441506	player_change_grenade			\Default Work Unit\player_change_grenade	
+	2614884293	ui_mute			\Default Work Unit\ui_mute	
+	2689326664	ui_start_level_one			\Default Work Unit\ui_start_level_one	
+	3088845913	player_grenade_explosion			\Default Work Unit\player_grenade_explosion	
+	3187239268	ui_unmute			\Default Work Unit\ui_unmute	
+	3542491801	enemy_random_vocal			\Default Work Unit\enemy_random_vocal	
+	3609978017	ui_game_over			\Default Work Unit\ui_game_over	
+	3663014476	gameplay_start_wave			\Default Work Unit\gameplay_start_wave	
+	3805217580	enemy_dead			\Default Work Unit\enemy_dead	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1834394558	Surface			\Default Work Unit\Surface	
+
+Switch	ID	Name	Switch Group			Notes
+	787898836	snow	Surface			
+	841620460	concrete	Surface			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	1281810935	Start			\Default Work Unit\Start	
+
+State	ID	Name	State Group			Notes
+	217363681	level_one_battle	Start			
+	748895195	None	Start			
+	1432716332	game_over	Start			
+	1792793154	loading_screen	Start			
+	1978974495	level_two_battle	Start			
+	2450840244	comic	Start			
+	2607556080	menu	Start			
+	3848109621	level_one_ambient	Start			
+	4294684739	level_two_ambient	Start			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	48752601	level_one_battle	Start	\Actor-Mixer Hierarchy\Default Work Unit\SFX\amb\amb_master		
+	161659429	menu	Start	\Actor-Mixer Hierarchy\Default Work Unit\SFX\amb\amb_master		
+	218155073	loading_screen	Start	\Actor-Mixer Hierarchy\Default Work Unit\SFX\amb\amb_master		
+	277021063	comic	Start	\Actor-Mixer Hierarchy\Default Work Unit\SFX\amb\amb_master		
+	358866646	level_two_ambient	Start	\Actor-Mixer Hierarchy\Default Work Unit\SFX\amb\amb_master		
+	451880546	comic	Start	\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\hearthbeat		
+	524756709	game_over	Start	\Actor-Mixer Hierarchy\Default Work Unit\SFX\amb\amb_master		
+	684650861	level_two_battle	Start	\Actor-Mixer Hierarchy\Default Work Unit\SFX\amb\amb_master		
+	691443009	game_over	Start	\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\hearthbeat		
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	215992295	player_health			\Default Work Unit\player_health	
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	538245672	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\SFX\amb\amb_master\toaster\silence\Wwise Silence	
+	1047756340	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\SFX\amb\amb_master\expresso\silence\Wwise Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	92482279	attack_02	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\Fast Action Swish_HW 05_5AB55FB7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_player\sword_attack\attack_02		46160
-	456638238	attack_01	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\Fast Action Swish_HW 05_88D4DE67.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_player\sword_attack\attack_01		65812
-	571465909	attack_03	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\Fast Action Swish_HW 05_1CE0CD73.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_player\sword_attack\attack_03		55232
-	572778280	attack_05	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\Fast Action Swish_HW 05_5DCF8E79.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_player\sword_attack\attack_05		52208
-	598615803	attack_04	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\Fast Action Swish_HW 05_A4E0AE8B.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_player\sword_attack\attack_04		48432
+	13818042	TRANSITION_SEGMENT_NAVIDAD	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\TRANSITION_SEGMENT_NAVIDAD_3D1D1BA5.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\transition_segment\TRANSITION_SEGMENT_NAVIDAD		53467
+	21094931	FFN_NAVIDAD_BATTLE - A	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\FFN_NAVIDAD_BATTLE - A_3D1D1BA5.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\level_two_battle\FFN_NAVIDAD_BATTLE - A\FFN_NAVIDAD_BATTLE - A		211910
+	23342759	walk_03	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\salpicada 4_B6D70D54.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_player\player_footstep\player_move\walk_03		5201
+	41932366	amb_fan	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\amb_stems_roomtone_overhead_fan_002_4766FE73.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\amb\amb_master\amb_background\amb_fan		33419
+	47986279	salpicada_05	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\salpicada 5_A48C010B.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_enemy\enemy_damage\salpicada_05		5075
+	118469236	salpicada_06	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\salpicada 5_EF5F82ED.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_enemy\enemy_damage\salpicada_06		7307
+	121230922	wave_start	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\Bombo_Corte_CD8EDA95.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\wave_start		23758
+	150665725	hit_01	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\Whoosh 5_FD60534F.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_enemy\enemy_hit\hit_01		7686
+	245343320	amb_toaster	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\amb_stems_EMF_Toaster_CD8EDA95.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\amb\amb_master\toaster\amb_toaster		19900
+	258078433	step_01	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\footstep_ice_crunchy_run_01_CD8EDA95.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_enemy\enemy_footstep\enemy_move_snow\step_01		8355
+	268348394	expresso_03	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\Espresso Machine 02_C548B5F1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\amb\amb_master\expresso\random_container\expresso_03		44193
+	288250054	gameplay_rest_normal	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\gameplay_rest_normal_3D1D1BA5.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\level_one_battle\gameplay_rest_normal\gameplay_rest_normal		1839002
+	296468668	step_02	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\footstep_ice_crunchy_run_02_0031CD92.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_boss\boss_footstep\enemy_move_snow\step_02		9237
+	305267194	expresso_02	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\Espresso Machine 02_41AFE44D.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\amb\amb_master\expresso\random_container\expresso_02		55292
+	317383924	death_02	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\Juicy Burst_VM 03_CD8EDA95.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_enemy\enemy_death\death_02		16543
+	324553183	walk_02	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\salpicada 4_7EF417A8.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_player\player_footstep\player_move\walk_02		3914
+	329607963	player_damage	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\salpicada 5_E19635F5.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_player\player_damage		6736
+	334660324	smg_shoot	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\disparos_6A14AFAA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_player\smg_shoot		21288
+	338169922	salpicada_03	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\salpicada 4_D15B8755.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_boss\boss_damage\salpicada_03		7004
+	405796298	step_01	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\footstep_ice_crunchy_run_01_0031CD92.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_boss\boss_footstep\enemy_move_snow\step_01		8386
+	406932726	FFN_NAVIDAD_AMBIENT	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\FFN_NAVIDAD_AMBIENT_3D1D1BA5.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\level_two_idle\FFN_NAVIDAD_AMBIENT\FFN_NAVIDAD_AMBIENT		667215
+	412758676	salpicada_03	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\salpicada 4_8B396C3E.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_enemy\enemy_damage\salpicada_03		5715
+	413081588	dash	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\DASH_1C1D86A1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_player\dash		31973
+	427303395	death_06	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\verduras aplastadas 1_C08A8BC0.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_enemy\enemy_death\death_06		50536
+	427827004	step_03	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\footstep_snow_E6E55EFF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_player\player_footstep\player_move_snow\step_03		6388
+	429997397	salpicada_04	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\salpicada 5_D2A7E267.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_enemy\enemy_damage\salpicada_04		5410
+	433326066	salpicada_01	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\salpicada 4_A4581B49.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_enemy\enemy_damage\salpicada_01		5605
+	435365801	death_01	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\verduras aplastadas 1_34E4E8FB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_enemy\enemy_death\death_01		36173
+	448754555	ghost_02	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\Luciernaga_ACF03393.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\ghosts\ghost_02		11455
+	453727089	death_05	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\verduras aplastadas 1_4C77450A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_enemy\enemy_death\death_05		47067
+	505339731	heal	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\SPELL_stems_spell - stem-001_CD8EDA95.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_player\heal		55830
+	527396946	step_02	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\footstep_snow_3FF48DCD.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_player\player_footstep\player_move_snow\step_02		5937
+	536469864	salpicada_01	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\salpicada 4_87D81886.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_boss\boss_damage\salpicada_01		6986
+	545953512	smg_change	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\gun_semi_auto_rifle_cock_02_CD8EDA95.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_player\smg_change		11622
+	576445621	hit_02	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\Whoosh 5_1B8E19B5.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_enemy\enemy_hit\hit_02		6462
+	612544327	salpicada_02	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\salpicada 4_B5FC9821.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_enemy\enemy_damage\salpicada_02		4403
+	628654353	hit_03	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\Whoosh 5_C05BE941.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_enemy\enemy_hit\hit_03		8130
+	640086825	death_03	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\Juicy Crack and Break_VM 01_CD8EDA95.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_enemy\enemy_death\death_03		25014
+	651556113	creature 4	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\creature 4_1E3BFB85.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_boss\boss_idle\creature 4		13376
+	655124528	Monster_Struggle_Grunt_240	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\Monster_Struggle_Grunt_240_CD8EDA95.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_boss\boss_idle\Monster_Struggle_Grunt_240		15214
+	702642504	FFN_NAVIDAD_BATTLE - B	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\FFN_NAVIDAD_BATTLE - B_3D1D1BA5.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\level_two_battle\FFN_NAVIDAD_BATTLE - B\FFN_NAVIDAD_BATTLE - B		500873
+	708179404	ghost_03	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\Luciernaga_26A4A805.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\ghosts\ghost_03		12715
+	734832010	salpicada_02	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\salpicada 4_56DBD36E.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_boss\boss_damage\salpicada_02		5189
+	747830783	amb_restaurant	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\amb_stems_RA_40_Restaurant_Bar_Night_Fridges_Empty_Room Tone_Neumann KM184 ORTF_4766FE73.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\amb\amb_master\amb_background\amb_restaurant		48686
+	751754252	Zombie Subject C Zombie Brat Groan (9)	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\Zombie Subject C Zombie Brat Groan (9)_CD8EDA95.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_boss\boss_idle\Zombie Subject C Zombie Brat Groan (9)		25456
+	764568390	grenade_change	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\golpe 4_C2EC71F8.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_player\grenade_change		8769
+	799234565	step_01	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\footstep_snow_15474120.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_player\player_footstep\player_move_snow\step_01		8279
+	801632523	ghost_01	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\Luciernaga_EC69B181.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\ghosts\ghost_01		10449
+	830001728	explosion_02	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\verduras aplastadas 1_1969A104.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_enemy\enemy_explode\enemy_explosion\explosion_02		43552
+	841950862	Hisses Dry 16_M	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\Hisses Dry 16.M_4ADA63D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_boss\boss_idle\Hisses Dry 16_M		31741
+	862048640	click	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\click 6_370FE1D5.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\click		1033
+	873653759	hearthbeat	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\Heartbeat,Sound Design,Pulse,Throb,Steady,Accelerate,Panic,Fear_B0F82471.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\hearthbeat		4561
+	885419676	death_04	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\verduras aplastadas 1_47C1F40C.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_enemy\enemy_death\death_04		44370
+	899336527	explosion_01	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\verduras aplastadas 1_BFBE7415.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_enemy\enemy_explode\enemy_explosion\explosion_01		36242
+	908313694	creature 5	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\creature 5_44514D49.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_boss\boss_idle\creature 5		23944
+	916872762	grenade_explosion	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\explosion_large_08_CD8EDA95.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_enemy\enemy_explode\grenade_explosion		55645
+	934696961	hit_04	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\Whoosh 5_C2D38FAF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_enemy\enemy_hit\hit_04		7006
+	968909548	walk_01	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\salpicada 4_5EE0DC6D.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_player\player_footstep\player_move\walk_01		6623
+	972570297	expresso_01	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\Espresso Machine 02_EB7811F2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\amb\amb_master\expresso\random_container\expresso_01		209360
+	1033831336	comic terror	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\comic terror_3D1D1BA5.wem		\Interactive Music Hierarchy\Default Work Unit\MUSIC\menu\menu track\comic terror		1106080
+	1057034511	step_02	E:\Arturia\Proyectos de juegos\Fast Food Nightmares - Final\Wwise\Fast Food Nightmare - Final\.cache\Windows\SFX\footstep_ice_crunchy_run_02_CD8EDA95.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_enemy\enemy_footstep\enemy_move_snow\step_02		7488
 

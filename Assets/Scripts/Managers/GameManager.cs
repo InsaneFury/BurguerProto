@@ -51,12 +51,12 @@ public class GameManager : MonobehaviourSingleton<GameManager>
     {
         gameStarted = true;
         player.canPlay = true;
-        //AkSoundEngine.PostEvent("Inicio_gameplay", gameObject);
     }
 
     public void GameOver(Player p)
     {
-        //AkSoundEngine.PostEvent("Perder", gameObject);
+        AkSoundEngine.SetState("MUSIC", "game_over");
+        AkSoundEngine.PostEvent("ui_game_over", gameObject);
         gameStarted = false;
         player.canPlay = false;
         gameOverText.SetActive(true);
@@ -75,12 +75,12 @@ public class GameManager : MonobehaviourSingleton<GameManager>
             if (pause)
             {
                 player.canPlay = !pause;
-                //AkSoundEngine.PostEvent("Pausa_ON", gameObject);
+                AkSoundEngine.PostEvent("ui_pause_on", gameObject);
             }
             else
             {
                 player.canPlay = pause;
-                //AkSoundEngine.PostEvent("Pausa_OFF", gameObject);
+                AkSoundEngine.PostEvent("ui_pause_off", gameObject);
             }
         }
     }
@@ -95,12 +95,22 @@ public class GameManager : MonobehaviourSingleton<GameManager>
         enemySpawner.ResetSpawner();
         ResetPlayer();
         ActiveGame();
-        //AkSoundEngine.PostEvent("Restart", gameObject);
+        if (sceneHandler.scene == SceneIndexes.LEVEL_1)
+        {
+            AkSoundEngine.SetState("Start", "level_one_ambient");
+            AkSoundEngine.PostEvent("ui_start_level_one", gameObject);
+        }
+        if (sceneHandler.scene == SceneIndexes.LEVEL_2)
+        {
+            AkSoundEngine.SetState("Start", "level_two_ambient");
+            AkSoundEngine.PostEvent("ui_start_level_two", gameObject);
+        }
     }
     public void Menu()
     {
         if (pause)
             PauseGame();
+        enemySpawner.ResetSpawner();
         sceneHandler.LoadSceneHandler((int)SceneIndexes.MENU);
     }
     private void ResetPlayer()

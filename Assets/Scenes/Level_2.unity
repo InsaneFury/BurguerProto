@@ -4351,8 +4351,8 @@ MonoBehaviour:
   spawnedEnemies: []
   BossSpawnPoint: {fileID: 647115208}
   survivalEnemiesLimit: 30
-  minEnemySize: 1.1
-  maxEnemySize: 1.5
+  minEnemySize: 1.5
+  maxEnemySize: 2
   userSurvivalRecord: 0
   timer: 0
   seconds: 0
@@ -5207,7 +5207,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPersistant: 0
-  bullet: {fileID: 5481822414896036123, guid: 35f4873cc9f657b448f56418d558c47f, type: 3}
+  granadePrefab: {fileID: 5481822414896036123, guid: 35f4873cc9f657b448f56418d558c47f,
+    type: 3}
   bulletSize: 0.1
   maxBulletSize: 1
   speedOfIncrease: 0.2
@@ -9640,6 +9641,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2302126836573957204, guid: f4a351e8818988b4e858be6e97f9aa51,
+        type: 3}
+      propertyPath: scene
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2302126836573957205, guid: f4a351e8818988b4e858be6e97f9aa51,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10108,7 +10114,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.46475053, y: 0.000000053533082, z: -0.000000028098437, w: 0.8854417}
+  m_LocalRotation: {x: 0.46475053, y: -0.000000058291743, z: 0.000000030596162, w: 0.8854417}
   m_LocalPosition: {x: 66.18, y: 45.643616, z: 28.893494}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -14303,7 +14309,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1453705768}
-  m_LocalRotation: {x: -0.38110745, y: 0.033526246, z: -0.15625829, w: 0.91061324}
+  m_LocalRotation: {x: -0.38110745, y: 0.033526238, z: -0.15625824, w: 0.91061324}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

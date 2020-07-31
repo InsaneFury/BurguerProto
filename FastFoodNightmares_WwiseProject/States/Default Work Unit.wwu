@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{477F3639-A364-441D-B3F7-453C1C153ADA}" SchemaVersion="97">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{477F3639-A364-441D-B3F7-453C1C153ADA}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{477F3639-A364-441D-B3F7-453C1C153ADA}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Start" ID="{79E14F1A-9485-4007-8810-0CD4D1A6A2F4}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="13"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{FD4D73C8-359F-443A-B4F3-CD0F01A45BCC}"/>
+						<State Name="menu" ID="{7118AE4A-55CA-4670-B2DD-7169E6DB97F9}"/>
+						<State Name="level_one_ambient" ID="{8A984B26-DBD5-41AD-B3C9-FFAB987AB2D5}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+						<State Name="level_one_battle" ID="{53BDD56C-AC9F-476D-B2F0-C668B40B0EBB}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+						<State Name="level_two_ambient" ID="{4B16B088-A157-47B7-B8FB-1D3179035E78}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+						<State Name="comic" ID="{1CB8CC16-841C-4A42-8FE5-DD60691CAF4C}"/>
+						<State Name="level_two_battle" ID="{C86A47DA-4269-4537-8B8D-E482A357AF8F}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="2"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+						<State Name="game_over" ID="{496BEE53-6F16-4A5F-ABCD-79D4D6F8B4B8}"/>
+						<State Name="loading_screen" ID="{69E83FD8-B92D-4375-9CD1-318CF7A818F6}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>
