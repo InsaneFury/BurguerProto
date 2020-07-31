@@ -24,7 +24,7 @@ public class Explosion : Weapon
         Instantiate(explosion, transform.position, Quaternion.identity);
 
         //Audio
-        AkSoundEngine.PostEvent("Granada_explosion", gameObject);
+        //AkSoundEngine.PostEvent("Granada_explosion", gameObject);
 
         Vector3 explosionPos = transform.position;
         Collider[] colliders = Physics.OverlapSphere(explosionPos, explosionRadius,layer);
@@ -44,7 +44,6 @@ public class Explosion : Weapon
                 }
             }    
         }
-        CameraShakeController.Get().ActiveScreenShake();
         Destroy(gameObject);
     }
 

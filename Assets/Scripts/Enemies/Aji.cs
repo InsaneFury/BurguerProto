@@ -63,8 +63,8 @@ public class Aji : Enemy
         if (distance < attackDistance)
         {
             //Audio
-            AkSoundEngine.PostEvent("Voz_enemigos", gameObject);
-            AkSoundEngine.PostEvent("Ataque_enemigos", gameObject);
+            //AkSoundEngine.PostEvent("Voz_enemigos", gameObject);
+            //AkSoundEngine.PostEvent("Ataque_enemigos", gameObject);
             player.TakeDamage(damage);
         }
         else

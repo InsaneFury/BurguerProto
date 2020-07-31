@@ -16,7 +16,7 @@ public class Player : MonobehaviourSingleton<Player>
     [Header("Movement Speed")]
     public float speed = 0.5f;
     public float rotationSpeed = 0.5f;
-    Vector3 playerMove;
+    private Vector3 playerMove;
 
     [Header("Dash")]
     public float dashSpeed = 100f;
@@ -46,15 +46,15 @@ public class Player : MonobehaviourSingleton<Player>
 
     [Header("Camera Settings")]
     public Camera cam;
-    Vector3 cameraForward;
-    Vector3 cameraRight;
+    private Vector3 cameraForward;
+    private Vector3 cameraRight;
 
     [Header("Weapons Settings")]
     public GameObject machineGun;
     public bool machineGunIsActive = false;
     [HideInInspector]
     public Animator animMachineGun;
-    public Gun granade;
+    public Granade granade;
     public int currentActiveWeapon;
     public int machineGunBullets;
 
@@ -65,8 +65,6 @@ public class Player : MonobehaviourSingleton<Player>
     [Header("UI VFX")]
     public GameObject getDmgVFX;
 
-    Rigidbody rb;
-    Vector3 pointToLook = Vector3.zero;
     [HideInInspector]
     public Vector3 forward;
     [HideInInspector]
@@ -75,29 +73,35 @@ public class Player : MonobehaviourSingleton<Player>
     public bool isMeleeing = false;
     public bool canPlay = false;
 
-    float originalLife = 0;
-    int comboCounter = 0;
+    private Rigidbody rb;
+    private Vector3 pointToLook = Vector3.zero;
+    private float originalLife = 0;
 
     //CHEAT ZARLANGA
-    bool notCheating = false;
+    private bool notCheating = false;
 
     //New Input System
     public PlayerInputActions inputAction;
-    Vector2 movementInput;
-    Vector2 look;
-    Keyboard kb;
-    float aimAngle;
-    Quaternion aimRotation;
-    float lastPosition = 0;
+    private Vector2 movementInput;
+    private Vector2 look;
+    private Keyboard kb;
+    private float aimAngle;
+    private Quaternion aimRotation;
+    private float lastPosition = 0;
 
     public static event Action<Player> OnChangeWeapon;
+    public static event Action<Player> OnPlayerDead;
 
     public override void Awake()
     {
         base.Awake();
         inputAction = new PlayerInputActions();
+       
+    }
 
-        kb = InputSystem.GetDevice<Keyboard>();
+    void Start()
+    {
+
         //All the pctx ctx etc mean ctx = context and the first letter just from heal, dash etc
         //Input System (assign movement input vector2 to movementInput new variable)
         inputAction.PlayerControls.Move.performed += pctx => movementInput = pctx.ReadValue<Vector2>();
@@ -105,19 +109,16 @@ public class Player : MonobehaviourSingleton<Player>
         //Input System (its like a delegate assign a function or multiple functions to an input action)
         inputAction.PlayerControls.Heal.performed += hctx => Heal();
         inputAction.PlayerControls.Dash.performed += dctx => Dash();
-
         inputAction.PlayerControls.WeaponChange.performed += wctx => WeaponChanger();
-    }
-
-    void Start()
-    {
         rb = GetComponent<Rigidbody>();
-        originalLife = life;
+        kb = InputSystem.GetDevice<Keyboard>();
         animMachineGun = machineGun.GetComponent<Animator>();
-        //Audio
-        //AkSoundEngine.SetState("Vivo_o_muerto", "Vivo");
+        
+        originalLife = life;
         currentActiveWeapon = 1;
+        WeaponChanger();
         machineGunBullets = 100;
+        //AkSoundEngine.SetState("Vivo_o_muerto", "Vivo");
     }
 
     void Update()
@@ -125,34 +126,68 @@ public class Player : MonobehaviourSingleton<Player>
         //Gamepad detection
         Gamepad gp = Gamepad.current;
 
-        if (Input.GetKeyDown(KeyCode.Alpha7))
-            AkSoundEngine.PostEvent("player_sword_attack", gameObject);
-
+        //if (Input.GetKeyDown(KeyCode.Alpha7))
+            //AkSoundEngine.PostEvent("player_sword_attack", gameObject);
+            
         if (isAlive && canPlay)
         {
-            //CHEAT ZARLANGA with new input system
-            if (kb.zKey.wasPressedThisFrame)
+            if (Input.GetKeyDown(KeyCode.Z))
             {
                 BecomeInmortal();
             }
+
             Move();
 
-            if (gp != null)
-            {
-                RotateWithJoystick();
-            }
-            else
-            {
-                RotateToMouse();
-            }
-            
+            if (gp != null) RotateWithJoystick(); 
+            else RotateToMouse();
 
             //AkSoundEngine.SetRTPCValue("vida_hamburguesa", life);
             //AkSoundEngine.SetRTPCValue("mana_hamburguesa", soulsCollected);
         }
     }
+    public void ResetStats()
+    {
+        //AkSoundEngine.SetState("Vivo_o_muerto", "Vivo");
+        animBottom.SetBool("death", false);
+        animTop.SetBool("death", false);
+        life = originalLife;
+        isAlive = true;
+        getDmgVFX.SetActive(false);
+        soulsCollected = 100;
+        Granade.Get().granadeCount = 2;
+        //MachineGun.Get().bullets = 100;
 
-    void Move()
+        //Back to default weapon
+        machineGunIsActive = false;
+        machineGun.SetActive(machineGunIsActive);
+        granade.enabled = true;
+    }
+    public void BecomeInmortal()
+    {
+        notCheating = !notCheating;
+        if (notCheating)
+            Debug.Log("GOD MODE ZARLANGA ENABLE");
+        else
+            Debug.Log("GOD MODE ZARLANGA DISABLE");
+    }
+    public void TakeDamage(float dmg)
+    {
+        if (notCheating) return;
+        if (isAlive)
+        {
+            if (life > 0)
+                life -= dmg;
+            //AkSoundEngine.PostEvent("Voz_hamburguesa", gameObject);
+            //AkSoundEngine.PostEvent("Damage_hamburguesa", gameObject);
+            StartCoroutine(GettingDmgVFX());
+        }
+        else
+        {
+            getDmgVFX.SetActive(true);
+        }
+        Death();
+    }
+    private void Move()
     {
         float vertical = movementInput.y * speed;
         float horizontal = movementInput.x * rotationSpeed;
@@ -200,8 +235,7 @@ public class Player : MonobehaviourSingleton<Player>
         rb.AddForce(playerMove * speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
 
     }
-
-    void RotateToMouse()
+    private void RotateToMouse()
     {
         Ray ray = Camera.main.ScreenPointToRay(look);
         Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
@@ -227,8 +261,7 @@ public class Player : MonobehaviourSingleton<Player>
             Top.transform.rotation = Quaternion.LookRotation(forward, Vector3.up);
         }
     }
-
-    void RotateWithJoystick()
+    private void RotateWithJoystick()
     {
 
         if (look.x > 0.03 || look.x < 0 || look.y > 0.03 || look.y < 0)
@@ -240,7 +273,7 @@ public class Player : MonobehaviourSingleton<Player>
         {
             aimAngle = lastPosition;
         }
-        
+
 
         aimRotation = Quaternion.AngleAxis(aimAngle, Vector3.up);
         vision.rotation = Quaternion.Slerp(vision.transform.rotation, aimRotation, rotationSpeed * Time.deltaTime);
@@ -250,8 +283,7 @@ public class Player : MonobehaviourSingleton<Player>
             Top.transform.rotation = Quaternion.Slerp(Top.transform.rotation, aimRotation, rotationSpeed * Time.deltaTime);
         }
     }
-
-    void CameraDirection()
+    private void CameraDirection()
     {
         cameraForward = cam.transform.forward;
         cameraRight = cam.transform.right;
@@ -262,78 +294,16 @@ public class Player : MonobehaviourSingleton<Player>
         cameraForward = cameraForward.normalized;
         cameraRight = cameraRight.normalized;
     }
-
-    public void TakeDamage(float dmg)
-    {
-        if (!notCheating)
-        {
-            if (isAlive)
-            {
-                if (life > 0)
-                    life -= dmg;
-
-                //Audio
-                //AkSoundEngine.PostEvent("Voz_hamburguesa", gameObject);
-                //AkSoundEngine.PostEvent("Damage_hamburguesa", gameObject);
-                StartCoroutine(GettingDmgVFX());
-            }
-            else
-            {
-                getDmgVFX.SetActive(true);
-            }
-
-            Death();
-        }
-
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Soul"))
-        {
-            //Audio
-            //AkSoundEngine.PostEvent("Fantasmas_enemigos", gameObject);
-            if (soulsCollected < maxSoulsCollected)
-            {
-                soulsCollected += (int)UnityEngine.Random.Range(soulGainRange.x, soulGainRange.y);
-            }
-            Destroy(other.gameObject);
-        }
-        if (other.CompareTag("Granade"))
-        {
-            Gun.Get().granades++;
-            Destroy(other.gameObject);
-        }
-        if (other.CompareTag("Ammo"))
-        {
-            MachineGun.Get().bullets += 25;
-            Destroy(other.gameObject);
-        }
-    }
-
-    void Dash()
+    private void Dash()
     {
         if (soulsCollected < dashCost)
             return;
-
         soulsCollected -= dashCost;
-
         StartCoroutine(ActiveDashTrail());
-
-        //Audio
         //AkSoundEngine.PostEvent("Dash", gameObject);
-
-        if (playerMove == Vector3.zero)
-        {
-            rb.velocity = cameraForward * dashSpeed;
-        }
-        else
-        {
-            rb.velocity = playerMove * dashSpeed;
-        }
+        rb.velocity = (playerMove == Vector3.zero ? cameraForward : playerMove) * dashSpeed;
     }
-
-    IEnumerator ActiveDashTrail()
+    private IEnumerator ActiveDashTrail()
     {
         trail.SetActive(true);
         animBottom.SetTrigger("dash");
@@ -349,139 +319,90 @@ public class Player : MonobehaviourSingleton<Player>
         bottomMat.DisableKeyword("_EMISSION");
         isDashing = false;
     }
-
-    IEnumerator GettingDmgVFX()
+    private IEnumerator GettingDmgVFX()
     {
         getDmgVFX.SetActive(true);
         yield return new WaitForSeconds(1);
         getDmgVFX.SetActive(false);
     }
-
-    void Heal()
+    private void Heal()
     {
         bool canHeal = (soulsCollected >= healCost);
+        if (!canHeal) return;
+        life += healAmount;
+        if (life > originalLife)
+            life = originalLife;
 
-        if (canHeal)
-        {
-            life += healAmount;
-            if (life > originalLife)
-                life = originalLife;
-
-            soulsCollected -= healCost;
-
-            //Audio
-            //AkSoundEngine.PostEvent("Curar_vida", gameObject);
-            healthVFX.Play();
-        }
+        soulsCollected -= healCost;
+        //AkSoundEngine.PostEvent("Curar_vida", gameObject);
+        healthVFX.Play();
     }
-
-    void Death()
+    private void Death()
     {
-        if (life <= 0)
-        {
-            isAlive = false;
-
-            //Audio
-            //AkSoundEngine.PostEvent("Muerte_hamburguesa", gameObject);
-            //AkSoundEngine.SetState("Vivo_o_muerto", "Muerto");
-
-            animBottom.SetBool("death", true);
-            animTop.SetBool("death", true);
-        }
+        if (life > 0) return;
+        isAlive = false;
+        //AkSoundEngine.PostEvent("Muerte_hamburguesa", gameObject);
+        //AkSoundEngine.SetState("Vivo_o_muerto", "Muerto");
+        animBottom.SetBool("death", true);
+        animTop.SetBool("death", true);
+        OnPlayerDead?.Invoke(this);
     }
-
-    
-
     //Refactorizar WeaponChanger
-    void WeaponChanger()
+    private void WeaponChanger()
     {
         currentActiveWeapon++;
         if (currentActiveWeapon > 2)
+           currentActiveWeapon = 0;
+
+        if(currentActiveWeapon == 0)
         {
-            currentActiveWeapon = 0;
+            granade.enabled = false;
+            machineGun.SetActive(true);
+            machineGunIsActive = true;
+            animTop.SetBool("machineGun", true);
         }
-        switch (currentActiveWeapon)
+        else if(currentActiveWeapon == 1)
         {
-            case 0:
-                if (!machineGunIsActive)
-                {
-                    currentActiveWeapon = 0;
-                    //Audio
-                   // AkSoundEngine.PostEvent("Mch_Gun_cambio", gameObject);
-
-                    machineGunIsActive = true;
-                    machineGun.SetActive(machineGunIsActive);
-                    granade.enabled = false;
-                    animBottom.SetTrigger("resetMove");
-                    animTop.SetTrigger("resetMove");
-
-                    if (OnChangeWeapon != null)
-                        OnChangeWeapon(this);
-                }
-                break;
-            case 1:
-                if (!granade.enabled)
-                {
-                    currentActiveWeapon = 1;
-                    //Audio
-                    //AkSoundEngine.PostEvent("Granada_cambio", gameObject);
-
-                    machineGunIsActive = false;
-                    machineGun.SetActive(machineGunIsActive);
-                    granade.enabled = true;
-                    animBottom.SetTrigger("resetMove");
-                    animTop.SetTrigger("resetMove");
-
-                    if (OnChangeWeapon != null)
-                        OnChangeWeapon(this);
-                }
-                break;
-            default:
-                break;
+            granade.enabled = true;
+            machineGun.SetActive(false);
+            machineGunIsActive = false;
+            animTop.SetBool("machineGun", false);
         }
-        animTop.SetBool("machineGun", machineGunIsActive);
+        
+        /*
+        string audio = currentActiveWeapon == 0 ? "Granada_cambio" : "Mch_Gun_cambio";
+        //AkSoundEngine.PostEvent("Mch_Gun_cambio", gameObject);
+        */
 
+        if (OnChangeWeapon != null)
+            OnChangeWeapon(this);
+        animBottom.SetTrigger("resetMove");
+        animTop.SetTrigger("resetMove");
     }
-
-
-    public void ResetStats()
+    private void OnTriggerEnter(Collider other)
     {
-        //Audio
-        //AkSoundEngine.SetState("Vivo_o_muerto", "Vivo");
-
-        animBottom.SetBool("death", false);
-        animTop.SetBool("death", false);
-        life = originalLife;
-        isAlive = true;
-        getDmgVFX.SetActive(false);
-        soulsCollected = 100;
-        Gun.Get().granades = 2;
-        //MachineGun.Get().bullets = 100;
-
-        //Back to default weapon
-        machineGunIsActive = false;
-        machineGun.SetActive(machineGunIsActive);
-        granade.enabled = true;
+        if (other.CompareTag("Soul"))
+        {
+            //AkSoundEngine.PostEvent("Fantasmas_enemigos", gameObject);
+            if (soulsCollected < maxSoulsCollected)
+            {
+                soulsCollected += (int)UnityEngine.Random.Range(soulGainRange.x, soulGainRange.y);
+            }
+            Destroy(other.gameObject);
+        }
+        if (other.CompareTag("Granade"))
+        {
+            Granade.Get().granadeCount++;
+            Destroy(other.gameObject);
+        }
+        if (other.CompareTag("Ammo"))
+        {
+            MachineGun.Get().bullets += 25;
+            Destroy(other.gameObject);
+        }
     }
-
     //INPUTS FUNCTIONS
-    private void OnEnable()
-    {
-        inputAction.Enable();
-    }
-
-    private void OnDisable()
-    {
-        inputAction.Disable();
-    }
-
-    public void BecomeInmortal()
-    {
-        notCheating = !notCheating;
-        if (notCheating)
-            Debug.Log("GOD MODE ZARLANGA ENABLE");
-        else
-            Debug.Log("GOD MODE ZARLANGA DISABLE");
-    }
+    private void OnEnable() { inputAction.Enable(); }
+    private void OnDisable() => inputAction.Disable();
 
 }

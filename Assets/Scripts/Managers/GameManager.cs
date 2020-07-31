@@ -3,17 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
-using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonobehaviourSingleton<GameManager>
 {
-    Player player;
-
-    [Header("Timelines")]
-    public PlayableDirector menuToGameplay;
-    public PlayableDirector menuToCredits;
-    public PlayableDirector creditsToMenu;
 
     [Header("Player settings")]
     public Transform startPosition;
@@ -29,138 +22,93 @@ public class GameManager : MonobehaviourSingleton<GameManager>
 
     private ColorAdjustments colorAdjustments;
     private float gameOverColorSaturation = -100f;
-    private ScoreManager sManager;
+    private ScoreManager scoreManager;
+    private Player player;
+    private EnemySpawner enemySpawner;
+    private UIManager uiManager;
+    private ScenesManagerHandler sceneHandler;
 
     public override void Awake()
     {
         base.Awake();
-        player = Player.Get();
-        player.inputAction.GameManagerControls.Pause.performed += ctx => PauseGame();
     }
 
     void Start()
     {
-        sManager = ScoreManager.Get();
-        //Audio
-        //AkSoundEngine.PostEvent("Menu", gameObject);
-        UIManager.Get().version.text ="v"+ Application.version;
-
+        player = Player.Get();
+        player.inputAction.GameManagerControls.Pause.performed += ctx => PauseGame();
+        scoreManager = ScoreManager.Get();
+        enemySpawner = EnemySpawner.Get();
+        uiManager = UIManager.Get();
+        Player.OnPlayerDead += GameOver;
         postProcessingProfile.profile.TryGet(out colorAdjustments);
         colorAdjustments.saturation.value = 0f;
+        ActiveGame();
     }
-
-    void Update()
-    {
-        if (!player.isAlive)
-        {
-            GameOver();
-        }
-    }
-
-
-    #region Timelines
-    public void GameStart()
-    {
-        menuToGameplay.Play();
-    }
-
-    public void GoToCredits()
-    {
-        menuToCredits.Play();
-    }
-
-    public void GoToMenu()
-    {
-        creditsToMenu.Play();
-    }
-    #endregion
 
     public void ActiveGame()
     {
         gameStarted = true;
         player.canPlay = true;
-        //Audio
         //AkSoundEngine.PostEvent("Inicio_gameplay", gameObject);
-        if (JukeBoxAudio.Get())
-        {
-            JukeBoxAudio.Get().PlayJukeBoxAudio();
-        }
-        UIManager.Get().ActiveInGameUI();
     }
 
-    void GameOver()
+    public void GameOver(Player p)
     {
-        //Audio
-        AkSoundEngine.PostEvent("Perder", gameObject);
-        if (JukeBoxAudio.Get())
-        {
-            JukeBoxAudio.Get().StopJukeBoxAudio();
-        }
+        //AkSoundEngine.PostEvent("Perder", gameObject);
         gameStarted = false;
         player.canPlay = false;
         gameOverText.SetActive(true);
         colorAdjustments.saturation.value = gameOverColorSaturation;
-        EnemySpawner.Get().ResetSpawner();
-        UIManager.Get().SetGameOverResults(sManager.enemiesKilled, sManager.maxWave, sManager.score);
+        enemySpawner.ResetSpawner();
+        uiManager.SetGameOverResults(scoreManager.enemiesKilled, scoreManager.maxWave, scoreManager.score);
     }
-
     void PauseGame()
     {
         if (gameStarted)
         {
             pause = !pause;
-            UIManager.Get().pause.SetActive(pause);
             Time.timeScale = pause ? 0 : 1;
+            uiManager.pause.SetActive(pause);
 
             if (pause)
             {
-                //Audio
-                player.canPlay = false;
-                AkSoundEngine.PostEvent("Pausa_ON", gameObject);
+                player.canPlay = !pause;
+                //AkSoundEngine.PostEvent("Pausa_ON", gameObject);
             }
             else
             {
-                player.canPlay = true;
-                //Audio
-                AkSoundEngine.PostEvent("Pausa_OFF", gameObject);
+                player.canPlay = pause;
+                //AkSoundEngine.PostEvent("Pausa_OFF", gameObject);
             }
         }
     }
-
     public void RestartGame()
     {
-        EnemySpawner.Get().ResetSpawner();
-        ResetPlayer();
-        colorAdjustments.saturation.value = 0f;
-        ActiveGame();
-        gameOverText.SetActive(false);
-        ScoreManager.Get().score = 0;
-        ScoreManager.Get().enemiesKilled = 0;
         if(pause)
         PauseGame();
-
-        //Audio
-        AkSoundEngine.PostEvent("Restart", gameObject);
+        colorAdjustments.saturation.value = 0f;
+        gameOverText.SetActive(false);
+        scoreManager.score = 0;
+        scoreManager.enemiesKilled = 0;
+        enemySpawner.ResetSpawner();
+        ResetPlayer();
+        ActiveGame();
+        //AkSoundEngine.PostEvent("Restart", gameObject);
     }
-
     public void Menu()
     {
         if (pause)
             PauseGame();
-        UIManager.Get().initMenu.SetActive(true);
-
-        //Sacar y cambiar por volver al menu sin recagar la scene.
-        SceneManager.LoadScene("Gameplay");
+        sceneHandler.LoadSceneHandler((int)SceneIndexes.MENU);
     }
-
-    void ResetPlayer()
+    private void ResetPlayer()
     {
         player.transform.position = startPosition.position;
         player.transform.rotation = startPosition.rotation;
         player.ResetStats();
         player.canPlay = true;
     }
-
     public void ExitGame()
     {
 #if UNITY_EDITOR
@@ -169,5 +117,9 @@ public class GameManager : MonobehaviourSingleton<GameManager>
 #if UNITY_STANDALONE && !UNITY_EDITOR
         Application.Quit();
 #endif
+    }
+    private void OnDestroy()
+    {
+        Player.OnPlayerDead -= GameOver;
     }
 }

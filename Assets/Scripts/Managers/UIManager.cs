@@ -24,11 +24,7 @@ public class UIManager : MonobehaviourSingleton<UIManager>
 
     [Header("HUD Settings")]
     public GameObject inGameHUD;
-    public GameObject menuHUD;
-    public GameObject initMenu;
-    public GameObject difficultyUi;
     public float soulFillvelocity = 0.1f;
-    public TextMeshProUGUI version;
 
     [Header("Score Settings")]
     public TextMeshProUGUI score;
@@ -51,7 +47,6 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     private float waveNumberTime = 3f;
 
     [Header("GameMode")]
-    public TextMeshProUGUI gameModeRoomText;
     public TextMeshProUGUI gameModePauseText;
     public TextMeshProUGUI gameOverModeText;
     public Image pauseImage;
@@ -64,17 +59,16 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     public TextMeshProUGUI maxWaves;
     public TextMeshProUGUI maxScore;
 
-    [Header("Cameras")]
-    public GameObject VCamThirdPerson;
-    public GameObject VCamMenu;
-
     [Header("PopUpAlert")]
     public GameObject popUpAlert;
     public TextMeshProUGUI popUpTitle;
     public TextMeshProUGUI popUpText;
 
-    Player player;
-    EnemySpawner eSpawner;
+    private Player player;
+    private EnemySpawner enemySpawner;
+    private ScoreManager scoreManager;
+    private MachineGun machineGun;
+    private Granade granade;
 
     public override void Awake()
     {
@@ -83,15 +77,16 @@ public class UIManager : MonobehaviourSingleton<UIManager>
 
     void Start()
     {
+        player = Player.Get();
+        machineGun = MachineGun.Get();
+        granade = Granade.Get();
+        enemySpawner = EnemySpawner.Get();
+        scoreManager = ScoreManager.Get();
+
         Player.OnChangeWeapon += SetActiveWeaponUI;
         popUpAlert.SetActive(false);
-        VCamThirdPerson.SetActive(false);
-        inGameHUD.SetActive(false);
-        menuHUD.SetActive(true);
-        player = Player.Get();
         healthBar.fillAmount = player.life / 100f;
         RefreshSouls();
-        eSpawner = EnemySpawner.Get();
         ShowWaveInfo();
         currentAmmoGo.SetActive(false);
     }
@@ -103,56 +98,31 @@ public class UIManager : MonobehaviourSingleton<UIManager>
         RefreshStats();
         RefreshHealthbar();
         RefreshSouls();
-        RefreshWeaponsAmmo();
     }
-
-    public void ActiveInGameUI()
-    {
-        inGameHUD.SetActive(true);
-        VCamThirdPerson.SetActive(true);
-        menuHUD.SetActive(false);
-        VCamMenu.SetActive(false);
-    }
-
     #region WeaponsUI
     public void SetActiveWeaponUI(Player p)
     {
+        if (player.currentActiveWeapon > 2)
+            player.currentActiveWeapon = 0;
         for (int i = 0; i < weaponsUI.Length; i++)
         {
             weaponsUI[i].GetComponent<Animator>().SetBool("weaponActive", false);
         }
         weaponsUI[player.currentActiveWeapon].GetComponent<Animator>().SetBool("weaponActive", true);
         currentWeaponText.text = weaponsNames[player.currentActiveWeapon];
-
-        if (player.currentActiveWeapon == 0)
-        {
-            infinitSymbol.SetActive(false);
-            currentAmmo.text = MachineGun.Get().bullets.ToString();
-            currentAmmoGo.SetActive(true);
-        }
-        if (player.currentActiveWeapon == 1)
-        {
-            infinitSymbol.SetActive(false);
-            currentAmmo.text = Gun.Get().granades.ToString();
-            currentAmmoGo.SetActive(true);
-        }
     }
     #endregion
-
     #region Refresh UI
-
     public void RefreshStats()
     {
-        score.text = ScoreManager.Get().score.ToString();
-        enemiesKilled.text = ScoreManager.Get().enemiesKilled.ToString();
+        score.text = scoreManager.score.ToString();
+        enemiesKilled.text = scoreManager.enemiesKilled.ToString();
     }
-
     public void RefreshSouls()
     {
         souls.fillAmount = player.soulsCollected / 100f;
         SoulNum.text = ((int)player.soulsCollected).ToString();
     }
-
     public void RefreshHealthbar()
     {
         if (healthBar.fillAmount != player.life)
@@ -161,19 +131,7 @@ public class UIManager : MonobehaviourSingleton<UIManager>
             lifeNum.text = ((int)player.life).ToString();
         }
     }
-
-    public void RefreshWeaponsAmmo()
-    {
-        if (player.currentActiveWeapon == 0)
-        {
-            currentAmmo.text = MachineGun.Get().bullets.ToString();
-        }
-        if (player.currentActiveWeapon == 1)
-        {
-            currentAmmo.text = Gun.Get().granades.ToString();
-        }
-    }
-
+   
     public void RefreshSkillsIcons()
     {
         int dashFillAmount = player.isDashing || (player.soulsCollected < player.dashCost) ? 0 : 1;
@@ -182,68 +140,54 @@ public class UIManager : MonobehaviourSingleton<UIManager>
         int healtFillAmount = (player.soulsCollected < player.healCost) ? 0 : 1;
         healthSkill.fillAmount = healtFillAmount;
     }
-
     #endregion
-
     #region Wave info
     void ShowWaveInfo()
     {
-        if (eSpawner != null)
+        if (enemySpawner != null)
         {
             waveCompleted.SetActive(false);
-            if (eSpawner.noTimerMode)
+            if (enemySpawner.noTimerMode)
             {
-                waveEnemiesAlive.text = eSpawner.spawnedEnemies.Count.ToString();
+                waveEnemiesAlive.text = enemySpawner.spawnedEnemies.Count.ToString();
                 waveWithEnemies.SetActive(true);
                 waveWithTimer.SetActive(false);
             }
             else
             {
-                waveTimer.text = eSpawner.seconds.ToString();
+                waveTimer.text = enemySpawner.seconds.ToString();
                 waveWithEnemies.SetActive(false);
                 waveWithTimer.SetActive(true);
             }
         }
-
     }
-
     void RefreshWaveInfo()
     {
-        if (eSpawner != null)
-        {
-            if (eSpawner.noTimerMode)
-            {
-                waveEnemiesAlive.text = eSpawner.spawnedEnemies.Count.ToString();
-            }
-            else
-            {
-                waveTimer.text = eSpawner.seconds.ToString();
-            }
+        if (!enemySpawner) return;
+        if (enemySpawner.noTimerMode)
+            waveEnemiesAlive.text = enemySpawner.spawnedEnemies.Count.ToString();
+        else
+            waveTimer.text = enemySpawner.seconds.ToString();
 
-            if (eSpawner.allWavesCompleted)
-            {
-                waveWithEnemies.SetActive(false);
-                waveWithTimer.SetActive(false);
-                waveCompleted.SetActive(true);
-            }
+        if (enemySpawner.allWavesCompleted)
+        {
+            waveWithEnemies.SetActive(false);
+            waveWithTimer.SetActive(false);
+            waveCompleted.SetActive(true);
         }
     }
-
     public void SetWaveNumber(int num)
     {
         waveNumber.GetComponent<TextMeshProUGUI>().text = "WAVE " + num.ToString();
-        StartCoroutine(StartWaveNumber());
-        
+        StartCoroutine(StartWaveNumber());    
     }
-
-    IEnumerator StartWaveNumber()
+    private IEnumerator StartWaveNumber()
     {
         waveNumber.SetActive(true);
         yield return new WaitForSecondsRealtime(waveNumberTime);
         waveNumber.SetActive(false);
         EnemySpawner.Get().ResetTimer();
     }
-
     public void ActivePopUpAlert(string popTitle,string popText)
     {
         popUpAlert.SetActive(false);
@@ -251,14 +195,6 @@ public class UIManager : MonobehaviourSingleton<UIManager>
         popUpText.text = popText;
         popUpAlert.SetActive(true);
     }
-
-    public void SetRoomGameModeText(string t)
-    {
-        gameModeRoomText.text = t.ToUpper();
-        gameModePauseText.text = t.ToUpper();
-        gameOverModeText.text = t.ToUpper();
-    }
-
     public void SetRoomGameModeImage(int img)
     {
         pauseImage.sprite = sprites[img];
@@ -267,7 +203,6 @@ public class UIManager : MonobehaviourSingleton<UIManager>
     {
         gameOverImage.sprite = spritesColor[img];
     }
-
     public void SetGameOverResults(int enemiesKilled,int maxwaves,int score)
     {
         enemiesKilledText.text = enemiesKilled.ToString();

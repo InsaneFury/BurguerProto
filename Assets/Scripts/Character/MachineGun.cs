@@ -34,14 +34,15 @@ public class MachineGun : MonobehaviourSingleton<MachineGun>
     public override void Awake()
     {
         base.Awake();
-        player = Player.Get();
-        poolDictionary = new Dictionary<string, Queue<GameObject>>();
-        mouse = InputSystem.GetDevice<Mouse>();
-        gd = InputSystem.GetDevice<Gamepad>();
+        
     }
 
     void Start()
     {
+        player = Player.Get();
+        poolDictionary = new Dictionary<string, Queue<GameObject>>();
+        mouse = InputSystem.GetDevice<Mouse>();
+        gd = InputSystem.GetDevice<Gamepad>();
         //bullets = player.machineGunBullets;
         gManager = GameManager.Get();
         foreach (Pool pool in pools)
