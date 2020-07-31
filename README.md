@@ -48,7 +48,6 @@ This is a game (still in development) developed by students from <a href="https:
 - **Yann Finidori** - *Music & SFX* 
 - **Leonardo Calvo** - *Music & SFX*
 - **Mariano Mallea** - *Animator & Rig* - <a href="https://www.facebook.com/Wally144"><img height="16" width="16" src="https://unpkg.com/simple-icons@latest/icons/facebook.svg" /></a> <a href="https://www.artstation.com/wallymallea"><img height="16" width="16" src="https://unpkg.com/simple-icons@latest/icons/artstation.svg" /></a>
-- **Paloma Martinez** - *2D Artist*
 - **Calbucura Emiliano** - *Q&A*
 - **Pereyra Tomás** - *Q&A*
 
