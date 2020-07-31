@@ -101,7 +101,7 @@ public class Tomato : Enemy
     {
         Instantiate(soul, spawnPos.transform.position, Quaternion.identity);
 
-        int randProbability = Random.Range(0, 100);
+        /*int randProbability = Random.Range(0, 100);
 
         if(randProbability >= bulletDropRate)
         {
@@ -110,7 +110,7 @@ public class Tomato : Enemy
         else if (randProbability <= granadeDropRate)
         {
             Instantiate(itemsToDrop[1], spawnPos.transform.position, Quaternion.identity);
-        }
+        }*/
 
     }
 

@@ -26,12 +26,22 @@ public class MenuGameSettings : MonobehaviourSingleton<MenuGameSettings>
     public void SetHardDifficultyMode(bool difficulty) => gameModeSettings.nightmare = difficulty;
     public void SetEasyDifficultyMode(bool difficulty) => gameModeSettings.easy = difficulty;
 
-    public void SetClassicMode(bool mapDefault) => gameModeSettings.map1 = mapDefault;
-    public void SetMadnessMode(bool mapDefault) => gameModeSettings.map2 = mapDefault;
+    public void SetClassicMode(bool mapDefault)
+    {
+        gameModeSettings.map1 = mapDefault;
+        if(mapDefault)
+            SetSceneLoader();
+    }
+    public void SetMadnessMode(bool mapDefault)
+    {
+        gameModeSettings.map2 = mapDefault;
+        if (mapDefault)
+            SetSceneLoader();
+    }
 
     public void SetSceneLoader()
     {
-            ScenesManagerHandler.Get().scene = gameModeSettings.easy?SceneIndexes.LEVEL_1 : SceneIndexes.LEVEL_2;
+            ScenesManagerHandler.Get().scene = gameModeSettings.map1?SceneIndexes.LEVEL_1 : SceneIndexes.LEVEL_2;
     }
     public GameModeSetting GetSettings() => gameModeSettings;
     public void ShowSettings()

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: CustomGameMode
   m_EditorClassIdentifier: 
   easy: 0
-  nightmare: 0
+  nightmare: 1
   map1: 0
-  map2: 0
+  map2: 1

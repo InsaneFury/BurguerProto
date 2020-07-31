@@ -936,6 +936,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.43610513, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1468,6 +1469,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.8301887, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1722,6 +1724,7 @@ MonoBehaviour:
   enemyAgent: {fileID: 6121857591312772360}
   attackDistance: 6
   life: 100
+  maxLife: 100
   healthBar: {fileID: 4202129582291080033}
   mat: {fileID: 0}
   popUp: {fileID: 4771802812483107025, guid: 87863029054c3f5488297a4b3215a044, type: 3}
@@ -1735,9 +1738,7 @@ MonoBehaviour:
   granadeDropRate: 10
   spawnPos: {fileID: 5006568695215763622}
   flashTime: 0.1
-  explosion: {fileID: 5769599830294413825}
-  explotionParticle: {fileID: 4596686777795968663, guid: f65b27f96ac3e634692a3ec68c3d5c8b,
-    type: 3}
+  explotionParticle: {fileID: 100004, guid: 38dd6275d9a709249ae566b6c8807812, type: 3}
 --- !u!195 &6121857591312772360
 NavMeshAgent:
   m_ObjectHideFlags: 0

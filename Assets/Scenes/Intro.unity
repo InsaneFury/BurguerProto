@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4625,7 +4625,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1105787129}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1589819289}
+        m_MethodName: LoadSceneHandler
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1105787129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4663,25 +4674,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1105787126}
   m_CullTransparentMesh: 0
---- !u!95 &1105787131
-Animator:
-  serializedVersion: 3
+--- !u!114 &1105787131
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1105787126}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 980503b6a8834794bba80fcb6d2064e4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8037b5a47d299e5479cc2817235bec04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inEaseType: 24
+  inDuration: 0.3
+  inDelay: 1
+  customInCurve: 0
+  inCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  outEaseType: 0
+  outDuration: 0.3
+  outDelay: 0
+  customOutCurve: 0
+  outCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animateChilds: 0
+  randomDuration: 1
+  inMinDuration: 0
+  inMaxDuration: 0
+  outMinDuration: 0
+  outMaxDuration: 0
+  childs: []
+  OnCompleteInCallback:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCompleteOutCallback:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1151708022
 GameObject:
   m_ObjectHideFlags: 0
@@ -6378,6 +6415,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4a351e8818988b4e858be6e97f9aa51, type: 3}
+--- !u!114 &1589819289 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2302126836573957204, guid: f4a351e8818988b4e858be6e97f9aa51,
+    type: 3}
+  m_PrefabInstance: {fileID: 1589819288}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b1458275eac3d448777cbb63b47c40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1603082888
 GameObject:
   m_ObjectHideFlags: 0

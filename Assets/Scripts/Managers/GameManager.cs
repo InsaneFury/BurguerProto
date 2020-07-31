@@ -35,6 +35,7 @@ public class GameManager : MonobehaviourSingleton<GameManager>
 
     void Start()
     {
+        sceneHandler = ScenesManagerHandler.Get();
         player = Player.Get();
         player.inputAction.GameManagerControls.Pause.performed += ctx => PauseGame();
         scoreManager = ScoreManager.Get();

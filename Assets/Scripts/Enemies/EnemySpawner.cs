@@ -30,6 +30,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
         Nightmare
     };
 
+    public GameModeSetting customGameMode;
     public GameDifficulty gameDifficulty;
 
     public LevelDifficulty[] difficulties;
@@ -84,6 +85,18 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
         uiManager = UIManager.Get();
         timer = timeBetweenWaves;
         userSurvivalRecord = currentWave;
+        if (customGameMode.easy)
+        {
+            SetDifficulty((int)GameDifficulty.Classic);
+            SetGameMode((int)GameMode.EnemiesDie);
+        }
+        else
+        {
+            SetDifficulty((int)GameDifficulty.Madness);
+            SetGameMode((int)GameMode.Survival);
+        }
+
+        
     }
 
     private void Update()
@@ -205,7 +218,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
             //AkSoundEngine.PostEvent("Comienzo_oleada", gameObject);
             isSpawning = false;
             uiManager.SetWaveNumber(currentWave + 1);
-            StartCoroutine(SpawnWave(lvl1Waves[currentWave],lvl2SpawnPoints));
+            StartCoroutine(SpawnWave(lvl1Waves[currentWave],lvl1SpawnPoints));
             currentWave++;
         }
     }
@@ -222,10 +235,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
             uiManager.SetWaveNumber(userSurvivalRecord);
             ScoreManager.Get().SetMaxWave(userSurvivalRecord);
 
-            if(gameDifficulty == GameDifficulty.Madness)
-                StartCoroutine(SpawnWave(lvl2Waves[currentWave],lvl2SpawnPoints));
-            else
-                StartCoroutine(SpawnWave(lvl1Waves[currentWave],lvl1SpawnPoints));
+            StartCoroutine(SpawnWave(lvl1Waves[currentWave],lvl1SpawnPoints));
 
             if (currentWave < maxSurvivalWave)
                 currentWave++;
@@ -246,8 +256,6 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
 
             if (gameDifficulty == GameDifficulty.Madness)
                 StartCoroutine(SpawnWave(lvl2Waves[currentWave], lvl2SpawnPoints));
-            else
-                StartCoroutine(SpawnWave(lvl1Waves[currentWave], lvl1SpawnPoints));
 
             if (currentWave < maxSurvivalWave)
                 currentWave++;
