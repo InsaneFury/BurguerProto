@@ -360,11 +360,7 @@ public class Player : MonobehaviourSingleton<Player>
             animTop.SetBool("machineGun", false);
             AkSoundEngine.PostEvent("player_change_grenade", gameObject);
         }
-        
-        /*
-        string audio = currentActiveWeapon == 0 ? "Granada_cambio" : "Mch_Gun_cambio";
-        //AkSoundEngine.PostEvent("Mch_Gun_cambio", gameObject);
-        */
+       
 
         if (OnChangeWeapon != null)
             OnChangeWeapon(this);

@@ -71,10 +71,11 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -875986075962305725, guid: 10afacd1ddc05a74b982c578c9b4bd38, type: 2}
+  - {fileID: 5700929535600907424, guid: b1d3b620fb91dc84eade8be7c16f22f5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -126,15 +127,14 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: HELLO
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 10afacd1ddc05a74b982c578c9b4bd38, type: 2}
-  m_sharedMaterial: {fileID: -875986075962305725, guid: 10afacd1ddc05a74b982c578c9b4bd38,
+  m_fontAsset: {fileID: 11400000, guid: b1d3b620fb91dc84eade8be7c16f22f5, type: 2}
+  m_sharedMaterial: {fileID: 5700929535600907424, guid: b1d3b620fb91dc84eade8be7c16f22f5,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

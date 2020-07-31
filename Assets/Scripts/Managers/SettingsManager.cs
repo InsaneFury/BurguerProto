@@ -52,11 +52,7 @@ public class SettingsManager : MonoBehaviour
     #endregion
 
     #region Audio
-    public void SetMasterVolume(float masterVolume)
-    {
-        float master = masterVolume * 100f;
-        AkSoundEngine.SetRTPCValue("general_volume", master);
-    }
+    public void SetMasterVolume(float masterVolume)=>AkSoundEngine.SetRTPCValue("general_volume", masterVolume * 100f);
     public void SetSFXVolume(float sfxVolume) => AkSoundEngine.SetRTPCValue("sfx_volume", sfxVolume * 100f);
     public void SetMusicVolume(float musicVolume) => AkSoundEngine.SetRTPCValue("music_volume", musicVolume*100f);
     public void SetMute(bool mute)

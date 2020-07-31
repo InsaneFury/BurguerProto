@@ -87,7 +87,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
         uiManager = UIManager.Get();
         timer = timeBetweenWaves;
         userSurvivalRecord = currentWave;
-        if (customGameMode.easy)
+        if (customGameMode.map1)
         {
             SetDifficulty((int)GameDifficulty.Classic);
             SetGameMode((int)GameMode.EnemiesDie);
@@ -177,7 +177,6 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
 
     IEnumerator SpawnWave(Wave wave, List<Transform> SpawnPoints)
     {
-        SetCurrentAudio();
         for (int i = 0; i < wave.enemyAmount; i++)
         {
             if (gManager.gameStarted)
@@ -220,6 +219,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
             uiManager.SetWaveNumber(currentWave + 1);
             StartCoroutine(SpawnWave(lvl1Waves[currentWave],lvl1SpawnPoints));
             currentWave++;
+            SetCurrentAudio();
         }
     }
 
@@ -238,6 +238,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
 
             if (currentWave < maxSurvivalWave)
                 currentWave++;
+            SetCurrentAudio();
         }
     }
 
@@ -257,6 +258,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
 
             if (currentWave < maxSurvivalWave)
                 currentWave++;
+            SetCurrentAudio();
         }
     }
 
